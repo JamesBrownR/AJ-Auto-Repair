@@ -1,0 +1,584 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AJ Auto Repair | Eustis, FL</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;700&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+        /* --- CSS VARIABLES & RESET --- */
+        :root {
+            /* Extracted from Logo: Dark Blue/Grey and Orange/Gold */
+            --primary-dark: #23262d; 
+            --primary-light: #2e323e;
+            --accent-gold: #e8a635;
+            --accent-hover: #ffb845;
+            --text-light: #f4f4f4;
+            --text-gray: #b0b0b0;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: var(--primary-dark);
+            color: var(--text-light);
+            line-height: 1.6;
+        }
+
+        h1, h2, h3, h4 {
+            font-family: 'Oswald', sans-serif;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        a { text-decoration: none; color: inherit; transition: 0.3s; }
+        ul { list-style: none; }
+        img { max-width: 100%; display: block; }
+
+        /* --- UTILITIES --- */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2.5rem;
+            color: var(--accent-gold);
+            margin-bottom: 1rem;
+            position: relative;
+            display: inline-block;
+            width: 100%;
+        }
+
+        .section-title::after {
+            content: '';
+            display: block;
+            width: 60px;
+            height: 3px;
+            background: #fff;
+            margin: 10px auto;
+        }
+
+        .btn {
+            display: inline-block;
+            background-color: var(--accent-gold);
+            color: var(--primary-dark);
+            padding: 12px 30px;
+            font-weight: bold;
+            text-transform: uppercase;
+            border-radius: 4px;
+            font-family: 'Oswald', sans-serif;
+            border: 2px solid var(--accent-gold);
+        }
+
+        .btn:hover {
+            background-color: transparent;
+            color: var(--accent-gold);
+        }
+
+        /* --- HEADER --- */
+        header {
+            background-color: rgba(35, 38, 45, 0.95);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            padding: 10px 0;
+            border-bottom: 2px solid var(--accent-gold);
+            box-shadow: 0 4px 10px rgba(0,0,0,0.5);
+        }
+
+        .nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo-area {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .logo-img {
+            height: 60px; /* Adjust based on your actual logo file */
+        }
+
+        .brand-name {
+            font-size: 1.8rem;
+            color: var(--accent-gold);
+            font-weight: 700;
+        }
+
+        nav ul {
+            display: flex;
+            gap: 25px;
+        }
+
+        nav a:hover {
+            color: var(--accent-gold);
+        }
+
+        .mobile-toggle {
+            display: none;
+            font-size: 1.5rem;
+            color: var(--accent-gold);
+        }
+
+        /* --- HERO SECTION --- */
+        .hero {
+            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://images.unsplash.com/photo-1619642751034-765dfdf7c58e?auto=format&fit=crop&q=80&w=1974'); /* Placeholder mechanic background */
+            background-size: cover;
+            background-position: center;
+            height: 80vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+
+        .hero-content h1 {
+            font-size: 4rem;
+            margin-bottom: 10px;
+            color: #fff;
+            text-shadow: 2px 2px 4px #000;
+        }
+
+        .hero-content p {
+            font-size: 1.5rem;
+            margin-bottom: 30px;
+            color: var(--accent-gold);
+            font-weight: 300;
+        }
+
+        /* --- SERVICES SECTION --- */
+        .services {
+            padding: 80px 0;
+            background-color: var(--primary-light);
+        }
+
+        .services-tagline {
+            text-align: center;
+            font-size: 1.2rem;
+            margin-bottom: 40px;
+            color: var(--text-gray);
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+
+        .service-card {
+            background: var(--primary-dark);
+            padding: 25px;
+            border-left: 3px solid var(--accent-gold);
+            transition: transform 0.3s;
+        }
+
+        .service-card:hover {
+            transform: translateY(-5px);
+            background: #363b49;
+        }
+
+        .service-card i {
+            font-size: 2rem;
+            color: var(--accent-gold);
+            margin-bottom: 15px;
+        }
+
+        .service-card h3 {
+            font-size: 1.2rem;
+            margin-bottom: 10px;
+        }
+
+        /* --- GALLERY SECTION --- */
+        .gallery {
+            padding: 80px 0;
+            background-color: var(--primary-dark);
+        }
+
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 15px;
+            margin-top: 40px;
+        }
+
+        .gallery-item {
+            position: relative;
+            height: 250px;
+            overflow: hidden;
+            border-radius: 4px;
+            border: 1px solid #444;
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s;
+        }
+
+        .gallery-item:hover img {
+            transform: scale(1.1);
+        }
+
+        .gallery-caption {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: rgba(0,0,0,0.8);
+            color: white;
+            padding: 10px;
+            transform: translateY(100%);
+            transition: transform 0.3s;
+            text-align: center;
+        }
+
+        .gallery-item:hover .gallery-caption {
+            transform: translateY(0);
+        }
+
+        /* --- REVIEWS SECTION --- */
+        .reviews {
+            padding: 80px 0;
+            background-color: var(--primary-light);
+        }
+
+        .reviews-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .review-card {
+            background: #fff;
+            color: #333;
+            padding: 25px;
+            border-radius: 8px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+            position: relative;
+        }
+
+        .review-card::before {
+            content: '\201C';
+            font-family: serif;
+            font-size: 4rem;
+            color: var(--accent-gold);
+            position: absolute;
+            top: -10px;
+            left: 10px;
+            opacity: 0.5;
+        }
+
+        .stars {
+            color: var(--accent-gold);
+            margin-bottom: 10px;
+        }
+
+        .review-text {
+            font-style: italic;
+            margin-bottom: 15px;
+            font-size: 0.95rem;
+        }
+
+        .review-author {
+            font-weight: bold;
+            font-family: 'Oswald', sans-serif;
+            text-align: right;
+            color: var(--primary-dark);
+        }
+
+        .review-sub {
+            font-size: 0.8rem;
+            color: #666;
+            text-align: right;
+        }
+
+        /* --- CONTACT & INFO --- */
+        .contact {
+            padding: 80px 0;
+            background-color: var(--primary-dark);
+        }
+
+        .contact-layout {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 40px;
+        }
+
+        .contact-info, .map-container {
+            flex: 1;
+            min-width: 300px;
+        }
+
+        .info-item {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 25px;
+            font-size: 1.1rem;
+        }
+
+        .info-item i {
+            color: var(--accent-gold);
+            font-size: 1.5rem;
+            margin-right: 15px;
+            margin-top: 5px;
+        }
+
+        .hours-table {
+            width: 100%;
+            margin-top: 20px;
+            border-collapse: collapse;
+        }
+
+        .hours-table td {
+            padding: 8px 0;
+            border-bottom: 1px solid #444;
+        }
+
+        .hours-table td:first-child {
+            color: var(--accent-gold);
+            font-weight: bold;
+        }
+
+        footer {
+            background: #111;
+            text-align: center;
+            padding: 20px;
+            color: #777;
+            border-top: 1px solid #333;
+        }
+
+        /* --- RESPONSIVE --- */
+        @media (max-width: 768px) {
+            .hero-content h1 { font-size: 2.5rem; }
+            .nav-container ul { display: none; } /* Simplified mobile handling */
+            .contact-layout { flex-direction: column; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container nav-container">
+            <div class="logo-area">
+                <img src="Logo.png" alt="AJ Services Logo" class="logo-img">
+                <span class="brand-name">AJ SERVICES</span>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#gallery">Work</a></li>
+                    <li><a href="#reviews">Reviews</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+            <a href="tel:+13523088142" class="btn"><i class="fa-solid fa-phone"></i> Call AJ</a>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Complete Automotive Solutions</h1>
+            <p>Foreign & Domestic • No Job Too Big Or Small</p>
+            <div style="margin-top: 20px;">
+                <a href="#contact" class="btn">Get a Quote</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="services" class="services">
+        <div class="container">
+            <h2 class="section-title">Our Services</h2>
+            <p class="services-tagline">"We fix it right the first time. Honest pricing. Professional work."</p>
+            
+            <div class="services-grid" id="services-grid">
+                </div>
+        </div>
+    </section>
+
+    <section id="gallery" class="gallery">
+        <div class="container">
+            <h2 class="section-title">Recent Work</h2>
+            <div class="gallery-grid" id="gallery-grid">
+                </div>
+        </div>
+    </section>
+
+    <section id="reviews" class="reviews">
+        <div class="container">
+            <h2 class="section-title">Customer Reviews</h2>
+            <div class="reviews-container" id="reviews-container">
+                </div>
+        </div>
+    </section>
+
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2 class="section-title">Find Us</h2>
+            <div class="contact-layout">
+                <div class="contact-info">
+                    <div class="info-item">
+                        <i class="fa-solid fa-location-dot"></i>
+                        <div>
+                            <h4>Location</h4>
+                            <p>1534 Kurt St, Eustis, FL 32726</p>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <i class="fa-solid fa-phone"></i>
+                        <div>
+                            <h4>Phone</h4>
+                            <p><a href="tel:+13523088142">+1 (352) 308-8142</a></p>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <i class="fa-solid fa-clock"></i>
+                        <div style="width: 100%;">
+                            <h4>Business Hours</h4>
+                            <table class="hours-table">
+                                <tr><td>Monday</td><td>8:00 AM – 6:00 PM</td></tr>
+                                <tr><td>Tuesday</td><td>8:00 AM – 6:00 PM</td></tr>
+                                <tr><td>Wednesday</td><td>8:00 AM – 6:00 PM</td></tr>
+                                <tr><td>Thursday</td><td>8:00 AM – 6:00 PM</td></tr>
+                                <tr><td>Friday</td><td>8:00 AM – 6:00 PM</td></tr>
+                                <tr><td>Saturday</td><td>8:00 AM – 6:00 PM</td></tr>
+                                <tr><td>Sunday</td><td>Closed</td></tr>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="map-container">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3500.123456789!2d-81.685!3d28.850!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88e7a7a7a7a7a7a7%3A0x123456789abcdef!2s1534%20Kurt%20St%2C%20Eustis%2C%20FL%2032726!5e0!3m2!1sen!2sus!4v1234567890" 
+                        width="100%" height="450" style="border:0; border-radius: 8px;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+                    </iframe>
+                    </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 AJ Services / AJ Auto Repair. All Rights Reserved.</p>
+        <p style="font-size: 0.8rem; margin-top: 10px;">Website Design for Local Business</p>
+    </footer>
+
+    <script>
+        // --- 1. SERVICES DATA ---
+        // Extracted from the yellow sign image provided
+        const servicesData = [
+            { name: "Brakes & Suspensions", icon: "fa-car-burst" },
+            { name: "A/C Repair", icon: "fa-snowflake" },
+            { name: "Tune-ups & Diagnostics", icon: "fa-stethoscope" },
+            { name: "Drive Trains & Transmissions", icon: "fa-gears" },
+            { name: "Electrical Systems", icon: "fa-bolt" },
+            { name: "Fleet Maintenance", icon: "fa-truck-moving" },
+            { name: "Engine Replacements", icon: "fa-engine" },
+            { name: "Welding & Fabrication", icon: "fa-fire-burner" },
+            { name: "Small Engine & Motorcycles", icon: "fa-motorcycle" },
+            { name: "Custom Headliners", icon: "fa-wand-magic-sparkles" }
+        ];
+
+        const servicesGrid = document.getElementById('services-grid');
+        servicesData.forEach(service => {
+            const card = document.createElement('div');
+            card.className = 'service-card';
+            card.innerHTML = `
+                <i class="fa-solid ${service.icon}"></i>
+                <h3>${service.name}</h3>
+                <p>Professional service for foreign & domestic vehicles.</p>
+            `;
+            servicesGrid.appendChild(card);
+        });
+
+        // --- 2. REVIEWS DATA (ARRAY) ---
+        // Populated from the prompt
+        const reviewsData = [
+            {
+                name: "Anjay Smith",
+                stars: 5,
+                date: "a week ago",
+                text: "I got referred to AJ Auto Repair and they did a great job at an affordable price range. The bumper of my car was fixed to where it actually stays put and they did it in a great time frame. I would 100% recommend this company."
+            },
+            {
+                name: "All Stars Mobile Detailing",
+                stars: 5,
+                date: "5 days ago",
+                text: "THESE GUYS KNOW WHAT THEY'RE DOING. HAD WORK DONE ON MY CHARGER AND TRUCK. FLAWLESS. EXCELLENT JOB GOOD PRICES. JEREMY AND ANDREW ARE GOOD MECHANICS. I HIGHLY RECOMMEND."
+            },
+            {
+                name: "Chandler Smithie",
+                stars: 5,
+                date: "a week ago",
+                text: "Been going to AJ Auto Repair for a long time now... Every repair has been done right the first time, pricing is fair, and they’re always upfront. It’s hard to find a shop this reliable anymore—highly recommend."
+            },
+            {
+                name: "Ayden Peluso",
+                stars: 5,
+                date: "2 days ago",
+                text: "Great customer service, and very informative. Great price assessment."
+            },
+            {
+                name: "Kaleb Williams",
+                stars: 5,
+                date: "3 days ago",
+                text: "Very friendly, fast, and knowledgeable service! Reasonable prices."
+            }
+        ];
+
+        const reviewsContainer = document.getElementById('reviews-container');
+        
+        reviewsData.forEach(review => {
+            let starsHtml = '';
+            for(let i=0; i<review.stars; i++) {
+                starsHtml += '<i class="fa-solid fa-star"></i> ';
+            }
+
+            const reviewCard = document.createElement('div');
+            reviewCard.className = 'review-card';
+            reviewCard.innerHTML = `
+                <div class="stars">${starsHtml}</div>
+                <p class="review-text">"${review.text}"</p>
+                <div class="review-author">${review.name}</div>
+                <div class="review-sub">${review.date}</div>
+            `;
+            reviewsContainer.appendChild(reviewCard);
+        });
+
+        // --- 3. GALLERY DATA (ARRAY) ---
+        // Placeholder images used. To customize, add images to your folder and change names here.
+        const galleryData = [
+            { src: "https://images.unsplash.com/photo-1487754180451-c456f719a1fc?auto=format&fit=crop&q=80&w=400", caption: "Engine Diagnostics" },
+            { src: "https://images.unsplash.com/photo-1486262715619-67b85e0b08d3?auto=format&fit=crop&q=80&w=400", caption: "General Maintenance" },
+            { src: "https://images.unsplash.com/photo-1597762635760-e44288d60155?auto=format&fit=crop&q=80&w=400", caption: "Suspension Work" },
+            { src: "https://images.unsplash.com/photo-1507767980914-f421f5ad76b5?auto=format&fit=crop&q=80&w=400", caption: "Fleet Services" }
+        ];
+
+        const galleryGrid = document.getElementById('gallery-grid');
+        galleryData.forEach(item => {
+            const div = document.createElement('div');
+            div.className = 'gallery-item';
+            div.innerHTML = `
+                <img src="${item.src}" alt="${item.caption}">
+                <div class="gallery-caption">${item.caption}</div>
+            `;
+            galleryGrid.appendChild(div);
+        });
+
+    </script>
+</body>
+</html>
