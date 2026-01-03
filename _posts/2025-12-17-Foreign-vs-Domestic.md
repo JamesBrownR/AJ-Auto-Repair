@@ -120,10 +120,9 @@ Whether you drive a Civic or a Silverado, a 3-Series or an F-150, we provide the
 
 ### Expert Service for Every Vehicle
 
-Foreign or domestic, new or old—we have the expertise to keep your vehicle running at its best. Experience the AJ Services difference.
+Foreign or domestic, new or old. We have the expertise to keep your vehicle running at its best. Experience the AJ Services difference.
 
 **Contact AJ Services**  
 📞 Call (352) 308-8142  
 📍 1534 Kurt St, Eustis, FL 32726  
 🌐 [Visit Our Website](https://ajautoandrepair.com/)
-
