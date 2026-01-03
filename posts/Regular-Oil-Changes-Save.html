@@ -1,0 +1,562 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Why Regular Oil Changes Save You Money Long-Term | AJ Auto Repair</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;700&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+        :root {
+            --primary-dark: #23262d; 
+            --primary-light: #2e323e;
+            --accent-gold: #e8a635;
+            --accent-hover: #ffb845;
+            --text-light: #f4f4f4;
+            --text-gray: #b0b0b0;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: var(--primary-dark);
+            color: var(--text-light);
+            line-height: 1.8;
+        }
+
+        h1, h2, h3, h4 {
+            font-family: 'Oswald', sans-serif;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        a { text-decoration: none; color: inherit; transition: 0.3s; }
+        ul { list-style: none; }
+        img { max-width: 100%; display: block; }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .btn {
+            display: inline-block;
+            background-color: var(--accent-gold);
+            color: var(--primary-dark);
+            padding: 12px 30px;
+            font-weight: bold;
+            text-transform: uppercase;
+            border-radius: 4px;
+            font-family: 'Oswald', sans-serif;
+            border: 2px solid var(--accent-gold);
+        }
+
+        .btn:hover {
+            background-color: transparent;
+            color: var(--accent-gold);
+        }
+
+        header {
+            background-color: rgba(35, 38, 45, 0.95);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            padding: 10px 0;
+            border-bottom: 2px solid var(--accent-gold);
+            box-shadow: 0 4px 10px rgba(0,0,0,0.5);
+        }
+
+        .nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo-area {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .logo-img {
+            height: 60px;
+        }
+
+        .brand-name {
+            font-size: 1.8rem;
+            color: var(--accent-gold);
+            font-weight: 700;
+        }
+
+        nav ul {
+            display: flex;
+            gap: 25px;
+        }
+
+        nav a:hover {
+            color: var(--accent-gold);
+        }
+
+        .article-header {
+            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://images.unsplash.com/photo-1487754180451-c456f719a1fc?auto=format&fit=crop&q=80&w=1974');
+            background-size: cover;
+            background-position: center;
+            padding: 120px 0 80px;
+            text-align: center;
+        }
+
+        .article-category {
+            display: inline-block;
+            background: var(--accent-gold);
+            color: var(--primary-dark);
+            padding: 8px 20px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+
+        .article-title {
+            font-size: 3rem;
+            color: #fff;
+            margin-bottom: 20px;
+            line-height: 1.2;
+        }
+
+        .article-meta {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            color: var(--text-gray);
+            font-size: 1rem;
+        }
+
+        .article-meta i {
+            color: var(--accent-gold);
+            margin-right: 8px;
+        }
+
+        .article-content {
+            background: var(--primary-light);
+            padding: 80px 0;
+        }
+
+        .content-wrapper {
+            max-width: 800px;
+            margin: 0 auto;
+            background: var(--primary-dark);
+            padding: 50px;
+            border-radius: 8px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.3);
+        }
+
+        .article-intro {
+            font-size: 1.2rem;
+            color: var(--text-gray);
+            margin-bottom: 40px;
+            padding-bottom: 30px;
+            border-bottom: 2px solid var(--accent-gold);
+        }
+
+        .content-section {
+            margin-bottom: 50px;
+        }
+
+        .content-section h2 {
+            color: var(--accent-gold);
+            font-size: 2rem;
+            margin-bottom: 20px;
+        }
+
+        .content-section p {
+            color: var(--text-light);
+            margin-bottom: 15px;
+            font-size: 1.1rem;
+        }
+
+        .comparison-box {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            margin: 30px 0;
+        }
+
+        .comparison-card {
+            background: var(--primary-light);
+            padding: 25px;
+            border-radius: 8px;
+            border: 2px solid var(--accent-gold);
+        }
+
+        .comparison-card h3 {
+            color: var(--accent-gold);
+            margin-bottom: 15px;
+            text-align: center;
+        }
+
+        .comparison-card p {
+            font-size: 1rem;
+            color: var(--text-gray);
+        }
+
+        .cost-highlight {
+            background: rgba(232, 166, 53, 0.1);
+            padding: 25px;
+            border-left: 4px solid var(--accent-gold);
+            margin: 25px 0;
+        }
+
+        .cost-highlight h3 {
+            color: var(--accent-gold);
+            margin-bottom: 15px;
+        }
+
+        .stat-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            margin: 30px 0;
+        }
+
+        .stat-card {
+            background: var(--primary-light);
+            padding: 25px;
+            border-radius: 8px;
+            text-align: center;
+            border-top: 3px solid var(--accent-gold);
+        }
+
+        .stat-number {
+            font-size: 2.5rem;
+            color: var(--accent-gold);
+            font-weight: bold;
+            font-family: 'Oswald', sans-serif;
+        }
+
+        .stat-label {
+            color: var(--text-gray);
+            font-size: 0.9rem;
+            margin-top: 5px;
+        }
+
+        .article-cta {
+            background: var(--primary-dark);
+            padding: 60px 0;
+            text-align: center;
+        }
+
+        .cta-box {
+            background: var(--primary-light);
+            padding: 50px;
+            border-radius: 8px;
+            border: 2px solid var(--accent-gold);
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        .cta-box h2 {
+            color: var(--accent-gold);
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+        }
+
+        .cta-box p {
+            color: var(--text-gray);
+            font-size: 1.2rem;
+            margin-bottom: 30px;
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .related-posts {
+            background: var(--primary-light);
+            padding: 80px 0;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2.5rem;
+            color: var(--accent-gold);
+            margin-bottom: 50px;
+        }
+
+        .posts-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .post-card {
+            background: var(--primary-dark);
+            border-radius: 8px;
+            overflow: hidden;
+            transition: transform 0.3s;
+        }
+
+        .post-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .post-card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-bottom: 2px solid var(--accent-gold);
+        }
+
+        .post-card-content {
+            padding: 25px;
+        }
+
+        .post-card h3 {
+            color: var(--accent-gold);
+            font-size: 1.3rem;
+            margin-bottom: 10px;
+        }
+
+        .post-card p {
+            color: var(--text-gray);
+            font-size: 0.95rem;
+        }
+
+        footer {
+            background: #111;
+            text-align: center;
+            padding: 20px;
+            color: #777;
+            border-top: 1px solid #333;
+        }
+
+        @media (max-width: 768px) {
+            .article-title { font-size: 2rem; }
+            .content-wrapper { padding: 30px 20px; }
+            nav ul { display: none; }
+            .cta-buttons { flex-direction: column; }
+            .comparison-box { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container nav-container">
+            <div class="logo-area">
+                <img src="../Logo.png" alt="AJ Services Logo" class="logo-img">
+                <span class="brand-name">AJ SERVICES</span>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="https://jamesbrownr.github.io/AJ-Auto-Repair/">Home</a></li>
+                    <li><a href="https://jamesbrownr.github.io/AJ-Auto-Repair#services">Services</a></li>
+                    <li><a href="https://jamesbrownr.github.io/AJ-Auto-Repair#gallery">Work</a></li>
+                    <li><a href="https://jamesbrownr.github.io/AJ-Auto-Repair#reviews">Reviews</a></li>
+                    <li><a href="https://jamesbrownr.github.io/AJ-Auto-Repair/blog">Blog</a></li>
+                    <li><a href="https://jamesbrownr.github.io/AJ-Auto-Repair/contact">Contact</a></li>
+                </ul>
+            </nav>
+            <a href="tel:+13523088142" class="btn"><i class="fa-solid fa-phone"></i> Call AJ</a>
+        </div>
+    </header>
+
+    <section class="article-header">
+        <div class="container">
+            <span class="article-category">Maintenance</span>
+            <h1 class="article-title">Why Regular Oil Changes Save You Money Long-Term</h1>
+            <div class="article-meta">
+                <span><i class="fa-regular fa-calendar"></i> December 15, 2024</span>
+                <span><i class="fa-regular fa-clock"></i> 7 min read</span>
+            </div>
+        </div>
+    </section>
+
+    <section class="article-content">
+        <div class="container">
+            <div class="content-wrapper">
+                <p class="article-intro">
+                    Oil changes are often viewed as just another expense on your vehicle maintenance list. Many drivers try to stretch intervals to save a few dollars, not realizing they're setting themselves up for catastrophic engine damage that costs thousands to repair. At AJ Auto Repair, we've seen firsthand how skipping oil changes destroys engines. The good news? Regular oil changes are one of the cheapest and most effective ways to protect your investment and extend your vehicle's life.
+                </p>
+
+                <div class="content-section">
+                    <h2>What Engine Oil Actually Does</h2>
+                    <p>
+                        Engine oil serves four critical functions that keep your engine running smoothly. First and foremost, it lubricates moving parts. Your engine contains hundreds of metal components moving at high speeds under extreme pressure. Without proper lubrication, metal-on-metal contact generates heat and friction that quickly destroys engine components.
+                    </p>
+                    <p>
+                        Second, oil cools the engine. While your radiator handles most cooling, oil absorbs heat from internal components that coolant can't reach. It carries this heat away from critical areas like pistons, bearings, and the crankshaft.
+                    </p>
+                    <p>
+                        Third, oil cleans your engine. As it circulates, it picks up dirt, metal particles, combustion byproducts, and other contaminants. These particles are captured by your oil filter, preventing them from circulating and causing damage.
+                    </p>
+                    <p>
+                        Finally, oil seals gaps between pistons and cylinder walls, preventing combustion gases from escaping and maintaining compression. This ensures your engine runs efficiently and produces maximum power.
+                    </p>
+                </div>
+
+                <div class="stat-grid">
+                    <div class="stat-card">
+                        <div class="stat-number">3-6K</div>
+                        <div class="stat-label">Miles Between Oil Changes (Conventional)</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number">7-10K</div>
+                        <div class="stat-label">Miles Between Oil Changes (Synthetic)</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number">$5K+</div>
+                        <div class="stat-label">Average Cost of Engine Replacement</div>
+                    </div>
+                </div>
+
+                <div class="content-section">
+                    <h2>What Happens When You Skip Oil Changes</h2>
+                    <p>
+                        Over time, oil breaks down and becomes contaminated. Heat, pressure, and time degrade oil's molecular structure, reducing its ability to lubricate effectively. Additives that prevent corrosion, reduce friction, and clean your engine get depleted.
+                    </p>
+                    <p>
+                        As oil degrades, it thickens into sludge. This sludge can't flow properly through your engine, meaning critical components don't get adequate lubrication. Oil passages and filters become clogged, further restricting flow. Eventually, parts that should be bathed in oil are running dry.
+                    </p>
+                    <p>
+                        The first casualties are usually the camshaft and valve train components, which rely on pressurized oil flow. Next come bearings, which experience increased wear from contaminated oil. Once bearing surfaces are damaged, metal particles contaminate the entire system, accelerating wear throughout the engine.
+                    </p>
+                    <p>
+                        By the time you notice problems—knocking sounds, loss of power, check engine lights—significant damage has already occurred. At this stage, you're looking at repairs costing thousands of dollars, far exceeding what you "saved" by skipping oil changes.
+                    </p>
+                </div>
+
+                <div class="cost-highlight">
+                    <h3><i class="fa-solid fa-calculator"></i> The Real Cost Comparison</h3>
+                    <p>
+                        Let's say you drive 15,000 miles per year. With conventional oil changes every 3,000 miles at $50 each, you spend $250 annually. Over 10 years (150,000 miles), that's $2,500 in oil changes.
+                    </p>
+                    <p style="margin-top: 15px;">
+                        Now consider the alternative: skipping oil changes leads to engine failure around 100,000 miles. A replacement engine costs $4,000-$7,000 installed. Even a major rebuild starts at $3,000. You've "saved" maybe $1,500 in oil changes but now face repairs triple that amount—plus your vehicle is out of commission for days or weeks.
+                    </p>
+                    <p style="margin-top: 15px;">
+                        The math is clear: regular oil changes are incredibly cheap insurance against catastrophic engine failure.
+                    </p>
+                </div>
+
+                <div class="content-section">
+                    <h2>Conventional vs Synthetic Oil</h2>
+                    <p>
+                        The oil type you choose impacts both cost and protection. Conventional oil is refined from crude petroleum and contains natural impurities. It breaks down faster under heat and stress, requiring more frequent changes.
+                    </p>
+                    <p>
+                        Synthetic oil is engineered at the molecular level for superior performance. It flows better in cold weather, resists breakdown in high heat, and contains fewer impurities. While synthetic costs more per change, you can safely extend change intervals, often offsetting the higher initial cost.
+                    </p>
+                    <p>
+                        For Florida drivers, synthetic oil offers real advantages. Our hot climate puts extra stress on engine oil. Synthetic maintains its protective properties longer, even in extreme heat. It also flows better during those rare cold mornings, providing instant protection on startup.
+                    </p>
+                </div>
+
+                <div class="comparison-box">
+                    <div class="comparison-card">
+                        <h3>Conventional Oil</h3>
+                        <p><strong>Pros:</strong> Lower upfront cost, readily available, adequate for normal driving conditions</p>
+                        <p style="margin-top: 10px;"><strong>Cons:</strong> Breaks down faster, requires more frequent changes, less protection in extreme temperatures</p>
+                        <p style="margin-top: 10px;"><strong>Best For:</strong> Older vehicles, budget-conscious drivers with normal driving habits</p>
+                    </div>
+                    <div class="comparison-card">
+                        <h3>Synthetic Oil</h3>
+                        <p><strong>Pros:</strong> Superior protection, longer change intervals, better temperature performance, cleaner engine</p>
+                        <p style="margin-top: 10px;"><strong>Cons:</strong> Higher cost per change</p>
+                        <p style="margin-top: 10px;"><strong>Best For:</strong> Newer vehicles, high-performance engines, extreme driving conditions, maximum protection</p>
+                    </div>
+                </div>
+
+                <div class="content-section">
+                    <h2>How to Know When You Need an Oil Change</h2>
+                    <p>
+                        Follow your owner's manual recommendations as a baseline. Manufacturers specify intervals based on extensive testing. However, certain driving conditions require more frequent changes, including frequent short trips (oil doesn't reach optimal operating temperature), stop-and-go traffic, towing or hauling heavy loads, dusty or dirty environments, and extreme temperatures.
+                    </p>
+                    <p>
+                        Modern vehicles have oil life monitoring systems that calculate when changes are needed based on driving conditions. These are generally reliable, but checking your oil manually is still wise. Pull the dipstick monthly to check level and condition. Oil should be amber or light brown. If it's black and gritty, it's overdue for a change.
+                    </p>
+                    <p>
+                        Never ignore a low oil level. Adding oil between changes is normal for some engines, but excessive consumption indicates problems like leaks or burning oil that need professional diagnosis.
+                    </p>
+                </div>
+
+                <div class="content-section">
+                    <h2>What We Check During Your Oil Change</h2>
+                    <p>
+                        At AJ Services, an oil change isn't just draining old oil and adding new. We provide a comprehensive inspection that catches potential problems early. We check all fluid levels including transmission, brake, power steering, and coolant. We inspect belts and hoses for cracks or wear. We examine your air filter and check tire pressure and condition.
+                    </p>
+                    <p>
+                        We look underneath for leaks, damage, or worn components. We test your battery and check lights. This multi-point inspection often reveals minor issues before they become major problems, saving you money and preventing breakdowns.
+                    </p>
+                    <p>
+                        We also keep detailed service records. Knowing your vehicle's maintenance history helps us spot patterns and recommend preventive maintenance tailored to your specific vehicle and driving habits.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="article-cta">
+        <div class="container">
+            <div class="cta-box">
+                <h2>Keep Your Engine Running Strong</h2>
+                <p>Schedule your oil change with AJ Services today. Protect your investment with professional service from technicians who care about your vehicle.</p>
+                <div class="cta-buttons">
+                    <a href="tel:+13523088142" class="btn">
+                        <i class="fa-solid fa-phone"></i> Call (352) 308-8142
+                    </a>
+                    <a href="https://jamesbrownr.github.io/AJ-Auto-Repair#contact" class="btn">
+                        <i class="fa-solid fa-wrench"></i> Get Service
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="related-posts">
+        <div class="container">
+            <h2 class="section-title">Related Articles</h2>
+            <div class="posts-grid">
+                <a href="#" class="post-card">
+                    <img src="https://images.unsplash.com/photo-1625047509248-ec889cbff17f?auto=format&fit=crop&q=80&w=800" alt="Brake Repair">
+                    <div class="post-card-content">
+                        <h3>5 Signs Your Brakes Need Attention</h3>
+                        <p>Don't ignore these critical warning signs that your brakes need immediate service...</p>
+                    </div>
+                </a>
+                <a href="#" class="post-card">
+                    <img src="https://images.unsplash.com/photo-1621905251918-48416bd8575a?auto=format&fit=crop&q=80&w=800" alt="A/C Repair">
+                    <div class="post-card-content">
+                        <h3>Summer Heat & Your A/C System</h3>
+                        <p>Keep cool this summer with proper A/C maintenance and early problem detection...</p>
+                    </div>
+                </a>
+                <a href="#" class="post-card">
+                    <img src="https://images.unsplash.com/photo-1619642751034-765dfdf7c58e?auto=format&fit=crop&q=80&w=800" alt="Foreign vs Domestic">
+                    <div class="post-card-content">
+                        <h3>Foreign vs Domestic Vehicles</h3>
+                        <p>Learn about the unique maintenance needs of different vehicle types...</p>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 AJ Services / AJ Auto Repair. All Rights Reserved.</p>
+        <p style="font-size: 0.8rem; margin-top: 10px;">1534 Kurt St, Eustis, FL 32726 | (352) 308-8142</p>
+    </footer>
+
+</body>
+</html>
