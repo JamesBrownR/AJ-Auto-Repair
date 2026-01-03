@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us | AJ Auto Repair</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;700&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+        /* --- CSS VARIABLES & RESET --- */
+        :root {
+            --primary-dark: #23262d; 
+            --primary-light: #2e323e;
+            --accent-gold: #e8a635;
+            --accent-hover: #ffb845;
+            --text-light: #f4f4f4;
+            --text-gray: #b0b0b0;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: var(--primary-dark);
+            color: var(--text-light);
+            line-height: 1.6;
+        }
+
+        h1, h2, h3, h4 {
+            font-family: 'Oswald', sans-serif;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        a { text-decoration: none; color: inherit; transition: 0.3s; }
+        ul { list-style: none; }
+        img { max-width: 100%; display: block; }
+
+        /* --- UTILITIES --- */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2.5rem;
+            color: var(--accent-gold);
+            margin-bottom: 1rem;
+            position: relative;
+            display: inline-block;
+            width: 100%;
+        }
+
+        .section-title::after {
+            content: '';
+            display: block;
+            width: 60px;
+            height: 3px;
+            background: #fff;
+            margin: 10px auto;
+        }
+
+        .btn {
+            display: inline-block;
+            background-color: var(--accent-gold);
+            color: var(--primary-dark);
+            padding: 12px 30px;
+            font-weight: bold;
+            text-transform: uppercase;
+            border-radius: 4px;
+            font-family: 'Oswald', sans-serif;
+            border: 2px solid var(--accent-gold);
+            cursor: pointer;
+        }
+
+        .btn:hover {
+            background-color: transparent;
+            color: var(--accent-gold);
+        }
+
+        /* --- HEADER --- */
+        header {
+            background-color: rgba(35, 38, 45, 0.95);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            padding: 10px 0;
+            border-bottom: 2px solid var(--accent-gold);
+            box-shadow: 0 4px 10px rgba(0,0,0,0.5);
+        }
+
+        .nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo-area {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .logo-img {
+            height: 60px;
+        }
+
+        .brand-name {
+            font-size: 1.8rem;
+            color: var(--accent-gold);
+            font-weight: 700;
+        }
+
+        nav ul {
+            display: flex;
+            gap: 25px;
+        }
+
+        nav a:hover {
+            color: var(--accent-gold);
+        }
+
+        /* --- PAGE HERO --- */
+        .page-hero {
+            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('AJ1.png');
+            background-size: cover;
+            background-position: center;
+            height: 50vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+
+        .page-hero h1 {
+            font-size: 3.5rem;
+            color: #fff;
+            text-shadow: 2px 2px 4px #000;
+        }
+
+        .page-hero p {
+            font-size: 1.3rem;
+            color: var(--accent-gold);
+            margin-top: 10px;
+        }
+
+        /* --- CONTACT SECTION --- */
+        .contact-section {
+            padding: 80px 0;
+            background-color: var(--primary-light);
+        }
+
+        .contact-wrapper {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+            margin-top: 40px;
+        }
+
+        /* Contact Info */
+        .contact-info-box {
+            background: var(--primary-dark);
+            padding: 40px;
+            border-radius: 8px;
+            border-left: 4px solid var(--accent-gold);
+        }
+
+        .info-item {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 30px;
+        }
+
+        .info-item i {
+            color: var(--accent-gold);
+            font-size: 1.8rem;
+            margin-right: 20px;
+            margin-top: 5px;
+        }
+
+        .info-item h3 {
+            font-size: 1.2rem;
+            margin-bottom: 5px;
+            color: var(--accent-gold);
+        }
+
+        .info-item p, .info-item a {
+            font-size: 1.1rem;
+            color: var(--text-light);
+        }
+
+        .info-item a:hover {
+            color: var(--accent-gold);
+        }
+
+        .hours-table {
+            width: 100%;
+            margin-top: 15px;
+            border-collapse: collapse;
+        }
+
+        .hours-table td {
+            padding: 10px 0;
+            border-bottom: 1px solid #444;
+        }
+
+        .hours-table td:first-child {
+            color: var(--accent-gold);
+            font-weight: bold;
+            width: 40%;
+        }
+
+        /* Contact Form */
+        .contact-form-box {
+            background: var(--primary-dark);
+            padding: 40px;
+            border-radius: 8px;
+            border-left: 4px solid var(--accent-gold);
+        }
+
+        .contact-form-box h3 {
+            font-size: 1.8rem;
+            margin-bottom: 20px;
+            color: var(--accent-gold);
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: bold;
+            color: var(--text-gray);
+        }
+
+        .form-group input,
+        .form-group textarea,
+        .form-group select {
+            width: 100%;
+            padding: 12px 15px;
+            background: var(--primary-light);
+            border: 1px solid #444;
+            border-radius: 4px;
+            color: var(--text-light);
+            font-family: 'Roboto', sans-serif;
+            font-size: 1rem;
+        }
+
+        .form-group input:focus,
+        .form-group textarea:focus,
+        .form-group select:focus {
+            outline: none;
+            border-color: var(--accent-gold);
+        }
+
+        .form-group textarea {
+            resize: vertical;
+            min-height: 120px;
+        }
+
+        .submit-btn {
+            width: 100%;
+            padding: 15px;
+            background-color: var(--accent-gold);
+            color: var(--primary-dark);
+            border: 2px solid var(--accent-gold);
+            font-weight: bold;
+            text-transform: uppercase;
+            font-family: 'Oswald', sans-serif;
+            font-size: 1.1rem;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .submit-btn:hover {
+            background-color: transparent;
+            color: var(--accent-gold);
+        }
+
+        /* --- MAP SECTION --- */
+        .map-section {
+            padding: 60px 0;
+            background-color: var(--primary-dark);
+        }
+
+        .map-container {
+            margin-top: 30px;
+            border-radius: 8px;
+            overflow: hidden;
+            border: 2px solid var(--accent-gold);
+        }
+
+        /* --- FOOTER --- */
+        footer {
+            background: #111;
+            text-align: center;
+            padding: 20px;
+            color: #777;
+            border-top: 1px solid #333;
+        }
+
+        /* --- RESPONSIVE --- */
+        @media (max-width: 968px) {
+            .contact-wrapper {
+                grid-template-columns: 1fr;
+            }
+
+            .page-hero h1 {
+                font-size: 2.5rem;
+            }
+
+            nav ul {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container nav-container">
+            <div class="logo-area">
+                <img src="Logo.png" alt="AJ Services Logo" class="logo-img">
+                <span class="brand-name">AJ SERVICES</span>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="https://jamesbrownr.github.io/AJ-Auto-Repair/">Home</a></li>
+                    <li><a href="https://jamesbrownr.github.io/AJ-Auto-Repair#services">Services</a></li>
+                    <li><a href="https://jamesbrownr.github.io/AJ-Auto-Repair#gallery">Work</a></li>
+                    <li><a href="https://jamesbrownr.github.io/AJ-Auto-Repair#reviews">Reviews</a></li>
+                    <li><a href="https://jamesbrownr.github.io/AJ-Auto-Repair/contact">Contact</a></li>
+                </ul>
+            </nav>
+            <a href="tel:+13523088142" class="btn"><i class="fa-solid fa-phone"></i> Call AJ</a>
+        </div>
+    </header>
+
+    <section class="page-hero">
+        <div class="hero-content">
+            <h1>Get In Touch</h1>
+            <p>We're Here To Help With All Your Auto Repair Needs</p>
+        </div>
+    </section>
+
+    <section class="contact-section">
+        <div class="container">
+            <h2 class="section-title">Contact Information</h2>
+            
+            <div class="contact-wrapper">
+                <!-- Contact Info -->
+                <div class="contact-info-box">
+                    <div class="info-item">
+                        <i class="fa-solid fa-location-dot"></i>
+                        <div>
+                            <h3>Our Location</h3>
+                            <p>1534 Kurt St<br>Eustis, FL 32726</p>
+                        </div>
+                    </div>
+
+                    <div class="info-item">
+                        <i class="fa-solid fa-phone"></i>
+                        <div>
+                            <h3>Phone Number</h3>
+                            <p><a href="tel:+13523088142">+1 (352) 308-8142</a></p>
+                        </div>
+                    </div>
+
+                    <div class="info-item">
+                        <i class="fa-solid fa-clock"></i>
+                        <div style="width: 100%;">
+                            <h3>Business Hours</h3>
+                            <table class="hours-table">
+                                <tr><td>Monday</td><td>8:00 AM – 6:00 PM</td></tr>
+                                <tr><td>Tuesday</td><td>8:00 AM – 6:00 PM</td></tr>
+                                <tr><td>Wednesday</td><td>8:00 AM – 6:00 PM</td></tr>
+                                <tr><td>Thursday</td><td>8:00 AM – 6:00 PM</td></tr>
+                                <tr><td>Friday</td><td>8:00 AM – 6:00 PM</td></tr>
+                                <tr><td>Saturday</td><td>8:00 AM – 6:00 PM</td></tr>
+                                <tr><td>Sunday</td><td>Closed</td></tr>
+                            </table>
+                        </div>
+                    </div>
+
+                    <div class="info-item">
+                        <i class="fa-solid fa-wrench"></i>
+                        <div>
+                            <h3>Services</h3>
+                            <p>Foreign & Domestic Vehicles<br>Fleet Maintenance<br>Small Engines & Motorcycles</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Contact Form -->
+                <div class="contact-form-box">
+                    <h3>Send Us A Message</h3>
+                    <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+                        <div class="form-group">
+                            <label for="name">Full Name *</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="email">Email Address *</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="phone">Phone Number</label>
+                            <input type="tel" id="phone" name="phone">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="service">Service Needed</label>
+                            <select id="service" name="service">
+                                <option value="">Select a service...</option>
+                                <option value="brakes">Brakes & Suspensions</option>
+                                <option value="ac">A/C Repair</option>
+                                <option value="tuneup">Tune-ups & Diagnostics</option>
+                                <option value="transmission">Drive Trains & Transmissions</option>
+                                <option value="electrical">Electrical Systems</option>
+                                <option value="fleet">Fleet Maintenance</option>
+                                <option value="engine">Engine Replacements</option>
+                                <option value="welding">Welding & Fabrication</option>
+                                <option value="motorcycle">Small Engine & Motorcycles</option>
+                                <option value="headliner">Custom Headliners</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="message">Message *</label>
+                            <textarea id="message" name="message" required placeholder="Tell us about your vehicle and what you need help with..."></textarea>
+                        </div>
+
+                        <button type="submit" class="submit-btn">
+                            <i class="fa-solid fa-paper-plane"></i> Send Message
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="map-section">
+        <div class="container">
+            <h2 class="section-title">Find Us On The Map</h2>
+            <div class="map-container">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3500.123456789!2d-81.685!3d28.850!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88e7a7a7a7a7a7a7%3A0x123456789abcdef!2s1534%20Kurt%20St%2C%20Eustis%2C%20FL%2032726!5e0!3m2!1sen!2sus!4v1234567890" 
+                    width="100%" height="500" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 AJ Services / AJ Auto Repair. All Rights Reserved.</p>
+        <p style="font-size: 0.8rem; margin-top: 10px;">Website Design for Local Business</p>
+    </footer>
+
+</body>
+</html>
