@@ -1,13 +1,10 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AJ Auto Repair | Eustis, FL</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;700&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+---
+layout: default
+title: AJ Auto Repair | Eustis, FL
+description: null
+---
+
+
 
     <style>
         /* --- CSS VARIABLES & RESET --- */
@@ -479,30 +476,7 @@
     <script>
         // --- 1. SERVICES DATA ---
         // Extracted from the yellow sign image provided
-        const servicesData = [
-            { name: "Brakes & Suspensions", icon: "fa-car-burst" },
-            { name: "A/C Repair", icon: "fa-snowflake" },
-            { name: "Tune-ups & Diagnostics", icon: "fa-stethoscope" },
-            { name: "Drive Trains & Transmissions", icon: "fa-gears" },
-            { name: "Electrical Systems", icon: "fa-bolt" },
-            { name: "Fleet Maintenance", icon: "fa-truck-moving" },
-            { name: "Engine Replacements", icon: "fa-wrench" },
-            { name: "Welding & Fabrication", icon: "fa-fire-burner" },
-            { name: "Small Engine & Motorcycles", icon: "fa-motorcycle" },
-            { name: "Custom Headliners", icon: "fa-wand-magic-sparkles" }
-        ];
-
-        const servicesGrid = document.getElementById('services-grid');
-        servicesData.forEach(service => {
-            const card = document.createElement('div');
-            card.className = 'service-card';
-            card.innerHTML = `
-                <i class="fa-solid ${service.icon}"></i>
-                <h3>${service.name}</h3>
-                <p>Professional service for foreign & domestic vehicles.</p>
-            `;
-            servicesGrid.appendChild(card);
-        });
+      
 
         // --- 2. REVIEWS DATA (ARRAY) ---
         // Populated from the prompt
@@ -577,5 +551,4 @@
         });
 
     </script>
-</body>
-</html>
+
