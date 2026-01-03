@@ -1,121 +1,11 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Blog | AJ Auto Repair</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;700&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+---
+layout: default
+title: Blog | AJ Auto Repair | Eustis, FL
+description: null
+---
 
     <style>
-        /* --- CSS VARIABLES & RESET --- */
-        :root {
-            --primary-dark: #23262d; 
-            --primary-light: #2e323e;
-            --accent-gold: #e8a635;
-            --accent-hover: #ffb845;
-            --text-light: #f4f4f4;
-            --text-gray: #b0b0b0;
-        }
-
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-        }
-
-        body {
-            font-family: 'Roboto', sans-serif;
-            background-color: var(--primary-dark);
-            color: var(--text-light);
-            line-height: 1.6;
-        }
-
-        h1, h2, h3, h4 {
-            font-family: 'Oswald', sans-serif;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-        }
-
-        a { text-decoration: none; color: inherit; transition: 0.3s; }
-        ul { list-style: none; }
-        img { max-width: 100%; display: block; }
-
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 20px;
-        }
-
-        .btn {
-            display: inline-block;
-            background-color: var(--accent-gold);
-            color: var(--primary-dark);
-            padding: 12px 30px;
-            font-weight: bold;
-            text-transform: uppercase;
-            border-radius: 4px;
-            font-family: 'Oswald', sans-serif;
-            border: 2px solid var(--accent-gold);
-        }
-
-        .btn:hover {
-            background-color: transparent;
-            color: var(--accent-gold);
-        }
-
-        /* --- HEADER --- */
-        header {
-            background-color: rgba(35, 38, 45, 0.95);
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-            padding: 10px 0;
-            border-bottom: 2px solid var(--accent-gold);
-            box-shadow: 0 4px 10px rgba(0,0,0,0.5);
-        }
-
-        .nav-container {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .logo-area {
-            display: flex;
-            align-items: center;
-            gap: 15px;
-        }
-
-        .logo-img {
-            height: 60px;
-        }
-
-        .brand-name {
-            font-size: 1.8rem;
-            color: var(--accent-gold);
-            font-weight: 700;
-        }
-
-        nav ul {
-            display: flex;
-            gap: 25px;
-        }
-
-        nav a:hover {
-            color: var(--accent-gold);
-        }
-
-        /* --- HERO BANNER --- */
-        .page-hero {
-            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://images.unsplash.com/photo-1486262715619-67b85e0b08d3?auto=format&fit=crop&q=80&w=1974');
-            background-size: cover;
-            background-position: center;
-            padding: 100px 0;
-            text-align: center;
-        }
+       
 
         .page-hero h1 {
             font-size: 3.5rem;
@@ -207,20 +97,6 @@
             color: var(--accent-hover);
         }
 
-        /* --- FOOTER --- */
-        footer {
-            background: #111;
-            text-align: center;
-            padding: 20px;
-            color: #777;
-            border-top: 1px solid #333;
-        }
-
-        /* --- RESPONSIVE --- */
-        @media (max-width: 768px) {
-            .page-hero h1 { font-size: 2.5rem; }
-            nav ul { display: none; }
-        }
     </style>
 </head>
 <body>
@@ -244,7 +120,7 @@
         </div>
     </header>
 
-    <section class="page-hero">
+    <section class="hero">
         <div class="container">
             <h1>Auto Repair Blog</h1>
             <p>Tips, Advice & Industry Insights from AJ Services</p>
