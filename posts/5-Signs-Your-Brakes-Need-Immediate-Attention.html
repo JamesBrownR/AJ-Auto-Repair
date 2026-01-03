@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>5 Signs Your Brakes Need Immediate Attention | AJ Auto Repair</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;700&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+        :root {
+            --primary-dark: #23262d; 
+            --primary-light: #2e323e;
+            --accent-gold: #e8a635;
+            --accent-hover: #ffb845;
+            --text-light: #f4f4f4;
+            --text-gray: #b0b0b0;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: var(--primary-dark);
+            color: var(--text-light);
+            line-height: 1.8;
+        }
+
+        h1, h2, h3, h4 {
+            font-family: 'Oswald', sans-serif;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        a { text-decoration: none; color: inherit; transition: 0.3s; }
+        ul { list-style: none; }
+        img { max-width: 100%; display: block; }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .btn {
+            display: inline-block;
+            background-color: var(--accent-gold);
+            color: var(--primary-dark);
+            padding: 12px 30px;
+            font-weight: bold;
+            text-transform: uppercase;
+            border-radius: 4px;
+            font-family: 'Oswald', sans-serif;
+            border: 2px solid var(--accent-gold);
+        }
+
+        .btn:hover {
+            background-color: transparent;
+            color: var(--accent-gold);
+        }
+
+        /* --- HEADER --- */
+        header {
+            background-color: rgba(35, 38, 45, 0.95);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            padding: 10px 0;
+            border-bottom: 2px solid var(--accent-gold);
+            box-shadow: 0 4px 10px rgba(0,0,0,0.5);
+        }
+
+        .nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo-area {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .logo-img {
+            height: 60px;
+        }
+
+        .brand-name {
+            font-size: 1.8rem;
+            color: var(--accent-gold);
+            font-weight: 700;
+        }
+
+        nav ul {
+            display: flex;
+            gap: 25px;
+        }
+
+        nav a:hover {
+            color: var(--accent-gold);
+        }
+
+        /* --- ARTICLE HEADER --- */
+        .article-header {
+            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://images.unsplash.com/photo-1625047509248-ec889cbff17f?auto=format&fit=crop&q=80&w=1974');
+            background-size: cover;
+            background-position: center;
+            padding: 120px 0 80px;
+            text-align: center;
+        }
+
+        .article-category {
+            display: inline-block;
+            background: var(--accent-gold);
+            color: var(--primary-dark);
+            padding: 8px 20px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+
+        .article-title {
+            font-size: 3rem;
+            color: #fff;
+            margin-bottom: 20px;
+            line-height: 1.2;
+        }
+
+        .article-meta {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            color: var(--text-gray);
+            font-size: 1rem;
+        }
+
+        .article-meta i {
+            color: var(--accent-gold);
+            margin-right: 8px;
+        }
+
+        /* --- ARTICLE CONTENT --- */
+        .article-content {
+            background: var(--primary-light);
+            padding: 80px 0;
+        }
+
+        .content-wrapper {
+            max-width: 800px;
+            margin: 0 auto;
+            background: var(--primary-dark);
+            padding: 50px;
+            border-radius: 8px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.3);
+        }
+
+        .article-intro {
+            font-size: 1.2rem;
+            color: var(--text-gray);
+            margin-bottom: 40px;
+            padding-bottom: 30px;
+            border-bottom: 2px solid var(--accent-gold);
+        }
+
+        .content-section {
+            margin-bottom: 50px;
+        }
+
+        .content-section h2 {
+            color: var(--accent-gold);
+            font-size: 2rem;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .content-section h2 .number {
+            background: var(--accent-gold);
+            color: var(--primary-dark);
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            flex-shrink: 0;
+        }
+
+        .content-section p {
+            color: var(--text-light);
+            margin-bottom: 15px;
+            font-size: 1.1rem;
+        }
+
+        .warning-box {
+            background: rgba(232, 166, 53, 0.1);
+            border-left: 4px solid var(--accent-gold);
+            padding: 20px;
+            margin: 30px 0;
+            border-radius: 4px;
+        }
+
+        .warning-box h3 {
+            color: var(--accent-gold);
+            margin-bottom: 10px;
+            font-size: 1.3rem;
+        }
+
+        .warning-box p {
+            color: var(--text-gray);
+            font-size: 1rem;
+        }
+
+        /* --- CTA SECTION --- */
+        .article-cta {
+            background: var(--primary-dark);
+            padding: 60px 0;
+            text-align: center;
+        }
+
+        .cta-box {
+            background: var(--primary-light);
+            padding: 50px;
+            border-radius: 8px;
+            border: 2px solid var(--accent-gold);
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        .cta-box h2 {
+            color: var(--accent-gold);
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+        }
+
+        .cta-box p {
+            color: var(--text-gray);
+            font-size: 1.2rem;
+            margin-bottom: 30px;
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        /* --- RELATED POSTS --- */
+        .related-posts {
+            background: var(--primary-light);
+            padding: 80px 0;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2.5rem;
+            color: var(--accent-gold);
+            margin-bottom: 50px;
+        }
+
+        .posts-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .post-card {
+            background: var(--primary-dark);
+            border-radius: 8px;
+            overflow: hidden;
+            transition: transform 0.3s;
+        }
+
+        .post-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .post-card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-bottom: 2px solid var(--accent-gold);
+        }
+
+        .post-card-content {
+            padding: 25px;
+        }
+
+        .post-card h3 {
+            color: var(--accent-gold);
+            font-size: 1.3rem;
+            margin-bottom: 10px;
+        }
+
+        .post-card p {
+            color: var(--text-gray);
+            font-size: 0.95rem;
+        }
+
+        /* --- FOOTER --- */
+        footer {
+            background: #111;
+            text-align: center;
+            padding: 20px;
+            color: #777;
+            border-top: 1px solid #333;
+        }
+
+        /* --- RESPONSIVE --- */
+        @media (max-width: 768px) {
+            .article-title { font-size: 2rem; }
+            .content-wrapper { padding: 30px 20px; }
+            nav ul { display: none; }
+            .cta-buttons { flex-direction: column; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container nav-container">
+            <div class="logo-area">
+                <img src="../Logo.png" alt="AJ Services Logo" class="logo-img">
+                <span class="brand-name">AJ SERVICES</span>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="https://jamesbrownr.github.io/AJ-Auto-Repair/">Home</a></li>
+                    <li><a href="https://jamesbrownr.github.io/AJ-Auto-Repair#services">Services</a></li>
+                    <li><a href="https://jamesbrownr.github.io/AJ-Auto-Repair#gallery">Work</a></li>
+                    <li><a href="https://jamesbrownr.github.io/AJ-Auto-Repair#reviews">Reviews</a></li>
+                    <li><a href="https://jamesbrownr.github.io/AJ-Auto-Repair/blog">Blog</a></li>
+                    <li><a href="https://jamesbrownr.github.io/AJ-Auto-Repair/contact">Contact</a></li>
+                </ul>
+            </nav>
+            <a href="tel:+13523088142" class="btn"><i class="fa-solid fa-phone"></i> Call AJ</a>
+        </div>
+    </header>
+
+    <section class="article-header">
+        <div class="container">
+            <span class="article-category">Maintenance</span>
+            <h1 class="article-title">5 Signs Your Brakes Need Immediate Attention</h1>
+            <div class="article-meta">
+                <span><i class="fa-regular fa-calendar"></i> December 28, 2024</span>
+                <span><i class="fa-regular fa-clock"></i> 5 min read</span>
+            </div>
+        </div>
+    </section>
+
+    <section class="article-content">
+        <div class="container">
+            <div class="content-wrapper">
+                <p class="article-intro">
+                    Your brakes are the most critical safety system in your vehicle. When they fail, the consequences can be catastrophic. Unfortunately, many drivers ignore warning signs until it's too late. At AJ Auto Repair, we've seen countless cases where early intervention could have prevented dangerous situations and saved drivers money on extensive repairs. Here are five unmistakable signs that your brakes need professional attention right now.
+                </p>
+
+                <div class="content-section">
+                    <h2><span class="number">1</span> Squealing or Grinding Noises</h2>
+                    <p>
+                        If you hear high-pitched squealing when you apply the brakes, your brake pads are likely worn down to their metal wear indicators. This squealing is intentionally designed to alert you that it's time for new pads. Ignore it, and you'll soon hear grinding metal-on-metal contact, which means you're damaging your rotors.
+                    </p>
+                    <p>
+                        Grinding sounds indicate that the brake pad material has worn completely away, and the metal backing plate is now scraping against the rotor. This not only reduces your stopping power dramatically but also causes expensive rotor damage that could have been avoided with timely pad replacement.
+                    </p>
+                </div>
+
+                <div class="content-section">
+                    <h2><span class="number">2</span> Soft or Spongy Brake Pedal</h2>
+                    <p>
+                        A healthy brake pedal should feel firm and responsive. If your pedal feels soft, spongy, or sinks to the floor when you press it, you likely have air in the brake lines or a brake fluid leak. This is a serious safety issue that requires immediate professional attention.
+                    </p>
+                    <p>
+                        Air in the brake lines compresses when you apply pressure, reducing the hydraulic force that stops your vehicle. A brake fluid leak can lead to complete brake failure. Either way, this isn't something to put off until next week. Get your vehicle to a trusted mechanic immediately.
+                    </p>
+                </div>
+
+                <div class="content-section">
+                    <h2><span class="number">3</span> Vehicle Pulls to One Side</h2>
+                    <p>
+                        When you brake and your vehicle consistently pulls to the left or right, it indicates uneven braking force. This could be caused by a stuck brake caliper, uneven brake pad wear, or contaminated brake fluid. In Florida's humid climate, moisture in brake fluid is particularly common and can lead to corrosion in brake components.
+                    </p>
+                    <p>
+                        A pulling vehicle makes emergency stops dangerous because you'll need to fight the steering wheel to maintain control. This problem typically worsens over time and can lead to premature tire wear on one side of your vehicle.
+                    </p>
+                </div>
+
+                <div class="content-section">
+                    <h2><span class="number">4</span> Vibration or Pulsation When Braking</h2>
+                    <p>
+                        If you feel pulsating or vibration through the brake pedal or steering wheel when you brake, your rotors are likely warped. Rotors can warp from excessive heat, improper installation, or aggressive driving. Warped rotors create an uneven surface that causes the pulsating sensation.
+                    </p>
+                    <p>
+                        While warped rotors might seem like a minor annoyance, they significantly reduce your braking efficiency. In an emergency stop, every fraction of a second and every foot of stopping distance matters. Warped rotors also accelerate brake pad wear, leading to more frequent replacements.
+                    </p>
+                </div>
+
+                <div class="content-section">
+                    <h2><span class="number">5</span> Warning Light on Dashboard</h2>
+                    <p>
+                        Modern vehicles have sophisticated brake monitoring systems. If your brake warning light illuminates, it's detecting a problem that needs attention. This could indicate low brake fluid, worn brake pads, or a malfunction in the anti-lock braking system.
+                    </p>
+                    <p>
+                        Never ignore a brake warning light. Even if your brakes seem to be working fine, the warning light indicates that your vehicle's computer has detected an issue that could lead to brake failure. Bring your vehicle in for a diagnostic check as soon as possible.
+                    </p>
+                </div>
+
+                <div class="warning-box">
+                    <h3><i class="fa-solid fa-triangle-exclamation"></i> Safety First</h3>
+                    <p>
+                        If you experience any of these symptoms, especially a soft brake pedal or warning lights, don't delay getting your brakes inspected. Your safety and the safety of others on the road depends on properly functioning brakes. At AJ Services, we offer comprehensive brake inspections and can diagnose issues quickly and accurately.
+                    </p>
+                </div>
+
+                <p>
+                    Regular brake maintenance is far less expensive than major repairs caused by neglect. We recommend having your brakes inspected at least once a year, or more frequently if you drive in stop-and-go traffic, tow heavy loads, or frequently drive in hilly terrain.
+                </p>
+
+                <p>
+                    At AJ Auto Repair in Eustis, we specialize in brake repair for both foreign and domestic vehicles. Our experienced technicians use quality parts and provide honest assessments. We'll never recommend unnecessary work, but we'll always be upfront about what your vehicle needs to keep you safe on the road.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <section class="article-cta">
+        <div class="container">
+            <div class="cta-box">
+                <h2>Need Your Brakes Checked?</h2>
+                <p>Don't wait until it's too late. Schedule a brake inspection with AJ Services today and drive with confidence.</p>
+                <div class="cta-buttons">
+                    <a href="tel:+13523088142" class="btn">
+                        <i class="fa-solid fa-phone"></i> Call (352) 308-8142
+                    </a>
+                    <a href="https://jamesbrownr.github.io/AJ-Auto-Repair#contact" class="btn">
+                        <i class="fa-solid fa-location-dot"></i> Visit Us
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="related-posts">
+        <div class="container">
+            <h2 class="section-title">Related Articles</h2>
+            <div class="posts-grid">
+                <a href="#" class="post-card">
+                    <img src="https://images.unsplash.com/photo-1621905251918-48416bd8575a?auto=format&fit=crop&q=80&w=800" alt="A/C Repair">
+                    <div class="post-card-content">
+                        <h3>Summer Heat & Your A/C System</h3>
+                        <p>Learn how to maintain your vehicle's air conditioning and recognize early warning signs...</p>
+                    </div>
+                </a>
+                <a href="#" class="post-card">
+                    <img src="https://images.unsplash.com/photo-1487754180451-c456f719a1fc?auto=format&fit=crop&q=80&w=800" alt="Oil Change">
+                    <div class="post-card-content">
+                        <h3>Why Regular Oil Changes Save You Money</h3>
+                        <p>Oil changes protect your engine and prevent costly repairs down the road...</p>
+                    </div>
+                </a>
+                <a href="#" class="post-card">
+                    <img src="https://images.unsplash.com/photo-1619642751034-765dfdf7c58e?auto=format&fit=crop&q=80&w=800" alt="Foreign vs Domestic">
+                    <div class="post-card-content">
+                        <h3>Foreign vs Domestic Vehicles</h3>
+                        <p>Understanding the unique characteristics and maintenance needs of different vehicles...</p>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 AJ Services / AJ Auto Repair. All Rights Reserved.</p>
+        <p style="font-size: 0.8rem; margin-top: 10px;">1534 Kurt St, Eustis, FL 32726 | (352) 308-8142</p>
+    </footer>
+
+</body>
+</html>
