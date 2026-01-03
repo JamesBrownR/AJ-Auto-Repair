@@ -1,158 +1,6 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact Us | AJ Auto Repair</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;700&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
     <style>
-        /* ---h CSS VARIABLES & RESET --- */
-        :root {
-            --primary-dark: #23262d; 
-            --primary-light: #2e323e;
-            --accent-gold: #e8a635;
-            --accent-hover: #ffb845;
-            --text-light: #f4f4f4;
-            --text-gray: #b0b0b0;
-        }
-
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-        }
-
-        body {
-            font-family: 'Roboto', sans-serif;
-            background-color: var(--primary-dark);
-            color: var(--text-light);
-            line-height: 1.6;
-        }
-
-        h1, h2, h3, h4 {
-            font-family: 'Oswald', sans-serif;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-        }
-
-        a { text-decoration: none; color: inherit; transition: 0.3s; }
-        ul { list-style: none; }
-        img { max-width: 100%; display: block; }
-
-        /* --- UTILITIES --- */
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 20px;
-        }
-
-        .section-title {
-            text-align: center;
-            font-size: 2.5rem;
-            color: var(--accent-gold);
-            margin-bottom: 1rem;
-            position: relative;
-            display: inline-block;
-            width: 100%;
-        }
-
-        .section-title::after {
-            content: '';
-            display: block;
-            width: 60px;
-            height: 3px;
-            background: #fff;
-            margin: 10px auto;
-        }
-
-        .btn {
-            display: inline-block;
-            background-color: var(--accent-gold);
-            color: var(--primary-dark);
-            padding: 12px 30px;
-            font-weight: bold;
-            text-transform: uppercase;
-            border-radius: 4px;
-            font-family: 'Oswald', sans-serif;
-            border: 2px solid var(--accent-gold);
-            cursor: pointer;
-        }
-
-        .btn:hover {
-            background-color: transparent;
-            color: var(--accent-gold);
-        }
-
-        /* --- HEADER --- */
-        header {
-            background-color: rgba(35, 38, 45, 0.95);
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-            padding: 10px 0;
-            border-bottom: 2px solid var(--accent-gold);
-            box-shadow: 0 4px 10px rgba(0,0,0,0.5);
-        }
-
-        .nav-container {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .logo-area {
-            display: flex;
-            align-items: center;
-            gap: 15px;
-        }
-
-        .logo-img {
-            height: 60px;
-        }
-
-        .brand-name {
-            font-size: 1.8rem;
-            color: var(--accent-gold);
-            font-weight: 700;
-        }
-
-        nav ul {
-            display: flex;
-            gap: 25px;
-        }
-
-        nav a:hover {
-            color: var(--accent-gold);
-        }
-
-        /* --- PAGE HERO --- */
-        .page-hero {
-            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://images.unsplash.com/photo-1619642751034-765dfdf7c58e?auto=format&fit=crop&q=80&w=1974'); /* Placeholder mechanic background */
-            background-size: cover;
-            background-position: center;
-            height: 100vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-        }
-
-        .page-hero h1 {
-            font-size: 3.5rem;
-            color: #fff;
-            text-shadow: 2px 2px 4px #000;
-        }
-
-        .page-hero p {
-            font-size: 1.3rem;
-            color: var(--accent-gold);
-            margin-top: 10px;
-        }
-
+      
         /* --- CONTACT SECTION --- */
         .contact-section {
             padding: 80px 0;
@@ -289,40 +137,7 @@
             color: var(--accent-gold);
         }
 
-        /* --- MAP SECTION --- */
-        .map-section {
-            padding: 60px 0;
-            background-color: var(--primary-dark);
-        }
-
-        .map-container {
-            margin-top: 30px;
-            
-        }
-
-        /* --- FOOTER --- */
-        footer {
-            background: #111;
-            text-align: center;
-            padding: 20px;
-            color: #777;
-            border-top: 1px solid #333;
-        }
-
-        /* --- RESPONSIVE --- */
-        @media (max-width: 968px) {
-            .contact-wrapper {
-                grid-template-columns: 1fr;
-            }
-
-            .page-hero h1 {
-                font-size: 2.5rem;
-            }
-
-            nav ul {
-                display: none;
-            }
-        }
+     
     </style>
 </head>
 <body>
@@ -346,7 +161,7 @@
         </div>
     </header>
 
-    <section class="page-hero">
+    <section class="hero">
         <div class="hero-content">
             <h1>Get In Touch</h1>
             <p>We're Here To Help With All Your Auto Repair Needs</p>
@@ -462,10 +277,4 @@
         </div>
     </section>
 
-    <footer>
-        <p>&copy; 2024 AJ Services / AJ Auto Repair. All Rights Reserved.</p>
-        <p style="font-size: 0.8rem; margin-top: 10px;">Website Design for Local Business</p>
-    </footer>
-
-</body>
-</html>
+    
