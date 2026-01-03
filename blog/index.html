@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog | AJ Auto Repair</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;700&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+        /* --- CSS VARIABLES & RESET --- */
+        :root {
+            --primary-dark: #23262d; 
+            --primary-light: #2e323e;
+            --accent-gold: #e8a635;
+            --accent-hover: #ffb845;
+            --text-light: #f4f4f4;
+            --text-gray: #b0b0b0;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: var(--primary-dark);
+            color: var(--text-light);
+            line-height: 1.6;
+        }
+
+        h1, h2, h3, h4 {
+            font-family: 'Oswald', sans-serif;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        a { text-decoration: none; color: inherit; transition: 0.3s; }
+        ul { list-style: none; }
+        img { max-width: 100%; display: block; }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .btn {
+            display: inline-block;
+            background-color: var(--accent-gold);
+            color: var(--primary-dark);
+            padding: 12px 30px;
+            font-weight: bold;
+            text-transform: uppercase;
+            border-radius: 4px;
+            font-family: 'Oswald', sans-serif;
+            border: 2px solid var(--accent-gold);
+        }
+
+        .btn:hover {
+            background-color: transparent;
+            color: var(--accent-gold);
+        }
+
+        /* --- HEADER --- */
+        header {
+            background-color: rgba(35, 38, 45, 0.95);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            padding: 10px 0;
+            border-bottom: 2px solid var(--accent-gold);
+            box-shadow: 0 4px 10px rgba(0,0,0,0.5);
+        }
+
+        .nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo-area {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .logo-img {
+            height: 60px;
+        }
+
+        .brand-name {
+            font-size: 1.8rem;
+            color: var(--accent-gold);
+            font-weight: 700;
+        }
+
+        nav ul {
+            display: flex;
+            gap: 25px;
+        }
+
+        nav a:hover {
+            color: var(--accent-gold);
+        }
+
+        /* --- HERO BANNER --- */
+        .page-hero {
+            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://images.unsplash.com/photo-1486262715619-67b85e0b08d3?auto=format&fit=crop&q=80&w=1974');
+            background-size: cover;
+            background-position: center;
+            padding: 100px 0;
+            text-align: center;
+        }
+
+        .page-hero h1 {
+            font-size: 3.5rem;
+            color: #fff;
+            margin-bottom: 10px;
+        }
+
+        .page-hero p {
+            font-size: 1.3rem;
+            color: var(--accent-gold);
+        }
+
+        /* --- BLOG SECTION --- */
+        .blog-section {
+            padding: 80px 0;
+            background-color: var(--primary-light);
+        }
+
+        .blog-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .blog-card {
+            background: var(--primary-dark);
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+            transition: transform 0.3s;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .blog-card:hover {
+            transform: translateY(-8px);
+        }
+
+        .blog-image {
+            width: 100%;
+            height: 220px;
+            object-fit: cover;
+            border-bottom: 3px solid var(--accent-gold);
+        }
+
+        .blog-content {
+            padding: 25px;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .blog-meta {
+            display: flex;
+            gap: 15px;
+            font-size: 0.85rem;
+            color: var(--text-gray);
+            margin-bottom: 15px;
+        }
+
+        .blog-meta i {
+            color: var(--accent-gold);
+        }
+
+        .blog-title {
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+            color: var(--accent-gold);
+        }
+
+        .blog-excerpt {
+            color: var(--text-gray);
+            margin-bottom: 20px;
+            flex: 1;
+        }
+
+        .read-more {
+            color: var(--accent-gold);
+            font-weight: bold;
+            text-transform: uppercase;
+            font-size: 0.9rem;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .read-more:hover {
+            color: var(--accent-hover);
+        }
+
+        /* --- FOOTER --- */
+        footer {
+            background: #111;
+            text-align: center;
+            padding: 20px;
+            color: #777;
+            border-top: 1px solid #333;
+        }
+
+        /* --- RESPONSIVE --- */
+        @media (max-width: 768px) {
+            .page-hero h1 { font-size: 2.5rem; }
+            nav ul { display: none; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container nav-container">
+            <div class="logo-area">
+                <img src="Logo.png" alt="AJ Services Logo" class="logo-img">
+                <span class="brand-name">AJ SERVICES</span>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="https://jamesbrownr.github.io/AJ-Auto-Repair/">Home</a></li>
+                    <li><a href="https://jamesbrownr.github.io/AJ-Auto-Repair#services">Services</a></li>
+                    <li><a href="https://jamesbrownr.github.io/AJ-Auto-Repair#gallery">Work</a></li>
+                    <li><a href="https://jamesbrownr.github.io/AJ-Auto-Repair#reviews">Reviews</a></li>
+                    <li><a href="https://jamesbrownr.github.io/AJ-Auto-Repair/blog">Blog</a></li>
+                    <li><a href="https://jamesbrownr.github.io/AJ-Auto-Repair/contact">Contact</a></li>
+                </ul>
+            </nav>
+            <a href="tel:+13523088142" class="btn"><i class="fa-solid fa-phone"></i> Call AJ</a>
+        </div>
+    </header>
+
+    <section class="page-hero">
+        <div class="container">
+            <h1>Auto Repair Blog</h1>
+            <p>Tips, Advice & Industry Insights from AJ Services</p>
+        </div>
+    </section>
+
+    <section class="blog-section">
+        <div class="container">
+            <div class="blog-grid" id="blog-grid"></div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 AJ Services / AJ Auto Repair. All Rights Reserved.</p>
+        <p style="font-size: 0.8rem; margin-top: 10px;">Website Design for Local Business</p>
+    </footer>
+
+    <script>
+        const blogPosts = [
+            {
+                title: "5 Signs Your Brakes Need Immediate Attention",
+                date: "December 28, 2024",
+                category: "Maintenance",
+                image: "https://images.unsplash.com/photo-1625047509248-ec889cbff17f?auto=format&fit=crop&q=80&w=800",
+                excerpt: "Don't ignore these warning signs that your brakes may be failing. From squealing sounds to a soft brake pedal, we break down the key indicators that it's time for a brake inspection. Your safety depends on properly functioning brakes, so learn what to watch for and when to visit our shop.",
+                link: "#"
+            },
+            {
+                title: "Summer Heat & Your A/C System: What You Need to Know",
+                date: "December 22, 2024",
+                category: "A/C Repair",
+                image: "https://images.unsplash.com/photo-1621905251918-48416bd8575a?auto=format&fit=crop&q=80&w=800",
+                excerpt: "Florida summers are brutal, and a broken A/C system can turn your car into an oven. Learn how to maintain your vehicle's air conditioning system, recognize early warning signs of problems, and understand when to get professional service. We cover refrigerant levels, compressor health, and more.",
+                link: "#"
+            },
+            {
+                title: "Why Regular Oil Changes Save You Money Long-Term",
+                date: "December 15, 2024",
+                category: "Maintenance",
+                image: "https://images.unsplash.com/photo-1487754180451-c456f719a1fc?auto=format&fit=crop&q=80&w=800",
+                excerpt: "Oil changes might seem like a small expense, but skipping them can lead to major engine damage. We explain how regular oil changes protect your engine, improve fuel efficiency, and prevent costly repairs down the road. Find out what type of oil is best for your vehicle and how often you should schedule this service.",
+                link: "#"
+            },
+            {
+                title: "Foreign vs Domestic: What Makes Each Unique?",
+                date: "December 8, 2024",
+                category: "Industry Insights",
+                image: "https://images.unsplash.com/photo-1619642751034-765dfdf7c58e?auto=format&fit=crop&q=80&w=800",
+                excerpt: "At AJ Services, we work on both foreign and domestic vehicles. Each has unique characteristics, common issues, and maintenance needs. Whether you drive a Honda, Ford, BMW, or Chevy, understanding your vehicle's specific requirements can help you maintain it better and avoid unnecessary repairs.",
+                link: "#"
+            }
+        ];
+
+        const blogGrid = document.getElementById('blog-grid');
+        
+        blogPosts.forEach(post => {
+            const card = document.createElement('div');
+            card.className = 'blog-card';
+            card.innerHTML = `
+                <img src="${post.image}" alt="${post.title}" class="blog-image">
+                <div class="blog-content">
+                    <div class="blog-meta">
+                        <span><i class="fa-regular fa-calendar"></i> ${post.date}</span>
+                        <span><i class="fa-solid fa-tag"></i> ${post.category}</span>
+                    </div>
+                    <h3 class="blog-title">${post.title}</h3>
+                    <p class="blog-excerpt">${post.excerpt}</p>
+                    <a href="${post.link}" class="read-more">
+                        Read More <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+                </div>
+            `;
+            blogGrid.appendChild(card);
+        });
+    </script>
+</body>
+</html>
