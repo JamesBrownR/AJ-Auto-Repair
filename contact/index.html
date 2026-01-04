@@ -1,271 +1,134 @@
 ---
 layout: default
-title: Contact AJ Auto Repair | Eustis, FL
-description: Contact AJ Auto Repair in Eustis, FL. Located at 1534 Kurt St. Call (352) 308-8142. Open Mon-Sat 9AM-6PM. Get a free quote for your auto repair needs today.
+title: Blog | AJ Auto Repair | Eustis, FL
+description: null
 ---
+
     <style>
-      .hero{
-height: 50vh;
-      }
-        /* --- CONTACT SECTION --- */
-        .contact-section {
+        .page-hero h1 {
+            font-size: 3.5rem;
+            color: #fff;
+            margin-bottom: 10px;
+        }
+
+        .page-hero p {
+            font-size: 1.3rem;
+            color: var(--accent-gold);
+        }
+
+        /* --- BLOG SECTION --- */
+        .blog-section {
             padding: 80px 0;
             background-color: var(--primary-light);
         }
 
-        .contact-wrapper {
+        .blog-grid {
             display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 50px;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
             margin-top: 40px;
         }
 
-        /* Contact Info */
-        .contact-info-box {
+        .blog-card {
             background: var(--primary-dark);
-            padding: 40px;
             border-radius: 8px;
-            border-left: 4px solid var(--accent-gold);
-        }
-
-        .info-item {
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+            transition: transform 0.3s;
             display: flex;
-            align-items: flex-start;
-            margin-bottom: 30px;
+            flex-direction: column;
         }
 
-        .info-item i {
-            color: var(--accent-gold);
-            font-size: 1.8rem;
-            margin-right: 20px;
-            margin-top: 5px;
+        .blog-card:hover {
+            transform: translateY(-8px);
         }
 
-        .info-item h3 {
-            font-size: 1.2rem;
-            margin-bottom: 5px;
-            color: var(--accent-gold);
-        }
-
-        .info-item p, .info-item a {
-            font-size: 1.1rem;
-            color: var(--text-light);
-        }
-
-        .info-item a:hover {
-            color: var(--accent-gold);
-        }
-
-        .hours-table {
+        .blog-image {
             width: 100%;
-            margin-top: 15px;
-            border-collapse: collapse;
+            height: 220px;
+            object-fit: cover;
+            border-bottom: 3px solid var(--accent-gold);
         }
 
-        .hours-table td {
-            padding: 10px 0;
-            border-bottom: 1px solid #444;
+        .blog-content {
+            padding: 25px;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
         }
 
-        .hours-table td:first-child {
-            color: var(--accent-gold);
-            font-weight: bold;
-            width: 40%;
-        }
-
-        /* Contact Form */
-        .contact-form-box {
-            background: var(--primary-dark);
-            padding: 40px;
-            border-radius: 8px;
-            border-left: 4px solid var(--accent-gold);
-        }
-
-        .contact-form-box h3 {
-            font-size: 1.8rem;
-            margin-bottom: 20px;
-            color: var(--accent-gold);
-        }
-
-        .form-group {
-            margin-bottom: 20px;
-        }
-
-        .form-group label {
-            display: block;
-            margin-bottom: 8px;
-            font-weight: bold;
+        .blog-meta {
+            display: flex;
+            gap: 15px;
+            font-size: 0.85rem;
             color: var(--text-gray);
+            margin-bottom: 15px;
         }
 
-        .form-group input,
-        .form-group textarea,
-        .form-group select {
-            width: 100%;
-            padding: 12px 15px;
-            background: var(--primary-light);
-            border: 1px solid #444;
-            border-radius: 4px;
-            color: var(--text-light);
-            font-family: 'Roboto', sans-serif;
-            font-size: 1rem;
+        .blog-meta i {
+            color: var(--accent-gold);
         }
 
-        .form-group input:focus,
-        .form-group textarea:focus,
-        .form-group select:focus {
-            outline: none;
-            border-color: var(--accent-gold);
+        .blog-title {
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+            color: var(--accent-gold);
         }
 
-        .form-group textarea {
-            resize: vertical;
-            min-height: 120px;
+        .blog-excerpt {
+            color: var(--text-gray);
+            margin-bottom: 20px;
+            flex: 1;
         }
 
-        .submit-btn {
-            width: 100%;
-            padding: 15px;
-            background-color: var(--accent-gold);
-            color: var(--primary-dark);
-            border: 2px solid var(--accent-gold);
+        .read-more {
+            color: var(--accent-gold);
             font-weight: bold;
             text-transform: uppercase;
-            font-family: 'Oswald', sans-serif;
-            font-size: 1.1rem;
-            border-radius: 4px;
-            cursor: pointer;
-            transition: 0.3s;
+            font-size: 0.9rem;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
         }
 
-        .submit-btn:hover {
-            background-color: transparent;
-            color: var(--accent-gold);
+        .read-more:hover {
+            color: var(--accent-hover);
         }
-
-     
     </style>
-</head>
-<body>
 
-   
     <section class="hero">
-        <div class="hero-content">
-            <h1>Get In Touch</h1>
-            <p>We're Here To Help With All Your Auto Repair Needs</p>
-             <div style="margin-top: 20px;">
-                <a href="#contact" class="btn">Get a Quote</a>
-            </div>
+        <div class="container">
+            <h1>Auto Repair Blog</h1>
+            <p>Tips, Advice & Industry Insights from AJ Services</p>
         </div>
     </section>
 
-    <section class="contact-section">
+    <section class="blog-section">
         <div class="container">
-            <h2 class="section-title">Contact Information</h2>
-            
-            <div class="contact-wrapper">
-                <!-- Contact Info -->
-                <div class="contact-info-box">
-                    <div class="info-item">
-                        <i class="fa-solid fa-location-dot"></i>
-                        <div>
-                            <h3>Our Location</h3>
-                            <p>1534 Kurt St<br>Eustis, FL 32726</p>
+            <div class="blog-grid">
+                {% for post in site.posts %}
+                <div class="blog-card">
+                    {% if post.image %}
+                    <img src="{{ post.image }}" alt="{{ post.title }}" class="blog-image">
+                    {% else %}
+                    <img src="https://images.unsplash.com/photo-1487754180451-c456f719a1fc?auto=format&fit=crop&q=80&w=800" alt="{{ post.title }}" class="blog-image">
+                    {% endif %}
+                    
+                    <div class="blog-content">
+                        <div class="blog-meta">
+                            <span><i class="fa-regular fa-calendar"></i> {{ post.date | date: "%B %d, %Y" }}</span>
+                            {% if post.category %}
+                            <span><i class="fa-solid fa-tag"></i> {{ post.category }}</span>
+                            {% endif %}
                         </div>
-                    </div>
-
-                    <div class="info-item">
-                        <i class="fa-solid fa-phone"></i>
-                        <div>
-                            <h3>Phone Number</h3>
-                            <p><a href="tel:+13523088142">+1 (352) 308-8142</a></p>
-                        </div>
-                    </div>
-
-                    <div class="info-item">
-                        <i class="fa-solid fa-clock"></i>
-                        <div style="width: 100%;">
-                            <h3>Business Hours</h3>
-                            <table class="hours-table">
-                                <tr><td>Monday</td><td>9:00 AM – 6:00 PM</td></tr>
-                                <tr><td>Tuesday</td><td>9:00 AM – 6:00 PM</td></tr>
-                                <tr><td>Wednesday</td><td>9:00 AM – 6:00 PM</td></tr>
-                                <tr><td>Thursday</td><td>9:00 AM – 6:00 PM</td></tr>
-                                <tr><td>Friday</td><td>9:00 AM – 6:00 PM</td></tr>
-                                <tr><td>Saturday</td><td>9:00 AM – 6:00 PM</td></tr>
-                                <tr><td>Sunday</td><td>Closed</td></tr>
-                            </table>
-                        </div>
-                    </div>
-
-                    <div class="info-item">
-                        <i class="fa-solid fa-wrench"></i>
-                        <div>
-                            <h3>Services</h3>
-                            <p>Foreign & Domestic Vehicles<br>Fleet Maintenance<br>Small Engines & Motorcycles</p>
-                        </div>
+                        <h3 class="blog-title">{{ post.title }}</h3>
+                        <p class="blog-excerpt">{{ post.excerpt | strip_html | truncate: 150 }}</p>
+                        <a href="{{ post.url }}" class="read-more">
+                            Read More <i class="fa-solid fa-arrow-right"></i>
+                        </a>
                     </div>
                 </div>
-
-                <!-- Contact Form -->
-                <div class="contact-form-box">
-                    <h3>Send Us A Message</h3>
-                    <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
-                        <div class="form-group">
-                            <label for="name">Full Name *</label>
-                            <input type="text" id="name" name="name" required>
-                        </div>
-
-                        <div class="form-group">
-                            <label for="email">Email Address *</label>
-                            <input type="email" id="email" name="email" required>
-                        </div>
-
-                        <div class="form-group">
-                            <label for="phone">Phone Number</label>
-                            <input type="tel" id="phone" name="phone">
-                        </div>
-
-                        <div class="form-group">
-                            <label for="service">Service Needed</label>
-                            <select id="service" name="service">
-                                <option value="">Select a service...</option>
-                                <option value="brakes">Brakes & Suspensions</option>
-                                <option value="ac">A/C Repair</option>
-                                <option value="tuneup">Tune-ups & Diagnostics</option>
-                                <option value="transmission">Drive Trains & Transmissions</option>
-                                <option value="electrical">Electrical Systems</option>
-                                <option value="fleet">Fleet Maintenance</option>
-                                <option value="engine">Engine Replacements</option>
-                                <option value="welding">Welding & Fabrication</option>
-                                <option value="motorcycle">Small Engine & Motorcycles</option>
-                                <option value="headliner">Custom Headliners</option>
-                                <option value="other">Other</option>
-                            </select>
-                        </div>
-
-                        <div class="form-group">
-                            <label for="message">Message *</label>
-                            <textarea id="message" name="message" required placeholder="Tell us about your vehicle and what you need help with..."></textarea>
-                        </div>
-
-                        <button type="submit" class="submit-btn">
-                            <i class="fa-solid fa-paper-plane"></i> Send Message
-                        </button>
-                    </form>
-                </div>
+                {% endfor %}
             </div>
         </div>
     </section>
-
-  <section id="contact" class="contact">
-        <div class="container">
-            <h2 class="section-title">Find Us On The Map</h2>
-            <div class="map-container">
-<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d13979.995151000732!2d-81.71116431284177!3d28.838896099999996!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88e7bd492408faa7%3A0x8685904d422d4747!2sAJ%20Auto%20Repair!5e0!3m2!1sen!2sus!4v1767474517398!5m2!1sen!2sus" width="100%" height="100%" style="border:0; min-height:400px" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>   
-
-            </div>
-        </div>
-    </section>
-
-    
