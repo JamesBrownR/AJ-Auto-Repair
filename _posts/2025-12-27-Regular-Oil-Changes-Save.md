@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: blog
 title: "Why Regular Oil Changes Save You Money Long-Term"
 description: "Discover how regular oil changes protect your engine and save you thousands in repair costs over the life of your vehicle."
 category: Maintenance
