@@ -1,14 +1,22 @@
 ---
 layout: default
 title: Blog | AJ Auto Repair | Eustis, FL
-description: Auto repair tips, maintenance advice, and industry insights from AJ Auto Repair in Eustis, FL. Learn how to keep your vehicle running smoothly and avoid costly repairs.
+description: null
 ---
 
     <style>
-       
+        .page-hero h1 {
+            font-size: 3.5rem;
+            color: #fff;
+            margin-bottom: 10px;
+        }
 
+        .page-hero p {
+            font-size: 1.3rem;
+            color: var(--accent-gold);
+        }
 
-     /* --- BLOG SECTION --- */
+        /* --- BLOG SECTION --- */
         .blog-section {
             padding: 80px 0;
             background-color: var(--primary-light);
@@ -86,14 +94,10 @@ description: Auto repair tips, maintenance advice, and industry insights from AJ
         .read-more:hover {
             color: var(--accent-hover);
         }
-
     </style>
 
-
-  
-
     <section class="hero">
-        <div class="hero-content">
+        <div class="container">
             <h1>Auto Repair Blog</h1>
             <p>Tips, Advice & Industry Insights from AJ Services</p>
         </div>
@@ -101,67 +105,30 @@ description: Auto repair tips, maintenance advice, and industry insights from AJ
 
     <section class="blog-section">
         <div class="container">
-            <div class="blog-grid" id="blog-grid"></div>
+            <div class="blog-grid">
+                {% for post in site.posts %}
+                <div class="blog-card">
+                    {% if post.image %}
+                    <img src="{{ post.image }}" alt="{{ post.title }}" class="blog-image">
+                    {% else %}
+                    <img src="https://images.unsplash.com/photo-1487754180451-c456f719a1fc?auto=format&fit=crop&q=80&w=800" alt="{{ post.title }}" class="blog-image">
+                    {% endif %}
+                    
+                    <div class="blog-content">
+                        <div class="blog-meta">
+                            <span><i class="fa-regular fa-calendar"></i> {{ post.date | date: "%B %d, %Y" }}</span>
+                            {% if post.category %}
+                            <span><i class="fa-solid fa-tag"></i> {{ post.category }}</span>
+                            {% endif %}
+                        </div>
+                        <h3 class="blog-title">{{ post.title }}</h3>
+                        <p class="blog-excerpt">{{ post.excerpt | strip_html | truncate: 150 }}</p>
+                        <a href="{{ post.url }}" class="read-more">
+                            Read More <i class="fa-solid fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
         </div>
     </section>
-
-  
-    <script>
-        const blogPosts = [
-            {
-                title: "5 Signs Your Brakes Need Immediate Attention",
-                date: "December 28, 2024",
-                category: "Maintenance",
-                image: "https://images.unsplash.com/photo-1625047509248-ec889cbff17f?auto=format&fit=crop&q=80&w=800",
-                excerpt: "Don't ignore these warning signs that your brakes may be failing. From squealing sounds to a soft brake pedal, we break down the key indicators that it's time for a brake inspection. Your safety depends on properly functioning brakes, so learn what to watch for and when to visit our shop.",
-                link: "https://ajautoandrepair.com/5-Signs-Your-Brakes-Need-Immediate-Attention/"
-            },
-            {
-                title: "Summer Heat & Your A/C System: What You Need to Know",
-                date: "December 22, 2024",
-                category: "A/C Repair",
-                image: "https://images.unsplash.com/photo-1621905251918-48416bd8575a?auto=format&fit=crop&q=80&w=800",
-                excerpt: "Florida summers are brutal, and a broken A/C system can turn your car into an oven. Learn how to maintain your vehicle's air conditioning system, recognize early warning signs of problems, and understand when to get professional service. We cover refrigerant levels, compressor health, and more.",
-                link: "https://ajautoandrepair.com/Summer-Heat-Your/"
-            },
-            {
-                title: "Why Regular Oil Changes Save You Money Long-Term",
-                date: "December 15, 2024",
-                category: "Maintenance",
-                image: "https://images.unsplash.com/photo-1487754180451-c456f719a1fc?auto=format&fit=crop&q=80&w=800",
-                excerpt: "Oil changes might seem like a small expense, but skipping them can lead to major engine damage. We explain how regular oil changes protect your engine, improve fuel efficiency, and prevent costly repairs down the road. Find out what type of oil is best for your vehicle and how often you should schedule this service.",
-                link: "https://ajautoandrepair.com/Regular-Oil-Changes-Save/"
-            },
-            {
-                title: "Foreign vs Domestic: What Makes Each Unique?",
-                date: "December 8, 2024",
-                category: "Industry Insights",
-                image: "https://images.unsplash.com/photo-1619642751034-765dfdf7c58e?auto=format&fit=crop&q=80&w=800",
-                excerpt: "At AJ Services, we work on both foreign and domestic vehicles. Each has unique characteristics, common issues, and maintenance needs. Whether you drive a Honda, Ford, BMW, or Chevy, understanding your vehicle's specific requirements can help you maintain it better and avoid unnecessary repairs.",
-                link: "https://ajautoandrepair.com/Summer-Heat-Your/"
-            }
-        ];
-
-        const blogGrid = document.getElementById('blog-grid');
-        
-        blogPosts.forEach(post => {
-            const card = document.createElement('div');
-            card.className = 'blog-card';
-            card.innerHTML = `
-                <img src="${post.image}" alt="${post.title}" class="blog-image">
-                <div class="blog-content">
-                    <div class="blog-meta">
-                        <span><i class="fa-regular fa-calendar"></i> ${post.date}</span>
-                        <span><i class="fa-solid fa-tag"></i> ${post.category}</span>
-                    </div>
-                    <h3 class="blog-title">${post.title}</h3>
-                    <p class="blog-excerpt">${post.excerpt}</p>
-                    <a href="${post.link}" class="read-more">
-                        Read More <i class="fa-solid fa-arrow-right"></i>
-                    </a>
-                </div>
-            `;
-            blogGrid.appendChild(card);
-        });
-    </script>
-
