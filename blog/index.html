@@ -98,11 +98,17 @@ description: Auto repair tips, maintenance advice, and industry insights from AJ
             <div class="blog-grid">
                 {% for post in site.posts %}
                 <div class="blog-card">
-                    {% if post.image %}
-                    <img src="{{ post.image }}" alt="{{ post.title }}" class="blog-image">
-                    {% else %}
-                    <img src="https://images.unsplash.com/photo-1487754180451-c456f719a1fc?auto=format&fit=crop&q=80&w=800" alt="{{ post.title }}" class="blog-image">
-                    {% endif %}
+                   {% if post.image %}
+<img src="{{ post.image }}" alt="{{ post.title }}" class="blog-image">
+{% elsif post.title contains "Brake" %}
+<img src="https://images.unsplash.com/photo-1625047509168-a7026f36de04?auto=format&fit=crop&q=80&w=800" alt="{{ post.title }}" class="blog-image">
+{% elsif post.title contains "A/C" or post.title contains "Heat" %}
+<img src="https://images.unsplash.com/photo-1621905251918-48416bd8575a?auto=format&fit=crop&q=80&w=800" alt="{{ post.title }}" class="blog-image">
+{% elsif post.title contains "Oil" %}
+<img src="https://images.unsplash.com/photo-1486262715619-67b85e0b08d3?auto=format&fit=crop&q=80&w=400" alt="{{ post.title }}" class="blog-image">
+{% else %}
+<img src="https://images.unsplash.com/photo-1487754180451-c456f719a1fc?auto=format&fit=crop&q=80&w=800" alt="{{ post.title }}" class="blog-image">
+{% endif %}
                     
                     <div class="blog-content">
                         <div class="blog-meta">
