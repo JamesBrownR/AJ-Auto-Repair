@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: blog
 title: "Foreign vs Domestic: What Makes Each Unique?"
 description: "Understanding the differences between foreign and domestic vehicles, their unique characteristics, and what it means for maintenance and ownership."
 category: Industry Insights
