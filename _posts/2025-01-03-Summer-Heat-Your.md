@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: blog
 title: "Summer Heat & Your A/C System: What You Need to Know"
 description: "Essential information about maintaining your vehicle's A/C system in Florida's extreme heat and recognizing warning signs before problems become expensive."
 category: A/C Repair
