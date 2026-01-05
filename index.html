@@ -6,58 +6,123 @@ description: Professional auto repair services in Eustis, FL. Specializing in fo
 
 
 <style>
- /* Center the buttons nicely */
+/* Gallery Wrapper - Keep flex for centering, but align with site spacing */
 .gallery-wrapper {
     position: relative;
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin-top: 40px; /* Match site's margin-top for .gallery-grid */
 }
 
+/* Buttons - Style like site's .btn: gold accent, dark text, hover effect */
 #prev-btn, #next-btn {
-    background: #007BFF;
-    color: white;
-    border: none;
-    padding: 10px 15px;
-    margin-top: 10px;
+    background: var(--accent-gold);
+    color: var(--primary-dark);
+    border: 2px solid var(--accent-gold);
+    padding: 12px 20px; /* Slightly larger for better touch on mobile */
+    margin-top: 20px;
     cursor: pointer;
-    border-radius: 5px;
+    border-radius: 4px; /* Match site's border-radius */
+    font-family: 'Oswald', sans-serif;
+    text-transform: uppercase;
+    font-weight: bold;
+    transition: 0.3s;
+    margin-left: 10px; /* Space between buttons */
+    margin-right: 10px;
+}
+
+#prev-btn:hover, #next-btn:hover {
+    background: transparent;
+    color: var(--accent-gold);
 }
 
 #prev-btn:disabled, #next-btn:disabled {
-    background: #aaa;
+    background: var(--text-gray);
+    border-color: var(--text-gray);
+    color: var(--primary-light);
     cursor: not-allowed;
 }
 
- .gallery-grid {
+/* Gallery Grid - Adopt site's auto-fit for responsiveness */
+.gallery-grid {
     display: grid;
-    grid-template-columns: repeat(4, 1fr); /* 4 images per row by default */
-    gap: 10px;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Site's flexible columns */
+    gap: 15px; /* Site's gap */
+    width: 100%; /* Ensure full container width */
+}
+
+/* Gallery Item - Match site's hover effects, borders, and fixed height */
+.gallery-item {
+    position: relative;
+    height: 250px; /* Site's uniform height */
+    overflow: hidden;
+    border-radius: 4px; /* Site's radius */
+    border: 1px solid #444; /* Site's subtle border */
 }
 
 .gallery-item img {
     width: 100%;
-    height: auto;
+    height: 100%;
+    object-fit: cover; /* Site's fit for cropping */
     display: block;
-    border-radius: 5px;
+    transition: transform 0.5s; /* Site's smooth scale transition */
 }
 
-/* Mobile responsiveness */
+.gallery-item:hover img {
+    transform: scale(1.1); /* Site's zoom on hover */
+}
+
+/* Caption - Match site's sliding absolute position */
+.gallery-caption {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0,0,0,0.8); /* Site's semi-transparent bg */
+    color: white;
+    padding: 10px;
+    transform: translateY(100%);
+    transition: transform 0.3s;
+    text-align: center;
+    font-size: 0.95rem; /* Subtle text size like reviews */
+}
+
+.gallery-item:hover .gallery-caption {
+    transform: translateY(0);
+}
+
+/* Mobile Responsiveness - Leverage auto-fit, but add site-aligned tweaks */
 @media (max-width: 768px) {
     .gallery-grid {
-        grid-template-columns: repeat(2, 1fr); /* 2 images per row on tablets */
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Adapt for tablets, smaller minmax */
+        gap: 10px;
+    }
+    
+    .gallery-item {
+        height: 200px; /* Slightly reduce height for mobile */
+    }
+    
+    #prev-btn, #next-btn {
+        padding: 10px 15px; /* Compact for smaller screens */
     }
 }
 
 @media (max-width: 480px) {
     .gallery-grid {
-        grid-template-columns: 1fr; /* 1 image per row on phones */
+        grid-template-columns: 1fr; /* Single column on phones, as in original */
+        gap: 10px;
     }
- 
+    
+    .gallery-item {
+        height: 250px; /* Keep height for better visibility */
+    }
+    
+    .gallery-wrapper {
+        align-items: stretch; /* Full width on small screens */
+    }
 }
 </style>
-
-
 
     <section class="hero">
         <div class="hero-content">
