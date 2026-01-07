@@ -5,7 +5,7 @@ description: "Essential information about maintaining your vehicle's A/C system 
 category: A/C Repair
 date: December 22, 2024
 read_time: 6 min read
-image: "{{ site.baseurl }}/Pics/AJ1.webp"
+image: "Pics/AJ1.webp"
 ---
 
 ## Summer Heat & Your A/C System: What You Need to Know
