@@ -5,6 +5,7 @@ description: "Discover how regular oil changes protect your engine and save you 
 category: Maintenance
 date: December 15, 2024
 read_time: 7 min read
+image: "Pics/AJ4.webp"
 ---
 
 ## Why Regular Oil Changes Save You Money Long-Term
