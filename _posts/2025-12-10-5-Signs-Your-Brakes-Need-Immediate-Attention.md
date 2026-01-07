@@ -6,6 +6,7 @@ description: "Learn the critical warning signs that indicate your brakes need pr
 category: Maintenance
 date: December 28, 2024
 read_time: 5 min read
+image: "Pics/AJ2.webp"
 ---
 
 ## 5 Signs Your Brakes Need Immediate Attention
