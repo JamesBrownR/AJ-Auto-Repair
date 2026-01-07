@@ -107,7 +107,7 @@ description: Auto repair tips, maintenance advice, and industry insights from AJ
                 {% for post in site.posts %}
                 <div class="blog-card">
                    {% if post.image %}
-{{ post.image }}
+{{ site.baseurl }}/{{ post.image }}
 {% endif %}
                     
                     <div class="blog-content">
