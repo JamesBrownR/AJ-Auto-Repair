@@ -109,7 +109,7 @@ description: Professional auto repair services in Eustis, FL. Specializing in fo
 
 @media (max-width: 480px) {
     .gallery-grid {
-        grid-template-columns: 1fr; /* Single column on phones, as in original */
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)) /* 2x2 yo */
         gap: 10px;
     }
     
