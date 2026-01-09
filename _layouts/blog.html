@@ -1,6 +1,8 @@
 ---
 layout: default
 ---
+
+
 <style>
      /* --- BLOG POST CONTENT STYLES --- */
         .blog-content h1,
@@ -133,10 +135,8 @@ layout: default
         </p>
 
         <!-- Featured Image -->
-        {% if page.image %}
-        <img 
-            src="{{ site.baseurl }}/{{ post.image }}"             alt="{{ page.title }}"    class="mt-10 w-full rounded-xl shadow-xl border border-gray-700"  >
-        {% endif %}
+         <img src="{{ site.baseurl }}/{{ post.image }}"  alt="{{ post.title }}"    class="mt-10 w-full rounded-xl shadow-xl border border-gray-700"  >
+    
 
         <!-- Content -->
    <article class="blog-content mt-12 text-gray-300 leading-relaxed max-w-none">
