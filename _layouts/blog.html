@@ -135,10 +135,7 @@ layout: default
         <!-- Featured Image -->
         {% if page.image %}
         <img 
-            src="{{ post.image }}" 
-            alt="{{ page.title }}" 
-            class="mt-10 w-full rounded-xl shadow-xl border border-gray-700"
-        >
+            src="{{ site.baseurl }}/{{ post.image }}"             alt="{{ page.title }}"    class="mt-10 w-full rounded-xl shadow-xl border border-gray-700"  >
         {% endif %}
 
         <!-- Content -->
