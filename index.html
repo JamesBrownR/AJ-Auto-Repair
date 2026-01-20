@@ -123,217 +123,257 @@ description: Professional auto repair services in Eustis, FL. Specializing in fo
 }
 </style>
 
-    <section class="hero">
-        <div class="hero-content">
-            <h1>Complete Automotive Solutions</h1>
-            <p>Foreign & Domestic • No Job Too Big Or Small</p>
-            <div style="margin-top: 20px;">
-                <a href="https://ajautoandrepair.com/contact/" class="btn">Get a Quote</a>
-            </div>
+   <section class="hero">
+    <div class="hero-content">
+        <h1>Complete Automotive Solutions</h1>
+        <p>Foreign & Domestic • No Job Too Big Or Small</p>
+        <div style="margin-top: 20px;">
+            <a href="/contact" class="btn">Get a Quote</a>
         </div>
-    </section>
+    </div>
+</section>
 
-    <section id="services" class="services">
-        <div class="container">
-            <h2 class="section-title">Our Services</h2>
-            <p class="services-tagline">"We fix it right the first time. Honest pricing. Professional work."</p>
-            
-            <div class="services-grid" id="services-grid">
-                </div>
-        </div>
-    </section>
-
-    <section id="gallery" class="gallery">
-        <div class="container">
-            <h2 class="section-title">Recent Work</h2>
-            <div class="gallery-wrapper">
-    <div class="gallery-grid" id="gallery-grid"></div>
-                <div style="display:flex; justify-content:center; flex-direction:row; width:100%" >
-    <button style="width:40%" id="prev-btn">&#8592;</button>
-    <button style="width:40%" id="next-btn">&#8594;</button>
-                    </div>
-</div>
-
-        </div>
-    </section>
-
-    <section id="reviews" class="reviews">
-        <div class="container">
-            <h2 class="section-title">Customer Reviews</h2>
-            <div class="reviews-container" id="reviews-container">
-                </div>
-        </div>
-    </section>
-
-    <section id="contact" class="contact">
-        <div class="container">
-            <h2 class="section-title">Find Us</h2>
-            <div class="contact-layout">
-                <div class="contact-info">
-                    <div class="info-item">
-                        <i class="fa-solid fa-location-dot"></i>
-                        <div>
-                            <h4>Location</h4>
-                            <p>1534 Kurt St, Eustis, FL 32726</p>
-                        </div>
-                    </div>
-                    <div class="info-item">
-                        <i class="fa-solid fa-phone"></i>
-                        <div>
-                            <h4>Phone</h4>
-                            <p><a href="tel:+13523088142">+1 (352) 308-8142</a></p>
-                        </div>
-                    </div>
-                    <div class="info-item">
-                        <i class="fa-solid fa-clock"></i>
-                        <div style="width: 100%;">
-                            <h4>Business Hours</h4>
-                            <table class="hours-table">
-                                <tr><td>Monday</td><td>9:00 AM – 6:00 PM</td></tr>
-                                <tr><td>Tuesday</td><td>9:00 AM – 6:00 PM</td></tr>
-                                <tr><td>Wednesday</td><td>9:00 AM – 6:00 PM</td></tr>
-                                <tr><td>Thursday</td><td>9:00 AM – 6:00 PM</td></tr>
-                                <tr><td>Friday</td><td>9:00 AM – 6:00 PM</td></tr>
-                                <tr><td>Saturday</td><td>9:00 AM – 6:00 PM</td></tr>
-                                <tr><td>Sunday</td><td>Closed</td></tr>
-                            </table>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="map-container">
-<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d13979.995151000732!2d-81.71116431284177!3d28.838896099999996!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88e7bd492408faa7%3A0x8685904d422d4747!2sAJ%20Auto%20Repair!5e0!3m2!1sen!2sus!4v1767474517398!5m2!1sen!2sus" width="100%" height="100%" style="border:0; min-height:400px" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>   
-                    </div>
-            </div>
-        </div>
-    </section>
-
-   
-
-  
-      
- <script>
-        // --- 1. SERVICES DATA ---
-        // Extracted from the yellow sign image provided
-        const servicesData = [
-            { name: "Brakes & Suspensions", icon: "fa-car-burst" },
-            { name: "A/C Repair", icon: "fa-snowflake" },
-            { name: "Tune-ups & Diagnostics", icon: "fa-stethoscope" },
-            { name: "Drive Trains & Transmissions", icon: "fa-gears" },
-            { name: "Electrical Systems", icon: "fa-bolt" },
-            { name: "Fleet Maintenance", icon: "fa-truck-moving" },
-            { name: "Engine Replacements", icon: "fa-wrench" },
-            { name: "Welding & Fabrication", icon: "fa-fire-burner" },
-            { name: "Small Engine & Motorcycles", icon: "fa-motorcycle" },
-            { name: "Custom Headliners", icon: "fa-wand-magic-sparkles" }
-        ];
-
-        const servicesGrid = document.getElementById('services-grid');
-        servicesData.forEach(service => {
-            const card = document.createElement('div');
-            card.className = 'service-card';
-            card.innerHTML = `
-                <i class="fa-solid ${service.icon}"></i>
-                <h3>${service.name}</h3>
-                <p>Professional service for foreign & domestic vehicles.</p>
-            `;
-            servicesGrid.appendChild(card);
-        });
-
-        // --- 2. REVIEWS DATA (ARRAY) ---
-        // Populated from the prompt
-        const reviewsData = [
-            {
-                name: "Anjay Smith",
-                stars: 5,
-                text: "I got referred to AJ Auto Repair and they did a great job at an affordable price range. The bumper of my car was fixed to where it actually stays put and they did it in a great time frame. I would 100% recommend this company."
-            },
-            {
-                name: "All Stars Mobile Detailing",
-                stars: 5,
-                text: "THESE GUYS KNOW WHAT THEY'RE DOING. HAD WORK DONE ON MY CHARGER AND TRUCK. FLAWLESS. EXCELLENT JOB GOOD PRICES. JEREMY AND ANDREW ARE GOOD MECHANICS. I HIGHLY RECOMMEND."
-            },
-            {
-                name: "Chandler Smithie",
-                stars: 5,
-                text: "Been going to AJ Auto Repair for a long time now... Every repair has been done right the first time, pricing is fair, and they’re always upfront. It’s hard to find a shop this reliable anymore—highly recommend."
-            },
-            {
-                name: "Ayden Peluso",
-                stars: 5,
-                text: "Great customer service, and very informative. Great price assessment."
-            },
-            {
-                name: "Kaleb Williams",
-                stars: 5,
-                text: "Very friendly, fast, and knowledgeable service! Reasonable prices."
-            },
-            {
-            name: "Roberto solo100",
-             stars: 5,
-                text: "I got a 2008 c300 and Jeremy and Andrew always do an amazing job on my car and are very professional"
-        },
-        ];
-
-        const reviewsContainer = document.getElementById('reviews-container');
+<section id="services" class="services">
+    <div class="container">
+        <h2 class="section-title">Our Services</h2>
+        <p class="services-tagline">"We fix it right the first time. Honest pricing. Professional work."</p>
         
-        reviewsData.forEach(review => {
-            let starsHtml = '';
-            for(let i=0; i<review.stars; i++) {
-                starsHtml += '<i class="fa-solid fa-star"></i> ';
-            }
+        <div class="services-grid" id="services-grid"></div>
+    </div>
+</section>
 
-            const reviewCard = document.createElement('div');
-            reviewCard.className = 'review-card';
-            reviewCard.innerHTML = `
-                <div class="stars">${starsHtml}</div>
-                <p class="review-text">"${review.text}"</p>
-                <div class="review-author">${review.name}</div>
-            `;
-            reviewsContainer.appendChild(reviewCard);
-        });
+<section id="gallery" class="gallery">
+    <div class="container">
+        <h2 class="section-title">Recent Work</h2>
+        <div class="gallery-wrapper">
+            <div class="gallery-grid" id="gallery-grid"></div>
+            <div style="display:flex; justify-content:center; flex-direction:row; width:100%">
+                <button style="width:40%" id="prev-btn">&#8592;</button>
+                <button style="width:40%" id="next-btn">&#8594;</button>
+            </div>
+        </div>
+    </div>
+</section>
 
-        // --- 3. GALLERY DATA (ARRAY) ---
-       const galleryData = [
-  { src: "{{ site.baseurl }}/Pics/AJ1.webp", caption: "ATV & Small Engine Repair" },
-  { src: "{{ site.baseurl }}/Pics/AJ2.webp", caption: "Classic Jeep Restoration" },
-  { src: "Pics/AJ3.webp", caption: "Custom Paint & Body Work" },
-  { src: "Pics/AJ4.webp", caption: "Clutch & Transmission Service" },
-  { src: "Pics/AJ5.webp", caption: "Professional Diagnostics" },
-  { src: "Pics/AJ6.webp", caption: "Quality Service You Can Trust" },
-  { src: "Pics/AJ7.webp", caption: "Headlight Replacement & Repair" },
-  { src: "Pics/AJ8.webp", caption: "Custom Interior Work" },
-  { src: "Pics/AJ9.webp", caption: "Marine Engine Service" },
-  { src: "Pics/AJ10.webp", caption: "Performance & Custom Builds" },
-  { src: "Pics/AJ11.webp", caption: "Engine Component Repair" },
-  { src: "Pics/AJ12.webp", caption: "Motorcycle Maintenance & Service" },
-  { src: "Pics/AJ13.webp", caption: "Infiniti G35 Specialist" },
-  { src: "Pics/AJ14.webp", caption: "Complex Engine Overhaul" },
-  { src: "Pics/AJ15.webp", caption: "Complete Vehicle Servicing" },
-  { src: "Pics/AJ16.webp", caption: "Precision Mechanical Work" },
-  { src: "Pics/AJ17.webp", caption: "Custom Interior Lighting" },
-  { src: "Pics/AJ18.webp", caption: "Honda Civic Performance Builds" },
-  { src: "Pics/AJ19.webp", caption: "Performance Coilover Installation" },
-  { src: "Pics/AJ20.webp", caption: "Turbo & Fuel System Service" },
-  { src: "Pics/AJ21.webp", caption: "Ford Truck Engine Service" },
-  { src: "Pics/AJ22.webp", caption: "A/C System Repair" },
-  { src: "Pics/AJ23.webp", caption: "Exhaust & Catalytic Converter Work" },
-  { src: "Pics/AJ24.webp", caption: "Engine Cleaning & Detailing" },
-  { src: "Pics/AJ25.webp", caption: "Custom Ambient Lighting Installation" },
-  { src: "Pics/AJ26.webp", caption: "Luxury Cadillac Service" },
-  { src: "Pics/AJ27.webp", caption: "Modern Vehicle Electronics" },
-  { src: "Pics/AJ28.webp", caption: "Infiniti G35 On The Lift" },
-  { src: "Pics/AJ29.webp", caption: "Undercarriage Inspection & Repair" },
-  { src: "Pics/AJ30.webp", caption: "Transmission Rebuild Specialist" },
-  { src: "Pics/AJ31.webp", caption: "Front of shop" },
-  { src: "Pics/AJ32.webp", caption: "Our logo" },  
-  { src: "Pics/AJ33.webp", caption: "Business card logo" }, 
-  { src: "Pics/AJ34.webp", caption: "Window Sign" }         
-];
+<section id="reviews" class="reviews">
+    <div class="container">
+        <h2 class="section-title">Customer Reviews</h2>
+        <div class="reviews-container" id="reviews-container"></div>
+    </div>
+</section>
 
+<section id="contact" class="contact">
+    <div class="container">
+        <h2 class="section-title">Find Us</h2>
+        <div class="contact-layout">
+            <div class="contact-info">
+                <div class="info-item">
+                    <i class="fa-solid fa-location-dot"></i>
+                    <div>
+                        <h4>Location</h4>
+                        <p>1534 Kurt St, Eustis, FL 32726</p>
+                    </div>
+                </div>
+                <div class="info-item">
+                    <i class="fa-solid fa-phone"></i>
+                    <div>
+                        <h4>Phone</h4>
+                        <p><a href="tel:+13523088142">+1 (352) 308-8142</a></p>
+                    </div>
+                </div>
+                <div class="info-item">
+                    <i class="fa-solid fa-clock"></i>
+                    <div style="width: 100%;">
+                        <h4>Business Hours</h4>
+                        <table class="hours-table">
+                            <tr><td>Monday</td><td>9:00 AM – 6:00 PM</td></tr>
+                            <tr><td>Tuesday</td><td>9:00 AM – 6:00 PM</td></tr>
+                            <tr><td>Wednesday</td><td>9:00 AM – 6:00 PM</td></tr>
+                            <tr><td>Thursday</td><td>9:00 AM – 6:00 PM</td></tr>
+                            <tr><td>Friday</td><td>9:00 AM – 6:00 PM</td></tr>
+                            <tr><td>Saturday</td><td>9:00 AM – 6:00 PM</td></tr>
+                            <tr><td>Sunday</td><td>Closed</td></tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
 
-        const galleryGrid = document.getElementById('gallery-grid');
-        galleryData.forEach(item => {
+            <div class="map-container">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d13979.995151000732!2d-81.71116431284177!3d28.838896099999996!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88e7bd492408faa7%3A0x8685904d422d4747!2sAJ%20Auto%20Repair!5e0!3m2!1sen!2sus!4v1767474517398!5m2!1sen!2sus" width="100%" height="100%" style="border:0; min-height:400px" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>   
+            </div>
+        </div>
+    </div>
+</section>
+
+<script>
+    // --- 1. SERVICES DATA WITH LINKS ---
+    const servicesData = [
+        { 
+            name: "Brakes & Suspensions", 
+            icon: "fa-car-burst",
+            link: "/services/brakes-suspension"
+        },
+        { 
+            name: "A/C Repair", 
+            icon: "fa-snowflake",
+            link: "/services/ac-repair"
+        },
+        { 
+            name: "Tune-ups & Diagnostics", 
+            icon: "fa-stethoscope",
+            link: "/services/engine-diagnostics"
+        },
+        { 
+            name: "Drive Trains & Transmissions", 
+            icon: "fa-gears",
+            link: "/services/transmission"
+        },
+        { 
+            name: "Electrical Systems", 
+            icon: "fa-bolt",
+            link: "/services"
+        },
+        { 
+            name: "Fleet Maintenance", 
+            icon: "fa-truck-moving",
+            link: "/services"
+        },
+        { 
+            name: "Engine Replacements", 
+            icon: "fa-wrench",
+            link: "/services/engine-diagnostics"
+        },
+        { 
+            name: "Welding & Fabrication", 
+            icon: "fa-fire-burner",
+            link: "/services"
+        },
+        { 
+            name: "Small Engine & Motorcycles", 
+            icon: "fa-motorcycle",
+            link: "/services"
+        },
+        { 
+            name: "Custom Headliners", 
+            icon: "fa-wand-magic-sparkles",
+            link: "/services"
+        }
+    ];
+
+    const servicesGrid = document.getElementById('services-grid');
+    servicesData.forEach(service => {
+        const card = document.createElement('div');
+        card.className = 'service-card';
+        card.style.cursor = 'pointer';
+        card.onclick = () => window.location.href = service.link;
+        card.innerHTML = `
+            <i class="fa-solid ${service.icon}"></i>
+            <h3>${service.name}</h3>
+            <p>Professional service for foreign & domestic vehicles.</p>
+        `;
+        servicesGrid.appendChild(card);
+    });
+
+    // --- 2. REVIEWS DATA ---
+    const reviewsData = [
+        {
+            name: "Anjay Smith",
+            stars: 5,
+            text: "I got referred to AJ Auto Repair and they did a great job at an affordable price range. The bumper of my car was fixed to where it actually stays put and they did it in a great time frame. I would 100% recommend this company."
+        },
+        {
+            name: "All Stars Mobile Detailing",
+            stars: 5,
+            text: "THESE GUYS KNOW WHAT THEY'RE DOING. HAD WORK DONE ON MY CHARGER AND TRUCK. FLAWLESS. EXCELLENT JOB GOOD PRICES. JEREMY AND ANDREW ARE GOOD MECHANICS. I HIGHLY RECOMMEND."
+        },
+        {
+            name: "Chandler Smithie",
+            stars: 5,
+            text: "Been going to AJ Auto Repair for a long time now... Every repair has been done right the first time, pricing is fair, and they're always upfront. It's hard to find a shop this reliable anymore—highly recommend."
+        },
+        {
+            name: "Ayden Peluso",
+            stars: 5,
+            text: "Great customer service, and very informative. Great price assessment."
+        },
+        {
+            name: "Kaleb Williams",
+            stars: 5,
+            text: "Very friendly, fast, and knowledgeable service! Reasonable prices."
+        },
+        {
+            name: "Roberto solo100",
+            stars: 5,
+            text: "I got a 2008 c300 and Jeremy and Andrew always do an amazing job on my car and are very professional"
+        },
+    ];
+
+    const reviewsContainer = document.getElementById('reviews-container');
+    reviewsData.forEach(review => {
+        let starsHtml = '';
+        for(let i=0; i<review.stars; i++) {
+            starsHtml += '<i class="fa-solid fa-star"></i> ';
+        }
+
+        const reviewCard = document.createElement('div');
+        reviewCard.className = 'review-card';
+        reviewCard.innerHTML = `
+            <div class="stars">${starsHtml}</div>
+            <p class="review-text">"${review.text}"</p>
+            <div class="review-author">${review.name}</div>
+        `;
+        reviewsContainer.appendChild(reviewCard);
+    });
+
+    // --- 3. GALLERY DATA ---
+    const galleryData = [
+        { src: "/Pics/AJ1.webp", caption: "ATV & Small Engine Repair" },
+        { src: "/Pics/AJ2.webp", caption: "Classic Jeep Restoration" },
+        { src: "/Pics/AJ3.webp", caption: "Custom Paint & Body Work" },
+        { src: "/Pics/AJ4.webp", caption: "Clutch & Transmission Service" },
+        { src: "/Pics/AJ5.webp", caption: "Professional Diagnostics" },
+        { src: "/Pics/AJ6.webp", caption: "Quality Service You Can Trust" },
+        { src: "/Pics/AJ7.webp", caption: "Headlight Replacement & Repair" },
+        { src: "/Pics/AJ8.webp", caption: "Custom Interior Work" },
+        { src: "/Pics/AJ9.webp", caption: "Marine Engine Service" },
+        { src: "/Pics/AJ10.webp", caption: "Performance & Custom Builds" },
+        { src: "/Pics/AJ11.webp", caption: "Engine Component Repair" },
+        { src: "/Pics/AJ12.webp", caption: "Motorcycle Maintenance & Service" },
+        { src: "/Pics/AJ13.webp", caption: "Infiniti G35 Specialist" },
+        { src: "/Pics/AJ14.webp", caption: "Complex Engine Overhaul" },
+        { src: "/Pics/AJ15.webp", caption: "Complete Vehicle Servicing" },
+        { src: "/Pics/AJ16.webp", caption: "Precision Mechanical Work" },
+        { src: "/Pics/AJ17.webp", caption: "Custom Interior Lighting" },
+        { src: "/Pics/AJ18.webp", caption: "Honda Civic Performance Builds" },
+        { src: "/Pics/AJ19.webp", caption: "Performance Coilover Installation" },
+        { src: "/Pics/AJ20.webp", caption: "Turbo & Fuel System Service" },
+        { src: "/Pics/AJ21.webp", caption: "Ford Truck Engine Service" },
+        { src: "/Pics/AJ22.webp", caption: "A/C System Repair" },
+        { src: "/Pics/AJ23.webp", caption: "Exhaust & Catalytic Converter Work" },
+        { src: "/Pics/AJ24.webp", caption: "Engine Cleaning & Detailing" },
+        { src: "/Pics/AJ25.webp", caption: "Custom Ambient Lighting Installation" },
+        { src: "/Pics/AJ26.webp", caption: "Luxury Cadillac Service" },
+        { src: "/Pics/AJ27.webp", caption: "Modern Vehicle Electronics" },
+        { src: "/Pics/AJ28.webp", caption: "Infiniti G35 On The Lift" },
+        { src: "/Pics/AJ29.webp", caption: "Undercarriage Inspection & Repair" },
+        { src: "/Pics/AJ30.webp", caption: "Transmission Rebuild Specialist" },
+        { src: "/Pics/AJ31.webp", caption: "Front of shop" },
+        { src: "/Pics/AJ32.webp", caption: "Our logo" },  
+        { src: "/Pics/AJ33.webp", caption: "Business card logo" }, 
+        { src: "/Pics/AJ34.webp", caption: "Window Sign" }         
+    ];
+
+    const galleryGrid = document.getElementById('gallery-grid');
+    const itemsPerPage = 4;
+    let currentPage = 0;
+
+    function renderGalleryPage(page) {
+        galleryGrid.innerHTML = "";
+        const start = page * itemsPerPage;
+        const end = start + itemsPerPage;
+        const pageItems = galleryData.slice(start, end);
+
+        pageItems.forEach(item => {
             const div = document.createElement('div');
             div.className = 'gallery-item';
             div.innerHTML = `
@@ -343,48 +383,23 @@ description: Professional auto repair services in Eustis, FL. Specializing in fo
             galleryGrid.appendChild(div);
         });
 
-  // --- PAGINATION ---
-const itemsPerPage = 4;
-let currentPage = 0;
+        document.getElementById('prev-btn').disabled = page === 0;
+        document.getElementById('next-btn').disabled = end >= galleryData.length;
+    }
 
-function renderGalleryPage(page) {
-    galleryGrid.innerHTML = "";
-    const start = page * itemsPerPage;
-    const end = start + itemsPerPage;
-    const pageItems = galleryData.slice(start, end);
-
-    pageItems.forEach(item => {
-        const div = document.createElement('div');
-        div.className = 'gallery-item';
-        div.innerHTML = `
-            <img src="${item.src}" alt="${item.caption}">
-            <div class="gallery-caption">${item.caption}</div>
-        `;
-        galleryGrid.appendChild(div);
+    document.getElementById('prev-btn').addEventListener('click', () => {
+        if (currentPage > 0) {
+            currentPage--;
+            renderGalleryPage(currentPage);
+        }
     });
 
-    // Enable/disable buttons
-    document.getElementById('prev-btn').disabled = page === 0;
-    document.getElementById('next-btn').disabled = end >= galleryData.length;
-}
+    document.getElementById('next-btn').addEventListener('click', () => {
+        if ((currentPage + 1) * itemsPerPage < galleryData.length) {
+            currentPage++;
+            renderGalleryPage(currentPage);
+        }
+    });
 
-document.getElementById('prev-btn').addEventListener('click', () => {
-    if (currentPage > 0) {
-        currentPage--;
-        renderGalleryPage(currentPage);
-    }
-});
-
-document.getElementById('next-btn').addEventListener('click', () => {
-    if ((currentPage + 1) * itemsPerPage < galleryData.length) {
-        currentPage++;
-        renderGalleryPage(currentPage);
-    }
-});
-
-// Initial render
-renderGalleryPage(currentPage);
-
-
-    </script>
-
+    renderGalleryPage(currentPage);
+</script>
