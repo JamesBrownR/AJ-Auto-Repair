@@ -1,0 +1,791 @@
+---
+layout: default
+title: Transmission Repair Eustis FL | Automatic & Manual Service | AJ Auto
+description: Expert transmission repair in Eustis, FL. Automatic and manual transmission service, clutch replacement, fluid changes. Honest diagnostics, quality repairs.
+---
+
+<style>
+    .service-hero {
+        background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://images.unsplash.com/photo-1486262715619-67b85e0b08d3?auto=format&fit=crop&q=80');
+        background-size: cover;
+        background-position: center;
+        height: 60vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+    }
+
+    .service-hero h1 {
+        font-size: 3.5rem;
+        color: var(--accent-gold);
+        margin-bottom: 20px;
+    }
+
+    .service-hero p {
+        font-size: 1.3rem;
+        color: var(--text-light);
+    }
+
+    .urgent-banner {
+        background: var(--accent-gold);
+        padding: 25px 0;
+        text-align: center;
+    }
+
+    .urgent-banner h3 {
+        color: var(--primary-dark);
+        font-size: 1.6rem;
+        margin-bottom: 10px;
+    }
+
+    .urgent-banner p {
+        color: var(--primary-dark);
+        font-size: 1.1rem;
+        font-weight: bold;
+    }
+
+    .service-intro {
+        padding: 80px 0;
+        background-color: var(--primary-light);
+    }
+
+    .intro-content {
+        max-width: 900px;
+        margin: 0 auto;
+    }
+
+    .intro-content p {
+        font-size: 1.1rem;
+        line-height: 1.8;
+        color: var(--text-gray);
+        margin-bottom: 20px;
+    }
+
+    .cost-comparison {
+        background: var(--primary-dark);
+        padding: 35px;
+        border-radius: 8px;
+        border-left: 4px solid var(--accent-gold);
+        margin: 30px 0;
+    }
+
+    .cost-comparison h3 {
+        color: var(--accent-gold);
+        margin-bottom: 20px;
+        font-size: 1.8rem;
+    }
+
+    .cost-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 20px;
+        margin-top: 20px;
+    }
+
+    .cost-item {
+        background: var(--primary-light);
+        padding: 20px;
+        border-radius: 4px;
+        text-align: center;
+    }
+
+    .cost-item .price {
+        font-size: 2rem;
+        color: var(--accent-gold);
+        font-weight: bold;
+        display: block;
+        margin-bottom: 10px;
+    }
+
+    .cost-item .service-name {
+        color: var(--text-light);
+        font-weight: bold;
+        margin-bottom: 5px;
+    }
+
+    .cost-item .description {
+        color: var(--text-gray);
+        font-size: 0.9rem;
+    }
+
+    .warning-signs {
+        padding: 80px 0;
+        background-color: var(--primary-dark);
+    }
+
+    .signs-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 30px;
+        margin-top: 40px;
+    }
+
+    .warning-card {
+        background: var(--primary-light);
+        padding: 30px;
+        border-radius: 8px;
+        border-left: 4px solid var(--accent-gold);
+        transition: transform 0.3s;
+    }
+
+    .warning-card:hover {
+        transform: translateY(-5px);
+    }
+
+    .warning-card .icon {
+        font-size: 2.5rem;
+        color: var(--accent-gold);
+        margin-bottom: 15px;
+    }
+
+    .warning-card h3 {
+        color: var(--accent-gold);
+        margin-bottom: 15px;
+        font-size: 1.5rem;
+    }
+
+    .warning-card p {
+        color: var(--text-gray);
+        line-height: 1.7;
+        margin-bottom: 15px;
+    }
+
+    .severity {
+        display: inline-block;
+        padding: 5px 15px;
+        border-radius: 20px;
+        font-size: 0.85rem;
+        font-weight: bold;
+        margin-top: 10px;
+    }
+
+    .severity-high {
+        background: #dc3545;
+        color: white;
+    }
+
+    .severity-medium {
+        background: #ffc107;
+        color: var(--primary-dark);
+    }
+
+    .services-section {
+        padding: 80px 0;
+        background-color: var(--primary-light);
+    }
+
+    .services-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+        gap: 30px;
+        margin-top: 40px;
+    }
+
+    .service-card {
+        background: var(--primary-dark);
+        padding: 35px;
+        border-radius: 8px;
+        border-top: 3px solid var(--accent-gold);
+    }
+
+    .service-card h3 {
+        color: var(--accent-gold);
+        margin-bottom: 15px;
+        font-size: 1.6rem;
+    }
+
+    .service-card p {
+        color: var(--text-gray);
+        line-height: 1.7;
+        margin-bottom: 15px;
+    }
+
+    .service-card ul {
+        list-style: none;
+        margin: 15px 0;
+    }
+
+    .service-card li {
+        padding: 8px 0;
+        color: var(--text-light);
+        position: relative;
+        padding-left: 25px;
+    }
+
+    .service-card li::before {
+        content: "→";
+        color: var(--accent-gold);
+        position: absolute;
+        left: 0;
+        font-weight: bold;
+    }
+
+    .maintenance-section {
+        padding: 80px 0;
+        background-color: var(--primary-dark);
+    }
+
+    .maintenance-tips {
+        max-width: 900px;
+        margin: 40px auto 0;
+    }
+
+    .tip-box {
+        background: var(--primary-light);
+        padding: 25px;
+        margin-bottom: 20px;
+        border-radius: 8px;
+        border-left: 4px solid var(--accent-gold);
+    }
+
+    .tip-box h4 {
+        color: var(--accent-gold);
+        margin-bottom: 10px;
+        font-size: 1.3rem;
+    }
+
+    .tip-box p {
+        color: var(--text-gray);
+        line-height: 1.7;
+    }
+
+    .type-comparison {
+        padding: 80px 0;
+        background-color: var(--primary-light);
+    }
+
+    .comparison-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+        gap: 40px;
+        margin-top: 40px;
+    }
+
+    .type-card {
+        background: var(--primary-dark);
+        padding: 40px;
+        border-radius: 8px;
+        border-top: 5px solid var(--accent-gold);
+    }
+
+    .type-card h3 {
+        color: var(--accent-gold);
+        font-size: 2rem;
+        margin-bottom: 20px;
+        text-align: center;
+    }
+
+    .type-card h4 {
+        color: var(--accent-gold);
+        margin: 20px 0 10px;
+        font-size: 1.2rem;
+    }
+
+    .type-card p {
+        color: var(--text-gray);
+        line-height: 1.7;
+        margin-bottom: 15px;
+    }
+
+    .type-card ul {
+        list-style: none;
+    }
+
+    .type-card li {
+        padding: 5px 0;
+        color: var(--text-light);
+        padding-left: 20px;
+        position: relative;
+    }
+
+    .type-card li::before {
+        content: "•";
+        color: var(--accent-gold);
+        position: absolute;
+        left: 0;
+        font-size: 1.5rem;
+    }
+
+    .blog-section {
+        padding: 80px 0;
+        background-color: var(--primary-dark);
+    }
+
+    .related-posts {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 30px;
+        margin-top: 40px;
+    }
+
+    .post-card {
+        background: var(--primary-light);
+        border-radius: 8px;
+        overflow: hidden;
+        transition: transform 0.3s;
+    }
+
+    .post-card:hover {
+        transform: translateY(-5px);
+    }
+
+    .post-card img {
+        width: 100%;
+        height: 200px;
+        object-fit: cover;
+    }
+
+    .post-content {
+        padding: 25px;
+    }
+
+    .post-content h4 {
+        color: var(--accent-gold);
+        margin-bottom: 10px;
+        font-size: 1.3rem;
+    }
+
+    .post-content p {
+        color: var(--text-gray);
+        margin-bottom: 15px;
+    }
+
+    .post-content a {
+        color: var(--accent-gold);
+        font-weight: bold;
+    }
+
+    .cta-banner {
+        padding: 80px 0;
+        background: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)), url('https://images.unsplash.com/photo-1487754180451-c456f719a1fc?auto=format&fit=crop&q=80');
+        background-size: cover;
+        background-position: center;
+        text-align: center;
+    }
+
+    .cta-banner h2 {
+        color: var(--accent-gold);
+        font-size: 2.5rem;
+        margin-bottom: 20px;
+    }
+
+    .cta-banner p {
+        color: var(--text-light);
+        font-size: 1.2rem;
+        margin-bottom: 30px;
+        max-width: 700px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    @media (max-width: 768px) {
+        .service-hero h1 {
+            font-size: 2rem;
+        }
+        .service-hero {
+            height: 50vh;
+        }
+        .comparison-grid {
+            grid-template-columns: 1fr;
+        }
+    }
+</style>
+
+<section class="service-hero">
+    <div class="hero-content">
+        <h1>Transmission Repair & Service</h1>
+        <p>Don't Ignore the Warning Signs</p>
+    </div>
+</section>
+
+<section class="urgent-banner">
+    <div class="container">
+        <h3>⚠ Early Detection Saves Thousands</h3>
+        <p>Most transmission failures give warning signs weeks or months before catastrophic damage occurs</p>
+    </div>
+</section>
+
+<section class="service-intro">
+    <div class="container">
+        <div class="intro-content">
+            <h2 class="section-title">Expert Transmission Repair in Eustis, FL</h2>
+            
+            <p>
+                Your transmission is one of the most complex and expensive components in your vehicle. When it fails, 
+                you're facing repair bills that can easily reach $3,000-$5,000 or more. At AJ Auto Repair in Eustis, 
+                we specialize in transmission diagnostics and repair that catch problems early—before they become catastrophic.
+            </p>
+
+            <p>
+                Whether you drive an automatic or manual transmission vehicle, our certified technicians have the expertise 
+                to diagnose and repair all transmission issues. We use professional-grade diagnostic equipment and quality 
+                parts to ensure repairs are done right the first time. We service all makes and models, foreign and domestic.
+            </p>
+
+            <div class="cost-comparison">
+                <h3>The True Cost: Prevention vs. Emergency Repair</h3>
+                <div class="cost-grid">
+                    <div class="cost-item">
+                        <span class="price">$150-$250</span>
+                        <div class="service-name">Transmission Service</div>
+                        <div class="description">Fluid change, filter, inspection - prevents major damage</div>
+                    </div>
+                    <div class="cost-item">
+                        <span class="price">$800-$1,500</span>
+                        <div class="service-name">Minor Repairs</div>
+                        <div class="description">Solenoid, sensor, or small component replacement</div>
+                    </div>
+                    <div class="cost-item">
+                        <span class="price">$2,500-$4,000</span>
+                        <div class="service-name">Major Rebuild</div>
+                        <div class="description">Complete transmission rebuild or replacement</div>
+                    </div>
+                </div>
+                <p style="color: var(--accent-gold); margin-top: 25px; text-align: center; font-weight: bold;">
+                    Spending $200 on preventive maintenance beats spending $3,000 on emergency repairs
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="warning-signs">
+    <div class="container">
+        <h2 class="section-title">7 Warning Signs Your Transmission Needs Attention</h2>
+        
+        <div class="signs-grid">
+            
+            <div class="warning-card">
+                <div class="icon"><i class="fa-solid fa-exclamation-triangle"></i></div>
+                <h3>Slipping Gears</h3>
+                <p>
+                    Your transmission shifts unexpectedly, loses power momentarily, or the engine revs without 
+                    corresponding acceleration. This indicates worn clutch plates or low fluid pressure.
+                </p>
+                <span class="severity severity-high">HIGH SEVERITY</span>
+            </div>
+
+            <div class="warning-card">
+                <div class="icon"><i class="fa-solid fa-clock"></i></div>
+                <h3>Delayed Engagement</h3>
+                <p>
+                    When you shift from Park to Drive or Reverse, there's a delay of more than one second before 
+                    the transmission engages. This indicates internal wear or fluid pressure problems.
+                </p>
+                <span class="severity severity-high">HIGH SEVERITY</span>
+            </div>
+
+            <div class="warning-card">
+                <div class="icon"><i class="fa-solid fa-bolt"></i></div>
+                <h3>Rough or Hard Shifting</h3>
+                <p>
+                    You feel harsh bumps, jerks, or grinding when the transmission shifts gears. This suggests 
+                    hydraulic system problems or worn internal components.
+                </p>
+                <span class="severity severity-medium">MEDIUM SEVERITY</span>
+            </div>
+
+            <div class="warning-card">
+                <div class="icon"><i class="fa-solid fa-droplet"></i></div>
+                <h3>Transmission Fluid Leaks</h3>
+                <p>
+                    Red or brown fluid puddles under your vehicle. Transmission fluid is essential for operation—
+                    even small leaks cause major damage if ignored.
+                </p>
+                <span class="severity severity-high">HIGH SEVERITY</span>
+            </div>
+
+            <div class="warning-card">
+                <div class="icon"><i class="fa-solid fa-fire"></i></div>
+                <h3>Burning Smell</h3>
+                <p>
+                    A burning odor while driving indicates overheating transmission fluid. This happens from low fluid, 
+                    old fluid, or the transmission working too hard.
+                </p>
+                <span class="severity severity-high">HIGH SEVERITY</span>
+            </div>
+
+            <div class="warning-card">
+                <div class="icon"><i class="fa-solid fa-light"></i></div>
+                <h3>Check Engine Light</h3>
+                <p>
+                    Modern vehicles monitor transmission performance. If the computer detects abnormal operation, 
+                    it triggers the check engine light. Get it scanned immediately.
+                </p>
+                <span class="severity severity-medium">MEDIUM SEVERITY</span>
+            </div>
+
+            <div class="warning-card">
+                <div class="icon"><i class="fa-solid fa-volume-high"></i></div>
+                <h3>Strange Noises</h3>
+                <p>
+                    Whining, humming, buzzing, clunking, or grinding sounds from your transmission indicate mechanical 
+                    problems that will worsen if ignored.
+                </p>
+                <span class="severity severity-medium">MEDIUM SEVERITY</span>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<section class="services-section">
+    <div class="container">
+        <h2 class="section-title">Our Transmission Services</h2>
+        
+        <div class="services-grid">
+            
+            <div class="service-card">
+                <h3>Transmission Diagnostics</h3>
+                <p>
+                    Professional diagnostic testing identifies the exact cause of transmission problems. We use 
+                    advanced scanners and pressure testing equipment for accurate diagnosis.
+                </p>
+                <ul>
+                    <li>Computer diagnostic scanning</li>
+                    <li>Transmission fluid analysis</li>
+                    <li>Pressure testing</li>
+                    <li>Road test evaluation</li>
+                    <li>Visual inspection</li>
+                    <li>Detailed written report</li>
+                </ul>
+            </div>
+
+            <div class="service-card">
+                <h3>Transmission Fluid Service</h3>
+                <p>
+                    Regular fluid changes are the best way to prevent transmission problems. We drain old fluid, 
+                    replace the filter, and refill with the correct fluid type.
+                </p>
+                <ul>
+                    <li>Complete fluid drain & fill</li>
+                    <li>Filter replacement (when accessible)</li>
+                    <li>Pan inspection for debris</li>
+                    <li>Gasket replacement</li>
+                    <li>Correct fluid type for your vehicle</li>
+                    <li>Service interval tracking</li>
+                </ul>
+            </div>
+
+            <div class="service-card">
+                <h3>Transmission Repair</h3>
+                <p>
+                    Many transmission problems can be repaired without complete replacement. We fix what's broken 
+                    and save you money whenever possible.
+                </p>
+                <ul>
+                    <li>Solenoid replacement</li>
+                    <li>Sensor repair</li>
+                    <li>Leak repair</li>
+                    <li>Valve body service</li>
+                    <li>Clutch pack replacement</li>
+                    <li>Torque converter repair</li>
+                </ul>
+            </div>
+
+            <div class="service-card">
+                <h3>Manual Transmission & Clutch</h3>
+                <p>
+                    Expert service for manual transmissions and clutch systems. We handle everything from minor 
+                    adjustments to complete clutch replacement.
+                </p>
+                <ul>
+                    <li>Clutch replacement</li>
+                    <li>Flywheel resurfacing/replacement</li>
+                    <li>Hydraulic system service</li>
+                    <li>Linkage adjustment</li>
+                    <li>Gear synchronizer repair</li>
+                    <li>Manual transmission fluid service</li>
+                </ul>
+            </div>
+
+            <div class="service-card">
+                <h3>Transmission Rebuild</h3>
+                <p>
+                    When repair isn't possible, we rebuild or replace transmissions using quality remanufactured 
+                    units with warranties. Honest assessments, competitive pricing.
+                </p>
+                <ul>
+                    <li>Complete transmission removal</li>
+                    <li>Professional rebuild service</li>
+                    <li>Remanufactured unit installation</li>
+                    <li>Torque converter replacement</li>
+                    <li>Road testing & warranty</li>
+                    <li>Multiple repair options</li>
+                </ul>
+            </div>
+
+            <div class="service-card">
+                <h3>Differential & Drivetrain</h3>
+                <p>
+                    Complete drivetrain services including differential repair, axle service, and transfer case 
+                    maintenance for 4WD/AWD vehicles.
+                </p>
+                <ul>
+                    <li>Differential fluid service</li>
+                    <li>Axle seal replacement</li>
+                    <li>CV axle replacement</li>
+                    <li>U-joint replacement</li>
+                    <li>Transfer case service</li>
+                    <li>Driveshaft repair</li>
+                </ul>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<section class="maintenance-section">
+    <div class="container">
+        <h2 class="section-title">Transmission Maintenance Tips</h2>
+        
+        <div class="maintenance-tips">
+            <div class="tip-box">
+                <h4>Follow Service Intervals</h4>
+                <p>
+                    Most vehicles need transmission fluid changes every 30,000-60,000 miles. Severe driving conditions 
+                    (stop-and-go traffic, towing, Florida heat) require more frequent service. Check your owner's manual 
+                    and follow recommendations religiously.
+                </p>
+            </div>
+
+            <div class="tip-box">
+                <h4>Check Fluid Monthly</h4>
+                <p>
+                    Low transmission fluid causes immediate damage. Check level and condition monthly. Fluid should be 
+                    bright red or light brown. Dark, black, or burnt-smelling fluid indicates problems needing professional 
+                    attention immediately.
+                </p>
+            </div>
+
+            <div class="tip-box">
+                <h4>Don't Ignore Warning Signs</h4>
+                <p>
+                    Small transmission problems rarely fix themselves—they get worse. Strange noises, rough shifting, or 
+                    slipping gears all indicate issues that will worsen if ignored. Early diagnosis and repair cost far 
+                    less than waiting until complete failure.
+                </p>
+            </div>
+
+            <div class="tip-box">
+                <h4>Avoid Towing Beyond Capacity</h4>
+                <p>
+                    Towing heavy loads beyond your vehicle's rated capacity puts enormous stress on your transmission. 
+                    If you regularly tow, consider a transmission cooler and service your transmission more frequently 
+                    than standard intervals.
+                </p>
+            </div>
+
+            <div class="tip-box">
+                <h4>Warm Up Before Driving</h4>
+                <p>
+                    In cold weather, transmission fluid thickens. Allow your vehicle to run for 30 seconds before driving, 
+                    and drive gently for the first few miles. This simple habit extends transmission life significantly.
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="type-comparison">
+    <div class="container">
+        <h2 class="section-title">Automatic vs. Manual Transmission Service</h2>
+        
+        <div class="comparison-grid">
+            
+            <div class="type-card">
+                <h3>Automatic Transmissions</h3>
+                <p>
+                    Modern automatic transmissions are complex computer-controlled systems with hundreds of internal parts. 
+                    They're reliable when maintained but expensive to repair when neglected.
+                </p>
+                
+                <h4>Common Issues:</h4>
+                <ul>
+                    <li>Solenoid failures (electrical components)</li>
+                    <li>Torque converter problems</li>
+                    <li>Worn clutch packs</li>
+                    <li>Valve body malfunctions</li>
+                    <li>Fluid contamination</li>
+                </ul>
+                
+                <h4>Maintenance:</h4>
+                <ul>
+                    <li>Fluid changes every 30,000-60,000 miles</li>
+                    <li>Regular filter replacement</li>
+                    <li>Computer diagnostic scans</li>
+                    <li>Professional inspection annually</li>
+                </ul>
+            </div>
+
+            <div class="type-card">
+                <h3>Manual Transmissions</h3>
+                <p>
+                    Manual transmissions are mechanically simpler and generally more reliable, but they still require 
+                    maintenance and eventually need clutch replacement.
+                </p>
+                
+                <h4>Common Issues:</h4>
+                <ul>
+                    <li>Clutch wear and failure</li>
+                    <li>Worn synchronizers</li>
+                    <li>Gear grinding</li>
+                    <li>Hydraulic clutch problems</li>
+                    <li>Linkage adjustment needs</li>
+                </ul>
+                
+                <h4>Maintenance:</h4>
+                <ul>
+                    <li>Fluid changes every 30,000-60,000 miles</li>
+                    <li>Clutch replacement every 50,000-100,000 miles</li>
+                    <li>Hydraulic system inspection</li>
+                    <li>Linkage lubrication</li>
+                </ul>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<section class="blog-section">
+    <div class="container">
+        <h2 class="section-title">Related Articles</h2>
+        
+        <div class="related-posts">
+            <div class="post-card">
+                <img src="/Pics/AJ13.webp" alt="Transmission Repair Warning Signs">
+                <div class="post-content">
+                    <h4>Transmission Repair: Warning Signs & Cost Savings</h4>
+                    <p>Learn the critical warning signs of transmission problems and how to avoid expensive replacements.</p>
+                    <a href="/2025/01/08/Transmission-Repair-Warning-Signs/">Read More →</a>
+                </div>
+            </div>
+
+            <div class="post-card">
+                <img src="/Pics/AJ5.webp" alt="Check Engine Light">
+                <div class="post-content">
+                    <h4>Check Engine Light: What It Means</h4>
+                    <p>Understand what your check engine light is telling you and when to worry about transmission codes.</p>
+                    <a href="/2026/02/15/Check-Engine-Light/">Read More →</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="cta-banner">
+    <div class="container">
+        <h2>Experiencing Transmission Problems?</h2>
+        <p>
+            Don't wait until it's too late. Early diagnosis saves thousands. Get professional transmission 
+            diagnostics and repair from AJ Auto Repair in Eustis.
+        </p>
+        <a href="tel:+13523088142" class="btn" style="margin-right: 15px;">
+            <i class="fa-solid fa-phone"></i> Call (352) 308-8142
+        </a>
+        <a href="/contact" class="btn">
+            Schedule Diagnostics
+        </a>
+    </div>
+</section>
