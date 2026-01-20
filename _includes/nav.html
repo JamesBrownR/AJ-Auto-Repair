@@ -1,17 +1,85 @@
-    <header>
-        <div class="container nav-container">
-            <div class="logo-area">
-                <span class="brand-name">AJ AUTOMOTIVE SERVICES</span>
-            </div>
-            <nav>
-                <ul>
-                    <li><a href="https://ajautoandrepair.com/">Home</a></li>
-                    <li><a href="https://ajautoandrepair.com/#services">Services</a></li>
-                    <li><a href="https://ajautoandrepair.com/#gallery">Work</a></li>
-                        <li><a href="https://ajautoandrepair.com/blog">Blog</a></li>
-                    <li><a href="https://ajautoandrepair.com/contact">Contact</a></li>
-                </ul>
-            </nav>
-            <a href="tel:+13523088142" class="btn2"><i class="fa-solid fa-phone"></i> Call AJ</a>
+<style>
+    /* Dropdown styling */
+    nav ul {
+        position: relative;
+    }
+    
+    nav li {
+        position: relative;
+    }
+    
+    .dropdown {
+        position: relative;
+        display: inline-block;
+    }
+    
+    .dropdown-content {
+        display: none;
+        position: absolute;
+        background-color: var(--primary-dark);
+        min-width: 250px;
+        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.3);
+        z-index: 1000;
+        border: 2px solid var(--accent-gold);
+        border-radius: 4px;
+        top: 100%;
+        left: 0;
+    }
+    
+    .dropdown-content a {
+        color: var(--text-light);
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+        border-bottom: 1px solid #444;
+        transition: 0.3s;
+    }
+    
+    .dropdown-content a:last-child {
+        border-bottom: none;
+    }
+    
+    .dropdown-content a:hover {
+        background-color: var(--primary-light);
+        color: var(--accent-gold);
+    }
+    
+    .dropdown:hover .dropdown-content {
+        display: block;
+    }
+    
+    .dropdown > a::after {
+        content: " ▼";
+        font-size: 0.7em;
+        margin-left: 5px;
+    }
+</style>
+
+<header>
+    <div class="container nav-container">
+        <div class="logo-area">
+            <span class="brand-name">AJ AUTOMOTIVE SERVICES</span>
         </div>
-    </header>
+        <nav>
+            <ul>
+                <li><a href="/">Home</a></li>
+                
+                <li class="dropdown">
+                    <a href="/services">Services</a>
+                    <div class="dropdown-content">
+                        <a href="/services/brakes-suspension">Brakes & Suspension</a>
+                        <a href="/services/ac-repair">A/C Repair</a>
+                        <a href="/services/engine-diagnostics">Engine & Diagnostics</a>
+                        <a href="/services/transmission">Transmission</a>
+                        <a href="/services">All Services</a>
+                    </div>
+                </li>
+                
+                <li><a href="/#gallery">Work</a></li>
+                <li><a href="/blog">Blog</a></li>
+                <li><a href="/contact">Contact</a></li>
+            </ul>
+        </nav>
+        <a href="tel:+13523088142" class="btn2"><i class="fa-solid fa-phone"></i> Call AJ</a>
+    </div>
+</header>
