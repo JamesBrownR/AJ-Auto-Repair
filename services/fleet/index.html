@@ -1,0 +1,895 @@
+  ---
+layout: default
+title: Fleet Maintenance Eustis FL | Commercial Vehicle Repair | AJ Auto Repair
+description: Professional fleet maintenance and commercial vehicle repair in Eustis, FL. Reduce downtime, control costs. Preventive maintenance programs for business fleets.
+---
+
+<style>
+    .service-hero {
+        background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://images.unsplash.com/photo-1581094271901-8022df4466f9?auto=format&fit=crop&q=80');
+        background-size: cover;
+        background-position: center;
+        height: 90vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+    }
+
+    .service-hero h1 {
+        font-size: 3.5rem;
+        color: var(--accent-gold);
+        margin-bottom: 20px;
+    }
+
+    .service-hero p {
+        font-size: 1.3rem;
+        color: var(--text-light);
+    }
+
+    .business-banner {
+        background: var(--accent-gold);
+        padding: 40px 0;
+        text-align: center;
+    }
+
+    .business-banner h3 {
+        color: var(--primary-dark);
+        font-size: 2rem;
+        margin-bottom: 15px;
+    }
+
+    .business-banner p {
+        color: var(--primary-dark);
+        font-size: 1.2rem;
+        max-width: 800px;
+        margin: 0 auto;
+    }
+
+    .service-intro {
+        padding: 80px 0;
+        background-color: var(--primary-light);
+    }
+
+    .intro-content {
+        max-width: 900px;
+        margin: 0 auto;
+    }
+
+    .intro-content p {
+        font-size: 1.1rem;
+        line-height: 1.8;
+        color: var(--text-gray);
+        margin-bottom: 20px;
+    }
+
+    .downtime-cost {
+        background: var(--primary-dark);
+        padding: 35px;
+        border-radius: 8px;
+        border-left: 4px solid var(--accent-gold);
+        margin: 30px 0;
+    }
+
+    .downtime-cost h3 {
+        color: var(--accent-gold);
+        margin-bottom: 20px;
+        font-size: 1.8rem;
+    }
+
+    .cost-breakdown {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 20px;
+        margin-top: 20px;
+    }
+
+    .cost-item {
+        background: var(--primary-light);
+        padding: 20px;
+        border-radius: 4px;
+        text-align: center;
+    }
+
+    .cost-item .cost-icon {
+        font-size: 2.5rem;
+        color: var(--accent-gold);
+        margin-bottom: 15px;
+    }
+
+    .cost-item h4 {
+        color: var(--text-light);
+        margin-bottom: 10px;
+        font-size: 1.2rem;
+    }
+
+    .cost-item p {
+        color: var(--text-gray);
+        font-size: 0.95rem;
+    }
+
+    .benefits-section {
+        padding: 80px 0;
+        background-color: var(--primary-dark);
+    }
+
+    .benefits-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 30px;
+        margin-top: 40px;
+    }
+
+    .benefit-card {
+        background: var(--primary-light);
+        padding: 35px;
+        border-radius: 8px;
+        border-top: 3px solid var(--accent-gold);
+        transition: transform 0.3s;
+    }
+
+    .benefit-card:hover {
+        transform: translateY(-5px);
+    }
+
+    .benefit-card .icon {
+        font-size: 3rem;
+        color: var(--accent-gold);
+        margin-bottom: 20px;
+    }
+
+    .benefit-card h3 {
+        color: var(--accent-gold);
+        margin-bottom: 15px;
+        font-size: 1.6rem;
+    }
+
+    .benefit-card p {
+        color: var(--text-gray);
+        line-height: 1.7;
+    }
+
+    .services-section {
+        padding: 80px 0;
+        background-color: var(--primary-light);
+    }
+
+    .services-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+        gap: 30px;
+        margin-top: 40px;
+    }
+
+    .service-card {
+        background: var(--primary-dark);
+        padding: 35px;
+        border-radius: 8px;
+        border-left: 4px solid var(--accent-gold);
+    }
+
+    .service-card h3 {
+        color: var(--accent-gold);
+        margin-bottom: 15px;
+        font-size: 1.6rem;
+    }
+
+    .service-card p {
+        color: var(--text-gray);
+        line-height: 1.7;
+        margin-bottom: 15px;
+    }
+
+    .service-card ul {
+        list-style: none;
+        margin: 15px 0;
+    }
+
+    .service-card li {
+        padding: 8px 0;
+        color: var(--text-light);
+        position: relative;
+        padding-left: 25px;
+    }
+
+    .service-card li::before {
+        content: "✓";
+        color: var(--accent-gold);
+        position: absolute;
+        left: 0;
+        font-weight: bold;
+        font-size: 1.2rem;
+    }
+
+    .maintenance-program {
+        padding: 80px 0;
+        background-color: var(--primary-dark);
+    }
+
+    .program-content {
+        max-width: 900px;
+        margin: 40px auto 0;
+    }
+
+    .program-features {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 20px;
+    }
+
+    .feature-box {
+        background: var(--primary-light);
+        padding: 25px;
+        border-radius: 8px;
+        border-left: 3px solid var(--accent-gold);
+    }
+
+    .feature-box h4 {
+        color: var(--accent-gold);
+        margin-bottom: 10px;
+        font-size: 1.3rem;
+    }
+
+    .feature-box p {
+        color: var(--text-gray);
+        line-height: 1.6;
+    }
+
+    .vehicle-types {
+        padding: 80px 0;
+        background-color: var(--primary-light);
+    }
+
+    .types-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 20px;
+        margin-top: 40px;
+    }
+
+    .type-card {
+        background: var(--primary-dark);
+        padding: 30px 20px;
+        border-radius: 8px;
+        text-align: center;
+        border: 2px solid var(--accent-gold);
+    }
+
+    .type-card i {
+        font-size: 3rem;
+        color: var(--accent-gold);
+        margin-bottom: 15px;
+    }
+
+    .type-card h4 {
+        color: var(--text-light);
+        font-size: 1.2rem;
+    }
+
+    .why-local {
+        padding: 80px 0;
+        background-color: var(--primary-dark);
+    }
+
+    .why-content {
+        max-width: 900px;
+        margin: 0 auto;
+    }
+
+    .why-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 30px;
+        margin-top: 40px;
+    }
+
+    .why-card {
+        background: var(--primary-light);
+        padding: 30px;
+        border-radius: 8px;
+    }
+
+    .why-card h4 {
+        color: var(--accent-gold);
+        margin-bottom: 15px;
+        font-size: 1.4rem;
+    }
+
+    .why-card p {
+        color: var(--text-gray);
+        line-height: 1.7;
+    }
+
+    .testimonial-section {
+        padding: 80px 0;
+        background: linear-gradient(rgba(0,0,0,0.85), rgba(0,0,0,0.85)), url('https://images.unsplash.com/photo-1449965408869-eaa3f722e40d?auto=format&fit=crop&q=80');
+        background-size: cover;
+        background-position: center;
+    }
+
+    .testimonial-box {
+        max-width: 800px;
+        margin: 0 auto;
+        background: rgba(35, 38, 45, 0.9);
+        padding: 50px;
+        border-radius: 8px;
+        border: 3px solid var(--accent-gold);
+        text-align: center;
+    }
+
+    .testimonial-box .quote-icon {
+        font-size: 3rem;
+        color: var(--accent-gold);
+        margin-bottom: 20px;
+    }
+
+    .testimonial-box p {
+        color: var(--text-light);
+        font-size: 1.3rem;
+        line-height: 1.8;
+        font-style: italic;
+        margin-bottom: 25px;
+    }
+
+    .testimonial-box .author {
+        color: var(--accent-gold);
+        font-size: 1.2rem;
+        font-weight: bold;
+        font-style: normal;
+    }
+
+    .blog-section {
+        padding: 80px 0;
+        background-color: var(--primary-light);
+    }
+
+    .related-posts {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 30px;
+        margin-top: 40px;
+    }
+
+    .post-card {
+        background: var(--primary-dark);
+        border-radius: 8px;
+        overflow: hidden;
+        transition: transform 0.3s;
+    }
+
+    .post-card:hover {
+        transform: translateY(-5px);
+    }
+
+    .post-card img {
+        width: 100%;
+        height: 200px;
+        object-fit: cover;
+    }
+
+    .post-content {
+        padding: 25px;
+    }
+
+    .post-content h4 {
+        color: var(--accent-gold);
+        margin-bottom: 10px;
+        font-size: 1.3rem;
+    }
+
+    .post-content p {
+        color: var(--text-gray);
+        margin-bottom: 15px;
+    }
+
+    .post-content a {
+        color: var(--accent-gold);
+        font-weight: bold;
+    }
+
+    .cta-banner {
+        padding: 80px 0;
+        background: var(--accent-gold);
+        text-align: center;
+    }
+
+    .cta-banner h2 {
+        color: var(--primary-dark);
+        font-size: 2.5rem;
+        margin-bottom: 20px;
+    }
+
+    .cta-banner p {
+        color: var(--primary-dark);
+        font-size: 1.2rem;
+        margin-bottom: 30px;
+        max-width: 700px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .cta-banner .btn {
+        background: var(--primary-dark);
+        color: var(--accent-gold);
+        border-color: var(--primary-dark);
+    }
+
+    .cta-banner .btn:hover {
+        background: transparent;
+        color: var(--primary-dark);
+    }
+
+    @media (max-width: 768px) {
+        .service-hero h1 {
+            font-size: 2rem;
+        }
+        .service-hero {
+            height: 50vh;
+        }
+    }
+</style>
+
+<section class="service-hero">
+    <div class="hero-content">
+        <h1>Fleet Maintenance & Commercial Vehicle Repair</h1>
+        <p>Keep Your Business Moving</p>
+    </div>
+</section>
+
+<section class="business-banner">
+    <div class="container">
+        <h3>Downtime Costs Your Business Money</h3>
+        <p>
+            Every hour a fleet vehicle sits broken down means lost revenue, disappointed customers, and damaged reputation. 
+            Preventive maintenance keeps your fleet on the road and your business running smoothly.
+        </p>
+    </div>
+</section>
+
+<section class="service-intro">
+    <div class="container">
+        <div class="intro-content">
+            <h2 class="section-title">Professional Fleet Maintenance in Eustis, FL</h2>
+            
+            <p>
+                For businesses that rely on vehicles, downtime is expensive. A broken-down delivery truck, service van, 
+                or company car disrupts schedules, disappoints customers, and costs money. At AJ Auto Repair in Eustis, 
+                we specialize in commercial fleet maintenance that keeps your business vehicles running reliably.
+            </p>
+
+            <p>
+                Whether you operate two vehicles or twenty, a preventive maintenance program saves you money and keeps 
+                your fleet on the road. Our experienced technicians understand business vehicle needs and structure our 
+                services to minimize disruption to your operations.
+            </p>
+
+            <div class="downtime-cost">
+                <h3>The True Cost of Fleet Vehicle Downtime</h3>
+                
+                <div class="cost-breakdown">
+                    <div class="cost-item">
+                        <div class="cost-icon"><i class="fa-solid fa-dollar-sign"></i></div>
+                        <h4>Direct Costs</h4>
+                        <p>Towing, rental vehicles, emergency repair premiums</p>
+                    </div>
+                    <div class="cost-item">
+                        <div class="cost-icon"><i class="fa-solid fa-clock"></i></div>
+                        <h4>Lost Productivity</h4>
+                        <p>Employees unable to complete routes or service calls</p>
+                    </div>
+                    <div class="cost-item">
+                        <div class="cost-icon"><i class="fa-solid fa-face-frown"></i></div>
+                        <h4>Customer Impact</h4>
+                        <p>Delays, cancellations, damage to business reputation</p>
+                    </div>
+                    <div class="cost-item">
+                        <div class="cost-icon"><i class="fa-solid fa-briefcase"></i></div>
+                        <h4>Opportunity Cost</h4>
+                        <p>Lost business while vehicle is out of service</p>
+                    </div>
+                </div>
+
+                <p style="color: var(--accent-gold); margin-top: 25px; text-align: center; font-weight: bold;">
+                    Preventive maintenance eliminates most breakdowns and costs far less than emergency repairs
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="benefits-section">
+    <div class="container">
+        <h2 class="section-title">Benefits of Our Fleet Maintenance Program</h2>
+        
+        <div class="benefits-grid">
+            
+            <div class="benefit-card">
+                <div class="icon"><i class="fa-solid fa-calendar-check"></i></div>
+                <h3>Scheduled Maintenance</h3>
+                <p>
+                    Regular, planned maintenance prevents unexpected breakdowns. We track service intervals for your 
+                    entire fleet and remind you when service is due, ensuring no vehicle is overlooked.
+                </p>
+            </div>
+
+            <div class="benefit-card">
+                <div class="icon"><i class="fa-solid fa-chart-line"></i></div>
+                <h3>Reduced Operating Costs</h3>
+                <p>
+                    Preventive maintenance improves fuel economy, extends vehicle life, and prevents expensive emergency 
+                    repairs. Well-maintained vehicles cost less per mile to operate.
+                </p>
+            </div>
+
+            <div class="benefit-card">
+                <div class="icon"><i class="fa-solid fa-shield-halved"></i></div>
+                <h3>Improved Safety</h3>
+                <p>
+                    Regular inspections identify safety issues before they cause accidents. Well-maintained vehicles 
+                    with functional brakes, lights, and steering reduce accident risk and liability.
+                </p>
+            </div>
+
+            <div class="benefit-card">
+                <div class="icon"><i class="fa-solid fa-clock-rotate-left"></i></div>
+                <h3>Minimized Downtime</h3>
+                <p>
+                    Scheduled maintenance during planned downtime beats paying emergency rates after a breakdown. 
+                    You control costs through planning rather than reacting to crises.
+                </p>
+            </div>
+
+            <div class="benefit-card">
+                <div class="icon"><i class="fa-solid fa-file-lines"></i></div>
+                <h3>Detailed Records</h3>
+                <p>
+                    We maintain complete service records for each vehicle, tracking maintenance history, identifying 
+                    patterns, and helping you budget for future needs accurately.
+                </p>
+            </div>
+
+            <div class="benefit-card">
+                <div class="icon"><i class="fa-solid fa-handshake"></i></div>
+                <h3>Personalized Service</h3>
+                <p>
+                    As a local shop, we know your vehicles individually and work with you personally. No automated 
+                    systems or corporate bureaucracy - just reliable service from people you know.
+                </p>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<section class="services-section">
+    <div class="container">
+        <h2 class="section-title">Our Fleet Maintenance Services</h2>
+        
+        <div class="services-grid">
+            
+            <div class="service-card">
+                <h3>Oil Changes & Fluid Services</h3>
+                <p>
+                    The foundation of vehicle maintenance. Regular oil changes and fluid services prevent engine, 
+                    transmission, and cooling system failures.
+                </p>
+                <ul>
+                    <li>Engine oil & filter changes</li>
+                    <li>Transmission fluid service</li>
+                    <li>Coolant flush & replacement</li>
+                    <li>Brake fluid exchange</li>
+                    <li>Differential service</li>
+                    <li>Power steering fluid</li>
+                </ul>
+            </div>
+
+            <div class="service-card">
+                <h3>Brake Service & Inspection</h3>
+                <p>
+                    Fleet vehicles making frequent stops wear brakes faster than personal vehicles. Regular inspection 
+                    and timely replacement prevent dangerous failures.
+                </p>
+                <ul>
+                    <li>Brake pad replacement</li>
+                    <li>Rotor resurfacing/replacement</li>
+                    <li>Caliper service</li>
+                    <li>Brake fluid service</li>
+                    <li>Complete system inspection</li>
+                    <li>ABS diagnostics</li>
+                </ul>
+            </div>
+
+            <div class="service-card">
+                <h3>Tire Services</h3>
+                <p>
+                    Proper tire maintenance improves fuel economy, extends tire life, and ensures safe handling under 
+                    heavy loads and frequent use.
+                </p>
+                <ul>
+                    <li>Tire rotation</li>
+                    <li>Wheel alignment</li>
+                    <li>Tire balancing</li>
+                    <li>Pressure monitoring</li>
+                    <li>Tire repair & replacement</li>
+                    <li>Tread depth inspection</li>
+                </ul>
+            </div>
+
+            <div class="service-card">
+                <h3>Preventive Inspections</h3>
+                <p>
+                    Regular multi-point inspections identify potential problems before they cause breakdowns, saving 
+                    money and preventing downtime.
+                </p>
+                <ul>
+                    <li>Complete vehicle inspection</li>
+                    <li>Belts & hoses</li>
+                    <li>Suspension components</li>
+                    <li>Exhaust system</li>
+                    <li>Battery & electrical</li>
+                    <li>Lights & safety equipment</li>
+                </ul>
+            </div>
+
+            <div class="service-card">
+                <h3>Engine & Transmission Service</h3>
+                <p>
+                    Major repairs and services handled professionally to get your vehicles back in service quickly 
+                    and reliably.
+                </p>
+                <ul>
+                    <li>Engine diagnostics</li>
+                    <li>Tune-ups & performance service</li>
+                    <li>Transmission repair</li>
+                    <li>Cooling system service</li>
+                    <li>Timing belt replacement</li>
+                    <li>Check engine light diagnosis</li>
+                </ul>
+            </div>
+
+            <div class="service-card">
+                <h3>A/C & Heating Service</h3>
+                <p>
+                    Functional climate control keeps drivers comfortable and productive, especially critical in 
+                    Florida's extreme heat.
+                </p>
+                <ul>
+                    <li>A/C performance testing</li>
+                    <li>Refrigerant recharge</li>
+                    <li>Compressor replacement</li>
+                    <li>Leak detection & repair</li>
+                    <li>Heater service</li>
+                    <li>Blower motor repair</li>
+                </ul>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<section class="maintenance-program">
+    <div class="container">
+        <h2 class="section-title">How Our Fleet Program Works</h2>
+        
+        <div class="program-content">
+            <p style="text-align: center; color: var(--text-gray); margin-bottom: 40px; font-size: 1.1rem;">
+                We create customized maintenance schedules based on your specific vehicles, usage patterns, and 
+                business needs. Here's what you get:
+            </p>
+
+            <div class="program-features">
+                
+                <div class="feature-box">
+                    <h4>Customized Schedules</h4>
+                    <p>
+                        Maintenance plans tailored to each vehicle type in your fleet. Delivery vans have different 
+                        needs than pickup trucks or sedans.
+                    </p>
+                </div>
+
+                <div class="feature-box">
+                    <h4>Service Reminders</h4>
+                    <p>
+                        We track service intervals and remind you when maintenance is due. No vehicle gets overlooked 
+                        or forgotten.
+                    </p>
+                </div>
+
+                <div class="feature-box">
+                    <h4>Flexible Scheduling</h4>
+                    <p>
+                        We accommodate your business hours with early drop-offs, after-hours pickups, and expedited 
+                        service when needed.
+                    </p>
+                </div>
+
+                <div class="feature-box">
+                    <h4>Fleet Discounts</h4>
+                    <p>
+                        Competitive pricing for regular fleet customers. Your loyalty and volume business earn better 
+                        rates.
+                    </p>
+                </div>
+
+                <div class="feature-box">
+                    <h4>Detailed Reporting</h4>
+                    <p>
+                        Complete service records for each vehicle including work performed, parts replaced, and 
+                        recommendations for future maintenance.
+                    </p>
+                </div>
+
+                <div class="feature-box">
+                    <h4>Priority Service</h4>
+                    <p>
+                        Fleet customers receive priority scheduling. When you need urgent service, we make room in 
+                        our schedule.
+                    </p>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="vehicle-types">
+    <div class="container">
+        <h2 class="section-title">Fleet Vehicles We Service</h2>
+        
+        <div class="types-grid">
+            <div class="type-card">
+                <i class="fa-solid fa-truck"></i>
+                <h4>Delivery Trucks</h4>
+            </div>
+            <div class="type-card">
+                <i class="fa-solid fa-van-shuttle"></i>
+                <h4>Service Vans</h4>
+            </div>
+            <div class="type-card">
+                <i class="fa-solid fa-car"></i>
+                <h4>Company Cars</h4>
+            </div>
+            <div class="type-card">
+                <i class="fa-solid fa-truck-pickup"></i>
+                <h4>Pickup Trucks</h4>
+            </div>
+            <div class="type-card">
+                <i class="fa-solid fa-bus"></i>
+                <h4>Passenger Vans</h4>
+            </div>
+            <div class="type-card">
+                <i class="fa-solid fa-truck-moving"></i>
+                <h4>Box Trucks</h4>
+            </div>
+        </div>
+
+        <p style="text-align: center; margin-top: 40px; color: var(--text-gray); font-size: 1.1rem;">
+            We service all makes and models of commercial vehicles, foreign and domestic.
+        </p>
+    </div>
+</section>
+
+<section class="why-local">
+    <div class="container">
+        <div class="why-content">
+            <h2 class="section-title">Why Choose a Local Shop for Fleet Maintenance?</h2>
+
+            <div class="why-grid">
+                
+                <div class="why-card">
+                    <h4>Personal Relationships</h4>
+                    <p>
+                        You work with the same technicians who understand your specific vehicles and business needs. 
+                        No rotating through different service advisors or shops.
+                    </p>
+                </div>
+
+                <div class="why-card">
+                    <h4>Convenient Location</h4>
+                    <p>
+                        Located in Eustis serving all of Lake County. Your vehicles don't travel far for service, 
+                        reducing downtime and fuel costs.
+                    </p>
+                </div>
+
+                <div class="why-card">
+                    <h4>Flexible Service</h4>
+                    <p>
+                        Need multiple vehicles serviced the same day? Urgent repair? After-hours pickup? We accommodate 
+                        your schedule and special needs.
+                    </p>
+                </div>
+
+                <div class="why-card">
+                    <h4>Competitive Pricing</h4>
+                    <p>
+                        Transparent, competitive rates without the overhead costs of national chains. Better value 
+                        through local service.
+                    </p>
+                </div>
+
+                <div class="why-card">
+                    <h4>Quality Without Upselling</h4>
+                    <p>
+                        We recommend only necessary work based on vehicle condition and your budget. No pressure to 
+                        perform unnecessary services.
+                    </p>
+                </div>
+
+                <div class="why-card">
+                    <h4>Community Investment</h4>
+                    <p>
+                        As a local business serving local businesses, we're invested in Lake County's economic success. 
+                        Your success matters to us.
+                    </p>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="testimonial-section">
+    <div class="container">
+        <div class="testimonial-box">
+            <div class="quote-icon"><i class="fa-solid fa-quote-left"></i></div>
+            <p>
+                "AJ Auto Repair has been maintaining our delivery fleet for over three years. Their preventive 
+                maintenance program has dramatically reduced our breakdown incidents and overall operating costs. 
+                The personal service and flexible scheduling make them perfect for our business needs."
+            </p>
+            <div class="author">— Local Business Owner, Eustis, FL</div>
+        </div>
+    </div>
+</section>
+
+<section class="blog-section">
+    <div class="container">
+        <h2 class="section-title">Related Articles</h2>
+        
+        <div class="related-posts">
+            <div class="post-card">
+                <img src="/Pics/AJ6.webp" alt="Fleet Maintenance">
+                <div class="post-content">
+                    <h4>Fleet Maintenance: Reduce Downtime & Costs</h4>
+                    <p>Learn how preventive maintenance programs keep business vehicles running reliably and reduce operating expenses.</p>
+                    <a href="/2026/03/12/Fleet-Maintenance/">Read More →</a>
+                </div>
+            </div>
+
+            <div class="post-card">
+                <img src="/Pics/AJ4.webp" alt="Oil Changes">
+                <div class="post-content">
+                    <h4>Why Regular Oil Changes Save You Money</h4>
+                    <p>Discover how routine oil changes prevent expensive engine damage and extend vehicle life significantly.</p>
+                    <a href="/2024/12/15/Regular-Oil-Changes-Save/">Read More →</a>
+                </div>
+            </div>
+
+            <div class="post-card">
+                <img src="/Pics/AJ2.webp" alt="Brake Service">
+                <div class="post-content">
+                    <h4>5 Signs Your Brakes Need Attention</h4>
+                    <p>Critical warning signs that indicate your fleet vehicles need immediate brake service.</p>
+                    <a href="/2024/12/28/5-Signs-Your-Brakes-Need-Immediate-Attention/">Read More →</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="cta-banner">
+    <div class="container">
+        <h2>Ready to Reduce Fleet Downtime?</h2>
+        <p>
+            Contact AJ Auto Repair today to discuss a customized fleet maintenance program for your business. 
+            Keep your vehicles running and your business moving.
+        </p>
+        <a href="tel:+13523088142" class="btn" style="margin-right: 15px;">
+            <i class="fa-solid fa-phone"></i> Call (352) 308-8142
+        </a>
+        <a href="/contact" class="btn">
+            Request Fleet Quote
+        </a>
+    </div>
+</section>
