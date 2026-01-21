@@ -1,0 +1,24 @@
+# Allow all search engines to crawl the site
+User-agent: *
+Allow: /
+
+# Sitemap location
+Sitemap: https://ajautoandrepair.com/sitemap.xml
+
+# Crawl-delay (optional - uncomment if you want to limit crawl rate)
+# Crawl-delay: 10
+
+# Disallow specific files/folders if needed (examples below - remove if not needed)
+# Disallow: /admin/
+# Disallow: /private/
+# Disallow: *.json$
+
+# Allow important resources for Google
+User-agent: Googlebot
+Allow: /Pics/
+Allow: /_includes/
+Allow: /_layouts/
+
+# Common bot-specific rules
+User-agent: Googlebot-Image
+Allow: /Pics/
