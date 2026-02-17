@@ -1,12 +1,12 @@
 name: Auto Update Site
-
 on:
   schedule:
-    - cron: '0 0 * * *'  # Runs daily at midnight
-
+    - cron: '0 0 * * *'
 jobs:
   update:
     runs-on: ubuntu-latest
+    permissions:
+      contents: write  # 👈 THIS is what you're missing
     steps:
       - uses: actions/checkout@v3
       
