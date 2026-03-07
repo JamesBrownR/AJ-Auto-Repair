@@ -95,7 +95,7 @@ description: Full-service auto repair in Eustis, FL. Oil changes, brake repair, 
 
     .service-card-top {
         display: flex;
-        align-items: center;
+        align-items: flex-start;
         gap: 14px;
         margin-bottom: 14px;
     }
@@ -267,6 +267,60 @@ description: Full-service auto repair in Eustis, FL. Oil changes, brake repair, 
         color: var(--text-gray);
     }
 
+    /* AREAS SECTION */
+    .areas-section {
+        padding: 70px 0;
+        background: var(--primary-light);
+    }
+
+    .areas-section .section-title {
+        text-align: left;
+        display: block;
+        width: auto;
+    }
+
+    .areas-section .section-title::after {
+        margin: 10px 0;
+    }
+
+    .areas-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+        gap: 15px;
+        margin-top: 2rem;
+    }
+
+    .area-card {
+        background: var(--primary-dark);
+        border: 1px solid #444;
+        border-top: 3px solid var(--accent-gold);
+        padding: 22px 18px;
+        text-decoration: none;
+        display: flex;
+        flex-direction: column;
+        gap: 6px;
+        transition: transform 0.3s, background 0.3s;
+    }
+
+    .area-card:hover {
+        transform: translateY(-3px);
+        background: #363b49;
+    }
+
+    .area-card-city {
+        font-family: 'Oswald', sans-serif;
+        font-size: 1.1rem;
+        color: var(--text-light);
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+    }
+
+    .area-card-sub {
+        font-family: 'Roboto', sans-serif;
+        font-size: 0.8rem;
+        color: var(--accent-gold);
+    }
+
     /* CTA BAND */
     .cta-band {
         background: var(--accent-gold);
@@ -350,7 +404,7 @@ description: Full-service auto repair in Eustis, FL. Oil changes, brake repair, 
         <h2 class="section-title">Our Services</h2>
         <div class="services-grid">
 
-            <a href="/oil-change" class="service-card">
+            <a href="/services/oil-change" class="service-card">
                 <div class="service-card-top">
                     <div class="service-card-icon"><i class="fa-solid fa-oil-can"></i></div>
                     <h3>Oil Change</h3>
@@ -365,7 +419,7 @@ description: Full-service auto repair in Eustis, FL. Oil changes, brake repair, 
                 <span class="service-card-link">View Service</span>
             </a>
 
-            <a href="/auto-brake-repair" class="service-card">
+            <a href="/services/auto-brake-repair" class="service-card">
                 <div class="service-card-top">
                     <div class="service-card-icon"><i class="fa-solid fa-car-burst"></i></div>
                     <h3>Brake Repair</h3>
@@ -380,7 +434,7 @@ description: Full-service auto repair in Eustis, FL. Oil changes, brake repair, 
                 <span class="service-card-link">View Service</span>
             </a>
 
-            <a href="/transmission" class="service-card">
+            <a href="/services/transmission" class="service-card">
                 <div class="service-card-top">
                     <div class="service-card-icon"><i class="fa-solid fa-gears"></i></div>
                     <h3>Transmission</h3>
@@ -395,7 +449,7 @@ description: Full-service auto repair in Eustis, FL. Oil changes, brake repair, 
                 <span class="service-card-link">View Service</span>
             </a>
 
-            <a href="/ac-installation-repair" class="service-card">
+            <a href="/services/ac-installation-repair" class="service-card">
                 <div class="service-card-top">
                     <div class="service-card-icon"><i class="fa-solid fa-snowflake"></i></div>
                     <h3>A/C Installation and Repair</h3>
@@ -410,7 +464,7 @@ description: Full-service auto repair in Eustis, FL. Oil changes, brake repair, 
                 <span class="service-card-link">View Service</span>
             </a>
 
-            <a href="/auto-engine-diagnostics" class="service-card">
+            <a href="/services/auto-engine-diagnostics" class="service-card">
                 <div class="service-card-top">
                     <div class="service-card-icon"><i class="fa-solid fa-stethoscope"></i></div>
                     <h3>Auto Engine Diagnostics</h3>
@@ -425,7 +479,7 @@ description: Full-service auto repair in Eustis, FL. Oil changes, brake repair, 
                 <span class="service-card-link">View Service</span>
             </a>
 
-            <a href="/electrical" class="service-card">
+            <a href="/services/electrical" class="service-card">
                 <div class="service-card-top">
                     <div class="service-card-icon"><i class="fa-solid fa-bolt"></i></div>
                     <h3>Electrical</h3>
@@ -440,7 +494,7 @@ description: Full-service auto repair in Eustis, FL. Oil changes, brake repair, 
                 <span class="service-card-link">View Service</span>
             </a>
 
-            <a href="/steering-suspension-repair" class="service-card">
+            <a href="/services/steering-suspension-repair" class="service-card">
                 <div class="service-card-top">
                     <div class="service-card-icon"><i class="fa-solid fa-car"></i></div>
                     <h3>Steering and Suspension Repair</h3>
@@ -455,7 +509,7 @@ description: Full-service auto repair in Eustis, FL. Oil changes, brake repair, 
                 <span class="service-card-link">View Service</span>
             </a>
 
-            <a href="/battery" class="service-card">
+            <a href="/services/battery" class="service-card">
                 <div class="service-card-top">
                     <div class="service-card-icon"><i class="fa-solid fa-battery-full"></i></div>
                     <h3>Battery</h3>
@@ -470,7 +524,7 @@ description: Full-service auto repair in Eustis, FL. Oil changes, brake repair, 
                 <span class="service-card-link">View Service</span>
             </a>
 
-            <a href="/exhaust" class="service-card">
+            <a href="/services/exhaust" class="service-card">
                 <div class="service-card-top">
                     <div class="service-card-icon"><i class="fa-solid fa-wind"></i></div>
                     <h3>Exhaust</h3>
@@ -485,7 +539,7 @@ description: Full-service auto repair in Eustis, FL. Oil changes, brake repair, 
                 <span class="service-card-link">View Service</span>
             </a>
 
-            <a href="/vehicle-safety-inspection" class="service-card">
+            <a href="/services/vehicle-safety-inspection" class="service-card">
                 <div class="service-card-top">
                     <div class="service-card-icon"><i class="fa-solid fa-clipboard-check"></i></div>
                     <h3>Vehicle Safety Inspection</h3>
@@ -500,7 +554,7 @@ description: Full-service auto repair in Eustis, FL. Oil changes, brake repair, 
                 <span class="service-card-link">View Service</span>
             </a>
 
-            <a href="/auto-emissions-testing" class="service-card">
+            <a href="/services/auto-emissions-testing" class="service-card">
                 <div class="service-card-top">
                     <div class="service-card-icon"><i class="fa-solid fa-leaf"></i></div>
                     <h3>Auto Emissions Testing</h3>
@@ -515,7 +569,7 @@ description: Full-service auto repair in Eustis, FL. Oil changes, brake repair, 
                 <span class="service-card-link">View Service</span>
             </a>
 
-            <a href="/tire-rotations" class="service-card">
+            <a href="/services/tire-rotations" class="service-card">
                 <div class="service-card-top">
                     <div class="service-card-icon"><i class="fa-solid fa-tire"></i></div>
                     <h3>Tire Rotations</h3>
@@ -592,6 +646,40 @@ description: Full-service auto repair in Eustis, FL. Oil changes, brake repair, 
     </div>
 </section>
 
+<!-- AREAS WE SERVE -->
+<section class="areas-section">
+    <div class="container">
+        <h2 class="section-title">Areas We Serve</h2>
+        <p style="font-family: 'Roboto', sans-serif; color: var(--text-gray); margin-bottom: 0; max-width: 700px;">AJ Automotive Services is located in Eustis and serves all of Lake County. Select your city to see local service information.</p>
+        <div class="areas-grid">
+            <a href="/service-area/mount-dora-fl" class="area-card">
+                <span class="area-card-city">Mount Dora</span>
+                <span class="area-card-sub">Auto Repair in Mount Dora, FL</span>
+            </a>
+            <a href="/service-area/tavares-fl" class="area-card">
+                <span class="area-card-city">Tavares</span>
+                <span class="area-card-sub">Auto Repair in Tavares, FL</span>
+            </a>
+            <a href="/service-area/leesburg-fl" class="area-card">
+                <span class="area-card-city">Leesburg</span>
+                <span class="area-card-sub">Auto Repair in Leesburg, FL</span>
+            </a>
+            <a href="/service-area/lady-lake-fl" class="area-card">
+                <span class="area-card-city">Lady Lake</span>
+                <span class="area-card-sub">Auto Repair in Lady Lake, FL</span>
+            </a>
+            <a href="/service-area/fruitland-park-fl" class="area-card">
+                <span class="area-card-city">Fruitland Park</span>
+                <span class="area-card-sub">Auto Repair in Fruitland Park, FL</span>
+            </a>
+            <a href="/service-area/umatilla-fl" class="area-card">
+                <span class="area-card-city">Umatilla</span>
+                <span class="area-card-sub">Auto Repair in Umatilla, FL</span>
+            </a>
+        </div>
+    </div>
+</section>
+
 <!-- CTA BAND -->
 <section class="cta-band">
     <div class="container">
@@ -619,18 +707,18 @@ description: Full-service auto repair in Eustis, FL. Oil changes, brake repair, 
     "@type": "ItemList",
     "name": "Auto Repair Services at AJ Automotive Services",
     "itemListElement": [
-        { "@type": "ListItem", "position": 1, "name": "Oil Change", "url": "https://ajautoandrepair.com/oil-change" },
-        { "@type": "ListItem", "position": 2, "name": "Brake Repair", "url": "https://ajautoandrepair.com/auto-brake-repair" },
-        { "@type": "ListItem", "position": 3, "name": "Transmission", "url": "https://ajautoandrepair.com/transmission" },
-        { "@type": "ListItem", "position": 4, "name": "A/C Installation and Repair", "url": "https://ajautoandrepair.com/ac-installation-repair" },
-        { "@type": "ListItem", "position": 5, "name": "Auto Engine Diagnostics", "url": "https://ajautoandrepair.com/auto-engine-diagnostics" },
-        { "@type": "ListItem", "position": 6, "name": "Electrical", "url": "https://ajautoandrepair.com/electrical" },
-        { "@type": "ListItem", "position": 7, "name": "Steering and Suspension Repair", "url": "https://ajautoandrepair.com/steering-suspension-repair" },
-        { "@type": "ListItem", "position": 8, "name": "Battery", "url": "https://ajautoandrepair.com/battery" },
-        { "@type": "ListItem", "position": 9, "name": "Exhaust", "url": "https://ajautoandrepair.com/exhaust" },
-        { "@type": "ListItem", "position": 10, "name": "Vehicle Safety Inspection", "url": "https://ajautoandrepair.com/vehicle-safety-inspection" },
-        { "@type": "ListItem", "position": 11, "name": "Auto Emissions Testing", "url": "https://ajautoandrepair.com/auto-emissions-testing" },
-        { "@type": "ListItem", "position": 12, "name": "Tire Rotations", "url": "https://ajautoandrepair.com/tire-rotations" }
+        { "@type": "ListItem", "position": 1, "name": "Oil Change", "url": "https://ajautoandrepair.com/services/oil-change" },
+        { "@type": "ListItem", "position": 2, "name": "Brake Repair", "url": "https://ajautoandrepair.com/services/auto-brake-repair" },
+        { "@type": "ListItem", "position": 3, "name": "Transmission", "url": "https://ajautoandrepair.com/services/transmission" },
+        { "@type": "ListItem", "position": 4, "name": "A/C Installation and Repair", "url": "https://ajautoandrepair.com/services/ac-installation-repair" },
+        { "@type": "ListItem", "position": 5, "name": "Auto Engine Diagnostics", "url": "https://ajautoandrepair.com/services/auto-engine-diagnostics" },
+        { "@type": "ListItem", "position": 6, "name": "Electrical", "url": "https://ajautoandrepair.com/services/electrical" },
+        { "@type": "ListItem", "position": 7, "name": "Steering and Suspension Repair", "url": "https://ajautoandrepair.com/services/steering-suspension-repair" },
+        { "@type": "ListItem", "position": 8, "name": "Battery", "url": "https://ajautoandrepair.com/services/battery" },
+        { "@type": "ListItem", "position": 9, "name": "Exhaust", "url": "https://ajautoandrepair.com/services/exhaust" },
+        { "@type": "ListItem", "position": 10, "name": "Vehicle Safety Inspection", "url": "https://ajautoandrepair.com/services/vehicle-safety-inspection" },
+        { "@type": "ListItem", "position": 11, "name": "Auto Emissions Testing", "url": "https://ajautoandrepair.com/services/auto-emissions-testing" },
+        { "@type": "ListItem", "position": 12, "name": "Tire Rotations", "url": "https://ajautoandrepair.com/services/tire-rotations" }
     ]
 }
 </script>
