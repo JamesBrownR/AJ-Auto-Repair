@@ -303,7 +303,7 @@ layout: default
     <div class="container">
         <div class="breadcrumb">
             <a href="/">Home</a> &rsaquo;
-            <a href="/{{ page.city_slug }}">{{ page.city }}</a> &rsaquo;
+            <a href="/service-area/{{ page.city_slug }}">{{ page.city }}</a> &rsaquo;
             {{ page.service_name }}
         </div>
         <h1>{{ page.service_name }} in <span>{{ page.city }}, FL</span></h1>
@@ -385,18 +385,18 @@ layout: default
             AJ Automotive serves {{ page.city }} with a full range of auto repair services.
         </p>
         <div class="other-services-list">
-            <a href="/{{ page.city_slug }}/oil-change" class="other-service-link">Oil Change</a>
-            <a href="/{{ page.city_slug }}/auto-brake-repair" class="other-service-link">Brake Repair</a>
-            <a href="/{{ page.city_slug }}/transmission" class="other-service-link">Transmission</a>
-            <a href="/{{ page.city_slug }}/ac-installation-repair" class="other-service-link">A/C Repair</a>
-            <a href="/{{ page.city_slug }}/auto-engine-diagnostics" class="other-service-link">Engine Diagnostics</a>
-            <a href="/{{ page.city_slug }}/electrical" class="other-service-link">Electrical</a>
-            <a href="/{{ page.city_slug }}/steering-suspension-repair" class="other-service-link">Steering and Suspension</a>
-            <a href="/{{ page.city_slug }}/battery" class="other-service-link">Battery</a>
-            <a href="/{{ page.city_slug }}/exhaust" class="other-service-link">Exhaust</a>
-            <a href="/{{ page.city_slug }}/vehicle-safety-inspection" class="other-service-link">Vehicle Inspection</a>
-            <a href="/{{ page.city_slug }}/auto-emissions-testing" class="other-service-link">Emissions Testing</a>
-            <a href="/{{ page.city_slug }}/tire-rotations" class="other-service-link">Tire Rotations</a>
+            <a href="/service-area/{{ page.city_slug }}/oil-change" class="other-service-link">Oil Change</a>
+            <a href="/service-area/{{ page.city_slug }}/auto-brake-repair" class="other-service-link">Brake Repair</a>
+            <a href="/service-area/{{ page.city_slug }}/transmission" class="other-service-link">Transmission</a>
+            <a href="/service-area/{{ page.city_slug }}/ac-installation-repair" class="other-service-link">A/C Repair</a>
+            <a href="/service-area/{{ page.city_slug }}/auto-engine-diagnostics" class="other-service-link">Engine Diagnostics</a>
+            <a href="/service-area/{{ page.city_slug }}/electrical" class="other-service-link">Electrical</a>
+            <a href="/service-area/{{ page.city_slug }}/steering-suspension-repair" class="other-service-link">Steering and Suspension</a>
+            <a href="/service-area/{{ page.city_slug }}/battery" class="other-service-link">Battery</a>
+            <a href="/service-area/{{ page.city_slug }}/exhaust" class="other-service-link">Exhaust</a>
+            <a href="/service-area/{{ page.city_slug }}/vehicle-safety-inspection" class="other-service-link">Vehicle Inspection</a>
+            <a href="/service-area/{{ page.city_slug }}/auto-emissions-testing" class="other-service-link">Emissions Testing</a>
+            <a href="/service-area/{{ page.city_slug }}/tire-rotations" class="other-service-link">Tire Rotations</a>
         </div>
     </div>
 </section>
@@ -460,7 +460,7 @@ layout: default
     "@type": "BreadcrumbList",
     "itemListElement": [
         { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://ajautoandrepair.com/" },
-        { "@type": "ListItem", "position": 2, "name": "{{ page.city }}", "item": "https://ajautoandrepair.com/{{ page.city_slug }}" },
+        { "@type": "ListItem", "position": 2, "name": "{{ page.city }}", "item": "https://ajautoandrepair.com/service-area/{{ page.city_slug }}" },
         { "@type": "ListItem", "position": 3, "name": "{{ page.service_name }}", "item": "https://ajautoandrepair.com{{ page.url }}" }
     ]
 }
