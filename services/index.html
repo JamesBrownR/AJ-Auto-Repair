@@ -1,380 +1,636 @@
 ---
 layout: default
-title: Auto Repair Services Eustis FL | AJ Automotive Services
-description: Complete auto repair services in Eustis, FL. Brakes, A/C, diagnostics, transmissions, electrical, fleet maintenance, and more. Expert service for foreign & domestic vehicles.
+title: Auto Repair Services in Eustis, FL | AJ Automotive Services
+description: Full-service auto repair in Eustis, FL. Oil changes, brake repair, transmission service, A/C repair, engine diagnostics, electrical, and more. Foreign and domestic vehicles. Call (352) 308-8142.
 ---
 
 <style>
-    .hero {
-        height: 90vh;
-        padding-top: 120px;
+    .services-hero {
+        background: linear-gradient(rgba(0,0,0,0.72), rgba(0,0,0,0.72)), url('https://images.unsplash.com/photo-1619642751034-765dfdf7c58e?auto=format&fit=crop&q=80&w=1974');
+        background-size: cover;
+        background-position: center;
+        padding: 100px 0 80px;
+        text-align: center;
+        border-bottom: 3px solid var(--accent-gold);
     }
 
+    .services-hero h1 {
+        font-size: clamp(2rem, 5vw, 3.2rem);
+        color: #fff;
+        margin-bottom: 1rem;
+    }
+
+    .services-hero p {
+        font-family: 'Roboto', sans-serif;
+        font-size: 1.1rem;
+        color: var(--text-gray);
+        max-width: 600px;
+        margin: 0 auto 2rem;
+        font-weight: 300;
+    }
+
+    .hero-cta-row {
+        display: flex;
+        gap: 1rem;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    /* INTRO */
     .services-intro {
         padding: 60px 0;
-        background-color: var(--primary-light);
-        text-align: center;
+        background: var(--primary-light);
     }
 
     .services-intro p {
-        max-width: 800px;
-        margin: 0 auto 20px;
-        font-size: 1.1rem;
+        font-family: 'Roboto', sans-serif;
         color: var(--text-gray);
         line-height: 1.8;
+        max-width: 860px;
+        font-size: 1.05rem;
+        margin-bottom: 1rem;
     }
 
+    .services-intro p strong {
+        color: var(--accent-gold);
+    }
+
+    /* SERVICE CARDS GRID */
     .services-main {
-        padding: 80px 0;
-        background-color: var(--primary-dark);
+        padding: 70px 0;
+        background: var(--primary-dark);
     }
 
-    .services-categories {
+    .services-main .section-title {
+        text-align: left;
+        display: block;
+        width: auto;
+        margin-bottom: 2rem;
+    }
+
+    .services-main .section-title::after {
+        margin: 10px 0;
+    }
+
+    .services-grid {
         display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-        gap: 30px;
-        margin-top: 40px;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 2px;
+        background: #333;
+        border: 1px solid #333;
     }
 
-    .service-category-card {
+    .service-card {
+        background: var(--primary-dark);
+        padding: 32px 28px;
+        display: flex;
+        flex-direction: column;
+        transition: background 0.3s;
+        text-decoration: none;
+    }
+
+    .service-card:hover {
         background: var(--primary-light);
-        border-left: 4px solid var(--accent-gold);
-        border-radius: 8px;
-        padding: 35px;
-        transition: transform 0.3s, box-shadow 0.3s;
     }
 
-    .service-category-card:hover {
-        transform: translateY(-5px);
-        box-shadow: 0 10px 30px rgba(232, 166, 53, 0.2);
+    .service-card-top {
+        display: flex;
+        align-items: center;
+        gap: 14px;
+        margin-bottom: 14px;
     }
 
-    .service-icon {
-        font-size: 3rem;
+    .service-card-icon {
+        width: 44px;
+        height: 44px;
+        background: var(--primary-light);
+        border: 1px solid var(--accent-gold);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-shrink: 0;
+    }
+
+    .service-card:hover .service-card-icon {
+        background: var(--accent-gold);
+    }
+
+    .service-card-icon i {
         color: var(--accent-gold);
-        margin-bottom: 20px;
+        font-size: 1.1rem;
     }
 
-    .service-category-card h3 {
-        font-size: 1.8rem;
-        color: var(--accent-gold);
-        margin-bottom: 15px;
+    .service-card:hover .service-card-icon i {
+        color: var(--primary-dark);
+    }
+
+    .service-card h3 {
         font-family: 'Oswald', sans-serif;
-        text-transform: uppercase;
-    }
-
-    .service-category-card p {
-        color: var(--text-gray);
-        margin-bottom: 20px;
-        line-height: 1.7;
-    }
-
-    .service-list {
-        list-style: none;
-        margin: 20px 0;
-    }
-
-    .service-list li {
-        padding: 8px 0;
+        font-size: 1.1rem;
         color: var(--text-light);
-        position: relative;
-        padding-left: 25px;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+        line-height: 1.2;
+        margin: 0;
     }
 
-    .service-list li::before {
-        content: "✓";
-        color: var(--accent-gold);
-        font-weight: bold;
+    .service-card p {
+        font-family: 'Roboto', sans-serif;
+        font-size: 0.9rem;
+        color: var(--text-gray);
+        line-height: 1.6;
+        margin: 0 0 16px;
+        flex-grow: 1;
+    }
+
+    .service-card-sub {
+        list-style: none;
+        margin: 0 0 18px;
+        padding: 0;
+    }
+
+    .service-card-sub li {
+        font-family: 'Roboto', sans-serif;
+        font-size: 0.85rem;
+        color: var(--text-gray);
+        padding: 4px 0;
+        border-bottom: 1px solid #2a2a2a;
+        padding-left: 14px;
+        position: relative;
+    }
+
+    .service-card-sub li::before {
+        content: "";
         position: absolute;
         left: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 5px;
+        height: 5px;
+        background: var(--accent-gold);
+        border-radius: 50%;
     }
 
-    .learn-more-btn {
-        display: inline-block;
-        background-color: var(--accent-gold);
+    .service-card-sub li:last-child {
+        border-bottom: none;
+    }
+
+    .service-card-link {
+        font-family: 'Oswald', sans-serif;
+        font-size: 0.85rem;
+        color: var(--accent-gold);
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        display: inline-flex;
+        align-items: center;
+        gap: 6px;
+        margin-top: auto;
+    }
+
+    .service-card-link::after {
+        content: "→";
+    }
+
+    /* WHY SECTION */
+    .why-section {
+        padding: 70px 0;
+        background: var(--primary-light);
+    }
+
+    .why-section .section-title {
+        text-align: left;
+        display: block;
+        width: auto;
+    }
+
+    .why-section .section-title::after {
+        margin: 10px 0;
+    }
+
+    .why-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+        gap: 20px;
+        margin-top: 2rem;
+    }
+
+    .why-card {
+        background: var(--primary-dark);
+        padding: 28px 20px;
+        border-top: 3px solid var(--accent-gold);
+        text-align: center;
+    }
+
+    .why-card h3 {
+        font-size: 1rem;
+        color: var(--text-light);
+        margin-bottom: 10px;
+    }
+
+    .why-card p {
+        font-family: 'Roboto', sans-serif;
+        font-size: 0.9rem;
+        color: var(--text-gray);
+        margin: 0;
+        line-height: 1.5;
+    }
+
+    /* VEHICLES WE SERVICE */
+    .vehicles-section {
+        padding: 70px 0;
+        background: var(--primary-dark);
+    }
+
+    .vehicles-section .section-title {
+        text-align: left;
+        display: block;
+        width: auto;
+    }
+
+    .vehicles-section .section-title::after {
+        margin: 10px 0;
+    }
+
+    .vehicles-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+        gap: 12px;
+        margin-top: 2rem;
+    }
+
+    .vehicle-tag {
+        background: var(--primary-light);
+        border-left: 3px solid var(--accent-gold);
+        padding: 14px 16px;
+        font-family: 'Roboto', sans-serif;
+        font-size: 0.9rem;
+        color: var(--text-gray);
+    }
+
+    /* CTA BAND */
+    .cta-band {
+        background: var(--accent-gold);
+        padding: 60px 0;
+        text-align: center;
+    }
+
+    .cta-band h2 {
         color: var(--primary-dark);
+        font-size: 2rem;
+        margin-bottom: 0.5rem;
+    }
+
+    .cta-band p {
+        font-family: 'Roboto', sans-serif;
+        color: var(--primary-dark);
+        font-size: 1rem;
+        margin-bottom: 1.5rem;
+        opacity: 0.85;
+    }
+
+    .cta-band .phone-link {
+        display: block;
+        font-family: 'Oswald', sans-serif;
+        font-size: 2.2rem;
+        color: var(--primary-dark);
+        letter-spacing: 1px;
+        margin-bottom: 1.2rem;
+        text-decoration: none;
+    }
+
+    .btn-dark {
+        display: inline-block;
+        background: var(--primary-dark);
+        color: var(--accent-gold);
         padding: 12px 30px;
+        font-family: 'Oswald', sans-serif;
         font-weight: bold;
         text-transform: uppercase;
         border-radius: 4px;
-        font-family: 'Oswald', sans-serif;
-        border: 2px solid var(--accent-gold);
-        margin-top: 15px;
-        transition: 0.3s;
+        border: 2px solid var(--primary-dark);
+        transition: all 0.3s;
+        text-decoration: none;
     }
 
-    .learn-more-btn:hover {
-        background-color: transparent;
-        color: var(--accent-gold);
-    }
-
-    .why-choose {
-        padding: 80px 0;
-        background-color: var(--primary-light);
-    }
-
-    .benefits-grid {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-        gap: 30px;
-        margin-top: 40px;
-    }
-
-    .benefit-card {
-        text-align: center;
-        padding: 30px 20px;
-    }
-
-    .benefit-card i {
-        font-size: 2.5rem;
-        color: var(--accent-gold);
-        margin-bottom: 15px;
-    }
-
-    .benefit-card h4 {
-        font-size: 1.3rem;
-        margin-bottom: 10px;
-        color: var(--text-light);
-    }
-
-    .benefit-card p {
-        color: var(--text-gray);
-    }
-
-    .cta-section {
-        padding: 80px 0;
-        background: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)), url('https://images.unsplash.com/photo-1486262715619-67b85e0b08d3?auto=format&fit=crop&q=80');
-        background-size: cover;
-        background-position: center;
-        text-align: center;
-    }
-
-    .cta-section h2 {
-        font-size: 2.5rem;
-        color: var(--accent-gold);
-        margin-bottom: 20px;
-    }
-
-    .cta-section p {
-        font-size: 1.2rem;
-        color: var(--text-light);
-        margin-bottom: 30px;
-        max-width: 600px;
-        margin-left: auto;
-        margin-right: auto;
+    .btn-dark:hover {
+        background: transparent;
+        color: var(--primary-dark);
     }
 
     @media (max-width: 768px) {
-        .services-categories {
-            grid-template-columns: 1fr;
-        }
-        
-        .hero {
-            height: 50vh;
-        }
+        .services-hero { padding: 70px 0 60px; }
+        .services-main, .why-section, .vehicles-section { padding: 50px 0; }
+        .services-grid { grid-template-columns: 1fr; }
     }
 </style>
 
-<section class="hero">
-    <div class="hero-content">
-        <h1>Professional Auto Repair Services</h1>
-        <p>Expert Service for Foreign & Domestic Vehicles</p>
-        <div style="margin-top: 20px;">
-            <a href="https://ajautoandrepair.com/contact/" class="btn">Schedule Service</a>
+<!-- HERO -->
+<section class="services-hero">
+    <div class="container">
+        <h1>Auto Repair Services in Eustis, FL</h1>
+        <p>Foreign and domestic vehicles. No job too big or small. Serving Eustis and all of Lake County.</p>
+        <div class="hero-cta-row">
+            <a href="tel:+13523088142" class="btn">Call (352) 308-8142</a>
+            <a href="/contact" class="btn" style="background: transparent; color: var(--accent-gold);">Schedule Service</a>
         </div>
     </div>
 </section>
 
+<!-- INTRO -->
 <section class="services-intro">
     <div class="container">
-        <p>
-            At AJ Auto Repair in Eustis, FL, we provide comprehensive automotive services for all makes and models. 
-            With years of experience and state-of-the-art diagnostic equipment, our certified technicians deliver 
-            quality repairs at honest prices. From routine maintenance to complex repairs, we're your trusted local auto shop.
-        </p>
-        <p style="font-weight: bold; color: var(--accent-gold);">
-            Serving Eustis, Mount Dora, Tavares, and all of Lake County, Florida
-        </p>
+        <p>At <strong>AJ Automotive Services</strong> in Eustis, Florida, we handle everything from a routine oil change to a full engine repair. Our certified technicians work on all makes and models, foreign and domestic, and we give you a straight answer on what your vehicle needs before we start any work.</p>
+        <p>We serve Eustis, <strong>Mount Dora</strong>, <strong>Tavares</strong>, <strong>Leesburg</strong>, <strong>Lady Lake</strong>, <strong>Fruitland Park</strong>, <strong>Umatilla</strong>, and all of Lake County. Open Monday through Saturday, 8 AM to 6 PM.</p>
     </div>
 </section>
 
+<!-- ALL SERVICES -->
 <section class="services-main">
     <div class="container">
-        <h2 class="section-title">Our Service Categories</h2>
-        
-        <div class="services-categories">
-            
-            <!-- Brake & Suspension Services -->
-            <div class="service-category-card">
-                <div class="service-icon">
-                    <i class="fa-solid fa-car-burst"></i>
-                </div>
-                <h3>Brake & Suspension Services</h3>
-                <p>Your brakes are your most critical safety system. We provide complete brake repair and suspension services to keep you safe on the road.</p>
-                <ul class="service-list">
-                    <li>Brake Pad & Rotor Replacement</li>
-                    <li>Brake Fluid Service</li>
-                    <li>Caliper Repair & Replacement</li>
-                    <li>Suspension Inspection & Repair</li>
-                    <li>Shocks & Struts</li>
-                    <li>Wheel Alignment</li>
-                </ul>
-                <a href="/services/brakes-suspension" class="learn-more-btn">Learn More</a>
-            </div>
+        <h2 class="section-title">Our Services</h2>
+        <div class="services-grid">
 
-            <!-- A/C Repair -->
-            <div class="service-category-card">
-                <div class="service-icon">
-                    <i class="fa-solid fa-snowflake"></i>
+            <a href="/oil-change" class="service-card">
+                <div class="service-card-top">
+                    <div class="service-card-icon"><i class="fa-solid fa-oil-can"></i></div>
+                    <h3>Oil Change</h3>
                 </div>
-                <h3>A/C Repair & Climate Control</h3>
-                <p>Don't suffer through Florida's heat with a broken A/C. We diagnose and repair all air conditioning and heating issues.</p>
-                <ul class="service-list">
-                    <li>A/C System Diagnostics</li>
-                    <li>Refrigerant Recharge</li>
-                    <li>Compressor Replacement</li>
-                    <li>Leak Detection & Repair</li>
-                    <li>Heating System Repair</li>
-                    <li>Climate Control Systems</li>
+                <p>Conventional, synthetic, synthetic blend, and high-mileage oil changes. Includes multi-point inspection and fluid top-off.</p>
+                <ul class="service-card-sub">
+                    <li>Conventional oil change</li>
+                    <li>Full synthetic oil change</li>
+                    <li>High-mileage oil change</li>
+                    <li>Oil filter replacement</li>
                 </ul>
-                <a href="/services/ac-repair" class="learn-more-btn">Learn More</a>
-            </div>
+                <span class="service-card-link">View Service</span>
+            </a>
 
-            <!-- Engine Services -->
-            <div class="service-category-card">
-                <div class="service-icon">
-                    <i class="fa-solid fa-wrench"></i>
+            <a href="/auto-brake-repair" class="service-card">
+                <div class="service-card-top">
+                    <div class="service-card-icon"><i class="fa-solid fa-car-burst"></i></div>
+                    <h3>Brake Repair</h3>
                 </div>
-                <h3>Engine Services & Diagnostics</h3>
-                <p>From routine tune-ups to complete engine replacements, we handle all your engine service needs with expertise.</p>
-                <ul class="service-list">
-                    <li>Check Engine Light Diagnostics</li>
-                    <li>Tune-ups & Oil Changes</li>
-                    <li>Engine Replacement</li>
-                    <li>Timing Belt/Chain Service</li>
-                    <li>Spark Plug Replacement</li>
-                    <li>Fuel System Service</li>
+                <p>Complete brake system service for all vehicles. Pads, rotors, calipers, brake fluid, and full brake inspections.</p>
+                <ul class="service-card-sub">
+                    <li>Brake pad replacement</li>
+                    <li>Rotor replacement</li>
+                    <li>Caliper repair and replacement</li>
+                    <li>Brake fluid service</li>
                 </ul>
-                <a href="/services/engine-diagnostics" class="learn-more-btn">Learn More</a>
-            </div>
+                <span class="service-card-link">View Service</span>
+            </a>
 
-            <!-- Transmission & Drivetrain -->
-            <div class="service-category-card">
-                <div class="service-icon">
-                    <i class="fa-solid fa-gears"></i>
+            <a href="/transmission" class="service-card">
+                <div class="service-card-top">
+                    <div class="service-card-icon"><i class="fa-solid fa-gears"></i></div>
+                    <h3>Transmission</h3>
                 </div>
-                <h3>Transmission & Drivetrain</h3>
-                <p>Expert transmission repair and drivetrain services to keep your vehicle shifting smoothly and running reliably.</p>
-                <ul class="service-list">
-                    <li>Transmission Diagnostics</li>
-                    <li>Transmission Fluid Service</li>
-                    <li>Transmission Repair & Rebuild</li>
-                    <li>Clutch Replacement</li>
-                    <li>Differential Service</li>
-                    <li>Axle Repair</li>
+                <p>Transmission diagnostics, fluid service, repair, and replacement for automatic and manual transmissions.</p>
+                <ul class="service-card-sub">
+                    <li>Transmission diagnostics</li>
+                    <li>Transmission fluid service</li>
+                    <li>Transmission repair</li>
+                    <li>Transmission replacement</li>
                 </ul>
-                <a href="/services/transmission" class="learn-more-btn">Learn More</a>
-            </div>
+                <span class="service-card-link">View Service</span>
+            </a>
 
-            <!-- Electrical Systems -->
-            <div class="service-category-card">
-                <div class="service-icon">
-                    <i class="fa-solid fa-bolt"></i>
+            <a href="/ac-installation-repair" class="service-card">
+                <div class="service-card-top">
+                    <div class="service-card-icon"><i class="fa-solid fa-snowflake"></i></div>
+                    <h3>A/C Installation and Repair</h3>
                 </div>
-                <h3>Electrical Systems</h3>
-                <p>Modern vehicles rely on complex electrical systems. We diagnose and repair all electrical issues quickly and accurately.</p>
-                <ul class="service-list">
-                    <li>Battery Testing & Replacement</li>
-                    <li>Alternator & Starter Service</li>
-                    <li>Electrical Diagnostics</li>
-                    <li>Lighting Repair</li>
-                    <li>Wiring Repair</li>
-                    <li>Computer System Diagnostics</li>
+                <p>Full A/C system service for Florida's heat. Diagnostics, recharge, compressor replacement, leak repair, and installation.</p>
+                <ul class="service-card-sub">
+                    <li>A/C diagnostics</li>
+                    <li>Refrigerant recharge</li>
+                    <li>Compressor replacement</li>
+                    <li>Leak detection and repair</li>
                 </ul>
-                <a href="/services/electrical" class="learn-more-btn">Learn More</a>
-            </div>
+                <span class="service-card-link">View Service</span>
+            </a>
 
-            <!-- Fleet Maintenance -->
-            <div class="service-category-card">
-                <div class="service-icon">
-                    <i class="fa-solid fa-truck-moving"></i>
+            <a href="/auto-engine-diagnostics" class="service-card">
+                <div class="service-card-top">
+                    <div class="service-card-icon"><i class="fa-solid fa-stethoscope"></i></div>
+                    <h3>Auto Engine Diagnostics</h3>
                 </div>
-                <h3>Fleet & Commercial Services</h3>
-                <p>Keep your business vehicles running with our comprehensive fleet maintenance programs designed to minimize downtime.</p>
-                <ul class="service-list">
-                    <li>Preventive Maintenance Programs</li>
-                    <li>Fleet Vehicle Repair</li>
-                    <li>Commercial Truck Service</li>
-                    <li>Scheduled Maintenance</li>
-                    <li>Fleet Inspections</li>
-                    <li>Priority Scheduling</li>
+                <p>Check engine light diagnosis, tune-ups, engine repair, and complete engine replacement for all makes and models.</p>
+                <ul class="service-card-sub">
+                    <li>Check engine light diagnosis</li>
+                    <li>Engine tune-up</li>
+                    <li>Engine repair</li>
+                    <li>Engine replacement</li>
                 </ul>
-                <a href="/services/fleet" class="learn-more-btn">Learn More</a>
-            </div>
+                <span class="service-card-link">View Service</span>
+            </a>
 
-            <!-- Specialty Services -->
-            <div class="service-category-card">
-                <div class="service-icon">
-                    <i class="fa-solid fa-motorcycle"></i>
+            <a href="/electrical" class="service-card">
+                <div class="service-card-top">
+                    <div class="service-card-icon"><i class="fa-solid fa-bolt"></i></div>
+                    <h3>Electrical</h3>
                 </div>
-                <h3>Specialty Services</h3>
-                <p>We also offer specialized services for motorcycles, small engines, custom work, and unique automotive needs.</p>
-                <ul class="service-list">
-                    <li>Motorcycle Repair & Maintenance</li>
-                    <li>Small Engine Repair (ATVs, Mowers)</li>
-                    <li>Welding & Fabrication</li>
-                    <li>Custom Headliners</li>
-                    <li>Custom Modifications</li>
-                    <li>Marine Engine Service</li>
+                <p>Battery, alternator, starter, wiring, lighting, and vehicle computer system diagnostics and repair.</p>
+                <ul class="service-card-sub">
+                    <li>Electrical diagnostics</li>
+                    <li>Alternator and starter service</li>
+                    <li>Wiring repair</li>
+                    <li>Computer system diagnostics</li>
                 </ul>
-                <a href="/contact" class="learn-more-btn">Contact Us</a>
-            </div>
+                <span class="service-card-link">View Service</span>
+            </a>
+
+            <a href="/steering-suspension-repair" class="service-card">
+                <div class="service-card-top">
+                    <div class="service-card-icon"><i class="fa-solid fa-car"></i></div>
+                    <h3>Steering and Suspension Repair</h3>
+                </div>
+                <p>Shocks, struts, tie rods, ball joints, wheel alignment, and complete steering and suspension system repair.</p>
+                <ul class="service-card-sub">
+                    <li>Shocks and struts</li>
+                    <li>Tie rod replacement</li>
+                    <li>Ball joint replacement</li>
+                    <li>Wheel alignment</li>
+                </ul>
+                <span class="service-card-link">View Service</span>
+            </a>
+
+            <a href="/battery" class="service-card">
+                <div class="service-card-top">
+                    <div class="service-card-icon"><i class="fa-solid fa-battery-full"></i></div>
+                    <h3>Battery</h3>
+                </div>
+                <p>Battery testing, maintenance, and replacement for all vehicles. We test your charging system at the same time.</p>
+                <ul class="service-card-sub">
+                    <li>Battery testing</li>
+                    <li>Battery maintenance</li>
+                    <li>Battery replacement</li>
+                    <li>Charging system test</li>
+                </ul>
+                <span class="service-card-link">View Service</span>
+            </a>
+
+            <a href="/exhaust" class="service-card">
+                <div class="service-card-top">
+                    <div class="service-card-icon"><i class="fa-solid fa-wind"></i></div>
+                    <h3>Exhaust</h3>
+                </div>
+                <p>Exhaust system inspection, repair, and full replacement. Mufflers, pipes, catalytic converters, and manifolds.</p>
+                <ul class="service-card-sub">
+                    <li>Exhaust system inspection</li>
+                    <li>Muffler repair and replacement</li>
+                    <li>Catalytic converter service</li>
+                    <li>Exhaust system replacement</li>
+                </ul>
+                <span class="service-card-link">View Service</span>
+            </a>
+
+            <a href="/vehicle-safety-inspection" class="service-card">
+                <div class="service-card-top">
+                    <div class="service-card-icon"><i class="fa-solid fa-clipboard-check"></i></div>
+                    <h3>Vehicle Safety Inspection</h3>
+                </div>
+                <p>Comprehensive vehicle inspections covering all major systems. Pre-purchase inspections and general safety checks.</p>
+                <ul class="service-card-sub">
+                    <li>Full vehicle inspection</li>
+                    <li>Pre-purchase inspection</li>
+                    <li>Safety system check</li>
+                    <li>Written inspection report</li>
+                </ul>
+                <span class="service-card-link">View Service</span>
+            </a>
+
+            <a href="/auto-emissions-testing" class="service-card">
+                <div class="service-card-top">
+                    <div class="service-card-icon"><i class="fa-solid fa-leaf"></i></div>
+                    <h3>Auto Emissions Testing</h3>
+                </div>
+                <p>Emissions testing and diagnostic repair to get your vehicle into compliance for Florida registration renewal.</p>
+                <ul class="service-card-sub">
+                    <li>Emissions test</li>
+                    <li>Emissions failure diagnosis</li>
+                    <li>Repair for failed emissions</li>
+                    <li>Re-test after repair</li>
+                </ul>
+                <span class="service-card-link">View Service</span>
+            </a>
+
+            <a href="/tire-rotations" class="service-card">
+                <div class="service-card-top">
+                    <div class="service-card-icon"><i class="fa-solid fa-tire"></i></div>
+                    <h3>Tire Rotations</h3>
+                </div>
+                <p>Regular tire rotations to extend tread life, improve handling, and maintain even wear across all four tires.</p>
+                <ul class="service-card-sub">
+                    <li>Tire rotation</li>
+                    <li>Tire pressure check</li>
+                    <li>Tread depth check</li>
+                    <li>Tire condition report</li>
+                </ul>
+                <span class="service-card-link">View Service</span>
+            </a>
 
         </div>
     </div>
 </section>
 
-<section class="why-choose">
+<!-- WHY CHOOSE AJ -->
+<section class="why-section">
     <div class="container">
-        <h2 class="section-title">Why Choose AJ Auto Repair?</h2>
-        
-        <div class="benefits-grid">
-            <div class="benefit-card">
-                <i class="fa-solid fa-certificate"></i>
-                <h4>Certified Technicians</h4>
-                <p>Our experienced mechanics are trained on the latest automotive technology</p>
+        <h2 class="section-title">Why Eustis Drivers Choose AJ Automotive</h2>
+        <div class="why-grid">
+            <div class="why-card">
+                <h3>Certified Technicians</h3>
+                <p>Experienced mechanics trained on foreign and domestic vehicles of all makes and models.</p>
             </div>
-            
-            <div class="benefit-card">
-                <i class="fa-solid fa-hand-holding-dollar"></i>
-                <h4>Honest Pricing</h4>
-                <p>Transparent quotes with no hidden fees or unnecessary upsells</p>
+            <div class="why-card">
+                <h3>Honest Pricing</h3>
+                <p>Upfront quotes with no hidden fees. You approve the work before we start.</p>
             </div>
-            
-            <div class="benefit-card">
-                <i class="fa-solid fa-car"></i>
-                <h4>All Makes & Models</h4>
-                <p>We service foreign and domestic vehicles of all types</p>
+            <div class="why-card">
+                <h3>All Makes and Models</h3>
+                <p>Cars, trucks, SUVs, and vans. Foreign and domestic. No job too big or small.</p>
             </div>
-            
-            <div class="benefit-card">
-                <i class="fa-solid fa-clock"></i>
-                <h4>Fast Turnaround</h4>
-                <p>We respect your time and complete most repairs same-day</p>
+            <div class="why-card">
+                <h3>Fast Turnaround</h3>
+                <p>Most repairs completed same day. We respect your time.</p>
+            </div>
+            <div class="why-card">
+                <h3>Family Owned</h3>
+                <p>A locally owned shop serving Eustis and Lake County since day one.</p>
             </div>
         </div>
     </div>
 </section>
 
-<section class="cta-section">
+<!-- VEHICLES WE SERVICE -->
+<section class="vehicles-section">
     <div class="container">
-        <h2>Need Auto Repair Service?</h2>
-        <p>Schedule your appointment today and experience the AJ Auto Repair difference. Quality work, honest prices, and service you can trust.</p>
-        <a href="tel:+13523088142" class="btn" style="margin: 15px;">
-            <i class="fa-solid fa-phone"></i> Call (352) 308-8142
-        </a>
-        <a href="/contact" class="btn">
-            <i class="fa-solid fa-calendar"></i> Schedule Service
-        </a>
+        <h2 class="section-title">Makes and Models We Service</h2>
+        <div class="vehicles-grid">
+            <div class="vehicle-tag">Honda</div>
+            <div class="vehicle-tag">Toyota</div>
+            <div class="vehicle-tag">Ford</div>
+            <div class="vehicle-tag">Chevrolet</div>
+            <div class="vehicle-tag">Dodge</div>
+            <div class="vehicle-tag">Nissan</div>
+            <div class="vehicle-tag">Jeep</div>
+            <div class="vehicle-tag">GMC</div>
+            <div class="vehicle-tag">Kia</div>
+            <div class="vehicle-tag">Hyundai</div>
+            <div class="vehicle-tag">Subaru</div>
+            <div class="vehicle-tag">BMW</div>
+            <div class="vehicle-tag">Mercedes-Benz</div>
+            <div class="vehicle-tag">Volkswagen</div>
+            <div class="vehicle-tag">Chrysler</div>
+            <div class="vehicle-tag">Ram</div>
+            <div class="vehicle-tag">Mazda</div>
+            <div class="vehicle-tag">Lexus</div>
+            <div class="vehicle-tag">Acura</div>
+            <div class="vehicle-tag">And more</div>
+        </div>
     </div>
 </section>
+
+<!-- CTA BAND -->
+<section class="cta-band">
+    <div class="container">
+        <h2>Need Auto Repair in Eustis?</h2>
+        <p>Call or schedule online. Most appointments available same week.</p>
+        <a href="tel:+13523088142" class="phone-link">(352) 308-8142</a>
+        <a href="/contact" class="btn-dark">Schedule Service</a>
+    </div>
+</section>
+
+<!-- Schema -->
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://ajautoandrepair.com/" },
+        { "@type": "ListItem", "position": 2, "name": "Services", "item": "https://ajautoandrepair.com/services/" }
+    ]
+}
+</script>
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    "name": "Auto Repair Services at AJ Automotive Services",
+    "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Oil Change", "url": "https://ajautoandrepair.com/oil-change" },
+        { "@type": "ListItem", "position": 2, "name": "Brake Repair", "url": "https://ajautoandrepair.com/auto-brake-repair" },
+        { "@type": "ListItem", "position": 3, "name": "Transmission", "url": "https://ajautoandrepair.com/transmission" },
+        { "@type": "ListItem", "position": 4, "name": "A/C Installation and Repair", "url": "https://ajautoandrepair.com/ac-installation-repair" },
+        { "@type": "ListItem", "position": 5, "name": "Auto Engine Diagnostics", "url": "https://ajautoandrepair.com/auto-engine-diagnostics" },
+        { "@type": "ListItem", "position": 6, "name": "Electrical", "url": "https://ajautoandrepair.com/electrical" },
+        { "@type": "ListItem", "position": 7, "name": "Steering and Suspension Repair", "url": "https://ajautoandrepair.com/steering-suspension-repair" },
+        { "@type": "ListItem", "position": 8, "name": "Battery", "url": "https://ajautoandrepair.com/battery" },
+        { "@type": "ListItem", "position": 9, "name": "Exhaust", "url": "https://ajautoandrepair.com/exhaust" },
+        { "@type": "ListItem", "position": 10, "name": "Vehicle Safety Inspection", "url": "https://ajautoandrepair.com/vehicle-safety-inspection" },
+        { "@type": "ListItem", "position": 11, "name": "Auto Emissions Testing", "url": "https://ajautoandrepair.com/auto-emissions-testing" },
+        { "@type": "ListItem", "position": 12, "name": "Tire Rotations", "url": "https://ajautoandrepair.com/tire-rotations" }
+    ]
+}
+</script>
