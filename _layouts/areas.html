@@ -234,20 +234,16 @@ layout: default
 </section>
 
 
-<!-- REVIEWS from _data/reviews.yml -->
+<!-- SINGLE FEATURED REVIEW (unique per city page via front matter) -->
 <section class="area-section">
     <div class="container">
         <h2 class="section-title">What Our Customers Are Saying</h2>
-        <div class="reviews-grid-area">
-            {% for review in site.data.reviews limit:6 %}
+        <div style="max-width: 700px; margin: 2rem auto 0;">
             <div class="area-review-card">
-                <div class="area-review-stars">
-                    {% for i in (1..review.stars) %}&#9733;{% endfor %}
-                </div>
-                <p class="area-review-text">{{ review.text }}</p>
-                <div class="area-review-author">{{ review.name }}</div>
+                <div class="area-review-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+                <p class="area-review-text">{{ page.review_text }}</p>
+                <div class="area-review-author">{{ page.review_author }}</div>
             </div>
-            {% endfor %}
         </div>
         <div class="reviews-cta">
             <a href="https://www.google.com/maps/search/AJ+Automotive+Services+Eustis+FL" target="_blank" rel="noopener">Read all reviews on Google &rarr;</a>
