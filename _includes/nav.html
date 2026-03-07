@@ -1,89 +1,229 @@
 <style>
-    /* Dropdown styling */
     nav ul {
         position: relative;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        align-items: center;
+        gap: 5px;
     }
-    
+
     nav li {
         position: relative;
     }
-    
+
     .dropdown {
         position: relative;
-        display: inline-block;
     }
-    
+
     .dropdown-content {
         display: none;
         position: absolute;
         background-color: var(--primary-dark);
-        min-width: 250px;
-        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.3);
+        min-width: 260px;
+        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.4);
         z-index: 1000;
         border: 2px solid var(--accent-gold);
         border-radius: 4px;
         top: 100%;
         left: 0;
     }
-    
+
     .dropdown-content a {
         color: var(--text-light);
-        padding: 12px 16px;
+        padding: 11px 16px;
         text-decoration: none;
         display: block;
-        border-bottom: 1px solid #444;
-        transition: 0.3s;
+        border-bottom: 1px solid #3a3d47;
+        font-size: 0.9rem;
+        transition: background 0.2s, color 0.2s;
     }
-    
+
     .dropdown-content a:last-child {
         border-bottom: none;
     }
-    
+
     .dropdown-content a:hover {
         background-color: var(--primary-light);
         color: var(--accent-gold);
     }
-    
+
+    .dropdown-content .dropdown-label {
+        padding: 8px 16px 4px;
+        font-size: 0.7rem;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+        color: var(--accent-gold);
+        border-bottom: 1px solid #3a3d47;
+        font-family: 'Oswald', sans-serif;
+        pointer-events: none;
+    }
+
+    .dropdown-content .dropdown-divider {
+        border-top: 2px solid var(--accent-gold);
+        margin: 2px 0;
+    }
+
     .dropdown:hover .dropdown-content {
         display: block;
     }
-    
+
     .dropdown > a::after {
         content: " ▼";
-        font-size: 0.7em;
-        margin-left: 5px;
+        font-size: 0.65em;
+        margin-left: 4px;
+        opacity: 0.8;
+    }
+
+    /* Mobile nav toggle */
+    .nav-toggle {
+        display: none;
+        background: none;
+        border: none;
+        cursor: pointer;
+        padding: 8px;
+        color: var(--text-light);
+        font-size: 1.5rem;
+    }
+
+    @media (max-width: 900px) {
+        .nav-toggle {
+            display: block;
+        }
+
+        nav {
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            right: 0;
+            background: var(--primary-dark);
+            border-top: 2px solid var(--accent-gold);
+            z-index: 999;
+            padding: 10px 0;
+        }
+
+        nav.open {
+            display: block;
+        }
+
+        nav ul {
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 0;
+        }
+
+        nav li {
+            width: 100%;
+        }
+
+        nav ul li a {
+            display: block;
+            padding: 12px 20px;
+            border-bottom: 1px solid #3a3d47;
+        }
+
+        .dropdown-content {
+            position: static;
+            display: none;
+            box-shadow: none;
+            border: none;
+            border-top: 1px solid #3a3d47;
+            background: var(--primary-light);
+            min-width: unset;
+            width: 100%;
+        }
+
+        .dropdown.open .dropdown-content {
+            display: block;
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: none;
+        }
+
+        .dropdown.open .dropdown-content {
+            display: block;
+        }
+
+        .dropdown > a::after {
+            float: right;
+            margin-right: 10px;
+        }
     }
 </style>
 
 <header>
     <div class="container nav-container">
         <div class="logo-area">
-            <span class="brand-name">AJ AUTOMOTIVE SERVICES</span>
+            <a href="/" style="text-decoration:none;">
+                <span class="brand-name">AJ AUTOMOTIVE SERVICES</span>
+            </a>
         </div>
+
+        <button class="nav-toggle" aria-label="Toggle navigation" onclick="this.closest('header').querySelector('nav').classList.toggle('open')">
+            <i class="fa-solid fa-bars"></i>
+        </button>
+
         <nav>
             <ul>
                 <li><a href="/">Home</a></li>
-                
-              <li class="dropdown">
+
+                <li class="dropdown">
                     <a href="/services">Services</a>
                     <div class="dropdown-content">
-                        <a href="/services/brakes-suspension">Brakes & Suspension</a>
-                        <a href="/services/ac-repair">A/C Repair</a>
-                        <a href="/services/engine-diagnostics">Engine & Diagnostics</a>
+                        <div class="dropdown-label">Services</div>
+                        <a href="/services/oil-change">Oil Change</a>
+                        <a href="/services/auto-brake-repair">Brake Repair</a>
                         <a href="/services/transmission">Transmission</a>
-                        <a href="/services/electrical">Electrical Systems</a>
-                        <a href="/services/tires">Tire Service</a>
-                        <a href="/services/oil-maintenance">Oil Changes</a>
-                        <a href="/services/fleet">Fleet Maintenance</a>
-                        <a href="/services">All Services</a>
+                        <a href="/services/ac-installation-repair">A/C Installation &amp; Repair</a>
+                        <a href="/services/auto-engine-diagnostics">Engine Diagnostics</a>
+                        <a href="/services/electrical">Electrical Repair</a>
+                        <a href="/services/steering-suspension-repair">Steering &amp; Suspension</a>
+                        <a href="/services/battery">Battery Service</a>
+                        <a href="/services/exhaust">Exhaust Repair</a>
+                        <a href="/services/vehicle-safety-inspection">Safety Inspection</a>
+                        <a href="/services/auto-emissions-testing">Emissions Testing</a>
+                        <a href="/services/tire-rotations">Tire Rotations</a>
+                        <div class="dropdown-divider"></div>
+                        <a href="/services" style="color: var(--accent-gold); font-weight: bold;">All Services &rarr;</a>
                     </div>
                 </li>
-                
+
+                <li class="dropdown">
+                    <a href="/service-area">Service Areas</a>
+                    <div class="dropdown-content">
+                        <div class="dropdown-label">Lake County, FL</div>
+                        <a href="/service-area/eustis-fl">Eustis <span style="font-size:0.75em; color:var(--accent-gold);">(Our Shop)</span></a>
+                        <a href="/service-area/mount-dora-fl">Mount Dora</a>
+                        <a href="/service-area/tavares-fl">Tavares</a>
+                        <a href="/service-area/leesburg-fl">Leesburg</a>
+                        <a href="/service-area/lady-lake-fl">Lady Lake</a>
+                        <a href="/service-area/fruitland-park-fl">Fruitland Park</a>
+                        <a href="/service-area/umatilla-fl">Umatilla</a>
+                    </div>
+                </li>
+
                 <li><a href="/#gallery">Work</a></li>
                 <li><a href="/blog">Blog</a></li>
                 <li><a href="/contact">Contact</a></li>
             </ul>
         </nav>
+
         <a href="tel:+13523088142" class="btn2"><i class="fa-solid fa-phone"></i> Call AJ</a>
     </div>
 </header>
+
+<script>
+    // Mobile: toggle dropdowns on tap
+    document.querySelectorAll('.dropdown > a').forEach(function(link) {
+        link.addEventListener('click', function(e) {
+            var nav = document.querySelector('nav');
+            if (!nav.classList.contains('open')) return;
+            e.preventDefault();
+            var parent = this.closest('.dropdown');
+            parent.classList.toggle('open');
+        });
+    });
+</script>
