@@ -1,0 +1,442 @@
+---
+layout: default
+---
+
+<style>
+    /* AREA LAYOUT */
+
+    .area-hero {
+        background: linear-gradient(rgba(0,0,0,0.72), rgba(0,0,0,0.72)),
+            url('https://images.unsplash.com/photo-1619642751034-765dfdf7c58e?auto=format&fit=crop&q=80&w=1974');
+        background-size: cover;
+        background-position: center;
+        padding: 100px 0 80px;
+        text-align: center;
+        border-bottom: 3px solid var(--accent-gold);
+    }
+
+    .area-hero .breadcrumb {
+        font-family: 'Roboto', sans-serif;
+        font-size: 0.85rem;
+        color: var(--text-gray);
+        margin-bottom: 1.2rem;
+    }
+
+    .area-hero .breadcrumb a {
+        color: var(--text-gray);
+        transition: color 0.3s;
+    }
+
+    .area-hero .breadcrumb a:hover {
+        color: var(--accent-gold);
+    }
+
+    .area-hero h1 {
+        font-size: clamp(2rem, 5vw, 3.2rem);
+        color: #fff;
+        margin-bottom: 1rem;
+        line-height: 1.15;
+    }
+
+    .area-hero h1 span {
+        color: var(--accent-gold);
+    }
+
+    .area-hero p {
+        font-family: 'Roboto', sans-serif;
+        font-size: 1.1rem;
+        color: var(--text-gray);
+        max-width: 620px;
+        margin: 0 auto 2rem;
+        font-weight: 300;
+    }
+
+    .hero-cta-row {
+        display: flex;
+        gap: 1rem;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    /* SECTIONS */
+    .area-section {
+        padding: 70px 0;
+    }
+
+    .area-section.alt {
+        background-color: var(--primary-light);
+    }
+
+    .area-section .section-title {
+        text-align: left;
+        display: block;
+        width: auto;
+    }
+
+    .area-section .section-title::after {
+        margin: 10px 0;
+    }
+
+    /* INTRO TWO-COL */
+    .intro-layout {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 50px;
+        align-items: start;
+        margin-top: 2rem;
+    }
+
+    .intro-body {
+        font-family: 'Roboto', sans-serif;
+        color: var(--text-gray);
+        line-height: 1.8;
+    }
+
+    .intro-body p {
+        margin-bottom: 1.2rem;
+    }
+
+    .info-box {
+        background: var(--primary-light);
+        border-left: 3px solid var(--accent-gold);
+        padding: 30px;
+    }
+
+    .info-box h3 {
+        color: var(--accent-gold);
+        font-size: 1.1rem;
+        margin-bottom: 1rem;
+    }
+
+    .info-box ul {
+        list-style: none;
+    }
+
+    .info-box li {
+        padding: 8px 0;
+        border-bottom: 1px solid #333;
+        font-family: 'Roboto', sans-serif;
+        font-size: 0.95rem;
+        color: var(--text-gray);
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .info-box li:last-child { border-bottom: none; }
+
+    .info-box li span { color: var(--text-light); }
+
+    /* SERVICES GRID */
+    .services-grid-area {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+        gap: 20px;
+        margin-top: 2rem;
+    }
+
+    .service-tile {
+        background: var(--primary-dark);
+        border-left: 3px solid var(--accent-gold);
+        padding: 25px;
+        transition: transform 0.3s;
+        text-decoration: none;
+        display: block;
+    }
+
+    .service-tile:hover {
+        transform: translateY(-4px);
+        background: #363b49;
+    }
+
+    .service-tile h3 {
+        font-size: 1.1rem;
+        color: var(--accent-gold);
+        margin-bottom: 8px;
+    }
+
+    .service-tile p {
+        font-family: 'Roboto', sans-serif;
+        font-size: 0.9rem;
+        color: var(--text-gray);
+        margin: 0;
+        line-height: 1.5;
+    }
+
+    /* WHY GRID */
+    .why-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+        gap: 20px;
+        margin-top: 2rem;
+    }
+
+    .why-card {
+        background: var(--primary-dark);
+        padding: 30px 20px;
+        text-align: center;
+        border-top: 3px solid var(--accent-gold);
+    }
+
+    .why-card h3 {
+        font-size: 1rem;
+        color: var(--text-light);
+        margin-bottom: 10px;
+    }
+
+    .why-card p {
+        font-family: 'Roboto', sans-serif;
+        font-size: 0.9rem;
+        color: var(--text-gray);
+        margin: 0;
+        line-height: 1.5;
+    }
+
+    /* DIRECTIONS */
+    .directions-block {
+        background: var(--primary-light);
+        padding: 30px;
+        border-left: 3px solid var(--accent-gold);
+        max-width: 700px;
+        margin-top: 2rem;
+    }
+
+    .directions-block p {
+        font-family: 'Roboto', sans-serif;
+        color: var(--text-gray);
+        line-height: 1.7;
+        margin-bottom: 1rem;
+    }
+
+    .directions-block p:last-child { margin-bottom: 0; }
+
+    /* CTA BAND */
+    .cta-band {
+        background: var(--accent-gold);
+        padding: 60px 0;
+        text-align: center;
+    }
+
+    .cta-band h2 {
+        color: var(--primary-dark);
+        font-size: 2rem;
+        margin-bottom: 0.5rem;
+    }
+
+    .cta-band p {
+        font-family: 'Roboto', sans-serif;
+        color: var(--primary-dark);
+        font-size: 1rem;
+        margin-bottom: 1.5rem;
+        opacity: 0.85;
+    }
+
+    .cta-band .phone-link {
+        display: block;
+        font-family: 'Oswald', sans-serif;
+        font-size: 2.2rem;
+        color: var(--primary-dark);
+        letter-spacing: 1px;
+        margin-bottom: 1.2rem;
+        text-decoration: none;
+    }
+
+    .btn-dark {
+        display: inline-block;
+        background: var(--primary-dark);
+        color: var(--accent-gold);
+        padding: 12px 30px;
+        font-family: 'Oswald', sans-serif;
+        font-weight: bold;
+        text-transform: uppercase;
+        border-radius: 4px;
+        border: 2px solid var(--primary-dark);
+        transition: all 0.3s;
+        text-decoration: none;
+    }
+
+    .btn-dark:hover {
+        background: transparent;
+        color: var(--primary-dark);
+    }
+
+    @media (max-width: 900px) {
+        .intro-layout { grid-template-columns: 1fr; gap: 30px; }
+    }
+
+    @media (max-width: 768px) {
+        .area-hero { padding: 70px 0 60px; }
+        .area-section { padding: 50px 0; }
+        .hero-cta-row { flex-direction: column; align-items: center; }
+    }
+</style>
+
+<!-- AREA HERO -->
+<section class="area-hero">
+    <div class="container">
+        <div class="breadcrumb">
+            <a href="/">Home</a> &rsaquo; {{ page.city }}
+        </div>
+        <h1>Auto Repair in <span>{{ page.city }}, FL</span></h1>
+        <p>AJ Automotive Services serves {{ page.city }} with honest, reliable auto repair. 1534 Kurt St, Eustis, FL, just {{ page.distance }} from {{ page.city }}.</p>
+        <div class="hero-cta-row">
+            <a href="tel:+13523088142" class="btn">Call (352) 308-8142</a>
+            <a href="/contact" class="btn" style="background: transparent; color: var(--accent-gold);">Schedule Service</a>
+        </div>
+    </div>
+</section>
+
+<!-- INTRO + INFO -->
+<section class="area-section">
+    <div class="container">
+        <div class="intro-layout">
+            <div class="intro-body">
+                <h2 class="section-title">Serving {{ page.city }} Drivers</h2>
+                {{ page.intro_content }}
+            </div>
+            <div class="info-box">
+                <h3>Shop Information</h3>
+                <ul>
+                    <li>Address <span>1534 Kurt St, Eustis, FL 32726</span></li>
+                    <li>Phone <span>(352) 308-8142</span></li>
+                    <li>Mon - Fri <span>8:00 AM - 6:00 PM</span></li>
+                    <li>Saturday <span>8:00 AM - 6:00 PM</span></li>
+                    <li>Sunday <span>Closed</span></li>
+                    <li>From {{ page.city }} <span>{{ page.distance }}</span></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ALL SERVICES -->
+<section class="area-section alt">
+    <div class="container">
+        <h2 class="section-title">Services Available to {{ page.city }} Residents</h2>
+        <div class="services-grid-area">
+            <a href="/{{ page.city_slug }}/oil-change" class="service-tile">
+                <h3>Oil Change</h3>
+                <p>Conventional, synthetic and high-mileage oil changes for all makes and models.</p>
+            </a>
+            <a href="/{{ page.city_slug }}/auto-brake-repair" class="service-tile">
+                <h3>Brake Repair</h3>
+                <p>Brake pads, rotors, calipers, and complete brake system service.</p>
+            </a>
+            <a href="/{{ page.city_slug }}/transmission" class="service-tile">
+                <h3>Transmission</h3>
+                <p>Transmission diagnostics, fluid service, repair, and replacement.</p>
+            </a>
+            <a href="/{{ page.city_slug }}/ac-installation-repair" class="service-tile">
+                <h3>A/C Repair</h3>
+                <p>A/C diagnostics, recharge, compressor replacement and full system repair.</p>
+            </a>
+            <a href="/{{ page.city_slug }}/auto-engine-diagnostics" class="service-tile">
+                <h3>Engine Diagnostics</h3>
+                <p>Check engine light diagnosis, tune-ups, and complete engine repair.</p>
+            </a>
+            <a href="/{{ page.city_slug }}/electrical" class="service-tile">
+                <h3>Electrical</h3>
+                <p>Battery, alternator, starter, wiring, and vehicle computer diagnostics.</p>
+            </a>
+            <a href="/{{ page.city_slug }}/steering-suspension-repair" class="service-tile">
+                <h3>Steering and Suspension</h3>
+                <p>Shocks, struts, alignment, and full suspension system repair.</p>
+            </a>
+            <a href="/{{ page.city_slug }}/battery" class="service-tile">
+                <h3>Battery Service</h3>
+                <p>Battery testing, maintenance, and replacement for all vehicles.</p>
+            </a>
+            <a href="/{{ page.city_slug }}/exhaust" class="service-tile">
+                <h3>Exhaust</h3>
+                <p>Exhaust system inspection, repair, and full replacement.</p>
+            </a>
+            <a href="/{{ page.city_slug }}/vehicle-safety-inspection" class="service-tile">
+                <h3>Vehicle Safety Inspection</h3>
+                <p>Comprehensive vehicle inspections for safety and peace of mind.</p>
+            </a>
+            <a href="/{{ page.city_slug }}/auto-emissions-testing" class="service-tile">
+                <h3>Emissions Testing</h3>
+                <p>Auto emissions testing and compliance for Florida registration.</p>
+            </a>
+            <a href="/{{ page.city_slug }}/tire-rotations" class="service-tile">
+                <h3>Tire Rotations</h3>
+                <p>Regular tire rotations to extend tread life and improve handling.</p>
+            </a>
+        </div>
+    </div>
+</section>
+
+<!-- WHY AJ -->
+<section class="area-section">
+    <div class="container">
+        <h2 class="section-title">Why {{ page.city }} Drivers Choose AJ Automotive</h2>
+        <div class="why-grid">
+            <div class="why-card">
+                <h3>Certified Technicians</h3>
+                <p>Experienced mechanics trained on foreign and domestic vehicles of all makes and models.</p>
+            </div>
+            <div class="why-card">
+                <h3>Honest Pricing</h3>
+                <p>Upfront quotes with no hidden fees. You approve the work before we start.</p>
+            </div>
+            <div class="why-card">
+                <h3>Fast Turnaround</h3>
+                <p>Most repairs completed same day. We respect your time.</p>
+            </div>
+            <div class="why-card">
+                <h3>Family Owned</h3>
+                <p>A locally owned shop serving Eustis and Lake County since day one.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- DIRECTIONS -->
+<section class="area-section alt">
+    <div class="container">
+        <h2 class="section-title">Getting to AJ Automotive from {{ page.city }}</h2>
+        <div class="directions-block">
+            {{ page.directions_content }}
+            <p><a href="https://www.google.com/maps/dir/{{ page.city | url_encode }},+FL/1534+Kurt+St,+Eustis,+FL+32726" target="_blank" style="color: var(--accent-gold);">Get Directions on Google Maps</a></p>
+        </div>
+    </div>
+</section>
+
+<!-- CTA BAND -->
+<section class="cta-band">
+    <div class="container">
+        <h2>Serving {{ page.city }} and All of Lake County</h2>
+        <p>Call or schedule online. Most appointments available same week.</p>
+        <a href="tel:+13523088142" class="phone-link">(352) 308-8142</a>
+        <a href="/contact" class="btn-dark">Schedule Online</a>
+    </div>
+</section>
+
+<!-- Schema -->
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "AutoRepair",
+    "name": "AJ Automotive Services",
+    "description": "Auto repair shop serving {{ page.city }}, FL and surrounding Lake County areas.",
+    "telephone": "+13523088142",
+    "url": "https://ajautoandrepair.com/{{ page.city_slug }}",
+    "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "1534 Kurt St",
+        "addressLocality": "Eustis",
+        "addressRegion": "FL",
+        "postalCode": "32726"
+    },
+    "areaServed": { "@type": "City", "name": "{{ page.city }}" }
+}
+</script>
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://ajautoandrepair.com/" },
+        { "@type": "ListItem", "position": 2, "name": "{{ page.city }}", "item": "https://ajautoandrepair.com/{{ page.city_slug }}" }
+    ]
+}
+</script>
