@@ -3,7 +3,7 @@ layout: default
 ---
 
 <style>
-    /* SERVICE LAYOUT */
+    /* SERVICES LAYOUT */
 
     .service-hero {
         background: linear-gradient(rgba(0,0,0,0.72), rgba(0,0,0,0.72)),
@@ -225,7 +225,45 @@ layout: default
         border-top: 1px solid #333;
     }
 
-    /* AREA LINKS */
+    /* AREA CARDS */
+    .area-cards-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+        gap: 15px;
+    }
+
+    .area-card {
+        background: var(--primary-dark);
+        border: 1px solid #444;
+        border-top: 3px solid var(--accent-gold);
+        padding: 20px 15px;
+        text-decoration: none;
+        display: flex;
+        flex-direction: column;
+        gap: 6px;
+        transition: transform 0.3s, border-color 0.3s;
+    }
+
+    .area-card:hover {
+        transform: translateY(-3px);
+        border-color: var(--accent-gold);
+    }
+
+    .area-card-city {
+        font-family: 'Oswald', sans-serif;
+        font-size: 1.1rem;
+        color: var(--text-light);
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+    }
+
+    .area-card-label {
+        font-family: 'Roboto', sans-serif;
+        font-size: 0.8rem;
+        color: var(--accent-gold);
+    }
+
+    /* AREA LINKS (legacy) */
     .area-links-row {
         display: flex;
         flex-wrap: wrap;
@@ -419,16 +457,34 @@ layout: default
 <section class="service-section alt">
     <div class="container">
         <h2 class="section-title">{{ page.title }} Near You</h2>
-        <p style="font-family: 'Roboto', sans-serif; color: var(--text-gray); margin-bottom: 0.5rem;">
-            We serve Eustis and all surrounding communities in Lake County, Florida.
+        <p style="font-family: 'Roboto', sans-serif; color: var(--text-gray); margin-bottom: 2rem;">
+            AJ Automotive Services is located in Eustis and serves all of Lake County. Select your city for local information.
         </p>
-        <div class="area-links-row">
-            <a href="/mount-dora/{{ page.slug }}" class="area-link">Mount Dora</a>
-            <a href="/tavares/{{ page.slug }}" class="area-link">Tavares</a>
-            <a href="/leesburg/{{ page.slug }}" class="area-link">Leesburg</a>
-            <a href="/lady-lake/{{ page.slug }}" class="area-link">Lady Lake</a>
-            <a href="/fruitland-park/{{ page.slug }}" class="area-link">Fruitland Park</a>
-            <a href="/umatilla/{{ page.slug }}" class="area-link">Umatilla</a>
+        <div class="area-cards-grid">
+            <a href="/mount-dora-fl/{{ page.slug }}" class="area-card">
+                <span class="area-card-city">Mount Dora</span>
+                <span class="area-card-label">{{ page.title }}</span>
+            </a>
+            <a href="/tavares-fl/{{ page.slug }}" class="area-card">
+                <span class="area-card-city">Tavares</span>
+                <span class="area-card-label">{{ page.title }}</span>
+            </a>
+            <a href="/leesburg-fl/{{ page.slug }}" class="area-card">
+                <span class="area-card-city">Leesburg</span>
+                <span class="area-card-label">{{ page.title }}</span>
+            </a>
+            <a href="/lady-lake-fl/{{ page.slug }}" class="area-card">
+                <span class="area-card-city">Lady Lake</span>
+                <span class="area-card-label">{{ page.title }}</span>
+            </a>
+            <a href="/fruitland-park-fl/{{ page.slug }}" class="area-card">
+                <span class="area-card-city">Fruitland Park</span>
+                <span class="area-card-label">{{ page.title }}</span>
+            </a>
+            <a href="/umatilla-fl/{{ page.slug }}" class="area-card">
+                <span class="area-card-city">Umatilla</span>
+                <span class="area-card-label">{{ page.title }}</span>
+            </a>
         </div>
     </div>
 </section>
