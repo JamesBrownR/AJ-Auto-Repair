@@ -1,0 +1,645 @@
+---
+layout: default
+title: Frequently Asked Questions | AJ Automotive Services | Eustis, FL
+description: Answers to common questions about auto repair at AJ Automotive Services in Eustis, FL. Hours, pricing, services, appointments, and more.
+---
+
+<style>
+    /* HERO */
+    .faq-page-hero {
+        background: linear-gradient(rgba(0,0,0,0.72), rgba(0,0,0,0.72)),
+            url('https://images.unsplash.com/photo-1619642751034-765dfdf7c58e?auto=format&fit=crop&q=80&w=1974');
+        background-size: cover;
+        background-position: center;
+        padding: 90px 0 70px;
+        text-align: center;
+        border-bottom: 3px solid var(--accent-gold);
+    }
+
+    .faq-page-hero .breadcrumb {
+        font-family: 'Roboto', sans-serif;
+        font-size: 0.85rem;
+        color: var(--text-gray);
+        margin-bottom: 1.2rem;
+    }
+
+    .faq-page-hero .breadcrumb a {
+        color: var(--text-gray);
+        transition: color 0.3s;
+    }
+
+    .faq-page-hero .breadcrumb a:hover {
+        color: var(--accent-gold);
+    }
+
+    .faq-page-hero h1 {
+        font-size: clamp(2rem, 5vw, 3.2rem);
+        color: #fff;
+        margin-bottom: 0.8rem;
+    }
+
+    .faq-page-hero p {
+        font-family: 'Roboto', sans-serif;
+        font-size: 1.05rem;
+        color: var(--text-gray);
+        max-width: 560px;
+        margin: 0 auto;
+        font-weight: 300;
+    }
+
+    /* LAYOUT */
+    .faq-page-section {
+        padding: 70px 0 90px;
+        background: var(--primary-dark);
+    }
+
+    .faq-page-layout {
+        display: grid;
+        grid-template-columns: 220px 1fr;
+        gap: 50px;
+        align-items: start;
+        margin-top: 2.5rem;
+    }
+
+    /* STICKY SIDEBAR NAV */
+    .faq-sidebar {
+        position: sticky;
+        top: 90px;
+    }
+
+    .faq-sidebar-title {
+        font-family: 'Oswald', sans-serif;
+        font-size: 0.8rem;
+        color: var(--accent-gold);
+        text-transform: uppercase;
+        letter-spacing: 1.5px;
+        margin-bottom: 14px;
+    }
+
+    .faq-sidebar-nav {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        border-left: 2px solid #333;
+    }
+
+    .faq-sidebar-nav li a {
+        display: block;
+        padding: 9px 16px;
+        font-family: 'Roboto', sans-serif;
+        font-size: 0.88rem;
+        color: var(--text-gray);
+        text-decoration: none;
+        transition: color 0.2s, border-color 0.2s;
+        border-left: 2px solid transparent;
+        margin-left: -2px;
+    }
+
+    .faq-sidebar-nav li a:hover {
+        color: var(--accent-gold);
+        border-left-color: var(--accent-gold);
+    }
+
+    /* CATEGORIES */
+    .faq-category {
+        margin-bottom: 52px;
+    }
+
+    .faq-category:last-child {
+        margin-bottom: 0;
+    }
+
+    .faq-category-heading {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        margin-bottom: 1.2rem;
+        padding-bottom: 12px;
+        border-bottom: 2px solid var(--accent-gold);
+    }
+
+    .faq-category-heading i {
+        color: var(--accent-gold);
+        font-size: 1.2rem;
+        width: 20px;
+        text-align: center;
+    }
+
+    .faq-category-heading h2 {
+        font-size: 1.3rem;
+        color: #fff;
+        margin: 0;
+        font-family: 'Oswald', sans-serif;
+        letter-spacing: 0.5px;
+        text-transform: uppercase;
+    }
+
+    /* ACCORDION */
+    .faq-accordion {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+    }
+
+    .faq-accordion details {
+        background: var(--primary-light);
+        border-left: 3px solid var(--accent-gold);
+        border-radius: 2px;
+        overflow: hidden;
+    }
+
+    .faq-accordion details summary {
+        padding: 16px 20px;
+        font-family: 'Oswald', sans-serif;
+        font-size: 1rem;
+        color: var(--text-light);
+        cursor: pointer;
+        list-style: none;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        letter-spacing: 0.3px;
+        transition: color 0.2s;
+    }
+
+    .faq-accordion details summary::-webkit-details-marker {
+        display: none;
+    }
+
+    .faq-accordion details summary::after {
+        content: "+";
+        color: var(--accent-gold);
+        font-size: 1.4rem;
+        font-weight: 300;
+        flex-shrink: 0;
+        margin-left: 16px;
+    }
+
+    .faq-accordion details[open] summary::after {
+        content: "-";
+    }
+
+    .faq-accordion details[open] summary {
+        color: var(--accent-gold);
+    }
+
+    .faq-answer {
+        padding: 16px 20px 20px;
+        font-family: 'Roboto', sans-serif;
+        font-size: 0.95rem;
+        color: var(--text-gray);
+        line-height: 1.75;
+        border-top: 1px solid #333;
+    }
+
+    .faq-answer a {
+        color: var(--accent-gold);
+        text-decoration: underline;
+    }
+
+    /* CTA BAND */
+    .faq-cta {
+        background: var(--primary-light);
+        padding: 65px 0;
+        text-align: center;
+        border-top: 3px solid var(--accent-gold);
+    }
+
+    .faq-cta h2 {
+        font-size: clamp(1.6rem, 3vw, 2.2rem);
+        color: #fff;
+        margin-bottom: 0.8rem;
+    }
+
+    .faq-cta p {
+        font-family: 'Roboto', sans-serif;
+        color: var(--text-gray);
+        max-width: 500px;
+        margin: 0 auto 2rem;
+        font-size: 1rem;
+    }
+
+    .faq-cta-btns {
+        display: flex;
+        gap: 1rem;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    @media (max-width: 860px) {
+        .faq-page-layout {
+            grid-template-columns: 1fr;
+        }
+
+        .faq-sidebar {
+            display: none;
+        }
+    }
+</style>
+
+<!-- FAQ Schema -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Where is AJ Automotive Services located?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "We are located at 1534 Kurt St, Eustis, FL 32726. We serve Eustis, Mount Dora, Tavares, Leesburg, Lady Lake, Fruitland Park, Umatilla, and all of Lake County, Florida."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What are your hours?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "We are open Monday through Saturday, 8 AM to 6 PM. Closed Sundays. Walk-ins are welcome during business hours."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do you provide free estimates?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. We give you a clear estimate before any work begins. No surprises on the final bill."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What vehicles do you work on?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "We work on all makes and models, foreign and domestic, including cars, trucks, SUVs, motorcycles, ATVs, and small engines."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How often should I get an oil change in Florida?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Every 3,000 to 5,000 miles for conventional oil and 7,000 to 10,000 miles for full synthetic. Florida heat breaks down oil faster than cooler climates, so staying toward the lower end of your interval is wise."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do I need an appointment or can I walk in?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Both are welcome. Walk-ins are accepted Monday through Saturday, 8 AM to 6 PM. Calling ahead at (352) 308-8142 helps us prepare and gets you in and out faster."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What payment methods do you accept?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "We accept cash, credit cards, and debit cards."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How far do you serve from Eustis?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "We serve all of Lake County including Mount Dora (5 miles), Tavares (6 miles), Umatilla (10 miles), Leesburg (12 miles), Fruitland Park (13 miles), and Lady Lake (16 miles)."
+      }
+    }
+  ]
+}
+</script>
+
+<!-- HERO -->
+<section class="faq-page-hero">
+    <div class="container">
+        <div class="breadcrumb">
+            <a href="/">Home</a> &rsaquo; FAQs
+        </div>
+        <h1>Frequently Asked Questions</h1>
+        <p>Straight answers about our shop, our services, and what to expect when you bring your vehicle to AJ Automotive.</p>
+    </div>
+</section>
+
+<!-- MAIN CONTENT -->
+<section class="faq-page-section">
+    <div class="container">
+        <div class="faq-page-layout">
+
+            <!-- SIDEBAR NAV -->
+            <aside class="faq-sidebar">
+                <p class="faq-sidebar-title">Jump to Section</p>
+                <ul class="faq-sidebar-nav">
+                    <li><a href="#general">General</a></li>
+                    <li><a href="#appointments">Appointments</a></li>
+                    <li><a href="#pricing">Pricing &amp; Payment</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#oil-change">Oil Changes</a></li>
+                    <li><a href="#brakes">Brakes</a></li>
+                    <li><a href="#ac">A/C</a></li>
+                    <li><a href="#check-engine">Check Engine Light</a></li>
+                    <li><a href="#tires">Tires</a></li>
+                    <li><a href="#florida">Florida &amp; Lake County</a></li>
+                </ul>
+            </aside>
+
+            <!-- ACCORDION CONTENT -->
+            <div class="faq-content">
+
+                <!-- GENERAL -->
+                <div class="faq-category" id="general">
+                    <div class="faq-category-heading">
+                        <i class="fa-solid fa-circle-info"></i>
+                        <h2>General</h2>
+                    </div>
+                    <div class="faq-accordion">
+                        <details>
+                            <summary>Where is AJ Automotive Services located?</summary>
+                            <div class="faq-answer">We are at 1534 Kurt St, Eustis, FL 32726. Plenty of on-site parking available. We serve all of Lake County including Mount Dora, Tavares, Leesburg, Lady Lake, Fruitland Park, and Umatilla.</div>
+                        </details>
+                        <details>
+                            <summary>What are your hours?</summary>
+                            <div class="faq-answer">Monday through Saturday, 8 AM to 6 PM. Closed Sundays. Walk-ins are welcome during business hours.</div>
+                        </details>
+                        <details>
+                            <summary>What vehicles do you work on?</summary>
+                            <div class="faq-answer">All makes and models, foreign and domestic. Cars, trucks, SUVs, motorcycles, ATVs, small engines, and fleet vehicles. We work on Honda, Toyota, Ford, Chevrolet, Dodge, Nissan, Jeep, GMC, Kia, Hyundai, Subaru, BMW, Mercedes-Benz, and more.</div>
+                        </details>
+                        <details>
+                            <summary>Is AJ Automotive locally owned?</summary>
+                            <div class="faq-answer">Yes. AJ Automotive Services is a locally owned and operated shop serving Eustis and Lake County. Andrew and Jeremy run the shop directly and work on vehicles themselves.</div>
+                        </details>
+                        <details>
+                            <summary>Do you work on vintage and classic vehicles?</summary>
+                            <div class="faq-answer">Yes. We have experience working on older and classic vehicles including vintage trucks, classic cars, and specialty builds. Give us a call at (352) 308-8142 to discuss your specific vehicle.</div>
+                        </details>
+                    </div>
+                </div>
+
+                <!-- APPOINTMENTS -->
+                <div class="faq-category" id="appointments">
+                    <div class="faq-category-heading">
+                        <i class="fa-solid fa-calendar-check"></i>
+                        <h2>Appointments</h2>
+                    </div>
+                    <div class="faq-accordion">
+                        <details>
+                            <summary>Do I need an appointment?</summary>
+                            <div class="faq-answer">Walk-ins are welcome Monday through Saturday, 8 AM to 6 PM. Calling ahead at (352) 308-8142 helps us prepare for your vehicle and gets you in and out faster, especially for larger jobs.</div>
+                        </details>
+                        <details>
+                            <summary>How do I schedule service?</summary>
+                            <div class="faq-answer">Call us at (352) 308-8142, use the <a href="/contact">contact form</a>, or simply stop by the shop during business hours. We will get you scheduled at a time that works.</div>
+                        </details>
+                        <details>
+                            <summary>How long will my repair take?</summary>
+                            <div class="faq-answer">It depends on the service. Oil changes take 30 to 45 minutes. Brake jobs take one to two hours per axle. Larger repairs like transmissions or engine work may take one to several days. We give you a time estimate when we diagnose the vehicle and keep you updated throughout.</div>
+                        </details>
+                        <details>
+                            <summary>Will you let me know before starting work?</summary>
+                            <div class="faq-answer">Always. We diagnose the vehicle, give you a clear estimate, and wait for your approval before any work begins. No surprises on the final bill.</div>
+                        </details>
+                        <details>
+                            <summary>Can I drop my vehicle off?</summary>
+                            <div class="faq-answer">Yes. Drop-offs are welcome. We will diagnose the vehicle, contact you with our findings and the estimate, and proceed once you approve.</div>
+                        </details>
+                    </div>
+                </div>
+
+                <!-- PRICING & PAYMENT -->
+                <div class="faq-category" id="pricing">
+                    <div class="faq-category-heading">
+                        <i class="fa-solid fa-dollar-sign"></i>
+                        <h2>Pricing &amp; Payment</h2>
+                    </div>
+                    <div class="faq-accordion">
+                        <details>
+                            <summary>Do you provide free estimates?</summary>
+                            <div class="faq-answer">Yes. We provide a clear estimate before any work begins. You know exactly what the repair will cost before we touch anything.</div>
+                        </details>
+                        <details>
+                            <summary>What payment methods do you accept?</summary>
+                            <div class="faq-answer">We accept cash, credit cards, and debit cards. No hidden fees.</div>
+                        </details>
+                        <details>
+                            <summary>Do you charge for diagnostics?</summary>
+                            <div class="faq-answer">Call us at (352) 308-8142 to discuss your specific situation. For most services we discuss what is going on with the vehicle before quoting any diagnostic charge.</div>
+                        </details>
+                        <details>
+                            <summary>Do you offer warranties on repairs?</summary>
+                            <div class="faq-answer">Yes. We stand behind our work. Warranty terms vary by service and parts. Ask us when we provide your estimate for the specific warranty that applies to your repair.</div>
+                        </details>
+                    </div>
+                </div>
+
+                <!-- SERVICES -->
+                <div class="faq-category" id="services">
+                    <div class="faq-category-heading">
+                        <i class="fa-solid fa-wrench"></i>
+                        <h2>Services</h2>
+                    </div>
+                    <div class="faq-accordion">
+                        <details>
+                            <summary>What services do you offer?</summary>
+                            <div class="faq-answer">We offer oil changes, brake repair, transmission service, A/C repair, engine diagnostics, electrical repair, steering and suspension, battery service, exhaust repair, vehicle safety inspections, emissions testing, tire rotations, fleet maintenance, welding and fabrication, custom headliners, and small engine and motorcycle service.</div>
+                        </details>
+                        <details>
+                            <summary>Do you do pre-purchase inspections?</summary>
+                            <div class="faq-answer">Yes. A pre-purchase inspection is one of the most valuable services we offer. We do a thorough inspection and give you a complete written report on the condition of the vehicle before you buy it. Most sellers will allow this. If a seller refuses, that is a red flag.</div>
+                        </details>
+                        <details>
+                            <summary>Do you work on motorcycles and ATVs?</summary>
+                            <div class="faq-answer">Yes. We service motorcycles, ATVs, and small engines in addition to standard automotive work.</div>
+                        </details>
+                        <details>
+                            <summary>Do you handle fleet vehicles?</summary>
+                            <div class="faq-answer">Yes. We work with businesses in Lake County on fleet maintenance and repair. Call us at (352) 308-8142 to discuss your fleet's needs and scheduling.</div>
+                        </details>
+                        <details>
+                            <summary>Do you do welding and fabrication?</summary>
+                            <div class="faq-answer">Yes. We offer welding and fabrication services. Call or stop by to discuss your specific project.</div>
+                        </details>
+                    </div>
+                </div>
+
+                <!-- OIL CHANGES -->
+                <div class="faq-category" id="oil-change">
+                    <div class="faq-category-heading">
+                        <i class="fa-solid fa-oil-can"></i>
+                        <h2>Oil Changes</h2>
+                    </div>
+                    <div class="faq-accordion">
+                        <details>
+                            <summary>How often should I change my oil in Florida?</summary>
+                            <div class="faq-answer">Every 3,000 to 5,000 miles for conventional oil. Every 7,000 to 10,000 miles for full synthetic. Florida heat breaks down oil faster than in cooler climates, so staying toward the lower end of your interval is wise for Lake County drivers.</div>
+                        </details>
+                        <details>
+                            <summary>What type of oil does my vehicle need?</summary>
+                            <div class="faq-answer">The correct oil type and viscosity is in your owner's manual. We look it up for every vehicle and use exactly what your engine requires. Never guess on oil spec.</div>
+                        </details>
+                        <details>
+                            <summary>What is included with an oil change at AJ Automotive?</summary>
+                            <div class="faq-answer">Every oil change includes an oil and filter service using the correct specification, plus a multi-point inspection covering brakes, tires, belts, hoses, and all fluid levels. You leave knowing the full condition of your vehicle.</div>
+                        </details>
+                        <details>
+                            <summary>How long does an oil change take?</summary>
+                            <div class="faq-answer">Most oil changes are completed in 30 to 45 minutes.</div>
+                        </details>
+                        <details>
+                            <summary>What is high-mileage oil and does my vehicle need it?</summary>
+                            <div class="faq-answer">High-mileage oil is formulated for vehicles over 75,000 miles. It contains additives that condition aging seals, reduce oil burn-off, and minimize wear on higher-mileage engines. If your vehicle is over 75,000 miles it is generally worth the upgrade.</div>
+                        </details>
+                    </div>
+                </div>
+
+                <!-- BRAKES -->
+                <div class="faq-category" id="brakes">
+                    <div class="faq-category-heading">
+                        <i class="fa-solid fa-car-burst"></i>
+                        <h2>Brakes</h2>
+                    </div>
+                    <div class="faq-accordion">
+                        <details>
+                            <summary>How do I know if my brakes need service?</summary>
+                            <div class="faq-answer">Common signs include squealing or grinding noises, a soft or spongy pedal, the vehicle pulling to one side when braking, vibration through the pedal, or a brake warning light on the dashboard. Any of these is a reason to have the system inspected.</div>
+                        </details>
+                        <details>
+                            <summary>How long do brake pads last?</summary>
+                            <div class="faq-answer">Typically 25,000 to 65,000 miles depending on driving habits, vehicle weight, and pad material. Stop-and-go driving in town wears pads faster than highway driving.</div>
+                        </details>
+                        <details>
+                            <summary>Do I always need new rotors when I get new pads?</summary>
+                            <div class="faq-answer">Not always. We measure rotor thickness and check for warping. If they are within spec and not scored, pad replacement alone may be sufficient. We will tell you honestly what your rotors need rather than upselling replacement by default.</div>
+                        </details>
+                        <details>
+                            <summary>How long does a brake job take?</summary>
+                            <div class="faq-answer">A standard pad and rotor replacement on one axle typically takes one to two hours. Full four-wheel brake service takes two to three hours.</div>
+                        </details>
+                    </div>
+                </div>
+
+                <!-- A/C -->
+                <div class="faq-category" id="ac">
+                    <div class="faq-category-heading">
+                        <i class="fa-solid fa-snowflake"></i>
+                        <h2>A/C Repair</h2>
+                    </div>
+                    <div class="faq-accordion">
+                        <details>
+                            <summary>Why is my A/C blowing warm air?</summary>
+                            <div class="faq-answer">The most common causes are low refrigerant from a leak, a failed compressor, a clogged condenser, or an electrical fault. We diagnose the specific cause before recommending any repair.</div>
+                        </details>
+                        <details>
+                            <summary>Can I just recharge the A/C myself with a store-bought kit?</summary>
+                            <div class="faq-answer">DIY recharge cans add refrigerant without finding or fixing the leak that caused the loss. This is a temporary fix at best and often does not address the underlying problem. We find and repair the leak so the charge holds long-term.</div>
+                        </details>
+                        <details>
+                            <summary>How often should A/C be serviced in Florida?</summary>
+                            <div class="faq-answer">We recommend an A/C inspection every year before summer. Florida A/C systems run harder and longer than in other states and catching small issues in spring prevents a breakdown in July.</div>
+                        </details>
+                        <details>
+                            <summary>How long does A/C repair take?</summary>
+                            <div class="faq-answer">A recharge with leak inspection takes one to two hours. Compressor or condenser replacement typically takes three to five hours depending on the vehicle.</div>
+                        </details>
+                    </div>
+                </div>
+
+                <!-- CHECK ENGINE LIGHT -->
+                <div class="faq-category" id="check-engine">
+                    <div class="faq-category-heading">
+                        <i class="fa-solid fa-triangle-exclamation"></i>
+                        <h2>Check Engine Light</h2>
+                    </div>
+                    <div class="faq-accordion">
+                        <details>
+                            <summary>What does a check engine light mean?</summary>
+                            <div class="faq-answer">It means a sensor detected a condition outside normal parameters and stored a fault code. It could be something minor like a loose gas cap or something more significant like a misfiring cylinder. The code points to a system, not a specific part. Proper diagnosis is required to determine what actually failed.</div>
+                        </details>
+                        <details>
+                            <summary>Can I drive with the check engine light on?</summary>
+                            <div class="faq-answer">If the light is steady and the vehicle is driving normally, it is generally safe for a short period but should be diagnosed soon. If the light is flashing, reduce speed and have it checked immediately. A flashing light indicates active engine misfires that can damage the catalytic converter.</div>
+                        </details>
+                        <details>
+                            <summary>Will clearing the code fix the problem?</summary>
+                            <div class="faq-answer">No. Clearing the code turns off the light but does not fix the underlying issue. The light will return if the problem is not repaired. We diagnose and fix the root cause, not just clear the code.</div>
+                        </details>
+                        <details>
+                            <summary>How long does engine diagnosis take?</summary>
+                            <div class="faq-answer">Initial scanning and diagnosis typically takes one to two hours. Complex or intermittent faults may require additional time.</div>
+                        </details>
+                    </div>
+                </div>
+
+                <!-- TIRES -->
+                <div class="faq-category" id="tires">
+                    <div class="faq-category-heading">
+                        <i class="fa-solid fa-tire"></i>
+                        <h2>Tires</h2>
+                    </div>
+                    <div class="faq-accordion">
+                        <details>
+                            <summary>How often should I rotate my tires?</summary>
+                            <div class="faq-answer">Every 5,000 to 7,500 miles, which for most drivers is every other oil change. Florida heat accelerates rubber wear so staying consistent with rotations matters more here than in cooler climates.</div>
+                        </details>
+                        <details>
+                            <summary>What is included with a tire rotation at AJ Automotive?</summary>
+                            <div class="faq-answer">Every rotation includes the correct pattern for your drivetrain, tread depth measurement on all four tires, a tire condition inspection, inflation adjustment to manufacturer spec, and lug nut torque to specification after reinstallation.</div>
+                        </details>
+                        <details>
+                            <summary>How do I know when my tires need to be replaced?</summary>
+                            <div class="faq-answer">Tread depth below 2/32 of an inch is the legal minimum in Florida but we recommend replacing at 4/32 for safety in wet conditions. We also look at tire age since rubber degrades in Florida's heat even if tread remains. Sidewall cracking, bulges, and uneven wear are also reasons to replace.</div>
+                        </details>
+                        <details>
+                            <summary>Do you do wheel alignments?</summary>
+                            <div class="faq-answer">Yes. We perform four-wheel alignment to manufacturer specifications. We recommend checking alignment annually or after any significant impact such as hitting a large pothole or curb. Misalignment is the leading cause of premature tire wear.</div>
+                        </details>
+                    </div>
+                </div>
+
+                <!-- FLORIDA & LAKE COUNTY -->
+                <div class="faq-category" id="florida">
+                    <div class="faq-category-heading">
+                        <i class="fa-solid fa-sun"></i>
+                        <h2>Florida &amp; Lake County</h2>
+                    </div>
+                    <div class="faq-accordion">
+                        <details>
+                            <summary>Does Florida heat really affect my vehicle differently?</summary>
+                            <div class="faq-answer">Yes significantly. Heat accelerates oil breakdown, degrades battery plates faster, dries out A/C seals, ages rubber components faster, and keeps cooling systems working at or near capacity during summer months. Maintenance intervals that work in northern states are often too long for Florida vehicles.</div>
+                        </details>
+                        <details>
+                            <summary>How long do batteries last in Florida?</summary>
+                            <div class="faq-answer">Typically three to four years compared to five or more years in cooler climates. Heat degrades internal battery plates faster than cold does, which is the opposite of what most people assume. If your battery is more than three years old it is worth having it tested.</div>
+                        </details>
+                        <details>
+                            <summary>Does living near a lake affect my vehicle?</summary>
+                            <div class="faq-answer">Yes. The high humidity near Lake County's many lakes promotes corrosion in electrical connectors and terminals, accelerates rust on brake hardware and exhaust components, and increases the dehumidification load on A/C systems. We factor local environmental conditions into every inspection and service recommendation.</div>
+                        </details>
+                        <details>
+                            <summary>How far do you serve from Eustis?</summary>
+                            <div class="faq-answer">We are located in Eustis and regularly serve Mount Dora (about 5 miles), Tavares (about 6 miles), Umatilla (about 10 miles), Leesburg (about 12 miles), Fruitland Park (about 13 miles), and Lady Lake (about 16 miles). See our <a href="/service-areas">service areas page</a> for more information.</div>
+                        </details>
+                        <details>
+                            <summary>Does Florida require vehicle emissions testing?</summary>
+                            <div class="faq-answer">Lake County uses an OBD-II emissions inspection program. Your vehicle's onboard diagnostic system is scanned for fault codes and readiness monitors. Any active check engine light is an automatic failure. We can scan your vehicle before the official test and repair any issues so you pass the first time.</div>
+                        </details>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- CTA -->
+<section class="faq-cta">
+    <div class="container">
+        <h2>Still Have a Question?</h2>
+        <p>Call us directly or stop by the shop. We are happy to talk through your vehicle's situation before you commit to anything.</p>
+        <div class="faq-cta-btns">
+            <a href="tel:+13523088142" class="btn">Call (352) 308-8142</a>
+            <a href="/contact" class="btn" style="background: transparent; color: var(--accent-gold); border: 2px solid var(--accent-gold);">Send a Message</a>
+        </div>
+    </div>
+</section>
