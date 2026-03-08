@@ -1,27 +1,402 @@
-<!-- Footer -->
-<footer>
-    <div class="container">
-        <p>&copy; 2024 AJ Automotive Services | Auto Repair All Rights Reserved.</p>
-        
-        <div class="footer-links">
-            <a href="https://www.google.com/maps/place/AJ+Automotive+Services/@28.8363114,-81.7579019,13z/data=!4m10!1m2!2m1!1seustis+auto+repair!3m6!1s0x88e7bd492408faa7:0x8685904d422d4747!8m2!3d28.8388961!4d-81.6921099!15sChJldXN0aXMgYXV0byByZXBhaXJaFCISZXVzdGlzIGF1dG8gcmVwYWlykgEQYXV0b19yZXBhaXJfc2hvcJoBRENpOURRVWxSUVVOdlpFTm9kSGxqUmpsdlQyNU9lbFJ1Vm5WVmExcDZWV3BHYjJGR1NrSlZSM2hDVkcwMVlWbFhZeEFC4AEA-gEECFUQGg!16s%2Fg%2F11ysh141vl?entry=ttu&g_ep=EgoyMDI2MDEwNy4wIKXMDSoASAFQAw%3D%3D" target="_blank">Google Maps</a>
-            <a href="tel:+13523088142">Call Us</a>
-            <a href="/services">Services</a>
-            <a href="/#reviews">Reviews</a>
-            <a href="/blog">Blog</a>
-            <a href="/contact">Contact</a>
+<style>
+/* =============================================
+   FOOTER
+   ============================================= */
+.site-footer {
+    background: #111315;
+    border-top: 3px solid var(--accent-gold, #e8a635);
+}
+
+/* TOP: MAIN FOOTER BODY */
+.footer-body {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 64px 40px 56px;
+    display: grid;
+    grid-template-columns: 1.6fr 1fr 1fr 1fr;
+    gap: 48px;
+}
+
+/* BRAND COLUMN */
+.footer-brand__logo {
+    display: inline-flex;
+    flex-direction: column;
+    gap: 2px;
+    text-decoration: none;
+    line-height: 1;
+    margin-bottom: 18px;
+}
+
+.footer-brand__logo-top {
+    font-family: 'Oswald', sans-serif;
+    font-size: 1.35rem;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: #ffffff;
+}
+
+.footer-brand__logo-top span {
+    color: var(--accent-gold, #e8a635);
+}
+
+.footer-brand__logo-sub {
+    font-family: 'Roboto', sans-serif;
+    font-size: 0.65rem;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.3);
+}
+
+.footer-brand__desc {
+    font-family: 'Roboto', sans-serif;
+    font-size: 0.88rem;
+    color: rgba(255,255,255,0.38);
+    line-height: 1.75;
+    max-width: 280px;
+    margin-bottom: 22px;
+}
+
+.footer-brand__contact {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 24px;
+}
+
+.footer-contact-row {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 0.85rem;
+    color: rgba(255,255,255,0.5);
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+a.footer-contact-row:hover {
+    color: var(--accent-gold, #e8a635);
+}
+
+.footer-contact-row i {
+    color: var(--accent-gold, #e8a635);
+    font-size: 0.8rem;
+    width: 14px;
+    text-align: center;
+    flex-shrink: 0;
+    opacity: 0.8;
+}
+
+.footer-brand__rating {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 12px 16px;
+    background: rgba(232,166,53,0.06);
+    border: 1px solid rgba(232,166,53,0.15);
+    border-radius: 2px;
+    width: fit-content;
+}
+
+.footer-brand__rating .stars {
+    color: var(--accent-gold, #e8a635);
+    font-size: 0.78rem;
+    letter-spacing: 2px;
+}
+
+.footer-brand__rating span {
+    font-family: 'Roboto', sans-serif;
+    font-size: 0.75rem;
+    color: rgba(255,255,255,0.35);
+}
+
+/* NAV COLUMNS */
+.footer-col__label {
+    font-family: 'Oswald', sans-serif;
+    font-size: 0.7rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--accent-gold, #e8a635);
+    margin-bottom: 18px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid rgba(255,255,255,0.06);
+}
+
+.footer-col__links {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.footer-col__links a {
+    font-family: 'Roboto', sans-serif;
+    font-size: 0.86rem;
+    color: rgba(255,255,255,0.45);
+    text-decoration: none;
+    padding: 5px 0;
+    transition: color 0.2s, padding-left 0.2s;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.footer-col__links a:hover {
+    color: rgba(255,255,255,0.9);
+    padding-left: 4px;
+}
+
+.footer-col__links a i {
+    color: var(--accent-gold, #e8a635);
+    font-size: 0.65rem;
+    opacity: 0.6;
+    flex-shrink: 0;
+    width: 10px;
+}
+
+/* HOURS COLUMN */
+.footer-hours-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.footer-hours-table tr {
+    border-bottom: 1px solid rgba(255,255,255,0.04);
+}
+
+.footer-hours-table tr:last-child {
+    border-bottom: none;
+}
+
+.footer-hours-table td {
+    padding: 6px 0;
+    font-family: 'Roboto', sans-serif;
+    font-size: 0.82rem;
+}
+
+.footer-hours-table td:first-child {
+    color: rgba(255,255,255,0.35);
+    width: 52%;
+}
+
+.footer-hours-table td:last-child {
+    color: rgba(255,255,255,0.6);
+    text-align: right;
+}
+
+.footer-hours-table tr.footer-today td {
+    color: #fff;
+}
+
+.footer-hours-table tr.footer-today td:first-child {
+    color: var(--accent-gold, #e8a635);
+}
+
+.footer-closed { color: rgba(255,255,255,0.22) !important; }
+
+/* BOTTOM BAR */
+.footer-bottom {
+    border-top: 1px solid rgba(255,255,255,0.05);
+}
+
+.footer-bottom__inner {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 18px 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    flex-wrap: wrap;
+}
+
+.footer-bottom__copy {
+    font-family: 'Roboto', sans-serif;
+    font-size: 0.76rem;
+    color: rgba(255,255,255,0.22);
+}
+
+.footer-bottom__links {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.footer-bottom__links a {
+    font-family: 'Roboto', sans-serif;
+    font-size: 0.76rem;
+    color: rgba(255,255,255,0.22);
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+.footer-bottom__links a:hover {
+    color: rgba(255,255,255,0.6);
+}
+
+.footer-bottom__sep {
+    color: rgba(255,255,255,0.1);
+    font-size: 0.7rem;
+}
+
+/* RESPONSIVE */
+@media (max-width: 1024px) {
+    .footer-body {
+        grid-template-columns: 1fr 1fr;
+        gap: 40px 48px;
+    }
+}
+
+@media (max-width: 600px) {
+    .footer-body {
+        grid-template-columns: 1fr;
+        padding: 48px 24px 44px;
+        gap: 36px;
+    }
+
+    .footer-bottom__inner {
+        padding: 16px 24px;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 8px;
+    }
+
+    .footer-brand__desc { max-width: 100%; }
+}
+</style>
+
+<footer class="site-footer">
+    <div class="footer-body">
+
+        <!-- BRAND -->
+        <div class="footer-brand">
+            <a href="/" class="footer-brand__logo">
+                <span class="footer-brand__logo-top">AJ <span>Automotive</span></span>
+                <span class="footer-brand__logo-sub">Services &mdash; Eustis, FL</span>
+            </a>
+            <p class="footer-brand__desc">Locally owned and operated auto repair in Eustis, FL. Honest estimates, fair prices, and repairs done right the first time.</p>
+            <div class="footer-brand__contact">
+                <a href="tel:+13523088142" class="footer-contact-row">
+                    <i class="fa-solid fa-phone"></i>
+                    (352) 308-8142
+                </a>
+                <a href="https://maps.google.com/?q=1534+Kurt+St+Eustis+FL+32726" target="_blank" rel="noopener" class="footer-contact-row">
+                    <i class="fa-solid fa-location-dot"></i>
+                    1534 Kurt St, Eustis, FL 32726
+                </a>
+                <div class="footer-contact-row">
+                    <i class="fa-solid fa-clock"></i>
+                    Mon &ndash; Sat: 8 AM &ndash; 6 PM
+                </div>
+            </div>
+            <div class="footer-brand__rating">
+                <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+                <span>5.0 &middot; Google Reviews</span>
+            </div>
         </div>
-        
-        <!-- Service Links Section -->
-        <div class="footer-services" style="margin-top: 20px; display: flex; flex-wrap: wrap; gap: 15px; justify-content: center; font-size: 0.85rem;">
-            <a href="/services/brakes-suspension" style="color: #888;">Brake Repair</a>
-            <a href="/services/ac-repair" style="color: #888;">A/C Service</a>
-            <a href="/services/transmission" style="color: #888;">Transmission</a>
-            <a href="/services/engine-diagnostics" style="color: #888;">Engine Diagnostics</a>
+
+        <!-- SERVICES -->
+        <div class="footer-col">
+            <div class="footer-col__label">Services</div>
+            <div class="footer-col__links">
+                <a href="/services/oil-change"><i class="fa-solid fa-chevron-right"></i>Oil Change</a>
+                <a href="/services/auto-brake-repair"><i class="fa-solid fa-chevron-right"></i>Brake Repair</a>
+                <a href="/services/transmission"><i class="fa-solid fa-chevron-right"></i>Transmission</a>
+                <a href="/services/ac-installation-repair"><i class="fa-solid fa-chevron-right"></i>A/C Repair</a>
+                <a href="/services/auto-engine-diagnostics"><i class="fa-solid fa-chevron-right"></i>Engine Diagnostics</a>
+                <a href="/services/electrical"><i class="fa-solid fa-chevron-right"></i>Electrical</a>
+                <a href="/services/steering-suspension-repair"><i class="fa-solid fa-chevron-right"></i>Steering &amp; Suspension</a>
+                <a href="/services/battery"><i class="fa-solid fa-chevron-right"></i>Battery Service</a>
+                <a href="/services/exhaust"><i class="fa-solid fa-chevron-right"></i>Exhaust</a>
+                <a href="/services/vehicle-safety-inspection"><i class="fa-solid fa-chevron-right"></i>Safety Inspection</a>
+                <a href="/services/auto-emissions-testing"><i class="fa-solid fa-chevron-right"></i>Emissions Testing</a>
+                <a href="/services/tire-rotations"><i class="fa-solid fa-chevron-right"></i>Tire Rotation</a>
+            </div>
         </div>
-        
-        <p style="margin-top: 10px; font-size: 0.8rem;">Expert auto repair serving Eustis, Mount Dora, Lake County, Tavares, and surrounding Florida areas.</p>
-        
-        <a href="https://www.meetingsurge.com" target="_blank" style="color:#5BA3C7; margin-top: 15px; font-size: 0.7rem; text-decoration: underline;">Made by MeetingSurge.com</a>
+
+        <!-- QUICK LINKS -->
+        <div class="footer-col">
+            <div class="footer-col__label">Quick Links</div>
+            <div class="footer-col__links">
+                <a href="/"><i class="fa-solid fa-chevron-right"></i>Home</a>
+                <a href="/services"><i class="fa-solid fa-chevron-right"></i>All Services</a>
+                <a href="/service-areas"><i class="fa-solid fa-chevron-right"></i>Service Areas</a>
+                <a href="/gallery"><i class="fa-solid fa-chevron-right"></i>Gallery</a>
+                <a href="/reviews"><i class="fa-solid fa-chevron-right"></i>Reviews</a>
+                <a href="/faqs"><i class="fa-solid fa-chevron-right"></i>FAQs</a>
+                <a href="/blog"><i class="fa-solid fa-chevron-right"></i>Blog</a>
+                <a href="/contact"><i class="fa-solid fa-chevron-right"></i>Contact</a>
+            </div>
+            <div class="footer-col__label" style="margin-top: 28px;">Service Areas</div>
+            <div class="footer-col__links">
+                <a href="/service-areas/eustis-fl"><i class="fa-solid fa-chevron-right"></i>Eustis</a>
+                <a href="/service-areas/mount-dora-fl"><i class="fa-solid fa-chevron-right"></i>Mount Dora</a>
+                <a href="/service-areas/tavares-fl"><i class="fa-solid fa-chevron-right"></i>Tavares</a>
+                <a href="/service-areas/leesburg-fl"><i class="fa-solid fa-chevron-right"></i>Leesburg</a>
+                <a href="/service-areas/fruitland-park-fl"><i class="fa-solid fa-chevron-right"></i>Fruitland Park</a>
+                <a href="/service-areas/umatilla-fl"><i class="fa-solid fa-chevron-right"></i>Umatilla</a>
+                <a href="/service-areas/lady-lake-fl"><i class="fa-solid fa-chevron-right"></i>Lady Lake</a>
+            </div>
+        </div>
+
+        <!-- HOURS -->
+        <div class="footer-col">
+            <div class="footer-col__label">Hours</div>
+            <table class="footer-hours-table" id="footerHours">
+                <tr><td>Monday</td><td>8 AM &ndash; 6 PM</td></tr>
+                <tr><td>Tuesday</td><td>8 AM &ndash; 6 PM</td></tr>
+                <tr><td>Wednesday</td><td>8 AM &ndash; 6 PM</td></tr>
+                <tr><td>Thursday</td><td>8 AM &ndash; 6 PM</td></tr>
+                <tr><td>Friday</td><td>8 AM &ndash; 6 PM</td></tr>
+                <tr><td>Saturday</td><td>8 AM &ndash; 6 PM</td></tr>
+                <tr><td>Sunday</td><td class="footer-closed">Closed</td></tr>
+            </table>
+
+            <div style="margin-top: 24px;">
+                <a href="https://www.google.com/maps/place/AJ+Auto+Repair/@28.8388961,-81.6921099,17z" target="_blank" rel="noopener" style="display:inline-flex; align-items:center; gap:7px; font-family:'Oswald',sans-serif; font-size:0.78rem; letter-spacing:0.1em; text-transform:uppercase; color:var(--accent-gold,#e8a635); text-decoration:none; border:1px solid rgba(232,166,53,0.3); padding:9px 14px; border-radius:2px; transition:background 0.2s, border-color 0.2s;" onmouseover="this.style.background='rgba(232,166,53,0.07)'; this.style.borderColor='var(--accent-gold,#e8a635)'" onmouseout="this.style.background=''; this.style.borderColor='rgba(232,166,53,0.3)'">
+                    <i class="fa-brands fa-google"></i> View on Google Maps
+                </a>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- BOTTOM BAR -->
+    <div class="footer-bottom">
+        <div class="footer-bottom__inner">
+            <p class="footer-bottom__copy">
+                &copy; <span id="footerYear"></span> AJ Automotive Services &mdash; Eustis, FL. All rights reserved.
+            </p>
+            <div class="footer-bottom__links">
+                <a href="/services">Services</a>
+                <span class="footer-bottom__sep">&middot;</span>
+                <a href="/service-areas">Service Areas</a>
+                <span class="footer-bottom__sep">&middot;</span>
+                <a href="/faqs">FAQs</a>
+                <span class="footer-bottom__sep">&middot;</span>
+                <a href="/contact">Contact</a>
+                <span class="footer-bottom__sep">&middot;</span>
+                <a href="https://www.meetingsurge.com" target="_blank" rel="noopener">Site by MeetingSurge</a>
+            </div>
+        </div>
     </div>
 </footer>
+
+<script>
+(function () {
+    /* Auto year in copyright */
+    var el = document.getElementById('footerYear');
+    if (el) el.textContent = new Date().getFullYear();
+
+    /* Highlight today's row */
+    var days = ['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'];
+    var today = days[new Date().getDay()];
+    var rows = document.querySelectorAll('#footerHours tr');
+    rows.forEach(function (row) {
+        if (row.cells[0] && row.cells[0].textContent.trim() === today) {
+            row.classList.add('footer-today');
+        }
+    });
+})();
+</script>
