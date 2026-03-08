@@ -1,10 +1,12 @@
-<!-- Base Schema for ALL pages -->
+<!-- =============================================
+     BASE SCHEMA — every page
+     ============================================= -->
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "AutoRepair",
-  "name": "AJ Auto Repair",
-  "alternateName": "AJ Automotive Services",
+  "name": "AJ Automotive Services",
+  "alternateName": "AJ Auto Repair",
   "image": "https://ajautoandrepair.com/Logo.png",
   "logo": "https://ajautoandrepair.com/Logo.png",
   "url": "https://ajautoandrepair.com/",
@@ -21,95 +23,59 @@
   "geo": {
     "@type": "GeoCoordinates",
     "latitude": 28.838896,
-    "longitude": -81.711164
+    "longitude": -81.692110
   },
   "openingHoursSpecification": [
     {
       "@type": "OpeningHoursSpecification",
-      "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
-      "opens": "09:00",
+      "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"],
+      "opens": "08:00",
       "closes": "18:00"
     }
   ],
   "aggregateRating": {
     "@type": "AggregateRating",
     "ratingValue": "5",
-    "reviewCount": "6",
+    "reviewCount": "12",
     "bestRating": "5"
   },
   "paymentAccepted": "Cash, Credit Card, Debit Card",
-  "currenciesAccepted": "USD"
+  "currenciesAccepted": "USD",
+  "areaServed": [
+    { "@type": "City", "name": "Eustis" },
+    { "@type": "City", "name": "Mount Dora" },
+    { "@type": "City", "name": "Tavares" },
+    { "@type": "City", "name": "Leesburg" },
+    { "@type": "City", "name": "Fruitland Park" },
+    { "@type": "City", "name": "Umatilla" },
+    { "@type": "City", "name": "Lady Lake" }
+  ]
 }
 </script>
 
-<!-- Homepage Additional Schema -->
+<!-- =============================================
+     HOMEPAGE
+     ============================================= -->
 {% if page.url == "/" or page.url == "/index.html" %}
+
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "ItemList",
-  "name": "Auto Repair Services",
+  "name": "Auto Repair Services at AJ Automotive Services",
   "itemListElement": [
-    {
-      "@type": "Service",
-      "position": 1,
-      "name": "Brakes & Suspensions",
-      "description": "Professional brake and suspension repair for foreign and domestic vehicles",
-      "provider": {
-        "@type": "AutoRepair",
-        "name": "AJ Auto Repair"
-      }
-    },
-    {
-      "@type": "Service",
-      "position": 2,
-      "name": "A/C Repair",
-      "description": "Air conditioning system repair and maintenance",
-      "provider": {
-        "@type": "AutoRepair",
-        "name": "AJ Auto Repair"
-      }
-    },
-    {
-      "@type": "Service",
-      "position": 3,
-      "name": "Tune-ups & Diagnostics",
-      "description": "Complete vehicle diagnostics and tune-up services",
-      "provider": {
-        "@type": "AutoRepair",
-        "name": "AJ Auto Repair"
-      }
-    },
-    {
-      "@type": "Service",
-      "position": 4,
-      "name": "Drive Trains & Transmissions",
-      "description": "Transmission repair and drivetrain maintenance",
-      "provider": {
-        "@type": "AutoRepair",
-        "name": "AJ Auto Repair"
-      }
-    },
-    {
-      "@type": "Service",
-      "position": 5,
-      "name": "Electrical Systems",
-      "description": "Vehicle electrical system diagnosis and repair",
-      "provider": {
-        "@type": "AutoRepair",
-        "name": "AJ Auto Repair"
-      }
-    },
-    {
-      "@type": "Service",
-      "position": 6,
-      "name": "Fleet Maintenance",
-      "description": "Commercial fleet maintenance and repair services",
-      "provider": {
-        "@type": "AutoRepair",
-        "name": "AJ Auto Repair"
-      }
-    }
+    { "@type": "ListItem", "position": 1,  "name": "Oil Change",                "url": "https://ajautoandrepair.com/services/oil-change" },
+    { "@type": "ListItem", "position": 2,  "name": "Brake Repair",              "url": "https://ajautoandrepair.com/services/auto-brake-repair" },
+    { "@type": "ListItem", "position": 3,  "name": "Transmission Service",      "url": "https://ajautoandrepair.com/services/transmission" },
+    { "@type": "ListItem", "position": 4,  "name": "A/C Repair",                "url": "https://ajautoandrepair.com/services/ac-installation-repair" },
+    { "@type": "ListItem", "position": 5,  "name": "Engine Diagnostics",        "url": "https://ajautoandrepair.com/services/auto-engine-diagnostics" },
+    { "@type": "ListItem", "position": 6,  "name": "Electrical Repair",         "url": "https://ajautoandrepair.com/services/electrical" },
+    { "@type": "ListItem", "position": 7,  "name": "Steering and Suspension",   "url": "https://ajautoandrepair.com/services/steering-suspension-repair" },
+    { "@type": "ListItem", "position": 8,  "name": "Battery Service",           "url": "https://ajautoandrepair.com/services/battery" },
+    { "@type": "ListItem", "position": 9,  "name": "Exhaust Repair",            "url": "https://ajautoandrepair.com/services/exhaust" },
+    { "@type": "ListItem", "position": 10, "name": "Vehicle Safety Inspection", "url": "https://ajautoandrepair.com/services/vehicle-safety-inspection" },
+    { "@type": "ListItem", "position": 11, "name": "Emissions Testing",         "url": "https://ajautoandrepair.com/services/auto-emissions-testing" },
+    { "@type": "ListItem", "position": 12, "name": "Tire Rotation",             "url": "https://ajautoandrepair.com/services/tire-rotations" }
   ]
 }
 </script>
@@ -117,27 +83,301 @@
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "Review",
-  "itemReviewed": {
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Where is AJ Automotive Services located?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "We are located at 1534 Kurt St, Eustis, FL 32726. We serve Eustis, Mount Dora, Tavares, Leesburg, Fruitland Park, Umatilla, Lady Lake, and all of Lake County, Florida."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What are your business hours?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "We are open Monday through Saturday, 8 AM to 6 PM. Closed Sundays. Walk-ins are welcome during business hours."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do you offer free estimates?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. We give you a clear estimate before any work begins. No surprises on the final bill. Call us at (352) 308-8142 or stop by the shop."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What vehicles do you work on?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "We work on all makes and models, foreign and domestic, including cars, trucks, SUVs, motorcycles, ATVs, and small engines."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How often should I get an oil change in Florida?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Every 3,000 to 5,000 miles for conventional oil and 7,000 to 10,000 miles for full synthetic. Florida heat breaks down oil faster than in cooler climates."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How long does a brake repair take?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A standard pad and rotor replacement on one axle typically takes one to two hours. We provide a time estimate when we inspect your vehicle and can often complete brake work same-day."
+      }
+    }
+  ]
+}
+</script>
+
+{% endif %}
+
+<!-- =============================================
+     SERVICE PAGES  (layout: services)
+     ============================================= -->
+{% if page.layout == "services" %}
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "name": "{{ page.title }}",
+  "description": "{{ page.description }}",
+  "provider": {
     "@type": "AutoRepair",
-    "name": "AJ Auto Repair"
+    "name": "AJ Automotive Services",
+    "telephone": "+13523088142",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "1534 Kurt St",
+      "addressLocality": "Eustis",
+      "addressRegion": "FL",
+      "postalCode": "32726"
+    }
   },
-  "author": {
-    "@type": "Person",
-    "name": "Anjay Smith"
-  },
-  "reviewRating": {
-    "@type": "Rating",
-    "ratingValue": "5",
-    "bestRating": "5"
-  },
-  "reviewBody": "I got referred to AJ Auto Repair and they did a great job at an affordable price range. The bumper of my car was fixed to where it actually stays put and they did it in a great time frame. I would 100% recommend this company."
+  "areaServed": [
+    { "@type": "City", "name": "Eustis" },
+    { "@type": "City", "name": "Mount Dora" },
+    { "@type": "City", "name": "Tavares" },
+    { "@type": "City", "name": "Leesburg" },
+    { "@type": "City", "name": "Fruitland Park" },
+    { "@type": "City", "name": "Umatilla" },
+    { "@type": "City", "name": "Lady Lake" }
+  ]
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Home",     "item": "https://ajautoandrepair.com/" },
+    { "@type": "ListItem", "position": 2, "name": "Services", "item": "https://ajautoandrepair.com/services" },
+    { "@type": "ListItem", "position": 3, "name": "{{ page.title }}", "item": "https://ajautoandrepair.com{{ page.url }}" }
+  ]
+}
+</script>
+
+{% if page.faqs %}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {% for faq in page.faqs %}
+    {
+      "@type": "Question",
+      "name": "{{ faq.question | escape }}",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "{{ faq.answer | escape }}"
+      }
+    }{% unless forloop.last %},{% endunless %}
+    {% endfor %}
+  ]
 }
 </script>
 {% endif %}
 
-<!-- Blog Post Schema -->
-{% if page.layout == 'blog' %}
+{% endif %}
+
+<!-- =============================================
+     AREA BASE PAGES  (layout: areas)
+     ============================================= -->
+{% if page.layout == "areas" %}
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Home",          "item": "https://ajautoandrepair.com/" },
+    { "@type": "ListItem", "position": 2, "name": "Service Areas", "item": "https://ajautoandrepair.com/service-areas" },
+    { "@type": "ListItem", "position": 3, "name": "{{ page.city }}", "item": "https://ajautoandrepair.com{{ page.url }}" }
+  ]
+}
+</script>
+
+{% endif %}
+
+<!-- =============================================
+     SERVICE + AREA COMBO PAGES  (layout: service-area)
+     ============================================= -->
+{% if page.layout == "service-area" %}
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "name": "{{ page.service_name }} in {{ page.city }}, FL",
+  "description": "{{ page.description }}",
+  "provider": {
+    "@type": "AutoRepair",
+    "name": "AJ Automotive Services",
+    "telephone": "+13523088142",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "1534 Kurt St",
+      "addressLocality": "Eustis",
+      "addressRegion": "FL",
+      "postalCode": "32726"
+    }
+  },
+  "areaServed": { "@type": "City", "name": "{{ page.city }}" }
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Home",             "item": "https://ajautoandrepair.com/" },
+    { "@type": "ListItem", "position": 2, "name": "Service Areas",    "item": "https://ajautoandrepair.com/service-areas" },
+    { "@type": "ListItem", "position": 3, "name": "{{ page.city }}",  "item": "https://ajautoandrepair.com/service-areas/{{ page.city_slug }}" },
+    { "@type": "ListItem", "position": 4, "name": "{{ page.service_name }}", "item": "https://ajautoandrepair.com{{ page.url }}" }
+  ]
+}
+</script>
+
+{% if page.faqs %}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {% for faq in page.faqs %}
+    {
+      "@type": "Question",
+      "name": "{{ faq.question | escape }}",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "{{ faq.answer | escape }}"
+      }
+    }{% unless forloop.last %},{% endunless %}
+    {% endfor %}
+  ]
+}
+</script>
+{% endif %}
+
+{% endif %}
+
+<!-- =============================================
+     FAQS PAGE
+     ============================================= -->
+{% if page.url contains '/faqs' %}
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://ajautoandrepair.com/" },
+    { "@type": "ListItem", "position": 2, "name": "FAQs", "item": "https://ajautoandrepair.com/faqs" }
+  ]
+}
+</script>
+
+{% endif %}
+
+<!-- =============================================
+     GALLERY PAGE
+     ============================================= -->
+{% if page.url contains '/gallery' %}
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Home",    "item": "https://ajautoandrepair.com/" },
+    { "@type": "ListItem", "position": 2, "name": "Gallery", "item": "https://ajautoandrepair.com/gallery" }
+  ]
+}
+</script>
+
+{% endif %}
+
+<!-- =============================================
+     REVIEWS PAGE
+     ============================================= -->
+{% if page.url contains '/reviews' %}
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Home",    "item": "https://ajautoandrepair.com/" },
+    { "@type": "ListItem", "position": 2, "name": "Reviews", "item": "https://ajautoandrepair.com/reviews" }
+  ]
+}
+</script>
+
+{% endif %}
+
+<!-- =============================================
+     CONTACT PAGE
+     ============================================= -->
+{% if page.url contains '/contact' %}
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ContactPage",
+  "name": "Contact AJ Automotive Services",
+  "description": "Contact AJ Automotive Services in Eustis, FL. Get a free estimate for auto repair.",
+  "url": "https://ajautoandrepair.com/contact"
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Home",    "item": "https://ajautoandrepair.com/" },
+    { "@type": "ListItem", "position": 2, "name": "Contact", "item": "https://ajautoandrepair.com/contact" }
+  ]
+}
+</script>
+
+{% endif %}
+
+<!-- =============================================
+     BLOG POST  (layout: blog)
+     ============================================= -->
+{% if page.layout == "blog" %}
+
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -149,12 +389,12 @@
   "dateModified": "{{ page.date | date_to_xmlschema }}",
   "author": {
     "@type": "Organization",
-    "name": "AJ Auto Repair",
+    "name": "AJ Automotive Services",
     "url": "https://ajautoandrepair.com/"
   },
   "publisher": {
     "@type": "Organization",
-    "name": "AJ Auto Repair",
+    "name": "AJ Automotive Services",
     "logo": {
       "@type": "ImageObject",
       "url": "https://ajautoandrepair.com/Logo.png"
@@ -164,8 +404,7 @@
     "@type": "WebPage",
     "@id": "https://ajautoandrepair.com{{ page.url }}"
   },
-  "articleSection": "{{ page.category }}",
-  "keywords": "auto repair, {{ page.category | downcase }}, Eustis FL, car maintenance"
+  "keywords": "auto repair, {{ page.category | downcase }}, Eustis FL, Lake County, car maintenance"
 }
 </script>
 
@@ -173,38 +412,31 @@
 {
   "@context": "https://schema.org",
   "@type": "BreadcrumbList",
-  "itemListElement": [{
-    "@type": "ListItem",
-    "position": 1,
-    "name": "Home",
-    "item": "https://ajautoandrepair.com/"
-  },{
-    "@type": "ListItem",
-    "position": 2,
-    "name": "Blog",
-    "item": "https://ajautoandrepair.com/blog"
-  },{
-    "@type": "ListItem",
-    "position": 3,
-    "name": "{{ page.title }}",
-    "item": "https://ajautoandrepair.com{{ page.url }}"
-  }]
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://ajautoandrepair.com/" },
+    { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://ajautoandrepair.com/blog" },
+    { "@type": "ListItem", "position": 3, "name": "{{ page.title }}", "item": "https://ajautoandrepair.com{{ page.url }}" }
+  ]
 }
 </script>
+
 {% endif %}
 
-<!-- Blog Index Schema -->
+<!-- =============================================
+     BLOG INDEX
+     ============================================= -->
 {% if page.url contains '/blog' and page.layout != 'blog' %}
+
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "Blog",
-  "name": "AJ Auto Repair Blog",
-  "description": "Tips, advice, and industry insights from AJ Auto Repair in Eustis, FL",
+  "name": "AJ Automotive Services Blog",
+  "description": "Auto repair tips, maintenance advice, and local driving insights from AJ Automotive Services in Eustis, FL.",
   "url": "https://ajautoandrepair.com/blog",
   "publisher": {
     "@type": "Organization",
-    "name": "AJ Auto Repair",
+    "name": "AJ Automotive Services",
     "logo": {
       "@type": "ImageObject",
       "url": "https://ajautoandrepair.com/Logo.png"
@@ -212,111 +444,16 @@
   }
 }
 </script>
-{% endif %}
-
-<!-- Contact Page Schema -->
-{% if page.url contains '/contact' %}
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "ContactPage",
-  "name": "Contact AJ Auto Repair",
-  "description": "Contact AJ Auto Repair in Eustis, FL. Get a free quote for auto repair services.",
-  "url": "https://ajautoandrepair.com/contact"
-}
-</script>
 
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "BreadcrumbList",
-  "itemListElement": [{
-    "@type": "ListItem",
-    "position": 1,
-    "name": "Home",
-    "item": "https://ajautoandrepair.com/"
-  },{
-    "@type": "ListItem",
-    "position": 2,
-    "name": "Contact",
-    "item": "https://ajautoandrepair.com/contact"
-  }]
-}
-</script>
-{% endif %}
-
-<!-- FAQ Schema - Shows on Homepage -->
-{% if page.url == "/" or page.url == "/index.html" %}
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  "mainEntity": [
-    {
-      "@type": "Question",
-      "name": "What types of vehicles does AJ Auto Repair service?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "We service all foreign and domestic vehicles including cars, trucks, SUVs, motorcycles, small engines, and ATVs. Our experienced technicians work on brands like Honda, Toyota, Ford, Chevrolet, BMW, Mercedes, and more."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "How often should I get an oil change?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "For conventional oil, we recommend changes every 3,000-5,000 miles. Synthetic oil can last 7,000-10,000 miles. However, your specific vehicle and driving conditions may require different intervals. Check your owner's manual or ask our technicians for personalized recommendations."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Do you offer free estimates?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Yes, we provide free quotes for all repair work. Call us at (352) 308-8142 or visit our shop at 1534 Kurt St, Eustis, FL 32726 to discuss your vehicle's needs and get an honest, upfront estimate."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "What are your business hours?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "We're open Monday through Saturday from 9:00 AM to 6:00 PM. We're closed on Sundays. Call ahead at (352) 308-8142 to schedule an appointment or drop by during business hours."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "How long does a typical brake repair take?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Most brake pad replacements take 1-2 hours. More extensive brake work involving rotors, calipers, or brake lines may take longer. We'll provide a time estimate when we inspect your vehicle and can often complete the work same-day."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Do you work on fleet vehicles?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Yes, we specialize in fleet maintenance for businesses in the Eustis and Lake County area. We offer competitive rates for commercial fleet services and can schedule maintenance to minimize downtime for your business vehicles."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "What should I do if my check engine light comes on?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Don't ignore it. A check engine light indicates your vehicle's computer has detected a problem. Bring your vehicle to AJ Auto Repair for diagnostic testing. We'll read the error codes, identify the issue, and provide honest recommendations for repair."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "How can I tell if my A/C needs repair?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Common signs include weak airflow, air that's not as cold as it should be, strange odors when the A/C runs, unusual noises, or visible moisture around A/C components. In Florida's heat, a failing A/C system is both uncomfortable and potentially dangerous. Get it checked before summer."
-      }
-    }
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://ajautoandrepair.com/" },
+    { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://ajautoandrepair.com/blog" }
   ]
 }
 </script>
+
 {% endif %}
