@@ -32,7 +32,7 @@ module Jekyll
           dir          = "service-areas/#{city_slug}/#{slug}"
 
           page_data = {
-            'layout'           => 'service-area',
+            'layout'           => 'service-areas',
             'title'            => "#{service_name} in #{city_name}, FL | AJ Automotive Services",
             'description'      => service['description'],
             'city'             => city_name,
