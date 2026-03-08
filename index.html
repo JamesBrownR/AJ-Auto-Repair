@@ -1,384 +1,1276 @@
 ---
 layout: default
-title: AJ Automotive Services | Auto Repair in Eustis, FL
-description: Professional auto repair services in Eustis, FL. Specializing in foreign & domestic vehicles, brakes, A/C repair, diagnostics, transmissions, and fleet maintenance. Honest pricing, quality work.
+title: Auto Repair in Eustis, FL | AJ Automotive Services
+description: Trusted auto repair in Eustis, FL. Oil changes, brakes, A/C, engine diagnostics, and more. Serving Lake County since day one. Call (352) 308-8142.
 ---
 
-
 <style>
-/* Gallery Wrapper - Keep flex for centering, but align with site spacing */
-.gallery-wrapper {
+/* =============================================
+   CSS RESET + ROOT
+   ============================================= */
+*, *::before, *::after { box-sizing: border-box; }
+
+:root {
+    --dark:        #1a1c21;
+    --dark-mid:    #23262d;
+    --dark-light:  #2e323e;
+    --gold:        #e8a635;
+    --gold-dim:    #c48b22;
+    --gold-pale:   rgba(232,166,53,0.08);
+    --text:        #ffffff;
+    --text-muted:  #9ea5b5;
+    --text-dark:   #23262d;
+    --radius:      3px;
+    --transition:  0.3s ease;
+}
+
+/* =============================================
+   HERO
+   ============================================= */
+.hp-hero {
     position: relative;
+    min-height: 100vh;
     display: flex;
-    flex-direction: column;
+    align-items: center;
+    overflow: hidden;
+    background: var(--dark);
+}
+
+.hp-hero__bg {
+    position: absolute;
+    inset: 0;
+    background:
+        linear-gradient(105deg, rgba(26,28,33,0.96) 0%, rgba(26,28,33,0.75) 55%, rgba(26,28,33,0.40) 100%),
+        url('https://images.unsplash.com/photo-1632823471565-1ecdf5c6da12?auto=format&fit=crop&q=80&w=2070') center / cover no-repeat;
+    z-index: 0;
+}
+
+/* Diagonal accent bar */
+.hp-hero__bg::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 5px;
+    height: 100%;
+    background: var(--gold);
+}
+
+.hp-hero__content {
+    position: relative;
+    z-index: 1;
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 120px 40px 100px;
+    width: 100%;
+}
+
+.hp-hero__eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    font-family: 'Oswald', sans-serif;
+    font-size: 0.78rem;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 1.4rem;
+}
+
+.hp-hero__eyebrow::before {
+    content: '';
+    display: block;
+    width: 32px;
+    height: 2px;
+    background: var(--gold);
+    flex-shrink: 0;
+}
+
+.hp-hero h1 {
+    font-family: 'Oswald', sans-serif;
+    font-size: clamp(3rem, 7vw, 6rem);
+    font-weight: 700;
+    line-height: 1.0;
+    color: #fff;
+    max-width: 700px;
+    margin: 0 0 1.6rem;
+    text-transform: uppercase;
+    letter-spacing: -0.01em;
+}
+
+.hp-hero h1 em {
+    font-style: normal;
+    color: var(--gold);
+    display: block;
+}
+
+.hp-hero__sub {
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.1rem;
+    font-weight: 300;
+    color: var(--text-muted);
+    max-width: 480px;
+    line-height: 1.7;
+    margin-bottom: 2.4rem;
+}
+
+.hp-hero__actions {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
     align-items: center;
 }
 
-/* Buttons - Style like site's .btn: gold accent, dark text, hover effect */
-#prev-btn, #next-btn {
-    background: var(--accent-gold);
-    color: var(--primary-dark);
-    border: 2px solid var(--accent-gold);
-    padding: 12px 20px; /* Slightly larger for better touch on mobile */
-    margin-top: 20px;
-    cursor: pointer;
-    border-radius: 4px; /* Match site's border-radius */
+.btn-gold {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: var(--gold);
+    color: var(--text-dark);
     font-family: 'Oswald', sans-serif;
+    font-size: 0.95rem;
+    letter-spacing: 0.08em;
     text-transform: uppercase;
-    font-weight: bold;
-    transition: 0.3s;
-    margin-left: 10px; /* Space between buttons */
-    margin-right: 10px;
+    padding: 15px 30px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: background var(--transition), transform var(--transition);
+    border-radius: var(--radius);
 }
 
-#prev-btn:hover, #next-btn:hover {
+.btn-gold:hover {
+    background: #f5b942;
+    transform: translateY(-2px);
+}
+
+.btn-outline {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
     background: transparent;
-    color: var(--accent-gold);
+    color: #fff;
+    font-family: 'Oswald', sans-serif;
+    font-size: 0.95rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    padding: 13px 28px;
+    text-decoration: none;
+    border: 2px solid rgba(255,255,255,0.3);
+    transition: border-color var(--transition), color var(--transition);
+    border-radius: var(--radius);
 }
 
-#prev-btn:disabled, #next-btn:disabled {
-    background: var(--text-gray);
-    border-color: var(--text-gray);
-    color: var(--primary-light);
-    cursor: not-allowed;
+.btn-outline:hover {
+    border-color: var(--gold);
+    color: var(--gold);
 }
 
-/* Gallery Grid - Adopt site's auto-fit for responsiveness */
-.gallery-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Site's flexible columns */
-    gap: 15px; /* Site's gap */
-    width: 100%; /* Ensure full container width */
+.hp-hero__trust {
+    margin-top: 3.5rem;
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    flex-wrap: wrap;
 }
 
-/* Gallery Item - Match site's hover effects, borders, and fixed height */
-.gallery-item {
-    position: relative;
-    height: 250px; /* Site's uniform height */
-    overflow: hidden;
-    border-radius: 4px; /* Site's radius */
-    border: 1px solid #444; /* Site's subtle border */
+.hp-hero__stars {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
 }
 
-.gallery-item img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover; /* Site's fit for cropping */
+.hp-hero__stars .stars-row {
+    color: var(--gold);
+    font-size: 1.05rem;
+    letter-spacing: 2px;
+}
+
+.hp-hero__stars span {
+    font-family: 'Roboto', sans-serif;
+    font-size: 0.82rem;
+    color: var(--text-muted);
+}
+
+.hp-hero__divider {
+    width: 1px;
+    height: 40px;
+    background: rgba(255,255,255,0.15);
+}
+
+.hp-hero__stat {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.hp-hero__stat strong {
+    font-family: 'Oswald', sans-serif;
+    font-size: 1.5rem;
+    color: #fff;
+    font-weight: 600;
+    line-height: 1;
+}
+
+.hp-hero__stat span {
+    font-family: 'Roboto', sans-serif;
+    font-size: 0.8rem;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.hp-hero__scroll {
+    position: absolute;
+    bottom: 36px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    opacity: 0.4;
+    animation: scrollBounce 2s ease-in-out infinite;
+}
+
+.hp-hero__scroll span {
+    font-family: 'Oswald', sans-serif;
+    font-size: 0.65rem;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: #fff;
+}
+
+@keyframes scrollBounce {
+    0%, 100% { transform: translateX(-50%) translateY(0); }
+    50% { transform: translateX(-50%) translateY(6px); }
+}
+
+/* =============================================
+   QUICK CONTACT STRIP
+   ============================================= */
+.hp-strip {
+    background: var(--gold);
+    padding: 0;
+}
+
+.hp-strip__inner {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 40px;
+    display: flex;
+    align-items: stretch;
+    justify-content: space-between;
+}
+
+.hp-strip__item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 18px 0;
+    color: var(--text-dark);
+    text-decoration: none;
+    font-family: 'Oswald', sans-serif;
+    font-size: 0.9rem;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    font-weight: 600;
+    transition: opacity var(--transition);
+    flex: 1;
+    justify-content: center;
+}
+
+.hp-strip__item + .hp-strip__item {
+    border-left: 1px solid rgba(0,0,0,0.15);
+}
+
+.hp-strip__item i {
+    font-size: 1.1rem;
+    flex-shrink: 0;
+}
+
+.hp-strip__item:hover {
+    opacity: 0.75;
+}
+
+/* =============================================
+   SERVICES GRID
+   ============================================= */
+.hp-services {
+    background: var(--dark);
+    padding: 90px 0 100px;
+}
+
+.container {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 40px;
+}
+
+.section-label {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    font-family: 'Oswald', sans-serif;
+    font-size: 0.75rem;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 1rem;
+}
+
+.section-label::before {
+    content: '';
     display: block;
-    transition: transform 0.5s; /* Site's smooth scale transition */
+    width: 24px;
+    height: 2px;
+    background: var(--gold);
+    flex-shrink: 0;
 }
 
-.gallery-item:hover img {
-    transform: scale(1.1); /* Site's zoom on hover */
+.section-title {
+    font-family: 'Oswald', sans-serif;
+    font-size: clamp(1.8rem, 3.5vw, 2.8rem);
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: 0.02em;
+    margin: 0 0 0.5rem;
+    line-height: 1.1;
 }
 
-/* Caption - Match site's sliding absolute position */
-.gallery-caption {
+.section-sub {
+    font-family: 'Roboto', sans-serif;
+    font-size: 1rem;
+    color: var(--text-muted);
+    font-weight: 300;
+    margin: 0 0 3rem;
+    max-width: 480px;
+}
+
+.hp-services__grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2px;
+}
+
+.service-card {
+    background: var(--dark-mid);
+    padding: 30px 24px 28px;
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    position: relative;
+    overflow: hidden;
+    transition: background var(--transition);
+    border-bottom: 3px solid transparent;
+}
+
+.service-card::before {
+    content: '';
     position: absolute;
     bottom: 0;
     left: 0;
     right: 0;
-    background: rgba(0,0,0,0.8); /* Site's semi-transparent bg */
-    color: white;
-    padding: 10px;
-    transform: translateY(100%);
-    transition: transform 0.3s;
+    height: 3px;
+    background: var(--gold);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.35s ease;
+}
+
+.service-card:hover {
+    background: var(--dark-light);
+}
+
+.service-card:hover::before {
+    transform: scaleX(1);
+}
+
+.service-card__icon {
+    width: 44px;
+    height: 44px;
+    background: var(--gold-pale);
+    border: 1px solid rgba(232,166,53,0.2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: var(--radius);
+    color: var(--gold);
+    font-size: 1.1rem;
+    transition: background var(--transition), border-color var(--transition);
+    flex-shrink: 0;
+}
+
+.service-card:hover .service-card__icon {
+    background: rgba(232,166,53,0.18);
+    border-color: var(--gold);
+}
+
+.service-card__name {
+    font-family: 'Oswald', sans-serif;
+    font-size: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    color: #fff;
+    line-height: 1.2;
+}
+
+.service-card__desc {
+    font-family: 'Roboto', sans-serif;
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    line-height: 1.6;
+    flex: 1;
+}
+
+.service-card__arrow {
+    color: var(--gold);
+    font-size: 0.8rem;
+    opacity: 0;
+    transform: translateX(-6px);
+    transition: opacity var(--transition), transform var(--transition);
+    align-self: flex-start;
+}
+
+.service-card:hover .service-card__arrow {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.hp-services__cta {
+    margin-top: 2.5rem;
     text-align: center;
-    font-size: 0.95rem; /* Subtle text size like reviews */
 }
 
-.gallery-item:hover .gallery-caption {
-    transform: translateY(0);
+/* =============================================
+   WHY AJ — SPLIT LAYOUT
+   ============================================= */
+.hp-why {
+    background: var(--dark-mid);
+    padding: 100px 0;
 }
 
-/* Mobile Responsiveness - Leverage auto-fit, but add site-aligned tweaks */
-@media (max-width: 768px) {
-    .gallery-grid {
-        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Adapt for tablets, smaller minmax */
-        gap: 10px;
-    }
-    
-    .gallery-item {
-        height: 200px; /* Slightly reduce height for mobile */
-    }
-    
-    #prev-btn, #next-btn {
-        padding: 10px 15px; /* Compact for smaller screens */
-    }
+.hp-why__layout {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+    align-items: center;
 }
 
-@media (max-width: 480px) {
-    .gallery-grid {
-        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); /* 2x2 yo */
-        gap: 10px;
-    }
-    
-    .gallery-item {
-        height: 250px; /* Keep height for better visibility */
-    }
-    
-    .gallery-wrapper {
-        align-items: stretch; /* Full width on small screens */
-    }
+.hp-why__image-wrap {
+    position: relative;
+}
+
+.hp-why__image-wrap img {
+    width: 100%;
+    height: 520px;
+    object-fit: cover;
+    display: block;
+    filter: brightness(0.88) saturate(0.8);
+}
+
+.hp-why__image-badge {
+    position: absolute;
+    bottom: -24px;
+    right: -24px;
+    background: var(--gold);
+    color: var(--text-dark);
+    padding: 24px 28px;
+    text-align: center;
+    box-shadow: 0 8px 32px rgba(0,0,0,0.4);
+}
+
+.hp-why__image-badge strong {
+    display: block;
+    font-family: 'Oswald', sans-serif;
+    font-size: 2.4rem;
+    font-weight: 700;
+    line-height: 1;
+}
+
+.hp-why__image-badge span {
+    font-family: 'Roboto', sans-serif;
+    font-size: 0.78rem;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    font-weight: 500;
+    margin-top: 4px;
+    display: block;
+}
+
+.hp-why__list {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    margin: 2.5rem 0;
+}
+
+.hp-why__item {
+    display: flex;
+    gap: 20px;
+    align-items: flex-start;
+    padding: 22px 0;
+    border-bottom: 1px solid rgba(255,255,255,0.06);
+}
+
+.hp-why__item:last-child {
+    border-bottom: none;
+}
+
+.hp-why__icon {
+    width: 40px;
+    height: 40px;
+    background: var(--gold-pale);
+    border: 1px solid rgba(232,166,53,0.25);
+    border-radius: var(--radius);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--gold);
+    font-size: 1rem;
+    flex-shrink: 0;
+    margin-top: 2px;
+}
+
+.hp-why__text h3 {
+    font-family: 'Oswald', sans-serif;
+    font-size: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    color: #fff;
+    margin: 0 0 5px;
+}
+
+.hp-why__text p {
+    font-family: 'Roboto', sans-serif;
+    font-size: 0.9rem;
+    color: var(--text-muted);
+    line-height: 1.65;
+    margin: 0;
+}
+
+/* =============================================
+   REVIEWS
+   ============================================= */
+.hp-reviews {
+    background: var(--dark);
+    padding: 90px 0 100px;
+}
+
+.hp-reviews__header {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    margin-bottom: 3rem;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.hp-reviews__rating {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+}
+
+.hp-reviews__score {
+    font-family: 'Oswald', sans-serif;
+    font-size: 3.5rem;
+    font-weight: 700;
+    color: var(--gold);
+    line-height: 1;
+}
+
+.hp-reviews__meta {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.hp-reviews__stars-row {
+    color: var(--gold);
+    font-size: 1rem;
+    letter-spacing: 3px;
+}
+
+.hp-reviews__meta span {
+    font-family: 'Roboto', sans-serif;
+    font-size: 0.82rem;
+    color: var(--text-muted);
+}
+
+.hp-reviews__grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+}
+
+.review-card {
+    background: var(--dark-mid);
+    padding: 28px 24px;
+    border-top: 3px solid var(--gold);
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.review-card__stars {
+    color: var(--gold);
+    font-size: 0.85rem;
+    letter-spacing: 2px;
+}
+
+.review-card__text {
+    font-family: 'Roboto', sans-serif;
+    font-size: 0.9rem;
+    color: var(--text-muted);
+    line-height: 1.72;
+    flex: 1;
+}
+
+.review-card__author {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.review-card__name {
+    font-family: 'Oswald', sans-serif;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: #fff;
+}
+
+.review-card__google {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 0.72rem;
+    color: var(--text-muted);
+    letter-spacing: 0.03em;
+}
+
+.review-card__google i {
+    color: #4285f4;
+    font-size: 0.85rem;
+}
+
+.hp-reviews__footer {
+    text-align: center;
+    margin-top: 2.5rem;
+}
+
+/* =============================================
+   AREAS STRIP
+   ============================================= */
+.hp-areas {
+    background: var(--dark-light);
+    padding: 72px 0;
+    border-top: 1px solid rgba(255,255,255,0.05);
+    border-bottom: 1px solid rgba(255,255,255,0.05);
+}
+
+.hp-areas__layout {
+    display: grid;
+    grid-template-columns: 280px 1fr;
+    gap: 60px;
+    align-items: center;
+}
+
+.hp-areas__intro .section-sub {
+    margin-bottom: 1.5rem;
+}
+
+.hp-areas__cities {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+}
+
+.area-pill {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 14px 18px;
+    background: var(--dark-mid);
+    color: #fff;
+    text-decoration: none;
+    font-family: 'Oswald', sans-serif;
+    font-size: 0.88rem;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    border: 1px solid rgba(255,255,255,0.06);
+    border-radius: var(--radius);
+    transition: border-color var(--transition), color var(--transition), background var(--transition);
+}
+
+.area-pill i {
+    font-size: 0.65rem;
+    color: var(--gold);
+    opacity: 0;
+    transform: translateX(-4px);
+    transition: opacity var(--transition), transform var(--transition);
+}
+
+.area-pill:hover {
+    border-color: var(--gold);
+    color: var(--gold);
+    background: rgba(232,166,53,0.05);
+}
+
+.area-pill:hover i {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.area-pill--shop {
+    border-color: rgba(232,166,53,0.3);
+    color: var(--gold);
+}
+
+.area-pill--shop .area-pill__label {
+    display: flex;
+    flex-direction: column;
+    gap: 1px;
+}
+
+.area-pill--shop .area-pill__sub {
+    font-family: 'Roboto', sans-serif;
+    font-size: 0.68rem;
+    text-transform: none;
+    letter-spacing: 0;
+    color: var(--text-muted);
+}
+
+/* =============================================
+   GALLERY STRIP
+   ============================================= */
+.hp-gallery {
+    background: var(--dark);
+    padding: 90px 0 100px;
+}
+
+.hp-gallery__grid {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: 200px 200px;
+    gap: 4px;
+    margin-top: 2.5rem;
+}
+
+.hp-gallery__item {
+    overflow: hidden;
+    position: relative;
+    cursor: pointer;
+}
+
+.hp-gallery__item:first-child {
+    grid-column: span 2;
+    grid-row: span 2;
+}
+
+.hp-gallery__item:nth-child(4) {
+    grid-column: span 2;
+}
+
+.hp-gallery__item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.5s ease, filter 0.5s ease;
+    filter: brightness(0.8) saturate(0.75);
+}
+
+.hp-gallery__item:hover img {
+    transform: scale(1.06);
+    filter: brightness(0.95) saturate(1);
+}
+
+.hp-gallery__overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(232,166,53,0.0);
+    transition: background var(--transition);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hp-gallery__item:hover .hp-gallery__overlay {
+    background: rgba(232,166,53,0.08);
+}
+
+.hp-gallery__footer {
+    text-align: center;
+    margin-top: 2rem;
+}
+
+/* =============================================
+   FINAL CTA BAND
+   ============================================= */
+.hp-cta {
+    background: var(--gold);
+    padding: 80px 40px;
+    text-align: center;
+}
+
+.hp-cta h2 {
+    font-family: 'Oswald', sans-serif;
+    font-size: clamp(1.8rem, 4vw, 3rem);
+    text-transform: uppercase;
+    color: var(--text-dark);
+    margin: 0 0 0.7rem;
+    letter-spacing: 0.02em;
+}
+
+.hp-cta p {
+    font-family: 'Roboto', sans-serif;
+    font-size: 1rem;
+    color: rgba(35,38,45,0.75);
+    max-width: 480px;
+    margin: 0 auto 2.4rem;
+}
+
+.hp-cta__btns {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.btn-dark {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: var(--text-dark);
+    color: var(--gold);
+    font-family: 'Oswald', sans-serif;
+    font-size: 0.95rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    padding: 15px 30px;
+    text-decoration: none;
+    font-weight: 600;
+    border-radius: var(--radius);
+    transition: background var(--transition), transform var(--transition);
+}
+
+.btn-dark:hover {
+    background: #111317;
+    transform: translateY(-2px);
+}
+
+.btn-dark-outline {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: transparent;
+    color: var(--text-dark);
+    font-family: 'Oswald', sans-serif;
+    font-size: 0.95rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    padding: 13px 28px;
+    text-decoration: none;
+    border: 2px solid rgba(35,38,45,0.4);
+    border-radius: var(--radius);
+    transition: border-color var(--transition), background var(--transition);
+}
+
+.btn-dark-outline:hover {
+    border-color: var(--text-dark);
+    background: rgba(35,38,45,0.08);
+}
+
+/* =============================================
+   RESPONSIVE
+   ============================================= */
+@media (max-width: 1100px) {
+    .hp-services__grid { grid-template-columns: repeat(3, 1fr); }
+    .hp-gallery__grid  { grid-template-columns: repeat(4, 1fr); grid-template-rows: 180px 180px; }
+    .hp-gallery__item:first-child { grid-column: span 2; grid-row: span 2; }
+    .hp-gallery__item:nth-child(4) { grid-column: span 1; }
+    .hp-areas__cities  { grid-template-columns: repeat(3, 1fr); }
+}
+
+@media (max-width: 860px) {
+    .hp-hero__content  { padding: 100px 24px 80px; }
+    .hp-services__grid { grid-template-columns: repeat(2, 1fr); }
+    .hp-why__layout    { grid-template-columns: 1fr; gap: 48px; }
+    .hp-why__image-wrap img { height: 360px; }
+    .hp-why__image-badge { right: 16px; bottom: -20px; }
+    .hp-reviews__grid  { grid-template-columns: repeat(2, 1fr); }
+    .hp-areas__layout  { grid-template-columns: 1fr; gap: 32px; }
+    .hp-areas__cities  { grid-template-columns: repeat(2, 1fr); }
+    .hp-gallery__grid  { grid-template-columns: repeat(3, 1fr); grid-template-rows: 160px 160px; }
+    .hp-strip__inner   { flex-direction: column; gap: 0; }
+    .hp-strip__item    { border-left: none !important; border-bottom: 1px solid rgba(0,0,0,0.12); justify-content: flex-start; padding: 16px 0; }
+    .container         { padding: 0 24px; }
+}
+
+@media (max-width: 560px) {
+    .hp-services__grid { grid-template-columns: 1fr; }
+    .hp-reviews__grid  { grid-template-columns: 1fr; }
+    .hp-areas__cities  { grid-template-columns: 1fr 1fr; }
+    .hp-gallery__grid  { grid-template-columns: repeat(2, 1fr); grid-template-rows: repeat(4, 140px); }
+    .hp-gallery__item:first-child { grid-column: span 2; grid-row: span 1; }
+    .hp-gallery__item:nth-child(4) { grid-column: span 1; }
+    .hp-hero__trust    { flex-direction: column; align-items: flex-start; gap: 16px; }
+    .hp-hero__divider  { display: none; }
 }
 </style>
 
-   <section class="hero">
-    <div class="hero-content">
-        <h1>Complete Automotive Solutions</h1>
-        <p>Foreign & Domestic • No Job Too Big Or Small</p>
-        <div style="margin-top: 20px;">
-            <a href="/contact" class="btn">Get a Quote</a>
+<!-- =============================================
+     HERO
+     ============================================= -->
+<section class="hp-hero">
+    <div class="hp-hero__bg"></div>
+    <div class="hp-hero__content">
+        <div class="hp-hero__eyebrow">Eustis, FL &mdash; Lake County</div>
+        <h1>
+            Real Repairs.
+            <em>Fair Prices.</em>
+        </h1>
+        <p class="hp-hero__sub">AJ Automotive Services is a locally owned shop in Eustis. We do the job right the first time and tell you exactly what your vehicle needs before we touch it.</p>
+        <div class="hp-hero__actions">
+            <a href="tel:+13523088142" class="btn-gold">
+                <i class="fa-solid fa-phone"></i> Call (352) 308-8142
+            </a>
+            <a href="/services" class="btn-outline">
+                <i class="fa-solid fa-wrench"></i> Our Services
+            </a>
+        </div>
+        <div class="hp-hero__trust">
+            <div class="hp-hero__stars">
+                <div class="stars-row">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+                <span>5.0 on Google Reviews</span>
+            </div>
+            <div class="hp-hero__divider"></div>
+            <div class="hp-hero__stat">
+                <strong>6 Days</strong>
+                <span>Mon &ndash; Sat, 8AM &ndash; 6PM</span>
+            </div>
+            <div class="hp-hero__divider"></div>
+            <div class="hp-hero__stat">
+                <strong>All Makes</strong>
+                <span>Foreign &amp; Domestic</span>
+            </div>
+        </div>
+    </div>
+    <div class="hp-hero__scroll">
+        <span>Scroll</span>
+        <i class="fa-solid fa-chevron-down" style="color:#fff; font-size:0.75rem;"></i>
+    </div>
+</section>
+
+<!-- =============================================
+     QUICK INFO STRIP
+     ============================================= -->
+<div class="hp-strip">
+    <div class="hp-strip__inner">
+        <a href="tel:+13523088142" class="hp-strip__item">
+            <i class="fa-solid fa-phone"></i> (352) 308-8142
+        </a>
+        <a href="https://maps.google.com/?q=1534+Kurt+St+Eustis+FL+32726" target="_blank" rel="noopener" class="hp-strip__item">
+            <i class="fa-solid fa-location-dot"></i> 1534 Kurt St, Eustis, FL 32726
+        </a>
+        <div class="hp-strip__item" style="cursor: default;">
+            <i class="fa-solid fa-clock"></i> Mon &ndash; Sat: 8 AM &ndash; 6 PM
+        </div>
+        <a href="/contact" class="hp-strip__item">
+            <i class="fa-solid fa-calendar-check"></i> Schedule Service
+        </a>
+    </div>
+</div>
+
+<!-- =============================================
+     SERVICES
+     ============================================= -->
+<section class="hp-services">
+    <div class="container">
+        <div class="section-label">What We Do</div>
+        <h2 class="section-title">Full-Service Auto Repair</h2>
+        <p class="section-sub">One shop for everything your vehicle needs. Foreign, domestic, everyday driver, or specialty build.</p>
+
+        <div class="hp-services__grid">
+            <a href="/services/oil-change" class="service-card">
+                <div class="service-card__icon"><i class="fa-solid fa-oil-can"></i></div>
+                <div class="service-card__name">Oil Change</div>
+                <p class="service-card__desc">Conventional, synthetic blend, or full synthetic. Every service includes a multi-point inspection.</p>
+                <div class="service-card__arrow"><i class="fa-solid fa-arrow-right"></i> View service</div>
+            </a>
+            <a href="/services/auto-brake-repair" class="service-card">
+                <div class="service-card__icon"><i class="fa-solid fa-car-burst"></i></div>
+                <div class="service-card__name">Brake Repair</div>
+                <p class="service-card__desc">Pads, rotors, calipers, brake lines, and full hydraulic system service for all vehicles.</p>
+                <div class="service-card__arrow"><i class="fa-solid fa-arrow-right"></i> View service</div>
+            </a>
+            <a href="/services/transmission" class="service-card">
+                <div class="service-card__icon"><i class="fa-solid fa-gears"></i></div>
+                <div class="service-card__name">Transmission</div>
+                <p class="service-card__desc">Fluid service, diagnostics, and repair for automatic and manual transmissions.</p>
+                <div class="service-card__arrow"><i class="fa-solid fa-arrow-right"></i> View service</div>
+            </a>
+            <a href="/services/ac-installation-repair" class="service-card">
+                <div class="service-card__icon"><i class="fa-solid fa-snowflake"></i></div>
+                <div class="service-card__name">A/C Repair</div>
+                <p class="service-card__desc">Leak diagnosis, compressor replacement, recharging, and full A/C system service.</p>
+                <div class="service-card__arrow"><i class="fa-solid fa-arrow-right"></i> View service</div>
+            </a>
+            <a href="/services/auto-engine-diagnostics" class="service-card">
+                <div class="service-card__icon"><i class="fa-solid fa-magnifying-glass-chart"></i></div>
+                <div class="service-card__name">Engine Diagnostics</div>
+                <p class="service-card__desc">Check engine light, OBD-II scanning, and advanced diagnostic procedures for all vehicles.</p>
+                <div class="service-card__arrow"><i class="fa-solid fa-arrow-right"></i> View service</div>
+            </a>
+            <a href="/services/electrical" class="service-card">
+                <div class="service-card__icon"><i class="fa-solid fa-bolt"></i></div>
+                <div class="service-card__name">Electrical</div>
+                <p class="service-card__desc">Wiring, starters, alternators, lighting systems, and electrical fault diagnosis.</p>
+                <div class="service-card__arrow"><i class="fa-solid fa-arrow-right"></i> View service</div>
+            </a>
+            <a href="/services/steering-suspension-repair" class="service-card">
+                <div class="service-card__icon"><i class="fa-solid fa-car-side"></i></div>
+                <div class="service-card__name">Steering &amp; Suspension</div>
+                <p class="service-card__desc">Shocks, struts, control arms, tie rods, wheel alignment, and full chassis work.</p>
+                <div class="service-card__arrow"><i class="fa-solid fa-arrow-right"></i> View service</div>
+            </a>
+            <a href="/services/battery" class="service-card">
+                <div class="service-card__icon"><i class="fa-solid fa-car-battery"></i></div>
+                <div class="service-card__name">Battery Service</div>
+                <p class="service-card__desc">Battery testing, replacement, terminal service, and charging system inspection.</p>
+                <div class="service-card__arrow"><i class="fa-solid fa-arrow-right"></i> View service</div>
+            </a>
+            <a href="/services/exhaust" class="service-card">
+                <div class="service-card__icon"><i class="fa-solid fa-wind"></i></div>
+                <div class="service-card__name">Exhaust</div>
+                <p class="service-card__desc">Muffler replacement, exhaust pipe repair, catalytic converter, and leak repair.</p>
+                <div class="service-card__arrow"><i class="fa-solid fa-arrow-right"></i> View service</div>
+            </a>
+            <a href="/services/vehicle-safety-inspection" class="service-card">
+                <div class="service-card__icon"><i class="fa-solid fa-shield-check"></i></div>
+                <div class="service-card__name">Safety Inspection</div>
+                <p class="service-card__desc">Pre-purchase inspections, annual safety checks, and Florida roadworthiness evaluations.</p>
+                <div class="service-card__arrow"><i class="fa-solid fa-arrow-right"></i> View service</div>
+            </a>
+            <a href="/services/auto-emissions-testing" class="service-card">
+                <div class="service-card__icon"><i class="fa-solid fa-leaf"></i></div>
+                <div class="service-card__name">Emissions Testing</div>
+                <p class="service-card__desc">OBD-II emissions diagnostics and repair to help you pass Florida's inspection program.</p>
+                <div class="service-card__arrow"><i class="fa-solid fa-arrow-right"></i> View service</div>
+            </a>
+            <a href="/services/tire-rotations" class="service-card">
+                <div class="service-card__icon"><i class="fa-solid fa-tire"></i></div>
+                <div class="service-card__name">Tire Rotation</div>
+                <p class="service-card__desc">Rotation, balance, tread depth checks, and inflation adjustment to extend tire life.</p>
+                <div class="service-card__arrow"><i class="fa-solid fa-arrow-right"></i> View service</div>
+            </a>
+        </div>
+
+        <div class="hp-services__cta">
+            <a href="/services" class="btn-outline" style="margin-top: 0.5rem;">View All Services &rarr;</a>
         </div>
     </div>
 </section>
 
-<section id="services" class="services">
+<!-- =============================================
+     WHY AJ
+     ============================================= -->
+<section class="hp-why">
     <div class="container">
-        <h2 class="section-title">Our Services</h2>
-        <p class="services-tagline">"We fix it right the first time. Honest pricing. Professional work."</p>
-        
-        <div class="services-grid" id="services-grid"></div>
-    </div>
-</section>
-
-<section id="gallery" class="gallery">
-    <div class="container">
-        <h2 class="section-title">Recent Work</h2>
-        <div class="gallery-wrapper">
-            <div class="gallery-grid" id="gallery-grid"></div>
-            <div style="display:flex; justify-content:center; flex-direction:row; width:100%">
-                <button style="width:40%" id="prev-btn">&#8592;</button>
-                <button style="width:40%" id="next-btn">&#8594;</button>
+        <div class="hp-why__layout">
+            <div class="hp-why__image-wrap">
+                <img src="https://images.unsplash.com/photo-1530046339160-ce3e530c7d2f?auto=format&fit=crop&q=80&w=1200" alt="AJ Automotive technician working on vehicle in Eustis FL" loading="lazy">
+                <div class="hp-why__image-badge">
+                    <strong>5.0</strong>
+                    <span>Google Rating</span>
+                </div>
+            </div>
+            <div class="hp-why__copy">
+                <div class="section-label">Why AJ Automotive</div>
+                <h2 class="section-title">The Shop Eustis Trusts</h2>
+                <p class="section-sub">We built this shop on one rule: tell people exactly what their vehicle needs, do the work right, and charge a fair price. That is still how we operate.</p>
+                <div class="hp-why__list">
+                    <div class="hp-why__item">
+                        <div class="hp-why__icon"><i class="fa-solid fa-clipboard-check"></i></div>
+                        <div class="hp-why__text">
+                            <h3>Upfront Estimates, Always</h3>
+                            <p>You get a clear price before we start. No surprise charges at pickup. No work done without your go-ahead.</p>
+                        </div>
+                    </div>
+                    <div class="hp-why__item">
+                        <div class="hp-why__icon"><i class="fa-solid fa-comments"></i></div>
+                        <div class="hp-why__text">
+                            <h3>Clear Communication</h3>
+                            <p>We walk you through what we found, why it matters, and what can wait versus what needs immediate attention.</p>
+                        </div>
+                    </div>
+                    <div class="hp-why__item">
+                        <div class="hp-why__icon"><i class="fa-solid fa-screwdriver-wrench"></i></div>
+                        <div class="hp-why__text">
+                            <h3>All Makes and Models</h3>
+                            <p>Foreign or domestic, daily driver or specialty build. One shop for everything your vehicle needs.</p>
+                        </div>
+                    </div>
+                    <div class="hp-why__item">
+                        <div class="hp-why__icon"><i class="fa-solid fa-map-pin"></i></div>
+                        <div class="hp-why__text">
+                            <h3>Locally Owned, Lake County Based</h3>
+                            <p>Andrew and Jeremy run the shop. Your car gets worked on by the owners, not handed off to whoever is available.</p>
+                        </div>
+                    </div>
+                </div>
+                <a href="/contact" class="btn-gold">Schedule Service &rarr;</a>
             </div>
         </div>
     </div>
 </section>
 
-<!-- REVIEWS section in index.html -->
-<section id="reviews" class="reviews">
+<!-- =============================================
+     REVIEWS
+     ============================================= -->
+<section class="hp-reviews">
     <div class="container">
-        <h2 class="section-title">Customer Reviews</h2>
-        <div class="reviews-container">
+        <div class="hp-reviews__header">
+            <div>
+                <div class="section-label">Customer Reviews</div>
+                <h2 class="section-title" style="margin-bottom:0;">What People Are Saying</h2>
+            </div>
+            <div class="hp-reviews__rating">
+                <div class="hp-reviews__score">5.0</div>
+                <div class="hp-reviews__meta">
+                    <div class="hp-reviews__stars-row">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+                    <span>12 reviews on Google</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="hp-reviews__grid">
             {% for review in site.data.reviews limit:6 %}
             <div class="review-card">
-                <div class="stars">
-                    {% for i in (1..review.stars) %}<i class="fa-solid fa-star"></i>{% endfor %}
+                <div class="review-card__stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+                <p class="review-card__text">{{ review.text }}</p>
+                <div class="review-card__author">
+                    <span class="review-card__name">{{ review.name }}</span>
+                    <div class="review-card__google">
+                        <i class="fa-brands fa-google"></i> Google
+                    </div>
                 </div>
-                <p class="review-text">"{{ review.text }}"</p>
-                <div class="review-author">{{ review.name }}</div>
             </div>
             {% endfor %}
         </div>
+
+        <div class="hp-reviews__footer">
+            <a href="/reviews" class="btn-outline">Read All Reviews &rarr;</a>
+        </div>
     </div>
 </section>
 
-<section id="contact" class="contact">
+<!-- =============================================
+     SERVICE AREAS
+     ============================================= -->
+<section class="hp-areas">
     <div class="container">
-        <h2 class="section-title">Find Us</h2>
-        <div class="contact-layout">
-            <div class="contact-info">
-                <div class="info-item">
-                    <i class="fa-solid fa-location-dot"></i>
-                    <div>
-                        <h4>Location</h4>
-                        <p>1534 Kurt St, Eustis, FL 32726</p>
-                    </div>
-                </div>
-                <div class="info-item">
-                    <i class="fa-solid fa-phone"></i>
-                    <div>
-                        <h4>Phone</h4>
-                        <p><a href="tel:+13523088142">+1 (352) 308-8142</a></p>
-                    </div>
-                </div>
-                <div class="info-item">
-                    <i class="fa-solid fa-clock"></i>
-                    <div style="width: 100%;">
-                        <h4>Business Hours</h4>
-                        <table class="hours-table">
-                            <tr><td>Monday</td><td>9:00 AM – 6:00 PM</td></tr>
-                            <tr><td>Tuesday</td><td>9:00 AM – 6:00 PM</td></tr>
-                            <tr><td>Wednesday</td><td>9:00 AM – 6:00 PM</td></tr>
-                            <tr><td>Thursday</td><td>9:00 AM – 6:00 PM</td></tr>
-                            <tr><td>Friday</td><td>9:00 AM – 6:00 PM</td></tr>
-                            <tr><td>Saturday</td><td>9:00 AM – 6:00 PM</td></tr>
-                            <tr><td>Sunday</td><td>Closed</td></tr>
-                        </table>
-                    </div>
-                </div>
+        <div class="hp-areas__layout">
+            <div class="hp-areas__intro">
+                <div class="section-label">Where We Serve</div>
+                <h2 class="section-title">Serving All of Lake County</h2>
+                <p class="section-sub">Based in Eustis. Driving distance from every city in Lake County.</p>
+                <a href="/service-areas" class="btn-gold" style="font-size:0.85rem; padding: 12px 22px;">All Service Areas &rarr;</a>
             </div>
-
-            <div class="map-container">
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d13979.995151000732!2d-81.71116431284177!3d28.838896099999996!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88e7bd492408faa7%3A0x8685904d422d4747!2sAJ%20Auto%20Repair!5e0!3m2!1sen!2sus!4v1767474517398!5m2!1sen!2sus" width="100%" height="100%" style="border:0; min-height:400px" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>   
+            <div class="hp-areas__cities">
+                <a href="/service-areas/eustis-fl" class="area-pill area-pill--shop">
+                    <span class="area-pill__label">
+                        Eustis
+                        <span class="area-pill__sub">Our Shop Location</span>
+                    </span>
+                    <i class="fa-solid fa-chevron-right"></i>
+                </a>
+                <a href="/service-areas/mount-dora-fl" class="area-pill">
+                    <span>Mount Dora</span>
+                    <i class="fa-solid fa-chevron-right"></i>
+                </a>
+                <a href="/service-areas/tavares-fl" class="area-pill">
+                    <span>Tavares</span>
+                    <i class="fa-solid fa-chevron-right"></i>
+                </a>
+                <a href="/service-areas/leesburg-fl" class="area-pill">
+                    <span>Leesburg</span>
+                    <i class="fa-solid fa-chevron-right"></i>
+                </a>
+                <a href="/service-areas/fruitland-park-fl" class="area-pill">
+                    <span>Fruitland Park</span>
+                    <i class="fa-solid fa-chevron-right"></i>
+                </a>
+                <a href="/service-areas/umatilla-fl" class="area-pill">
+                    <span>Umatilla</span>
+                    <i class="fa-solid fa-chevron-right"></i>
+                </a>
+                <a href="/service-areas/lady-lake-fl" class="area-pill">
+                    <span>Lady Lake</span>
+                    <i class="fa-solid fa-chevron-right"></i>
+                </a>
             </div>
         </div>
+    </div>
+</section>
+
+<!-- =============================================
+     GALLERY
+     ============================================= -->
+<section class="hp-gallery">
+    <div class="container">
+        <div style="display:flex; align-items:flex-end; justify-content:space-between; flex-wrap:wrap; gap:1rem;">
+            <div>
+                <div class="section-label">Our Work</div>
+                <h2 class="section-title" style="margin-bottom:0;">The Shop in Action</h2>
+            </div>
+            <a href="/gallery" class="btn-outline" style="font-size:0.85rem; padding:10px 20px;">Full Gallery &rarr;</a>
+        </div>
+
+        <div class="hp-gallery__grid" id="homepageGallery">
+            <!-- Populated by JS below -->
+        </div>
+    </div>
+</section>
+
+<!-- =============================================
+     FINAL CTA
+     ============================================= -->
+<section class="hp-cta">
+    <div class="container" style="padding:0;">
+        <h2>Ready to Get Back on the Road?</h2>
+        <p>Call us, schedule online, or stop by the shop on Kurt St. Walk-ins welcome Monday through Saturday.</p>
+        <div class="hp-cta__btns">
+            <a href="tel:+13523088142" class="btn-dark">
+                <i class="fa-solid fa-phone"></i> Call (352) 308-8142
+            </a>
+            <a href="/contact" class="btn-dark-outline">
+                Schedule Service Online
+            </a>
+        </div>
+        <p style="margin-top:1.8rem; font-size:0.82rem; color:rgba(35,38,45,0.55);">1534 Kurt St &mdash; Eustis, FL 32726 &mdash; Mon &ndash; Sat 8 AM &ndash; 6 PM</p>
     </div>
 </section>
 
 <script>
-    // --- 1. SERVICES DATA WITH LINKS ---
-  const servicesData = [
-    { 
-        name: "Brakes & Suspensions", 
-        icon: "fa-car-burst",
-        link: "/services/brakes-suspension"
-    },
-    { 
-        name: "A/C Repair", 
-        icon: "fa-snowflake",
-        link: "/services/ac-repair"
-    },
-    { 
-        name: "Tune-ups & Diagnostics", 
-        icon: "fa-stethoscope",
-        link: "/services/engine-diagnostics"
-    },
-    { 
-        name: "Drive Trains & Transmissions", 
-        icon: "fa-gears",
-        link: "/services/transmission"
-    },
-    { 
-        name: "Electrical Systems", 
-        icon: "fa-bolt",
-        link: "/services/electrical"
-    },
-    { 
-        name: "Fleet Maintenance", 
-        icon: "fa-truck-moving",
-        link: "/services/fleet"
-    },
-    { 
-        name: "Engine Replacements", 
-        icon: "fa-wrench",
-        link: "/services/engine-diagnostics"
-    },
-    { 
-        name: "Welding & Fabrication", 
-        icon: "fa-fire-burner",
-        link: "/services"
-    },
-    { 
-        name: "Small Engine & Motorcycles", 
-        icon: "fa-motorcycle",
-        link: "/services"
-    },
-    { 
-        name: "Custom Headliners", 
-        icon: "fa-wand-magic-sparkles",
-        link: "/services"
-    }
-];
-
-    const servicesGrid = document.getElementById('services-grid');
-    servicesData.forEach(service => {
-        const card = document.createElement('div');
-        card.className = 'service-card';
-        card.style.cursor = 'pointer';
-        card.onclick = () => window.location.href = service.link;
-        card.innerHTML = `
-            <i class="fa-solid ${service.icon}"></i>
-            <h3>${service.name}</h3>
-            <p>Professional service for foreign & domestic vehicles.</p>
-        `;
-        servicesGrid.appendChild(card);
-    });
-
-  
-
-    const reviewsContainer = document.getElementById('reviews-container');
-    reviewsData.forEach(review => {
-        let starsHtml = '';
-        for(let i=0; i<review.stars; i++) {
-            starsHtml += '<i class="fa-solid fa-star"></i> ';
-        }
-
-        const reviewCard = document.createElement('div');
-        reviewCard.className = 'review-card';
-        reviewCard.innerHTML = `
-            <div class="stars">${starsHtml}</div>
-            <p class="review-text">"${review.text}"</p>
-            <div class="review-author">${review.name}</div>
-        `;
-        reviewsContainer.appendChild(reviewCard);
-    });
-
-    // --- 3. GALLERY DATA ---
+(function() {
     const galleryData = [
-        { src: "/Pics/AJ1.webp", caption: "ATV & Small Engine Repair" },
-        { src: "/Pics/AJ2.webp", caption: "Classic Jeep Restoration" },
-        { src: "/Pics/AJ3.webp", caption: "Custom Paint & Body Work" },
-        { src: "/Pics/AJ4.webp", caption: "Clutch & Transmission Service" },
-        { src: "/Pics/AJ5.webp", caption: "Professional Diagnostics" },
-        { src: "/Pics/AJ6.webp", caption: "Quality Service You Can Trust" },
-        { src: "/Pics/AJ7.webp", caption: "Headlight Replacement & Repair" },
-        { src: "/Pics/AJ8.webp", caption: "Custom Interior Work" },
-        { src: "/Pics/AJ9.webp", caption: "Marine Engine Service" },
-        { src: "/Pics/AJ10.webp", caption: "Performance & Custom Builds" },
-        { src: "/Pics/AJ11.webp", caption: "Engine Component Repair" },
-        { src: "/Pics/AJ12.webp", caption: "Motorcycle Maintenance & Service" },
-        { src: "/Pics/AJ13.webp", caption: "Infiniti G35 Specialist" },
-        { src: "/Pics/AJ14.webp", caption: "Complex Engine Overhaul" },
-        { src: "/Pics/AJ15.webp", caption: "Complete Vehicle Servicing" },
-        { src: "/Pics/AJ16.webp", caption: "Precision Mechanical Work" },
-        { src: "/Pics/AJ17.webp", caption: "Custom Interior Lighting" },
-        { src: "/Pics/AJ18.webp", caption: "Honda Civic Performance Builds" },
-        { src: "/Pics/AJ19.webp", caption: "Performance Coilover Installation" },
-        { src: "/Pics/AJ20.webp", caption: "Turbo & Fuel System Service" },
-        { src: "/Pics/AJ21.webp", caption: "Ford Truck Engine Service" },
-        { src: "/Pics/AJ22.webp", caption: "A/C System Repair" },
-        { src: "/Pics/AJ23.webp", caption: "Exhaust & Catalytic Converter Work" },
-        { src: "/Pics/AJ24.webp", caption: "Engine Cleaning & Detailing" },
-        { src: "/Pics/AJ25.webp", caption: "Custom Ambient Lighting Installation" },
-        { src: "/Pics/AJ26.webp", caption: "Luxury Cadillac Service" },
-        { src: "/Pics/AJ27.webp", caption: "Modern Vehicle Electronics" },
-        { src: "/Pics/AJ28.webp", caption: "Infiniti G35 On The Lift" },
-        { src: "/Pics/AJ29.webp", caption: "Undercarriage Inspection & Repair" },
-        { src: "/Pics/AJ30.webp", caption: "Transmission Rebuild Specialist" },
-        { src: "/Pics/AJ31.webp", caption: "Front of shop" },
-        { src: "/Pics/AJ32.webp", caption: "Our logo" },  
-        { src: "/Pics/AJ33.webp", caption: "Business card logo" }, 
-        { src: "/Pics/AJ34.webp", caption: "Window Sign" }         
+        {% for item in site.data.gallery limit:9 %}
+        { src: "{{ item.src }}", caption: "{{ item.caption }}" }{% unless forloop.last %},{% endunless %}
+        {% endfor %}
     ];
 
-    const galleryGrid = document.getElementById('gallery-grid');
-    const itemsPerPage = 4;
-    let currentPage = 0;
+    const grid = document.getElementById('homepageGallery');
+    if (!grid || !galleryData.length) return;
 
-    function renderGalleryPage(page) {
-        galleryGrid.innerHTML = "";
-        const start = page * itemsPerPage;
-        const end = start + itemsPerPage;
-        const pageItems = galleryData.slice(start, end);
-
-        pageItems.forEach(item => {
-            const div = document.createElement('div');
-            div.className = 'gallery-item';
-            div.innerHTML = `
-                <img src="${item.src}" alt="${item.caption}">
-                <div class="gallery-caption">${item.caption}</div>
-            `;
-            galleryGrid.appendChild(div);
-        });
-
-        document.getElementById('prev-btn').disabled = page === 0;
-        document.getElementById('next-btn').disabled = end >= galleryData.length;
-    }
-
-    document.getElementById('prev-btn').addEventListener('click', () => {
-        if (currentPage > 0) {
-            currentPage--;
-            renderGalleryPage(currentPage);
-        }
+    galleryData.forEach(function(item, i) {
+        const el = document.createElement('div');
+        el.className = 'hp-gallery__item';
+        el.innerHTML = '<img src="' + item.src + '" alt="' + item.caption + '" loading="lazy"><div class="hp-gallery__overlay"></div>';
+        grid.appendChild(el);
     });
-
-    document.getElementById('next-btn').addEventListener('click', () => {
-        if ((currentPage + 1) * itemsPerPage < galleryData.length) {
-            currentPage++;
-            renderGalleryPage(currentPage);
-        }
-    });
-
-    renderGalleryPage(currentPage);
+})();
 </script>
