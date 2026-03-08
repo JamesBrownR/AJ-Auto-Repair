@@ -1,302 +1,740 @@
 <style>
-    nav ul {
-        list-style: none;
-        margin: 0;
-        padding: 0;
-        display: flex;
-        align-items: center;
-        gap: 28px;
-    }
+/* =============================================
+   HEADER / NAV
+   ============================================= */
+.site-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 9000;
+    background: rgba(26, 28, 33, 0.97);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(255,255,255,0.06);
+    transition: box-shadow 0.3s ease, border-color 0.3s ease;
+}
 
-    nav ul li a {
-        font-family: 'Oswald', sans-serif;
-        font-size: 0.95rem;
-        color: var(--text-light);
-        text-decoration: none;
-        letter-spacing: 0.04em;
-        transition: color 0.2s;
-        white-space: nowrap;
-    }
+.site-header.scrolled {
+    box-shadow: 0 4px 32px rgba(0,0,0,0.5);
+    border-bottom-color: rgba(232,166,53,0.2);
+}
 
-    nav ul li a:hover {
-        color: var(--accent-gold);
-    }
+.nav-container {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 40px;
+    display: flex;
+    align-items: center;
+    height: 68px;
+    gap: 40px;
+}
 
-    nav li {
-        position: relative;
-    }
+.nav-logo {
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+    gap: 1px;
+    flex-shrink: 0;
+    line-height: 1;
+}
 
-    /* ---- DROPDOWN SHARED ---- */
-    .dropdown-content {
-        display: none;
-        position: absolute;
-        background-color: var(--primary-dark);
-        box-shadow: 0 8px 24px rgba(0,0,0,0.5);
-        z-index: 1000;
-        border: 2px solid var(--accent-gold);
-        border-radius: 4px;
-        top: calc(100% + 10px);
-        left: 0;
-    }
+.nav-logo__top {
+    font-family: 'Oswald', sans-serif;
+    font-size: 1.3rem;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: #ffffff;
+}
 
-    .dropdown:hover .dropdown-content {
-        display: block;
-    }
+.nav-logo__top span { color: var(--accent-gold, #e8a635); }
 
-    .dropdown > a::after {
-        content: " ▼";
-        font-size: 0.6em;
-        margin-left: 4px;
-        opacity: 0.7;
-    }
+.nav-logo__sub {
+    font-family: 'Roboto', sans-serif;
+    font-size: 0.65rem;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.38);
+    font-weight: 400;
+}
 
-    .dropdown-label {
-        padding: 8px 16px 6px;
-        font-size: 0.68rem;
-        letter-spacing: 0.12em;
-        text-transform: uppercase;
-        color: var(--accent-gold);
-        font-family: 'Oswald', sans-serif;
-        pointer-events: none;
-        border-bottom: 1px solid #3a3d47;
-    }
+.nav-links {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    gap: 2px;
+    flex: 1;
+    justify-content: center;
+}
 
-    .dropdown-divider {
-        border-top: 1px solid var(--accent-gold);
-        margin: 4px 0;
-    }
+.nav-links > li > a,
+.nav-links > li > button {
+    font-family: 'Oswald', sans-serif;
+    font-size: 0.82rem;
+    font-weight: 400;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.72);
+    text-decoration: none;
+    padding: 8px 14px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    border-radius: 3px;
+    transition: color 0.2s, background 0.2s;
+    background: none;
+    border: none;
+    cursor: pointer;
+    white-space: nowrap;
+    height: 68px;
+}
 
-    /* ---- SERVICES: 2-column grid dropdown ---- */
-    .services-dropdown {
-        width: 480px;
-        left: 50%;
-        transform: translateX(-50%);
-    }
+.nav-links > li > a:hover,
+.nav-links > li > button:hover {
+    color: #ffffff;
+    background: rgba(255,255,255,0.05);
+}
 
-    .services-dropdown-grid {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        gap: 0;
-    }
+.nav-links > li > a.active-page { color: var(--accent-gold, #e8a635); }
 
-    .services-dropdown-grid a {
-        color: var(--text-light);
-        padding: 10px 16px;
-        text-decoration: none;
-        font-family: 'Roboto', sans-serif;
-        font-size: 0.85rem;
-        border-bottom: 1px solid #3a3d47;
-        transition: background 0.15s, color 0.15s;
-        display: block;
-        white-space: nowrap;
-    }
+.nav-chevron {
+    font-size: 0.55rem;
+    opacity: 0.55;
+    transition: transform 0.25s ease;
+}
 
-    .services-dropdown-grid a:nth-child(odd) {
-        border-right: 1px solid #3a3d47;
-    }
+li.nav-has-dropdown.open .nav-chevron {
+    transform: rotate(180deg);
+    opacity: 1;
+}
 
-    .services-dropdown-grid a:hover {
-        background: var(--primary-light);
-        color: var(--accent-gold);
-    }
+.nav-dropdown {
+    position: absolute;
+    top: 68px;
+    left: 0;
+    right: 0;
+    background: #1a1c21;
+    border-top: 2px solid var(--accent-gold, #e8a635);
+    border-bottom: 1px solid rgba(255,255,255,0.07);
+    box-shadow: 0 20px 50px rgba(0,0,0,0.6);
+    opacity: 0;
+    pointer-events: none;
+    transform: translateY(-8px);
+    transition: opacity 0.22s ease, transform 0.22s ease;
+    z-index: 8999;
+}
 
-    .services-dropdown-footer {
-        border-top: 1px solid var(--accent-gold);
-        padding: 10px 16px;
-        text-align: center;
-    }
+.nav-has-dropdown { position: static; }
 
-    .services-dropdown-footer a {
-        color: var(--accent-gold);
-        font-family: 'Oswald', sans-serif;
-        font-size: 0.85rem;
-        text-decoration: none;
-        letter-spacing: 0.05em;
-    }
+.nav-has-dropdown.open > .nav-dropdown {
+    opacity: 1;
+    pointer-events: auto;
+    transform: translateY(0);
+}
 
-    .services-dropdown-footer a:hover {
-        text-decoration: underline;
-    }
+.nav-dropdown__inner {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 32px 40px 36px;
+}
 
-    /* ---- SERVICE AREAS: single column ---- */
-    .areas-dropdown {
-        min-width: 200px;
-    }
+.services-panel {
+    display: grid;
+    grid-template-columns: 220px 1fr;
+    gap: 40px;
+}
 
-    .areas-dropdown a {
-        color: var(--text-light);
-        padding: 10px 16px;
-        text-decoration: none;
-        font-family: 'Roboto', sans-serif;
-        font-size: 0.88rem;
-        border-bottom: 1px solid #3a3d47;
-        display: block;
-        transition: background 0.15s, color 0.15s;
-        white-space: nowrap;
-    }
+.services-panel__intro {
+    border-right: 1px solid rgba(255,255,255,0.07);
+    padding-right: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
 
-    .areas-dropdown a:last-child {
-        border-bottom: none;
-    }
+.services-panel__label {
+    font-family: 'Oswald', sans-serif;
+    font-size: 0.68rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--accent-gold, #e8a635);
+    margin-bottom: 10px;
+}
 
-    .areas-dropdown a:hover {
-        background: var(--primary-light);
-        color: var(--accent-gold);
-    }
+.services-panel__heading {
+    font-family: 'Oswald', sans-serif;
+    font-size: 1.5rem;
+    color: #fff;
+    text-transform: uppercase;
+    line-height: 1.1;
+    margin-bottom: 12px;
+    letter-spacing: 0.02em;
+}
 
-    /* ---- MOBILE ---- */
-    .nav-toggle {
-        display: none;
-        background: none;
-        border: none;
-        cursor: pointer;
-        padding: 8px;
-        color: var(--text-light);
-        font-size: 1.5rem;
-    }
+.services-panel__desc {
+    font-family: 'Roboto', sans-serif;
+    font-size: 0.85rem;
+    color: rgba(255,255,255,0.4);
+    line-height: 1.65;
+    flex: 1;
+    margin-bottom: 20px;
+}
 
-    @media (max-width: 1024px) {
-        nav ul { gap: 18px; }
-    }
+.services-panel__all {
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+    font-family: 'Oswald', sans-serif;
+    font-size: 0.8rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--accent-gold, #e8a635);
+    text-decoration: none;
+    padding: 10px 16px;
+    border: 1px solid rgba(232,166,53,0.35);
+    border-radius: 2px;
+    transition: background 0.2s, border-color 0.2s;
+    align-self: flex-start;
+}
 
-    @media (max-width: 900px) {
-        .nav-toggle { display: block; }
+.services-panel__all:hover {
+    background: rgba(232,166,53,0.08);
+    border-color: var(--accent-gold, #e8a635);
+}
 
-        nav {
-            display: none;
-            position: absolute;
-            top: 100%;
-            left: 0;
-            right: 0;
-            background: var(--primary-dark);
-            border-top: 2px solid var(--accent-gold);
-            z-index: 999;
-            padding: 10px 0;
-        }
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 4px;
+}
 
-        nav.open { display: block; }
+.service-link {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 11px 14px;
+    text-decoration: none;
+    border-radius: 2px;
+    transition: background 0.18s;
+}
 
-        nav ul {
-            flex-direction: column;
-            align-items: flex-start;
-            gap: 0;
-        }
+.service-link:hover { background: rgba(255,255,255,0.04); }
 
-        nav li { width: 100%; }
+.service-link__icon {
+    width: 28px;
+    height: 28px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--accent-gold, #e8a635);
+    font-size: 0.85rem;
+    flex-shrink: 0;
+    opacity: 0.75;
+    transition: opacity 0.18s;
+}
 
-        nav ul li a {
-            display: block;
-            padding: 12px 20px;
-            border-bottom: 1px solid #3a3d47;
-        }
+.service-link:hover .service-link__icon { opacity: 1; }
 
-        .dropdown-content {
-            position: static;
-            display: none;
-            box-shadow: none;
-            border: none;
-            border-top: 1px solid #3a3d47;
-            background: var(--primary-light);
-            width: 100%;
-            transform: none;
-            left: 0;
-        }
+.service-link__name {
+    font-family: 'Oswald', sans-serif;
+    font-size: 0.82rem;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.72);
+    transition: color 0.18s;
+    line-height: 1.2;
+}
 
-        .services-dropdown {
-            width: 100%;
-        }
+.service-link:hover .service-link__name { color: #fff; }
 
-        .services-dropdown-grid {
-            grid-template-columns: 1fr;
-        }
+.areas-panel {
+    display: grid;
+    grid-template-columns: 220px 1fr;
+    gap: 40px;
+}
 
-        .services-dropdown-grid a:nth-child(odd) {
-            border-right: none;
-        }
+.areas-panel__intro {
+    border-right: 1px solid rgba(255,255,255,0.07);
+    padding-right: 40px;
+    display: flex;
+    flex-direction: column;
+}
 
-        .dropdown.open .dropdown-content { display: block; }
-        .dropdown:hover .dropdown-content { display: none; }
-        .dropdown.open .dropdown-content { display: block; }
+.areas-cities {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 4px;
+    align-content: start;
+}
 
-        .dropdown > a::after {
-            float: right;
-            margin-right: 10px;
-        }
-    }
+.area-link {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 12px 16px;
+    text-decoration: none;
+    border-radius: 2px;
+    border: 1px solid transparent;
+    transition: background 0.18s, border-color 0.18s;
+}
+
+.area-link:hover {
+    background: rgba(255,255,255,0.04);
+    border-color: rgba(255,255,255,0.06);
+}
+
+.area-link__city {
+    font-family: 'Oswald', sans-serif;
+    font-size: 0.9rem;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.72);
+    transition: color 0.18s;
+}
+
+.area-link:hover .area-link__city { color: #fff; }
+
+.area-link__badge {
+    font-family: 'Roboto', sans-serif;
+    font-size: 0.65rem;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--accent-gold, #e8a635);
+    background: rgba(232,166,53,0.1);
+    padding: 2px 6px;
+    border-radius: 2px;
+    flex-shrink: 0;
+}
+
+.area-link__arrow {
+    color: rgba(232,166,53,0.5);
+    font-size: 0.6rem;
+    opacity: 0;
+    transform: translateX(-4px);
+    transition: opacity 0.18s, transform 0.18s;
+}
+
+.area-link:hover .area-link__arrow {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.nav-cta {
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.nav-phone {
+    font-family: 'Oswald', sans-serif;
+    font-size: 0.85rem;
+    letter-spacing: 0.06em;
+    color: rgba(255,255,255,0.5);
+    text-decoration: none;
+    white-space: nowrap;
+    transition: color 0.2s;
+}
+
+.nav-phone:hover { color: rgba(255,255,255,0.9); }
+
+.nav-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+    background: var(--accent-gold, #e8a635);
+    color: #23262d;
+    font-family: 'Oswald', sans-serif;
+    font-size: 0.82rem;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 2px;
+    transition: background 0.2s, transform 0.2s;
+    white-space: nowrap;
+}
+
+.nav-btn:hover {
+    background: #f5b942;
+    transform: translateY(-1px);
+}
+
+.nav-hamburger {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    gap: 5px;
+    width: 36px;
+    height: 36px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 4px;
+    margin-left: auto;
+    flex-shrink: 0;
+}
+
+.nav-hamburger span {
+    display: block;
+    width: 100%;
+    height: 2px;
+    background: rgba(255,255,255,0.8);
+    border-radius: 2px;
+    transition: transform 0.28s ease, opacity 0.28s ease, width 0.28s ease;
+    transform-origin: center;
+}
+
+.nav-hamburger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+.nav-hamburger.open span:nth-child(2) { opacity: 0; width: 0; }
+.nav-hamburger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
+.nav-drawer {
+    display: none;
+    position: fixed;
+    top: 68px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: #1a1c21;
+    z-index: 8998;
+    overflow-y: auto;
+    border-top: 2px solid var(--accent-gold, #e8a635);
+    transform: translateX(100%);
+    transition: transform 0.32s ease;
+}
+
+.nav-drawer.open { transform: translateX(0); }
+
+.nav-drawer__inner { padding: 16px 0 40px; }
+
+.drawer-link {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 14px 24px;
+    font-family: 'Oswald', sans-serif;
+    font-size: 0.95rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.75);
+    text-decoration: none;
+    border-bottom: 1px solid rgba(255,255,255,0.05);
+    transition: color 0.2s, background 0.2s;
+}
+
+.drawer-link:hover { color: #fff; background: rgba(255,255,255,0.03); }
+
+.drawer-toggle {
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: var(--accent-gold, #e8a635);
+    font-size: 0.75rem;
+    padding: 4px 16px;
+    transition: transform 0.25s ease;
+    height: 52px;
+    display: flex;
+    align-items: center;
+}
+
+.drawer-toggle.open { transform: rotate(180deg); }
+
+.drawer-sub {
+    display: none;
+    background: rgba(0,0,0,0.2);
+    border-bottom: 1px solid rgba(255,255,255,0.05);
+}
+
+.drawer-sub.open { display: block; }
+
+.drawer-sub a {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 12px 24px 12px 36px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 0.88rem;
+    color: rgba(255,255,255,0.55);
+    text-decoration: none;
+    border-bottom: 1px solid rgba(255,255,255,0.04);
+    transition: color 0.2s;
+}
+
+.drawer-sub a:hover { color: #fff; }
+
+.drawer-sub a i {
+    color: var(--accent-gold, #e8a635);
+    font-size: 0.75rem;
+    width: 14px;
+    text-align: center;
+    opacity: 0.7;
+}
+
+.drawer-cta {
+    padding: 20px 24px 0;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.drawer-cta .nav-btn {
+    justify-content: center;
+    font-size: 0.9rem;
+    padding: 14px;
+}
+
+.drawer-phone-link {
+    text-align: center;
+    font-family: 'Oswald', sans-serif;
+    font-size: 1.2rem;
+    letter-spacing: 0.06em;
+    color: rgba(255,255,255,0.5);
+    text-decoration: none;
+    padding: 10px;
+    display: block;
+    transition: color 0.2s;
+}
+
+.drawer-phone-link:hover { color: #fff; }
+
+@media (max-width: 1024px) {
+    .nav-container { gap: 24px; }
+    .nav-links > li > a,
+    .nav-links > li > button { padding: 8px 10px; font-size: 0.78rem; }
+}
+
+@media (max-width: 860px) {
+    .nav-links, .nav-phone { display: none; }
+    .nav-hamburger { display: flex; }
+    .nav-drawer { display: block; }
+    .nav-container { padding: 0 24px; }
+}
 </style>
 
-<header>
-    <div class="container nav-container">
-        <div class="logo-area">
-            <a href="/" style="text-decoration:none;">
-                <span class="brand-name">AJ AUTOMOTIVE SERVICES</span>
-            </a>
+<header class="site-header" id="siteHeader">
+    <div class="nav-container">
+
+        <a href="/" class="nav-logo">
+            <span class="nav-logo__top">AJ <span>Automotive</span></span>
+            <span class="nav-logo__sub">Services &mdash; Eustis, FL</span>
+        </a>
+
+        <ul class="nav-links" id="navLinks">
+            <li><a href="/">Home</a></li>
+
+            <li class="nav-has-dropdown" id="servicesDropdown">
+                <button aria-haspopup="true" aria-expanded="false">
+                    Services <i class="fa-solid fa-chevron-down nav-chevron"></i>
+                </button>
+                <div class="nav-dropdown">
+                    <div class="nav-dropdown__inner">
+                        <div class="services-panel">
+                            <div class="services-panel__intro">
+                                <div>
+                                    <div class="services-panel__label">What We Do</div>
+                                    <div class="services-panel__heading">Auto Repair &amp; Service</div>
+                                    <p class="services-panel__desc">Full-service shop for all makes and models. Foreign, domestic, cars, trucks, and SUVs.</p>
+                                </div>
+                                <a href="/services" class="services-panel__all">View All Services <i class="fa-solid fa-arrow-right"></i></a>
+                            </div>
+                            <div class="services-grid">
+                                <a href="/services/oil-change" class="service-link"><div class="service-link__icon"><i class="fa-solid fa-oil-can"></i></div><span class="service-link__name">Oil Change</span></a>
+                                <a href="/services/auto-brake-repair" class="service-link"><div class="service-link__icon"><i class="fa-solid fa-car-burst"></i></div><span class="service-link__name">Brake Repair</span></a>
+                                <a href="/services/transmission" class="service-link"><div class="service-link__icon"><i class="fa-solid fa-gears"></i></div><span class="service-link__name">Transmission</span></a>
+                                <a href="/services/ac-installation-repair" class="service-link"><div class="service-link__icon"><i class="fa-solid fa-snowflake"></i></div><span class="service-link__name">A/C Repair</span></a>
+                                <a href="/services/auto-engine-diagnostics" class="service-link"><div class="service-link__icon"><i class="fa-solid fa-magnifying-glass-chart"></i></div><span class="service-link__name">Engine Diagnostics</span></a>
+                                <a href="/services/electrical" class="service-link"><div class="service-link__icon"><i class="fa-solid fa-bolt"></i></div><span class="service-link__name">Electrical</span></a>
+                                <a href="/services/steering-suspension-repair" class="service-link"><div class="service-link__icon"><i class="fa-solid fa-car-side"></i></div><span class="service-link__name">Steering &amp; Suspension</span></a>
+                                <a href="/services/battery" class="service-link"><div class="service-link__icon"><i class="fa-solid fa-car-battery"></i></div><span class="service-link__name">Battery</span></a>
+                                <a href="/services/exhaust" class="service-link"><div class="service-link__icon"><i class="fa-solid fa-wind"></i></div><span class="service-link__name">Exhaust</span></a>
+                                <a href="/services/vehicle-safety-inspection" class="service-link"><div class="service-link__icon"><i class="fa-solid fa-shield-check"></i></div><span class="service-link__name">Safety Inspection</span></a>
+                                <a href="/services/auto-emissions-testing" class="service-link"><div class="service-link__icon"><i class="fa-solid fa-leaf"></i></div><span class="service-link__name">Emissions Testing</span></a>
+                                <a href="/services/tire-rotations" class="service-link"><div class="service-link__icon"><i class="fa-solid fa-tire"></i></div><span class="service-link__name">Tire Rotation</span></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </li>
+
+            <li class="nav-has-dropdown" id="areasDropdown">
+                <button aria-haspopup="true" aria-expanded="false">
+                    Service Areas <i class="fa-solid fa-chevron-down nav-chevron"></i>
+                </button>
+                <div class="nav-dropdown">
+                    <div class="nav-dropdown__inner">
+                        <div class="areas-panel">
+                            <div class="areas-panel__intro">
+                                <div class="services-panel__label">Where We Serve</div>
+                                <div class="services-panel__heading">Lake County, FL</div>
+                                <p class="services-panel__desc">Based in Eustis. Serving all surrounding communities within Lake County.</p>
+                                <a href="/service-areas" class="services-panel__all" style="margin-top:auto;">All Areas <i class="fa-solid fa-arrow-right"></i></a>
+                            </div>
+                            <div class="areas-cities">
+                                <a href="/service-areas/eustis-fl" class="area-link"><span class="area-link__city">Eustis</span><span class="area-link__badge">Our Shop</span></a>
+                                <a href="/service-areas/mount-dora-fl" class="area-link"><span class="area-link__city">Mount Dora</span><i class="fa-solid fa-chevron-right area-link__arrow"></i></a>
+                                <a href="/service-areas/tavares-fl" class="area-link"><span class="area-link__city">Tavares</span><i class="fa-solid fa-chevron-right area-link__arrow"></i></a>
+                                <a href="/service-areas/leesburg-fl" class="area-link"><span class="area-link__city">Leesburg</span><i class="fa-solid fa-chevron-right area-link__arrow"></i></a>
+                                <a href="/service-areas/fruitland-park-fl" class="area-link"><span class="area-link__city">Fruitland Park</span><i class="fa-solid fa-chevron-right area-link__arrow"></i></a>
+                                <a href="/service-areas/umatilla-fl" class="area-link"><span class="area-link__city">Umatilla</span><i class="fa-solid fa-chevron-right area-link__arrow"></i></a>
+                                <a href="/service-areas/lady-lake-fl" class="area-link"><span class="area-link__city">Lady Lake</span><i class="fa-solid fa-chevron-right area-link__arrow"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </li>
+
+            <li><a href="/gallery">Gallery</a></li>
+            <li><a href="/reviews">Reviews</a></li>
+            <li><a href="/faqs">FAQs</a></li>
+            <li><a href="/contact">Contact</a></li>
+        </ul>
+
+        <div class="nav-cta">
+            <a href="tel:+13523088142" class="nav-phone">(352) 308-8142</a>
+            <a href="/contact" class="nav-btn"><i class="fa-solid fa-calendar-check"></i> Schedule</a>
         </div>
 
-        <button class="nav-toggle" aria-label="Toggle navigation" onclick="this.closest('header').querySelector('nav').classList.toggle('open')">
-            <i class="fa-solid fa-bars"></i>
+        <button class="nav-hamburger" id="navHamburger" aria-label="Open menu" aria-expanded="false">
+            <span></span><span></span><span></span>
         </button>
 
-        <nav>
-            <ul>
-                <li><a href="/">Home</a></li>
-
-                <li class="dropdown">
-                    <a href="/services">Services</a>
-                    <div class="dropdown-content services-dropdown">
-                        <div class="dropdown-label">All Services</div>
-                        <div class="services-dropdown-grid">
-                            <a href="/services/oil-change">Oil Change</a>
-                            <a href="/services/auto-brake-repair">Brake Repair</a>
-                            <a href="/services/transmission">Transmission</a>
-                            <a href="/services/ac-installation-repair">A/C Repair</a>
-                            <a href="/services/auto-engine-diagnostics">Engine Diagnostics</a>
-                            <a href="/services/electrical">Electrical Repair</a>
-                            <a href="/services/steering-suspension-repair">Steering &amp; Suspension</a>
-                            <a href="/services/battery">Battery Service</a>
-                            <a href="/services/exhaust">Exhaust Repair</a>
-                            <a href="/services/vehicle-safety-inspection">Safety Inspection</a>
-                            <a href="/services/auto-emissions-testing">Emissions Testing</a>
-                            <a href="/services/tire-rotations">Tire Rotations</a>
-                        </div>
-                        <div class="services-dropdown-footer">
-                            <a href="/services">View All Services &rarr;</a>
-                        </div>
-                    </div>
-                </li>
-
-                <li class="dropdown">
-                    <a href="/service-areas">Service Areas</a>
-                    <div class="dropdown-content areas-dropdown">
-                        <div class="dropdown-label">Lake County, FL</div>
-                        <a href="/service-areas/eustis-fl">Eustis <span style="font-size:0.75em; color:var(--accent-gold); margin-left:4px;">(Our Shop)</span></a>
-                        <a href="/service-areas/mount-dora-fl">Mount Dora</a>
-                        <a href="/service-areas/tavares-fl">Tavares</a>
-                        <a href="/service-areas/leesburg-fl">Leesburg</a>
-                        <a href="/service-areas/lady-lake-fl">Lady Lake</a>
-                        <a href="/service-areas/fruitland-park-fl">Fruitland Park</a>
-                        <a href="/service-areas/umatilla-fl">Umatilla</a>
-                    </div>
-                </li>
-
-                <li><a href="/#gallery">Work</a></li>
-                <li><a href="/blog">Blog</a></li>
-                <li><a href="/contact">Contact</a></li>
-            </ul>
-        </nav>
-
-        <a href="tel:+13523088142" class="btn2"><i class="fa-solid fa-phone"></i> Call AJ</a>
     </div>
 </header>
 
+<div class="nav-drawer" id="navDrawer" role="dialog" aria-label="Mobile navigation">
+    <div class="nav-drawer__inner">
+
+        <div style="display:flex;align-items:center;padding:4px 24px 12px;border-bottom:1px solid rgba(255,255,255,0.07);">
+            <span style="font-family:'Oswald',sans-serif;font-size:0.65rem;letter-spacing:0.18em;text-transform:uppercase;color:rgba(255,255,255,0.3);">Navigation</span>
+        </div>
+
+        <a href="/" class="drawer-link">Home</a>
+
+        <div style="border-bottom:1px solid rgba(255,255,255,0.05);">
+            <div style="display:flex;align-items:center;justify-content:space-between;">
+                <a href="/services" class="drawer-link" style="border-bottom:none;flex:1;">Services</a>
+                <button class="drawer-toggle" id="servicesToggle" aria-expanded="false"><i class="fa-solid fa-chevron-down"></i></button>
+            </div>
+            <div class="drawer-sub" id="servicesSub">
+                <a href="/services/oil-change"><i class="fa-solid fa-oil-can"></i> Oil Change</a>
+                <a href="/services/auto-brake-repair"><i class="fa-solid fa-car-burst"></i> Brake Repair</a>
+                <a href="/services/transmission"><i class="fa-solid fa-gears"></i> Transmission</a>
+                <a href="/services/ac-installation-repair"><i class="fa-solid fa-snowflake"></i> A/C Repair</a>
+                <a href="/services/auto-engine-diagnostics"><i class="fa-solid fa-magnifying-glass-chart"></i> Engine Diagnostics</a>
+                <a href="/services/electrical"><i class="fa-solid fa-bolt"></i> Electrical</a>
+                <a href="/services/steering-suspension-repair"><i class="fa-solid fa-car-side"></i> Steering &amp; Suspension</a>
+                <a href="/services/battery"><i class="fa-solid fa-car-battery"></i> Battery</a>
+                <a href="/services/exhaust"><i class="fa-solid fa-wind"></i> Exhaust</a>
+                <a href="/services/vehicle-safety-inspection"><i class="fa-solid fa-shield-check"></i> Safety Inspection</a>
+                <a href="/services/auto-emissions-testing"><i class="fa-solid fa-leaf"></i> Emissions Testing</a>
+                <a href="/services/tire-rotations"><i class="fa-solid fa-tire"></i> Tire Rotation</a>
+                <a href="/services" style="color:var(--accent-gold,#e8a635)!important;"><i class="fa-solid fa-arrow-right"></i> View All Services</a>
+            </div>
+        </div>
+
+        <div style="border-bottom:1px solid rgba(255,255,255,0.05);">
+            <div style="display:flex;align-items:center;justify-content:space-between;">
+                <a href="/service-areas" class="drawer-link" style="border-bottom:none;flex:1;">Service Areas</a>
+                <button class="drawer-toggle" id="areasToggle" aria-expanded="false"><i class="fa-solid fa-chevron-down"></i></button>
+            </div>
+            <div class="drawer-sub" id="areasSub">
+                <a href="/service-areas/eustis-fl"><i class="fa-solid fa-map-pin"></i> Eustis (Our Shop)</a>
+                <a href="/service-areas/mount-dora-fl"><i class="fa-solid fa-location-dot"></i> Mount Dora</a>
+                <a href="/service-areas/tavares-fl"><i class="fa-solid fa-location-dot"></i> Tavares</a>
+                <a href="/service-areas/leesburg-fl"><i class="fa-solid fa-location-dot"></i> Leesburg</a>
+                <a href="/service-areas/fruitland-park-fl"><i class="fa-solid fa-location-dot"></i> Fruitland Park</a>
+                <a href="/service-areas/umatilla-fl"><i class="fa-solid fa-location-dot"></i> Umatilla</a>
+                <a href="/service-areas/lady-lake-fl"><i class="fa-solid fa-location-dot"></i> Lady Lake</a>
+            </div>
+        </div>
+
+        <a href="/gallery" class="drawer-link">Gallery</a>
+        <a href="/reviews" class="drawer-link">Reviews</a>
+        <a href="/faqs" class="drawer-link">FAQs</a>
+        <a href="/contact" class="drawer-link">Contact</a>
+
+        <div class="drawer-cta">
+            <a href="/contact" class="nav-btn"><i class="fa-solid fa-calendar-check"></i> Schedule Service</a>
+            <a href="tel:+13523088142" class="drawer-phone-link">(352) 308-8142</a>
+        </div>
+
+    </div>
+</div>
+
 <script>
-    document.querySelectorAll('.dropdown > a').forEach(function(link) {
-        link.addEventListener('click', function(e) {
-            var nav = document.querySelector('nav');
-            if (!nav.classList.contains('open')) return;
-            e.preventDefault();
-            var parent = this.closest('.dropdown');
-            parent.classList.toggle('open');
+(function () {
+    var header = document.getElementById('siteHeader');
+    window.addEventListener('scroll', function () {
+        header.classList.toggle('scrolled', window.scrollY > 20);
+    }, { passive: true });
+
+    var dropdowns = document.querySelectorAll('.nav-has-dropdown');
+    var activeDropdown = null;
+
+    function openDD(li) {
+        if (activeDropdown && activeDropdown !== li) closeDD(activeDropdown);
+        li.classList.add('open');
+        var btn = li.querySelector('button');
+        if (btn) btn.setAttribute('aria-expanded', 'true');
+        activeDropdown = li;
+    }
+
+    function closeDD(li) {
+        li.classList.remove('open');
+        var btn = li.querySelector('button');
+        if (btn) btn.setAttribute('aria-expanded', 'false');
+        if (activeDropdown === li) activeDropdown = null;
+    }
+
+    dropdowns.forEach(function (li) {
+        var btn = li.querySelector(':scope > button');
+        if (btn) {
+            btn.addEventListener('click', function (e) {
+                e.stopPropagation();
+                li.classList.contains('open') ? closeDD(li) : openDD(li);
+            });
+        }
+        li.addEventListener('mouseenter', function () { if (window.innerWidth > 860) openDD(li); });
+        li.addEventListener('mouseleave', function () { if (window.innerWidth > 860) closeDD(li); });
+    });
+
+    document.addEventListener('click', function (e) {
+        if (activeDropdown && !activeDropdown.contains(e.target)) closeDD(activeDropdown);
+    });
+
+    document.addEventListener('keydown', function (e) {
+        if (e.key === 'Escape' && activeDropdown) closeDD(activeDropdown);
+    });
+
+    var hamburger = document.getElementById('navHamburger');
+    var drawer = document.getElementById('navDrawer');
+
+    hamburger.addEventListener('click', function () {
+        var isOpen = drawer.classList.toggle('open');
+        hamburger.classList.toggle('open', isOpen);
+        hamburger.setAttribute('aria-expanded', String(isOpen));
+        document.body.style.overflow = isOpen ? 'hidden' : '';
+    });
+
+    [['servicesToggle','servicesSub'],['areasToggle','areasSub']].forEach(function (pair) {
+        var btn = document.getElementById(pair[0]);
+        var sub = document.getElementById(pair[1]);
+        if (!btn || !sub) return;
+        btn.addEventListener('click', function () {
+            var isOpen = sub.classList.toggle('open');
+            btn.classList.toggle('open', isOpen);
+            btn.setAttribute('aria-expanded', String(isOpen));
         });
     });
+
+    var path = window.location.pathname.replace(/\/$/, '') || '/';
+    document.querySelectorAll('.nav-links > li > a').forEach(function (a) {
+        if ((a.getAttribute('href') || '').replace(/\/$/, '') === path) a.classList.add('active-page');
+    });
+})();
 </script>
