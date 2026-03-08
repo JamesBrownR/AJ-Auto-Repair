@@ -2,7 +2,7 @@
 markdown: kramdown
 permalink: pretty
 permalink: /:year/:month/:day/:title/
-
+url: "https://ajautoandrepair.com"
 baseurl: ""
 future: false #hides future blogs
 # Enable Liquid processing in markdown files
