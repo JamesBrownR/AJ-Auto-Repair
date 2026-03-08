@@ -1,0 +1,388 @@
+---
+layout: default
+title: Customer Reviews | AJ Automotive Services | Eustis, FL
+description: See what customers are saying about AJ Automotive Services in Eustis, FL. Honest pricing, quality work, and service you can trust. Read our Google reviews.
+---
+
+<style>
+    /* HERO */
+    .reviews-page-hero {
+        background: linear-gradient(rgba(0,0,0,0.72), rgba(0,0,0,0.72)),
+            url('https://images.unsplash.com/photo-1619642751034-765dfdf7c58e?auto=format&fit=crop&q=80&w=1974');
+        background-size: cover;
+        background-position: center;
+        padding: 90px 0 70px;
+        text-align: center;
+        border-bottom: 3px solid var(--accent-gold);
+    }
+
+    .reviews-page-hero .breadcrumb {
+        font-family: 'Roboto', sans-serif;
+        font-size: 0.85rem;
+        color: var(--text-gray);
+        margin-bottom: 1.2rem;
+    }
+
+    .reviews-page-hero .breadcrumb a {
+        color: var(--text-gray);
+        transition: color 0.3s;
+    }
+
+    .reviews-page-hero .breadcrumb a:hover {
+        color: var(--accent-gold);
+    }
+
+    .reviews-page-hero h1 {
+        font-size: clamp(2rem, 5vw, 3.2rem);
+        color: #fff;
+        margin-bottom: 0.8rem;
+    }
+
+    .reviews-page-hero p {
+        font-family: 'Roboto', sans-serif;
+        font-size: 1.05rem;
+        color: var(--text-gray);
+        max-width: 560px;
+        margin: 0 auto 2rem;
+        font-weight: 300;
+    }
+
+    .hero-rating-row {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        flex-wrap: wrap;
+    }
+
+    .hero-stars {
+        color: var(--accent-gold);
+        font-size: 1.4rem;
+        letter-spacing: 2px;
+    }
+
+    .hero-rating-label {
+        font-family: 'Oswald', sans-serif;
+        font-size: 1.1rem;
+        color: #fff;
+        letter-spacing: 0.5px;
+    }
+
+    .hero-rating-source {
+        font-family: 'Roboto', sans-serif;
+        font-size: 0.85rem;
+        color: var(--text-gray);
+    }
+
+    /* AGGREGATE STAT BAR */
+    .reviews-stat-bar {
+        background: var(--primary-light);
+        padding: 40px 0;
+        border-bottom: 1px solid #333;
+    }
+
+    .stat-bar-inner {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 60px;
+        flex-wrap: wrap;
+    }
+
+    .stat-item {
+        text-align: center;
+    }
+
+    .stat-number {
+        font-family: 'Oswald', sans-serif;
+        font-size: 2.6rem;
+        color: var(--accent-gold);
+        line-height: 1;
+        display: block;
+    }
+
+    .stat-label {
+        font-family: 'Roboto', sans-serif;
+        font-size: 0.9rem;
+        color: var(--text-gray);
+        margin-top: 6px;
+        display: block;
+    }
+
+    .stat-divider {
+        width: 1px;
+        height: 50px;
+        background: #444;
+    }
+
+    /* REVIEWS GRID */
+    .reviews-page-section {
+        padding: 70px 0 90px;
+        background: var(--primary-dark);
+    }
+
+    .reviews-page-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+        gap: 28px;
+        margin-top: 2.5rem;
+    }
+
+    .review-page-card {
+        background: #fff;
+        color: #333;
+        padding: 30px 28px 24px;
+        border-radius: 8px;
+        box-shadow: 0 5px 18px rgba(0,0,0,0.22);
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        transition: transform 0.3s;
+    }
+
+    .review-page-card:hover {
+        transform: translateY(-4px);
+    }
+
+    .review-page-card::before {
+        content: '\201C';
+        font-family: serif;
+        font-size: 4.5rem;
+        color: var(--accent-gold);
+        position: absolute;
+        top: -12px;
+        left: 14px;
+        opacity: 0.4;
+        line-height: 1;
+    }
+
+    .review-page-stars {
+        color: #e8a635;
+        font-size: 1rem;
+        margin-bottom: 12px;
+        letter-spacing: 1px;
+    }
+
+    .review-page-text {
+        font-style: italic;
+        font-size: 0.95rem;
+        line-height: 1.75;
+        color: #444;
+        flex-grow: 1;
+        margin-bottom: 18px;
+    }
+
+    .review-page-author {
+        font-family: 'Oswald', sans-serif;
+        font-weight: bold;
+        font-size: 1rem;
+        color: var(--primary-dark);
+        text-align: right;
+        border-top: 1px solid #eee;
+        padding-top: 12px;
+    }
+
+    .review-page-badge {
+        display: inline-flex;
+        align-items: center;
+        gap: 5px;
+        font-family: 'Roboto', sans-serif;
+        font-size: 0.75rem;
+        color: #888;
+        margin-top: 4px;
+        justify-content: flex-end;
+    }
+
+    .review-page-badge i {
+        color: #4285F4;
+        font-size: 0.8rem;
+    }
+
+    /* GOOGLE CTA BAND */
+    .reviews-google-cta {
+        background: var(--primary-light);
+        padding: 55px 0;
+        text-align: center;
+        border-top: 1px solid #333;
+        border-bottom: 1px solid #333;
+    }
+
+    .reviews-google-cta h2 {
+        font-size: clamp(1.5rem, 3vw, 2rem);
+        color: #fff;
+        margin-bottom: 0.7rem;
+    }
+
+    .reviews-google-cta p {
+        font-family: 'Roboto', sans-serif;
+        color: var(--text-gray);
+        max-width: 480px;
+        margin: 0 auto 2rem;
+        font-size: 0.97rem;
+        line-height: 1.7;
+    }
+
+    .google-btn {
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+        background: #fff;
+        color: #333;
+        font-family: 'Oswald', sans-serif;
+        font-size: 1rem;
+        font-weight: bold;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+        padding: 14px 28px;
+        border-radius: 4px;
+        text-decoration: none;
+        transition: background 0.3s, color 0.3s;
+        border: 2px solid #fff;
+    }
+
+    .google-btn:hover {
+        background: transparent;
+        color: #fff;
+    }
+
+    .google-btn i {
+        font-size: 1.1rem;
+        color: #4285F4;
+    }
+
+    .google-btn:hover i {
+        color: #fff;
+    }
+
+    /* BOTTOM CTA */
+    .reviews-bottom-cta {
+        background: var(--primary-dark);
+        padding: 65px 0;
+        text-align: center;
+        border-top: 3px solid var(--accent-gold);
+    }
+
+    .reviews-bottom-cta h2 {
+        font-size: clamp(1.6rem, 3vw, 2.2rem);
+        color: #fff;
+        margin-bottom: 0.8rem;
+    }
+
+    .reviews-bottom-cta p {
+        font-family: 'Roboto', sans-serif;
+        color: var(--text-gray);
+        max-width: 500px;
+        margin: 0 auto 2rem;
+        font-size: 1rem;
+    }
+
+    .cta-btns {
+        display: flex;
+        gap: 1rem;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    @media (max-width: 768px) {
+        .reviews-page-grid {
+            grid-template-columns: 1fr;
+        }
+
+        .stat-bar-inner {
+            gap: 30px;
+        }
+
+        .stat-divider {
+            display: none;
+        }
+    }
+</style>
+
+<!-- HERO -->
+<section class="reviews-page-hero">
+    <div class="container">
+        <div class="breadcrumb">
+            <a href="/">Home</a> &rsaquo; Reviews
+        </div>
+        <h1>Customer Reviews</h1>
+        <p>Honest work earns honest reviews. Here is what our customers say about AJ Automotive Services in Eustis, FL.</p>
+        <div class="hero-rating-row">
+            <span class="hero-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+            <span class="hero-rating-label">5.0</span>
+            <span class="hero-rating-source">on Google</span>
+        </div>
+    </div>
+</section>
+
+<!-- STAT BAR -->
+<section class="reviews-stat-bar">
+    <div class="container">
+        <div class="stat-bar-inner">
+            <div class="stat-item">
+                <span class="stat-number">5.0</span>
+                <span class="stat-label">Average Rating</span>
+            </div>
+            <div class="stat-divider"></div>
+            <div class="stat-item">
+                <span class="stat-number">{{ site.data.reviews | size }}</span>
+                <span class="stat-label">Verified Reviews</span>
+            </div>
+            <div class="stat-divider"></div>
+            <div class="stat-item">
+                <span class="stat-number">100%</span>
+                <span class="stat-label">5-Star Reviews</span>
+            </div>
+            <div class="stat-divider"></div>
+            <div class="stat-item">
+                <span class="stat-number">All</span>
+                <span class="stat-label">Makes &amp; Models</span>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- REVIEWS GRID -->
+<section class="reviews-page-section">
+    <div class="container">
+        <h2 class="section-title">What Our Customers Are Saying</h2>
+        <div class="reviews-page-grid">
+            {% for review in site.data.reviews %}
+            <div class="review-page-card">
+                <div class="review-page-stars">
+                    {% for i in (1..review.stars) %}&#9733;{% endfor %}
+                </div>
+                <p class="review-page-text">"{{ review.text }}"</p>
+                <div class="review-page-author">
+                    {{ review.name }}
+                    <div class="review-page-badge">
+                        <i class="fa-brands fa-google"></i> Google Review
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>
+
+<!-- LEAVE A REVIEW CTA -->
+<section class="reviews-google-cta">
+    <div class="container">
+        <h2>Had a Good Experience?</h2>
+        <p>Your review helps other Lake County drivers find a shop they can trust. It takes less than a minute on Google.</p>
+        <a href="https://g.page/r/CUdHLUJNkIWGEAE/review" target="_blank" rel="noopener" class="google-btn">
+            <i class="fa-brands fa-google"></i> Leave Us a Review
+        </a>
+    </div>
+</section>
+
+<!-- BOTTOM CTA -->
+<section class="reviews-bottom-cta">
+    <div class="container">
+        <h2>Ready to See It for Yourself?</h2>
+        <p>AJ Automotive Services is open Monday through Saturday, 8 AM to 6 PM. Walk-ins welcome at 1534 Kurt St, Eustis, FL.</p>
+        <div class="cta-btns">
+            <a href="tel:+13523088142" class="btn">Call (352) 308-8142</a>
+            <a href="/contact" class="btn" style="background: transparent; color: var(--accent-gold); border: 2px solid var(--accent-gold);">Schedule Service</a>
+        </div>
+    </div>
+</section>
