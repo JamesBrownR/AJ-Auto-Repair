@@ -1,374 +1,267 @@
 ---
 layout: default
 title: Contact AJ Automotive Services | Auto Repair in Eustis, FL
-description: Contact AJ Automotive Services in Eustis, FL. Located at 1534 Kurt St. Call (352) 308-8142. Open Mon-Sat 9AM-6PM. Get a free quote for your auto repair needs today.
+description: Contact AJ Automotive Services in Eustis, FL. Located at 1534 Kurt St. Call (352) 308-8142. Open Mon-Sat 8AM-6PM. Get a free quote for auto repair today.
 ---
-    <style>
-      .hero{
-height: 50vh;
-      }
-        /* --- CONTACT SECTION --- */
-        .contact-section {
-            padding: 80px 0;
-            background-color: var(--primary-light);
-        }
+<style>
+.contact-hero {
+    background: linear-gradient(105deg, rgba(26,28,33,0.97) 0%, rgba(26,28,33,0.82) 60%, rgba(26,28,33,0.55) 100%),
+        url('https://images.unsplash.com/photo-1619642751034-765dfdf7c58e?auto=format&fit=crop&q=80&w=1974') center / cover no-repeat;
+    padding: 90px 0 72px;
+    border-bottom: 3px solid var(--accent-gold, #e8a635);
+}
+.contact-hero__inner { max-width: 1280px; margin: 0 auto; padding: 0 40px; }
+.contact-hero__breadcrumb { font-family: "Roboto", sans-serif; font-size: 0.82rem; color: rgba(255,255,255,0.35); margin-bottom: 1.2rem; }
+.contact-hero__breadcrumb a { color: rgba(255,255,255,0.35); text-decoration: none; transition: color 0.2s; }
+.contact-hero__breadcrumb a:hover { color: var(--accent-gold, #e8a635); }
+.contact-hero__eyebrow { display: inline-flex; align-items: center; gap: 10px; font-family: "Oswald", sans-serif; font-size: 0.75rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--accent-gold, #e8a635); margin-bottom: 1rem; }
+.contact-hero__eyebrow::before { content: ""; display: block; width: 28px; height: 2px; background: var(--accent-gold, #e8a635); }
+.contact-hero h1 { font-family: "Oswald", sans-serif; font-size: clamp(2.2rem, 5vw, 3.8rem); font-weight: 700; text-transform: uppercase; letter-spacing: 0.02em; color: #fff; margin: 0 0 0.8rem; line-height: 1.05; }
+.contact-hero p { font-family: "Roboto", sans-serif; font-size: 1rem; font-weight: 300; color: rgba(255,255,255,0.55); max-width: 480px; line-height: 1.7; margin: 0; }
 
-        .contact-wrapper {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 50px;
-            margin-top: 40px;
-        }
+.contact-quickbar { background: var(--accent-gold, #e8a635); }
+.contact-quickbar__inner { max-width: 1280px; margin: 0 auto; padding: 0 40px; display: flex; align-items: stretch; }
+.contact-quickbar__item { display: flex; align-items: center; gap: 10px; padding: 16px 0; flex: 1; font-family: "Oswald", sans-serif; font-size: 0.85rem; letter-spacing: 0.06em; text-transform: uppercase; color: var(--primary-dark, #23262d); text-decoration: none; font-weight: 600; justify-content: center; transition: opacity 0.2s; }
+.contact-quickbar__item + .contact-quickbar__item { border-left: 1px solid rgba(0,0,0,0.12); }
+.contact-quickbar__item i { font-size: 1rem; }
+.contact-quickbar__item:hover { opacity: 0.7; }
 
-        /* Contact Info */
-        .contact-info-box {
-            background: var(--primary-dark);
-            padding: 40px;
-            border-radius: 8px;
-            border-left: 4px solid var(--accent-gold);
-        }
+.contact-main { background: var(--primary-dark, #23262d); padding: 80px 0 100px; }
+.contact-main__inner { max-width: 1280px; margin: 0 auto; padding: 0 40px; display: grid; grid-template-columns: 1fr 420px; gap: 56px; align-items: start; }
 
-        .info-item {
-            display: flex;
-            align-items: flex-start;
-            margin-bottom: 30px;
-        }
+.contact-form-card { background: var(--primary-light, #2e323e); border-top: 3px solid var(--accent-gold, #e8a635); }
+.contact-form-card__header { padding: 32px 36px 0; }
+.contact-form-card__label { font-family: "Oswald", sans-serif; font-size: 0.7rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--accent-gold, #e8a635); margin-bottom: 8px; }
+.contact-form-card__title { font-family: "Oswald", sans-serif; font-size: 1.6rem; text-transform: uppercase; letter-spacing: 0.02em; color: #fff; margin: 0 0 6px; }
+.contact-form-card__sub { font-family: "Roboto", sans-serif; font-size: 0.88rem; color: rgba(255,255,255,0.4); margin: 0; line-height: 1.6; }
+.contact-form-body { padding: 28px 36px 36px; }
+.form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+.form-group { margin-bottom: 16px; }
+.form-group label { display: block; font-family: "Oswald", sans-serif; font-size: 0.75rem; letter-spacing: 0.12em; text-transform: uppercase; color: rgba(255,255,255,0.5); margin-bottom: 7px; }
+.form-group label .req { color: var(--accent-gold, #e8a635); margin-left: 2px; }
+.form-group input, .form-group textarea, .form-group select { width: 100%; padding: 12px 16px; background: rgba(0,0,0,0.25); border: 1px solid rgba(255,255,255,0.1); color: #fff; font-family: "Roboto", sans-serif; font-size: 0.95rem; border-radius: 2px; transition: border-color 0.2s, background 0.2s; appearance: none; -webkit-appearance: none; }
+.form-group input::placeholder, .form-group textarea::placeholder { color: rgba(255,255,255,0.2); }
+.form-group input:focus, .form-group textarea:focus, .form-group select:focus { outline: none; border-color: var(--accent-gold, #e8a635); background: rgba(0,0,0,0.35); }
+.form-group select option { background: var(--primary-dark, #23262d); color: #fff; }
+.form-group textarea { resize: vertical; min-height: 130px; line-height: 1.6; }
+.form-select-wrap { position: relative; }
+.form-select-wrap::after { content: "\f078"; font-family: "Font Awesome 6 Free"; font-weight: 900; position: absolute; right: 14px; top: 50%; transform: translateY(-50%); color: var(--accent-gold, #e8a635); font-size: 0.65rem; pointer-events: none; }
+.form-submit { width: 100%; padding: 15px; background: var(--accent-gold, #e8a635); color: var(--primary-dark, #23262d); font-family: "Oswald", sans-serif; font-size: 1rem; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; border: none; cursor: pointer; border-radius: 2px; display: flex; align-items: center; justify-content: center; gap: 9px; transition: background 0.2s, transform 0.2s; margin-top: 8px; }
+.form-submit:hover { background: #f5b942; transform: translateY(-1px); }
+.form-note { font-family: "Roboto", sans-serif; font-size: 0.78rem; color: rgba(255,255,255,0.25); text-align: center; margin-top: 12px; line-height: 1.5; }
+.form-success { display: none; text-align: center; padding: 48px 36px; }
+.form-success__icon { width: 56px; height: 56px; background: rgba(232,166,53,0.12); border: 2px solid var(--accent-gold, #e8a635); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 20px; color: var(--accent-gold, #e8a635); font-size: 1.3rem; }
+.form-success h3 { font-family: "Oswald", sans-serif; font-size: 1.4rem; text-transform: uppercase; color: #fff; margin-bottom: 10px; }
+.form-success p { font-family: "Roboto", sans-serif; font-size: 0.92rem; color: rgba(255,255,255,0.45); line-height: 1.65; }
 
-        .info-item i {
-            color: var(--accent-gold);
-            font-size: 1.8rem;
-            margin-right: 20px;
-            margin-top: 5px;
-        }
+.contact-sidebar { display: flex; flex-direction: column; gap: 16px; }
+.info-block { background: var(--primary-light, #2e323e); border-left: 3px solid var(--accent-gold, #e8a635); padding: 26px 28px; }
+.info-block__label { font-family: "Oswald", sans-serif; font-size: 0.68rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--accent-gold, #e8a635); margin-bottom: 14px; display: flex; align-items: center; gap: 8px; }
+.info-block__label i { font-size: 0.85rem; }
+.info-block__main { font-family: "Oswald", sans-serif; font-size: 1.5rem; color: #fff; text-decoration: none; display: block; letter-spacing: 0.02em; transition: color 0.2s; line-height: 1.2; }
+a.info-block__main:hover { color: var(--accent-gold, #e8a635); }
+.info-block__sub { font-family: "Roboto", sans-serif; font-size: 0.85rem; color: rgba(255,255,255,0.4); margin-top: 5px; line-height: 1.55; }
+.hours-table { width: 100%; border-collapse: collapse; margin-top: 4px; }
+.hours-table tr { border-bottom: 1px solid rgba(255,255,255,0.06); }
+.hours-table tr:last-child { border-bottom: none; }
+.hours-table td { padding: 9px 0; font-family: "Roboto", sans-serif; font-size: 0.88rem; color: rgba(255,255,255,0.6); line-height: 1.3; }
+.hours-table td:first-child { font-family: "Oswald", sans-serif; font-size: 0.82rem; letter-spacing: 0.06em; text-transform: uppercase; color: rgba(255,255,255,0.4); width: 44%; }
+.hours-table .hours-today td { color: #fff; }
+.hours-table .hours-today td:first-child { color: var(--accent-gold, #e8a635); }
+.hours-table .hours-closed td { color: rgba(255,255,255,0.25); }
+.hours-table .hours-closed td:first-child { color: rgba(255,255,255,0.2); }
+.services-quick-list { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 4px; }
+.services-quick-list a { font-family: "Roboto", sans-serif; font-size: 0.78rem; color: rgba(255,255,255,0.5); text-decoration: none; padding: 4px 10px; border: 1px solid rgba(255,255,255,0.1); border-radius: 2px; transition: color 0.2s, border-color 0.2s; }
+.services-quick-list a:hover { color: var(--accent-gold, #e8a635); border-color: rgba(232,166,53,0.35); }
 
-        .info-item h3 {
-            font-size: 1.2rem;
-            margin-bottom: 5px;
-            color: var(--accent-gold);
-        }
+.contact-map { background: var(--primary-light, #2e323e); padding: 0 0 80px; }
+.contact-map__inner { max-width: 1280px; margin: 0 auto; padding: 0 40px; }
+.contact-map__header { padding: 52px 0 28px; display: flex; align-items: flex-end; justify-content: space-between; flex-wrap: wrap; gap: 1rem; }
+.contact-map__title { font-family: "Oswald", sans-serif; font-size: 1.5rem; text-transform: uppercase; color: #fff; letter-spacing: 0.02em; margin: 0; }
+.contact-map__address { font-family: "Roboto", sans-serif; font-size: 0.88rem; color: rgba(255,255,255,0.4); }
+.contact-map__frame { width: 100%; height: 420px; display: block; border: none; filter: grayscale(30%) contrast(1.05); }
 
-        .info-item p, .info-item a {
-            font-size: 1.1rem;
-            color: var(--text-light);
-        }
+@media (max-width: 860px) {
+    .contact-hero { padding: 72px 0 52px; }
+    .contact-hero__inner, .contact-main__inner, .contact-map__inner { padding: 0 24px; }
+    .contact-main__inner { grid-template-columns: 1fr; }
+    .contact-sidebar { order: -1; display: grid; grid-template-columns: 1fr 1fr; }
+    .form-row { grid-template-columns: 1fr; }
+    .contact-form-card__header { padding: 24px 24px 0; }
+    .contact-form-body { padding: 20px 24px 28px; }
+    .contact-quickbar__inner { flex-direction: column; padding: 0 24px; }
+    .contact-quickbar__item { justify-content: flex-start; border-left: none !important; border-bottom: 1px solid rgba(0,0,0,0.1); padding: 14px 0; }
+}
+@media (max-width: 600px) { .contact-sidebar { grid-template-columns: 1fr; } }
+</style>
 
-        .info-item a:hover {
-            color: var(--accent-gold);
-        }
-
-        .hours-table {
-            width: 100%;
-            margin-top: 15px;
-            border-collapse: collapse;
-        }
-
-        .hours-table td {
-            padding: 10px 0;
-            border-bottom: 1px solid #444;
-        }
-
-        .hours-table td:first-child {
-            color: var(--accent-gold);
-            font-weight: bold;
-            width: 40%;
-        }
-
-        /* Contact Form */
-        .contact-form-box {
-            background: var(--primary-dark);
-            padding: 40px;
-            border-radius: 8px;
-            border-left: 4px solid var(--accent-gold);
-        }
-
-        .contact-form-box h3 {
-            font-size: 1.8rem;
-            margin-bottom: 20px;
-            color: var(--accent-gold);
-        }
-
-        .form-group {
-            margin-bottom: 20px;
-        }
-
-        .form-group label {
-            display: block;
-            margin-bottom: 8px;
-            font-weight: bold;
-            color: var(--text-gray);
-        }
-
-        .form-group input,
-        .form-group textarea,
-        .form-group select {
-            width: 100%;
-            padding: 12px 15px;
-            background: var(--primary-light);
-            border: 1px solid #444;
-            border-radius: 4px;
-            color: var(--text-light);
-            font-family: 'Roboto', sans-serif;
-            font-size: 1rem;
-        }
-
-        .form-group input:focus,
-        .form-group textarea:focus,
-        .form-group select:focus {
-            outline: none;
-            border-color: var(--accent-gold);
-        }
-
-        .form-group textarea {
-            resize: vertical;
-            min-height: 120px;
-        }
-
-        .submit-btn {
-            width: 100%;
-            padding: 15px;
-            background-color: var(--accent-gold);
-            color: var(--primary-dark);
-            border: 2px solid var(--accent-gold);
-            font-weight: bold;
-            text-transform: uppercase;
-            font-family: 'Oswald', sans-serif;
-            font-size: 1.1rem;
-            border-radius: 4px;
-            cursor: pointer;
-            transition: 0.3s;
-        }
-
-        .submit-btn:hover {
-            background-color: transparent;
-            color: var(--accent-gold);
-        }
-
-     @media(max-width:900px) {
- .contact-wrapper {
-            display: flex;
-           flex-direction:column;
-        }
-     }
-    </style>
-</head>
-<body>
-
-   
-    <section class="hero" style="margin-top:4rem;">
-        <div class="hero-content">
-            <h1>Get In Touch</h1>
-            <p>We're Here To Help With All Your Auto Repair Needs</p>
-             <div style="margin-top: 20px;">
-                <a href="#contact" class="btn">Get a Quote</a>
-            </div>
-        </div>
-    </section>
-
-    <section class="contact-section">
-        <div class="container">
-            <h2 class="section-title">Contact Information</h2>
-            
-            <div class="contact-wrapper">
-                <!-- Contact Info -->
-                <div class="contact-info-box">
-                    <div class="info-item">
-                        <i class="fa-solid fa-location-dot"></i>
-                        <div>
-                            <h3>Our Location</h3>
-                            <p>1534 Kurt St<br>Eustis, FL 32726</p>
-                        </div>
-                    </div>
-
-                    <div class="info-item">
-                        <i class="fa-solid fa-phone"></i>
-                        <div>
-                            <h3>Phone Number</h3>
-                            <p><a href="tel:+13523088142">+1 (352) 308-8142</a></p>
-                        </div>
-                    </div>
-
-                    <div class="info-item">
-                        <i class="fa-solid fa-clock"></i>
-                        <div style="width: 100%;">
-                            <h3>Business Hours</h3>
-                            <table class="hours-table">
-                                <tr><td>Monday</td><td>9:00 AM – 6:00 PM</td></tr>
-                                <tr><td>Tuesday</td><td>9:00 AM – 6:00 PM</td></tr>
-                                <tr><td>Wednesday</td><td>9:00 AM – 6:00 PM</td></tr>
-                                <tr><td>Thursday</td><td>9:00 AM – 6:00 PM</td></tr>
-                                <tr><td>Friday</td><td>9:00 AM – 6:00 PM</td></tr>
-                                <tr><td>Saturday</td><td>9:00 AM – 6:00 PM</td></tr>
-                                <tr><td>Sunday</td><td>Closed</td></tr>
-                            </table>
-                        </div>
-                    </div>
-
-                    <div class="info-item">
-                        <i class="fa-solid fa-wrench"></i>
-                        <div>
-                            <h3>Services</h3>
-                            <p>Foreign & Domestic Vehicles<br>Fleet Maintenance<br>Small Engines & Motorcycles</p>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Contact Form -->
-                <div class="contact-form-box">
-                    <h3>Send Us A Message</h3>
-                    <form action="https://formspree.io/f/xaqnknbk" method="POST">
-                        <div class="form-group">
-                            <label for="name">Full Name *</label>
-                            <input type="text" id="name" name="name" required>
-                        </div>
-
-                        <div class="form-group">
-                            <label for="email">Email Address *</label>
-                            <input type="email" id="email" name="email" required>
-                        </div>
-
-                        <div class="form-group">
-                            <label for="phone">Phone Number</label>
-                            <input type="tel" id="phone" name="phone">
-                        </div>
-
-                        <div class="form-group">
-                            <label for="service">Service Needed</label>
-                            <select id="service" name="service">
-                                <option value="">Select a service...</option>
-                                <option value="brakes">Brakes & Suspensions</option>
-                                <option value="ac">A/C Repair</option>
-                                <option value="tuneup">Tune-ups & Diagnostics</option>
-                                <option value="transmission">Drive Trains & Transmissions</option>
-                                <option value="electrical">Electrical Systems</option>
-                                <option value="fleet">Fleet Maintenance</option>
-                                <option value="engine">Engine Replacements</option>
-                                <option value="welding">Welding & Fabrication</option>
-                                <option value="motorcycle">Small Engine & Motorcycles</option>
-                                <option value="headliner">Custom Headliners</option>
-                                <option value="other">Other</option>
-                            </select>
-                        </div>
-
-                        <div class="form-group">
-                            <label for="message">Message *</label>
-                            <textarea id="message" name="message" required placeholder="Tell us about your vehicle and what you need help with..."></textarea>
-                        </div>
-
-                        <button type="submit" class="submit-btn">
-                            <i class="fa-solid fa-paper-plane"></i> Send Message
-                        </button>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </section>
-<!-- Add this section to your contact/index.html, before the map section -->
-
-<section class="faq-section" style="padding: 80px 0; background-color: var(--primary-dark);">
-    <div class="container">
-        <h2 class="section-title">Frequently Asked Questions</h2>
-        
-        <div class="faq-container" style=" margin: 10px auto 0;">
-            
-            <div class="faq-item">
-                <h3 class="faq-question">Where is AJ Auto Repair located?</h3>
-                <p class="faq-answer">We're located at 1534 Kurt St, Eustis, FL 32726. We serve Eustis, Mount Dora, Tavares, and all of Lake County, Florida.</p>
-            </div>
-
-            <div class="faq-item">
-                <h3 class="faq-question">What are AJ Auto Repair's business hours?</h3>
-                <p class="faq-answer">We're open Monday through Saturday from 9:00 AM to 6:00 PM. We're closed on Sundays. Call ahead at (352) 308-8142 to schedule an appointment.</p>
-            </div>
-
-            <div class="faq-item">
-                <h3 class="faq-question">How do I schedule an appointment?</h3>
-                <p class="faq-answer">Call us at (352) 308-8142 or stop by our shop at 1534 Kurt St during business hours. We accept walk-ins, but appointments ensure faster service and minimize your wait time.</p>
-            </div>
-
-            <div class="faq-item">
-                <h3 class="faq-question">Do you provide free estimates?</h3>
-                <p class="faq-answer">Yes, we provide free, honest estimates for all repair work. Bring your vehicle in or call us at (352) 308-8142 to describe the issue, and we'll give you an upfront quote before any work begins.</p>
-            </div>
-
-            <div class="faq-item">
-                <h3 class="faq-question">What payment methods do you accept?</h3>
-                <p class="faq-answer">We accept cash, credit cards, and debit cards. We believe in transparent, fair pricing with no hidden fees.</p>
-            </div>
-
-            <div class="faq-item">
-                <h3 class="faq-question">How long will my repair take?</h3>
-                <p class="faq-answer">Repair time varies by service. Oil changes typically take 30-45 minutes. Brake jobs take 1-2 hours. More complex repairs like transmissions or engine work may take several days. We'll provide a time estimate when we diagnose your vehicle.</p>
-            </div>
-
-            <div class="faq-item">
-                <h3 class="faq-question">Do I need an appointment or can I walk in?</h3>
-                <p class="faq-answer">We accept both appointments and walk-ins. Appointments are recommended for faster service, especially during busy periods. For urgent repairs, call us at (352) 308-8142 and we'll do our best to fit you in.</p>
-            </div>
-
-            <div class="faq-item">
-                <h3 class="faq-question">Do you offer warranties on your work?</h3>
-                <p class="faq-answer">Yes, we stand behind our work with warranties on parts and labor. Warranty terms vary by service and parts used. Ask our technicians for specific warranty information when we provide your estimate.</p>
-            </div>
-
-        </div>
+<section class="contact-hero">
+    <div class="contact-hero__inner">
+        <div class="contact-hero__breadcrumb"><a href="/">Home</a> &rsaquo; Contact</div>
+        <div class="contact-hero__eyebrow">Get in Touch</div>
+        <h1>Let's Talk About<br>Your Vehicle</h1>
+        <p>Send us a message, give us a call, or stop by the shop on Kurt St. We will give you an honest assessment and a clear price before any work begins.</p>
     </div>
 </section>
 
-<style>
-    .faq-container {
-        display: flex;
-        flex-direction: row;
-        gap: 25px;
-        flex-wrap:wrap;
-        justify-content:center;
-    }
+<div class="contact-quickbar">
+    <div class="contact-quickbar__inner">
+        <a href="tel:+13523088142" class="contact-quickbar__item"><i class="fa-solid fa-phone"></i> (352) 308-8142</a>
+        <a href="https://maps.google.com/?q=1534+Kurt+St+Eustis+FL+32726" target="_blank" rel="noopener" class="contact-quickbar__item"><i class="fa-solid fa-location-dot"></i> 1534 Kurt St, Eustis, FL 32726</a>
+        <div class="contact-quickbar__item" style="cursor:default;"><i class="fa-solid fa-clock"></i> Mon &ndash; Sat: 8 AM &ndash; 6 PM</div>
+    </div>
+</div>
 
-    .faq-item {
-        background: var(--primary-light);
-        border-left: 3px solid var(--accent-gold);
-        border-radius: 4px;
-        padding: 25px;
-        width:45%;
-    }
+<section class="contact-main">
+    <div class="contact-main__inner">
 
-    .faq-question {
-        color: var(--accent-gold);
-        font-size: 1.2rem;
-        font-weight: bold;
-        font-family: 'Oswald', sans-serif;
-        margin-bottom: 10px;
-        text-transform: none;
-        letter-spacing: normal;
-    }
-
-    .faq-answer {
-        color: var(--text-gray);
-        line-height: 1.8;
-        margin: 0;
-    }
-
-    @media (max-width: 768px) {
-          .faq-container {
-        flex-direction: column;
-    }
-        .faq-item {
-            padding: 20px;
-            width:100%;
-        }
-        
-        .faq-question {
-            font-size: 1.1rem;
-        }
-    }
-</style>
-  <section id="contact" class="contact">
-        <div class="container">
-            <h2 class="section-title">Find Us On The Map</h2>
-            <div class="map-container">
-<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d13979.995151000732!2d-81.71116431284177!3d28.838896099999996!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88e7bd492408faa7%3A0x8685904d422d4747!2sAJ%20Auto%20Repair!5e0!3m2!1sen!2sus!4v1767474517398!5m2!1sen!2sus" width="100%" height="100%" style="border:0; min-height:400px" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>   
-
+        <div class="contact-form-card">
+            <div class="contact-form-card__header">
+                <div class="contact-form-card__label">Free Estimate</div>
+                <h2 class="contact-form-card__title">Send Us a Message</h2>
+                <p class="contact-form-card__sub">We typically respond same business day. For faster service, call us directly at (352) 308-8142.</p>
+            </div>
+            <div class="contact-form-body">
+                <form id="contactForm" action="https://formspree.io/f/xaqnknbk" method="POST">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="name">Full Name <span class="req">*</span></label>
+                            <input type="text" id="name" name="name" required placeholder="Your name">
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">Phone Number</label>
+                            <input type="tel" id="phone" name="phone" placeholder="(352) 000-0000">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email Address <span class="req">*</span></label>
+                        <input type="email" id="email" name="email" required placeholder="your@email.com">
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="service">Service Needed</label>
+                            <div class="form-select-wrap">
+                                <select id="service" name="service">
+                                    <option value="">Select a service...</option>
+                                    <option value="oil-change">Oil Change</option>
+                                    <option value="brakes">Brake Repair</option>
+                                    <option value="transmission">Transmission</option>
+                                    <option value="ac">A/C Repair</option>
+                                    <option value="diagnostics">Engine Diagnostics</option>
+                                    <option value="electrical">Electrical</option>
+                                    <option value="steering-suspension">Steering &amp; Suspension</option>
+                                    <option value="battery">Battery Service</option>
+                                    <option value="exhaust">Exhaust</option>
+                                    <option value="inspection">Safety Inspection</option>
+                                    <option value="emissions">Emissions Testing</option>
+                                    <option value="tires">Tire Rotation</option>
+                                    <option value="fleet">Fleet Maintenance</option>
+                                    <option value="motorcycle">Motorcycle / Small Engine</option>
+                                    <option value="other">Other</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="vehicle">Vehicle (Year, Make, Model)</label>
+                            <input type="text" id="vehicle" name="vehicle" placeholder="e.g. 2018 Honda Accord">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Message <span class="req">*</span></label>
+                        <textarea id="message" name="message" required placeholder="Describe what your vehicle is doing and what you need help with..."></textarea>
+                    </div>
+                    <button type="submit" class="form-submit"><i class="fa-solid fa-paper-plane"></i> Send Message</button>
+                    <p class="form-note">No spam, no pressure. We will review your message and reach out with an honest assessment.</p>
+                </form>
+                <div class="form-success" id="formSuccess">
+                    <div class="form-success__icon"><i class="fa-solid fa-check"></i></div>
+                    <h3>Message Sent</h3>
+                    <p>We received your message and will be in touch soon. You can also call us at <a href="tel:+13523088142" style="color:var(--accent-gold,#e8a635);">(352) 308-8142</a>.</p>
+                </div>
             </div>
         </div>
-    </section>
 
-    
+        <aside class="contact-sidebar">
+            <div class="info-block">
+                <div class="info-block__label"><i class="fa-solid fa-phone"></i> Call Us</div>
+                <a href="tel:+13523088142" class="info-block__main">(352) 308-8142</a>
+                <p class="info-block__sub">Mon &ndash; Sat, 8 AM &ndash; 6 PM<br>Walk-ins welcome during business hours.</p>
+            </div>
+            <div class="info-block">
+                <div class="info-block__label"><i class="fa-solid fa-location-dot"></i> Our Location</div>
+                <a href="https://maps.google.com/?q=1534+Kurt+St+Eustis+FL+32726" target="_blank" rel="noopener" class="info-block__main" style="font-size:1.15rem;line-height:1.4;">1534 Kurt St<br>Eustis, FL 32726</a>
+                <p class="info-block__sub" style="margin-top:10px;">Serving all of Lake County. Plenty of on-site parking.</p>
+            </div>
+            <div class="info-block">
+                <div class="info-block__label"><i class="fa-solid fa-clock"></i> Business Hours</div>
+                <table class="hours-table">
+                    <tr id="hours-mon"><td>Monday</td><td>8:00 AM &ndash; 6:00 PM</td></tr>
+                    <tr id="hours-tue"><td>Tuesday</td><td>8:00 AM &ndash; 6:00 PM</td></tr>
+                    <tr id="hours-wed"><td>Wednesday</td><td>8:00 AM &ndash; 6:00 PM</td></tr>
+                    <tr id="hours-thu"><td>Thursday</td><td>8:00 AM &ndash; 6:00 PM</td></tr>
+                    <tr id="hours-fri"><td>Friday</td><td>8:00 AM &ndash; 6:00 PM</td></tr>
+                    <tr id="hours-sat"><td>Saturday</td><td>8:00 AM &ndash; 6:00 PM</td></tr>
+                    <tr id="hours-sun" class="hours-closed"><td>Sunday</td><td>Closed</td></tr>
+                </table>
+            </div>
+            <div class="info-block">
+                <div class="info-block__label"><i class="fa-solid fa-wrench"></i> Services</div>
+                <div class="services-quick-list">
+                    <a href="/services/oil-change">Oil Change</a>
+                    <a href="/services/auto-brake-repair">Brakes</a>
+                    <a href="/services/transmission">Transmission</a>
+                    <a href="/services/ac-installation-repair">A/C Repair</a>
+                    <a href="/services/auto-engine-diagnostics">Diagnostics</a>
+                    <a href="/services/electrical">Electrical</a>
+                    <a href="/services/steering-suspension-repair">Suspension</a>
+                    <a href="/services/battery">Battery</a>
+                    <a href="/services/exhaust">Exhaust</a>
+                    <a href="/services/vehicle-safety-inspection">Inspection</a>
+                    <a href="/services/auto-emissions-testing">Emissions</a>
+                    <a href="/services/tire-rotations">Tire Rotation</a>
+                </div>
+            </div>
+        </aside>
+
+    </div>
+</section>
+
+<section class="contact-map">
+    <div class="contact-map__inner">
+        <div class="contact-map__header">
+            <div>
+                <h2 class="contact-map__title">Find Us on the Map</h2>
+                <p class="contact-map__address">1534 Kurt St &mdash; Eustis, FL 32726 &mdash; Easy to reach from all of Lake County</p>
+            </div>
+            <a href="https://maps.google.com/?q=1534+Kurt+St+Eustis+FL+32726" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:7px;font-family:Oswald,sans-serif;font-size:0.8rem;letter-spacing:0.1em;text-transform:uppercase;color:var(--accent-gold,#e8a635);text-decoration:none;padding:10px 18px;border:1px solid rgba(232,166,53,0.35);border-radius:2px;">
+                <i class="fa-solid fa-diamond-turn-right"></i> Get Directions
+            </a>
+        </div>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d13979.995151000732!2d-81.71116431284177!3d28.838896099999996!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88e7bd492408faa7%3A0x8685904d422d4747!2sAJ%20Auto%20Repair!5e0!3m2!1sen!2sus!4v1767474517398!5m2!1sen!2sus"
+            class="contact-map__frame" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="AJ Automotive Services on Google Maps"></iframe>
+    </div>
+</section>
+
+<script>
+(function () {
+    var days = ["sun","mon","tue","wed","thu","fri","sat"];
+    var row = document.getElementById("hours-" + days[new Date().getDay()]);
+    if (row) row.classList.add("hours-today");
+
+    var form = document.getElementById("contactForm");
+    var success = document.getElementById("formSuccess");
+    if (!form) return;
+    form.addEventListener("submit", function (e) {
+        e.preventDefault();
+        var btn = form.querySelector(".form-submit");
+        btn.disabled = true;
+        btn.innerHTML = '<i class="fa-solid fa-spinner fa-spin"></i> Sending...';
+        fetch(form.action, { method: "POST", body: new FormData(form), headers: { "Accept": "application/json" } })
+        .then(function (res) {
+            if (res.ok) { form.style.display = "none"; success.style.display = "block"; }
+            else { btn.disabled = false; btn.innerHTML = '<i class="fa-solid fa-paper-plane"></i> Send Message'; alert("Something went wrong. Please call us at (352) 308-8142."); }
+        })
+        .catch(function () { btn.disabled = false; btn.innerHTML = '<i class="fa-solid fa-paper-plane"></i> Send Message'; alert("Something went wrong. Please call us at (352) 308-8142."); });
+    });
+})();
+</script>
