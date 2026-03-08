@@ -3,68 +3,50 @@ layout: null
 ---
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  
-  <!-- Homepage -->
-  <url>
-    <loc>{{ site.url }}/</loc>
-    <lastmod>{{ site.time | date_to_xmlschema }}</lastmod>
-    <changefreq>weekly</changefreq>
-  </url>
-  
-  <!-- Services Main Page -->
-  <url>
-    <loc>{{ site.url }}/services/</loc>
-    <lastmod>{{ site.time | date_to_xmlschema }}</lastmod>
-    <changefreq>monthly</changefreq>
-  </url>
-  
-  <!-- Service Subpages -->
-  <url>
-    <loc>{{ site.url }}/services/brakes-suspension/</loc>
-    <lastmod>{{ site.time | date_to_xmlschema }}</lastmod>
-    <changefreq>monthly</changefreq>
-  </url>
-  
-  <url>
-    <loc>{{ site.url }}/services/ac-repair/</loc>
-    <lastmod>{{ site.time | date_to_xmlschema }}</lastmod>
-    <changefreq>monthly</changefreq>
-  </url>
-  
-  <url>
-    <loc>{{ site.url }}/services/transmission/</loc>
-    <lastmod>{{ site.time | date_to_xmlschema }}</lastmod>
-    <changefreq>monthly</changefreq>
-  </url>
-  
-  <url>
-    <loc>{{ site.url }}/services/engine-diagnostics/</loc>
-    <lastmod>{{ site.time | date_to_xmlschema }}</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  
-  <!-- Blog Index -->
-  <url>
-    <loc>{{ site.url }}/blog/</loc>
-    <lastmod>{{ site.time | date_to_xmlschema }}</lastmod>
-    <changefreq>weekly</changefreq>
-  </url>
-  
-  <!-- Contact Page -->
-  <url>
-    <loc>{{ site.url }}/contact/</loc>
-    <lastmod>{{ site.time | date_to_xmlschema }}</lastmod>
-    <changefreq>monthly</changefreq>
-  </url>
-  
-  <!-- Blog Posts -->
+
+  <!-- CORE -->
+  <url><loc>{{ site.url }}/</loc></url>
+  <url><loc>{{ site.url }}/contact/</loc></url>
+  <url><loc>{{ site.url }}/gallery/</loc></url>
+  <url><loc>{{ site.url }}/reviews/</loc></url>
+  <url><loc>{{ site.url }}/faqs/</loc></url>
+
+  <!-- SERVICES -->
+  <url><loc>{{ site.url }}/services/</loc></url>
+  <url><loc>{{ site.url }}/services/oil-change/</loc></url>
+  <url><loc>{{ site.url }}/services/auto-brake-repair/</loc></url>
+  <url><loc>{{ site.url }}/services/transmission/</loc></url>
+  <url><loc>{{ site.url }}/services/ac-installation-repair/</loc></url>
+  <url><loc>{{ site.url }}/services/auto-engine-diagnostics/</loc></url>
+  <url><loc>{{ site.url }}/services/electrical/</loc></url>
+  <url><loc>{{ site.url }}/services/steering-suspension-repair/</loc></url>
+  <url><loc>{{ site.url }}/services/battery/</loc></url>
+  <url><loc>{{ site.url }}/services/exhaust/</loc></url>
+  <url><loc>{{ site.url }}/services/vehicle-safety-inspection/</loc></url>
+  <url><loc>{{ site.url }}/services/auto-emissions-testing/</loc></url>
+  <url><loc>{{ site.url }}/services/tire-rotations/</loc></url>
+
+  <!-- SERVICE AREAS -->
+  <url><loc>{{ site.url }}/service-areas/</loc></url>
+  <url><loc>{{ site.url }}/service-areas/eustis-fl/</loc></url>
+  <url><loc>{{ site.url }}/service-areas/mount-dora-fl/</loc></url>
+  <url><loc>{{ site.url }}/service-areas/tavares-fl/</loc></url>
+  <url><loc>{{ site.url }}/service-areas/leesburg-fl/</loc></url>
+  <url><loc>{{ site.url }}/service-areas/fruitland-park-fl/</loc></url>
+  <url><loc>{{ site.url }}/service-areas/umatilla-fl/</loc></url>
+  <url><loc>{{ site.url }}/service-areas/lady-lake-fl/</loc></url>
+
+  <!-- SERVICE + AREA COMBO PAGES -->
+  {% assign city_slugs = "eustis-fl,mount-dora-fl,tavares-fl,leesburg-fl,fruitland-park-fl,umatilla-fl,lady-lake-fl" | split: "," %}
+  {% assign service_slugs = "oil-change,auto-brake-repair,transmission,ac-installation-repair,auto-engine-diagnostics,electrical,steering-suspension-repair,battery,exhaust,vehicle-safety-inspection,auto-emissions-testing,tire-rotations" | split: "," %}
+  {% for city in city_slugs %}{% for service in service_slugs %}
+  <url><loc>{{ site.url }}/service-areas/{{ city }}/{{ service }}/</loc></url>
+  {% endfor %}{% endfor %}
+
+  <!-- BLOG -->
+  <url><loc>{{ site.url }}/blog/</loc></url>
   {% for post in site.posts %}
-  <url>
-    <loc>{{ site.url }}{{ post.url }}</loc>
-    <lastmod>{{ post.date | date_to_xmlschema }}</lastmod>
-    <changefreq>monthly</changefreq>
-  </url>
+  <url><loc>{{ site.url }}{{ post.url }}</loc></url>
   {% endfor %}
-  
+
 </urlset>
