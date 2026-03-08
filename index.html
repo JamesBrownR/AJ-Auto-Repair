@@ -400,9 +400,6 @@ description: Trusted auto repair in Eustis, FL. Oil changes, brakes, A/C, engine
     transition: background var(--transition), border-color var(--transition);
     flex-shrink: 0;
 }
-   .service-card i {
-margin-bottom: 0px;
-   }
 
 .service-card:hover .service-card__icon {
     background: rgba(232,166,53,0.18);
@@ -655,7 +652,7 @@ margin-bottom: 0px;
 }
 
 .review-card__google i {
-    color: var(--gold);
+    color: #4285f4;
     font-size: 0.85rem;
 }
 
@@ -811,80 +808,214 @@ margin-bottom: 0px;
 }
 
 /* =============================================
-   FINAL CTA BAND
+   CONTACT FORM CTA
    ============================================= */
-.hp-cta {
-    background: var(--gold);
-    padding: 80px 40px;
-    text-align: center;
+.hp-contact {
+    background: var(--dark-mid);
+    padding: 90px 0 100px;
+    border-top: 3px solid var(--gold);
 }
 
-.hp-cta h2 {
-    font-family: 'Oswald', sans-serif;
-    font-size: clamp(1.8rem, 4vw, 3rem);
-    text-transform: uppercase;
-    color: var(--text-dark);
-    margin: 0 0 0.7rem;
-    letter-spacing: 0.02em;
+.hp-contact__layout {
+    display: grid;
+    grid-template-columns: 1fr 1.2fr;
+    gap: 64px;
+    align-items: start;
 }
 
-.hp-cta p {
+.hp-contact__intro {
+    position: sticky;
+    top: 88px;
+}
+
+.hp-contact__intro .section-title {
+    margin-bottom: 1rem;
+}
+
+.hp-contact__intro p {
     font-family: 'Roboto', sans-serif;
-    font-size: 1rem;
-    color: rgba(35,38,45,0.75);
-    max-width: 480px;
-    margin: 0 auto 2.4rem;
+    font-size: 0.95rem;
+    color: var(--text-muted);
+    line-height: 1.75;
+    margin-bottom: 2rem;
 }
 
-.hp-cta__btns {
+.hp-contact__details {
     display: flex;
-    gap: 1rem;
-    justify-content: center;
-    flex-wrap: wrap;
+    flex-direction: column;
+    gap: 16px;
+    margin-bottom: 2rem;
 }
 
-.btn-dark {
-    display: inline-flex;
+.hp-contact__detail {
+    display: flex;
     align-items: center;
-    gap: 8px;
-    background: var(--text-dark);
+    gap: 12px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 0.92rem;
+    color: var(--text-muted);
+}
+
+.hp-contact__detail i {
     color: var(--gold);
-    font-family: 'Oswald', sans-serif;
-    font-size: 0.95rem;
-    letter-spacing: 0.08em;
-    text-transform: uppercase;
-    padding: 15px 30px;
+    width: 16px;
+    text-align: center;
+    flex-shrink: 0;
+}
+
+.hp-contact__detail a {
+    color: var(--text-muted);
     text-decoration: none;
-    font-weight: 600;
-    border-radius: var(--radius);
-    transition: background var(--transition), transform var(--transition);
+    transition: color 0.2s;
 }
 
-.btn-dark:hover {
-    background: #111317;
-    transform: translateY(-2px);
+.hp-contact__detail a:hover { color: var(--gold); }
+
+/* FORM CARD */
+.hp-form-card {
+    background: var(--dark);
+    border-top: 3px solid var(--gold);
+    padding: 36px 36px 40px;
 }
 
-.btn-dark-outline {
-    display: inline-flex;
+.hp-form__row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 14px;
+}
+
+.hp-form__group {
+    margin-bottom: 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.hp-form__group label {
+    font-family: 'Oswald', sans-serif;
+    font-size: 0.68rem;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.38);
+}
+
+.hp-form__group input,
+.hp-form__group select,
+.hp-form__group textarea {
+    background: var(--dark-mid);
+    border: 1px solid rgba(255,255,255,0.08);
+    border-radius: 2px;
+    color: #fff;
+    font-family: 'Roboto', sans-serif;
+    font-size: 0.92rem;
+    padding: 11px 13px;
+    width: 100%;
+    transition: border-color 0.2s;
+    -webkit-appearance: none;
+    appearance: none;
+}
+
+.hp-form__group input::placeholder,
+.hp-form__group textarea::placeholder {
+    color: rgba(255,255,255,0.18);
+    font-size: 0.86rem;
+}
+
+.hp-form__group input:focus,
+.hp-form__group select:focus,
+.hp-form__group textarea:focus {
+    outline: none;
+    border-color: var(--gold);
+}
+
+.hp-form__group select {
+    color: rgba(255,255,255,0.6);
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='6' viewBox='0 0 10 6'%3E%3Cpath fill='%23e8a635' d='M5 6L0 0h10z'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 13px center;
+    padding-right: 32px;
+    cursor: pointer;
+}
+
+.hp-form__group select option { background: #23262d; }
+
+.hp-form__group textarea {
+    resize: vertical;
+    min-height: 100px;
+    line-height: 1.6;
+}
+
+.hp-form__req { color: var(--gold); margin-left: 2px; }
+
+.hp-form__submit {
+    width: 100%;
+    background: var(--gold);
+    color: var(--dark);
+    font-family: 'Oswald', sans-serif;
+    font-size: 0.92rem;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    padding: 15px;
+    border: none;
+    border-radius: 2px;
+    cursor: pointer;
+    display: flex;
     align-items: center;
+    justify-content: center;
     gap: 8px;
-    background: transparent;
-    color: var(--text-dark);
-    font-family: 'Oswald', sans-serif;
-    font-size: 0.95rem;
-    letter-spacing: 0.08em;
-    text-transform: uppercase;
-    padding: 13px 28px;
-    text-decoration: none;
-    border: 2px solid rgba(35,38,45,0.4);
-    border-radius: var(--radius);
-    transition: border-color var(--transition), background var(--transition);
+    transition: background 0.2s, transform 0.2s;
+    margin-top: 4px;
 }
 
-.btn-dark-outline:hover {
-    border-color: var(--text-dark);
-    background: rgba(35,38,45,0.08);
+.hp-form__submit:hover {
+    background: #f5b942;
+    transform: translateY(-1px);
+}
+
+.hp-form__note {
+    font-family: 'Roboto', sans-serif;
+    font-size: 0.75rem;
+    color: rgba(255,255,255,0.2);
+    text-align: center;
+    margin-top: 12px;
+}
+
+.hp-form__success {
+    display: none;
+    text-align: center;
+    padding: 48px 20px;
+}
+
+.hp-form__success i {
+    font-size: 2.8rem;
+    color: var(--gold);
+    display: block;
+    margin-bottom: 14px;
+}
+
+.hp-form__success h3 {
+    font-family: 'Oswald', sans-serif;
+    font-size: 1.4rem;
+    text-transform: uppercase;
+    color: #fff;
+    margin-bottom: 8px;
+}
+
+.hp-form__success p {
+    font-family: 'Roboto', sans-serif;
+    font-size: 0.9rem;
+    color: var(--text-muted);
+    line-height: 1.65;
+}
+
+.hp-form__success a { color: var(--gold); }
+
+@media (max-width: 860px) {
+    .hp-contact__layout { grid-template-columns: 1fr; gap: 40px; }
+    .hp-contact__intro { position: static; }
+    .hp-form-card { padding: 28px 24px 32px; }
+    .hp-form__row { grid-template-columns: 1fr; }
 }
 
 /* =============================================
@@ -1240,23 +1371,132 @@ margin-bottom: 0px;
 </section>
 
 <!-- =============================================
-     FINAL CTA
+     CONTACT FORM
      ============================================= -->
-<section class="hp-cta">
-    <div class="container" style="padding:0;">
-        <h2>Ready to Get Back on the Road?</h2>
-        <p>Call us, schedule online, or stop by the shop on Kurt St. Walk-ins welcome Monday through Saturday.</p>
-        <div class="hp-cta__btns">
-            <a href="tel:+13523088142" class="btn-dark">
-                <i class="fa-solid fa-phone"></i> Call (352) 308-8142
-            </a>
-            <a href="/contact" class="btn-dark-outline">
-                Schedule Service Online
-            </a>
+<section class="hp-contact">
+    <div class="container">
+        <div class="hp-contact__layout">
+
+            <!-- LEFT: INTRO -->
+            <div class="hp-contact__intro">
+                <div class="section-label">Get in Touch</div>
+                <h2 class="section-title">Ready to Get Back on the Road?</h2>
+                <p>Send us a message and we will get back to you the same day. For urgent needs, call us directly. Walk-ins welcome Monday through Saturday.</p>
+                <div class="hp-contact__details">
+                    <div class="hp-contact__detail">
+                        <i class="fa-solid fa-phone"></i>
+                        <a href="tel:+13523088142">(352) 308-8142</a>
+                    </div>
+                    <div class="hp-contact__detail">
+                        <i class="fa-solid fa-location-dot"></i>
+                        <span>1534 Kurt St, Eustis, FL 32726</span>
+                    </div>
+                    <div class="hp-contact__detail">
+                        <i class="fa-solid fa-clock"></i>
+                        <span>Mon &ndash; Sat: 8 AM &ndash; 6 PM</span>
+                    </div>
+                </div>
+                <a href="tel:+13523088142" class="btn-gold">
+                    <i class="fa-solid fa-phone"></i> Call Now
+                </a>
+            </div>
+
+            <!-- RIGHT: FORM -->
+            <div class="hp-form-card">
+                <div id="hpFormWrap">
+                    <form action="https://formspree.io/f/xaqnknbk" method="POST" id="hpContactForm" novalidate>
+
+                        <div class="hp-form__row">
+                            <div class="hp-form__group">
+                                <label for="hp-name">Full Name <span class="hp-form__req">*</span></label>
+                                <input type="text" id="hp-name" name="name" required placeholder="Your name">
+                            </div>
+                            <div class="hp-form__group">
+                                <label for="hp-phone">Phone Number</label>
+                                <input type="tel" id="hp-phone" name="phone" placeholder="(352) 000-0000">
+                            </div>
+                        </div>
+
+                        <div class="hp-form__group">
+                            <label for="hp-email">Email Address <span class="hp-form__req">*</span></label>
+                            <input type="email" id="hp-email" name="email" required placeholder="your@email.com">
+                        </div>
+
+                        <div class="hp-form__group">
+                            <label for="hp-service">Service Needed</label>
+                            <select id="hp-service" name="service">
+                                <option value="">Select a service...</option>
+                                <option value="oil-change">Oil Change</option>
+                                <option value="brakes">Brake Repair</option>
+                                <option value="transmission">Transmission</option>
+                                <option value="ac">A/C Repair</option>
+                                <option value="diagnostics">Engine Diagnostics</option>
+                                <option value="electrical">Electrical Repair</option>
+                                <option value="steering-suspension">Steering &amp; Suspension</option>
+                                <option value="battery">Battery Service</option>
+                                <option value="exhaust">Exhaust Repair</option>
+                                <option value="inspection">Safety Inspection</option>
+                                <option value="emissions">Emissions Testing</option>
+                                <option value="tires">Tire Rotation</option>
+                                <option value="fleet">Fleet Maintenance</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+
+                        <div class="hp-form__group">
+                            <label for="hp-message">Message <span class="hp-form__req">*</span></label>
+                            <textarea id="hp-message" name="message" required placeholder="Describe the issue or what your vehicle needs..."></textarea>
+                        </div>
+
+                        <button type="submit" class="hp-form__submit">
+                            <i class="fa-solid fa-paper-plane"></i> Send Message
+                        </button>
+                        <p class="hp-form__note">We never share your information. Expect a response same day.</p>
+
+                    </form>
+                </div>
+
+                <div class="hp-form__success" id="hpFormSuccess">
+                    <i class="fa-solid fa-circle-check"></i>
+                    <h3>Message Sent</h3>
+                    <p>Thanks for reaching out. We will be in touch shortly.<br>Need faster help? Call <a href="tel:+13523088142">(352) 308-8142</a>.</p>
+                </div>
+            </div>
+
         </div>
-        <p style="margin-top:1.8rem; font-size:0.82rem; color:rgba(35,38,45,0.55);">1534 Kurt St &mdash; Eustis, FL 32726 &mdash; Mon &ndash; Sat 8 AM &ndash; 6 PM</p>
     </div>
 </section>
+
+<script>
+(function () {
+    var form = document.getElementById('hpContactForm');
+    if (!form) return;
+    form.addEventListener('submit', function (e) {
+        e.preventDefault();
+        var btn = form.querySelector('.hp-form__submit');
+        btn.disabled = true;
+        btn.innerHTML = '<i class="fa-solid fa-spinner fa-spin"></i> Sending...';
+        fetch(form.action, {
+            method: 'POST',
+            body: new FormData(form),
+            headers: { 'Accept': 'application/json' }
+        }).then(function (res) {
+            if (res.ok) {
+                document.getElementById('hpFormWrap').style.display = 'none';
+                document.getElementById('hpFormSuccess').style.display = 'block';
+            } else {
+                btn.disabled = false;
+                btn.innerHTML = '<i class="fa-solid fa-paper-plane"></i> Send Message';
+                alert('Something went wrong. Please call us at (352) 308-8142.');
+            }
+        }).catch(function () {
+            btn.disabled = false;
+            btn.innerHTML = '<i class="fa-solid fa-paper-plane"></i> Send Message';
+            alert('Something went wrong. Please call us at (352) 308-8142.');
+        });
+    });
+})();
+</script>
 
 <script>
 (function() {
