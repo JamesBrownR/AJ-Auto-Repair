@@ -8,3 +8,5 @@ future: false #hides future blogs
 # Enable Liquid processing in markdown files
 kramdown:
   parse_block_html: true
+
+plugins: []
