@@ -1,7 +1,7 @@
 ---
 layout: blog
 title: "Brake Repair Eustis FL: 5 Warning Signs You Need Service Now | AJ Auto"
-date: December 28, 2024
+date: December 10, 2025
 description: "Expert brake repair in Eustis, FL. Learn the 5 critical warning signs your brakes need immediate attention. Professional brake service for all vehicles."
 category: Maintenance
 read_time: 5 min read
