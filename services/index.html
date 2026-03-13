@@ -1,23 +1,20 @@
 ---
 layout: default
 title: Auto Repair Services | AJ Automotive Services | Eustis, FL
-description: Full-service auto repair in Eustis, FL. Oil changes, brakes, transmission, A/C, engine diagnostics, electrical, and more. All makes and models. Call (352) 308-8142.
+description: Full-service auto repair in Eustis, FL. Oil changes, brakes, transmission, A/C, engine diagnostics, electrical, exhaust, and more. All makes and models.
 ---
 
 <style>
-/* =============================================
-   SERVICES INDEX
-   ============================================= */
-
 /* HERO */
 .si-hero {
-    background:
-        linear-gradient(105deg, rgba(26,28,33,0.97) 0%, rgba(26,28,33,0.82) 55%, rgba(26,28,33,0.45) 100%),
-        url('https://images.unsplash.com/photo-1530046339160-ce3e530c7d2f?auto=format&fit=crop&q=80&w=1974') center / cover no-repeat;
-    padding: 90px 0 72px;
+    background: linear-gradient(rgba(0,0,0,0.75), rgba(0,0,0,0.75)),
+        url('https://images.unsplash.com/photo-1619642751034-765dfdf7c58e?auto=format&fit=crop&q=80&w=1974');
+    background-size: cover;
+    background-position: center;
+    padding: 100px 0 80px;
     border-bottom: 3px solid var(--accent-gold);
-    border-left: 5px solid var(--accent-gold);
-   margin-top: 4rem;
+    border-left: 4px solid var(--accent-gold);
+    margin-top: 4rem;
 }
 
 .si-hero__inner {
@@ -28,13 +25,13 @@ description: Full-service auto repair in Eustis, FL. Oil changes, brakes, transm
 
 .si-hero__breadcrumb {
     font-family: 'Roboto', sans-serif;
-    font-size: 0.8rem;
-    color: rgba(255,255,255,0.3);
+    font-size: 0.82rem;
+    color: rgba(255,255,255,0.35);
     margin-bottom: 1.2rem;
 }
 
 .si-hero__breadcrumb a {
-    color: rgba(255,255,255,0.3);
+    color: rgba(255,255,255,0.35);
     text-decoration: none;
     transition: color 0.2s;
 }
@@ -42,48 +39,37 @@ description: Full-service auto repair in Eustis, FL. Oil changes, brakes, transm
 .si-hero__breadcrumb a:hover { color: var(--accent-gold); }
 
 .si-hero__eyebrow {
-    display: inline-flex;
-    align-items: center;
-    gap: 10px;
     font-family: 'Oswald', sans-serif;
-    font-size: 0.72rem;
-    letter-spacing: 0.2em;
+    font-size: 0.7rem;
+    letter-spacing: 0.22em;
     text-transform: uppercase;
     color: var(--accent-gold);
-    margin-bottom: 1rem;
-}
-
-.si-hero__eyebrow::before {
-    content: '';
-    display: block;
-    width: 28px;
-    height: 2px;
-    background: var(--accent-gold);
+    margin-bottom: 12px;
 }
 
 .si-hero h1 {
     font-family: 'Oswald', sans-serif;
     font-size: clamp(2.2rem, 5vw, 3.6rem);
     text-transform: uppercase;
-    letter-spacing: 0.01em;
-    line-height: 1.05;
     color: #fff;
-    margin: 0 0 1rem;
+    letter-spacing: 0.02em;
+    line-height: 1.05;
+    margin-bottom: 1rem;
 }
 
 .si-hero h1 em {
-    font-style: normal;
     color: var(--accent-gold);
+    font-style: normal;
 }
 
 .si-hero__sub {
     font-family: 'Roboto', sans-serif;
     font-size: 1rem;
-    color: rgba(255,255,255,0.45);
+    color: rgba(255,255,255,0.5);
+    max-width: 520px;
+    margin-bottom: 2rem;
+    line-height: 1.65;
     font-weight: 300;
-    max-width: 500px;
-    line-height: 1.7;
-    margin-bottom: 28px;
 }
 
 .si-hero__ctas {
@@ -92,6 +78,7 @@ description: Full-service auto repair in Eustis, FL. Oil changes, brakes, transm
     flex-wrap: wrap;
 }
 
+/* BUTTONS */
 .si-btn-gold {
     display: inline-flex;
     align-items: center;
@@ -108,7 +95,6 @@ description: Full-service auto repair in Eustis, FL. Oil changes, brakes, transm
     border-radius: 2px;
     transition: background 0.2s;
 }
-
 .si-btn-gold:hover { background: #f5b942; }
 
 .si-btn-outline {
@@ -127,7 +113,6 @@ description: Full-service auto repair in Eustis, FL. Oil changes, brakes, transm
     border-radius: 2px;
     transition: border-color 0.2s, color 0.2s;
 }
-
 .si-btn-outline:hover {
     border-color: rgba(255,255,255,0.5);
     color: #fff;
@@ -138,7 +123,6 @@ description: Full-service auto repair in Eustis, FL. Oil changes, brakes, transm
     background: var(--accent-gold);
     padding: 14px 0;
 }
-
 .si-trust__inner {
     max-width: 1280px;
     margin: 0 auto;
@@ -149,7 +133,6 @@ description: Full-service auto repair in Eustis, FL. Oil changes, brakes, transm
     flex-wrap: wrap;
     justify-content: center;
 }
-
 .si-trust__item {
     display: flex;
     align-items: center;
@@ -161,21 +144,138 @@ description: Full-service auto repair in Eustis, FL. Oil changes, brakes, transm
     color: #23262d;
     font-weight: 600;
 }
-
 .si-trust__item i { font-size: 0.9rem; }
 
-/* SERVICES GRID */
-.si-grid-section {
+/* CATEGORY SECTIONS */
+.si-category-section {
+    padding: 72px 0 80px;
+}
+.si-category-section:nth-child(odd) {
     background: #1a1c21;
-    padding: 72px 0 88px;
+}
+.si-category-section:nth-child(even) {
+    background: #23262d;
 }
 
-.si-grid-section__inner {
+.si-category-section__inner {
     max-width: 1280px;
     margin: 0 auto;
     padding: 0 40px;
 }
 
+.si-category-eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    font-family: 'Oswald', sans-serif;
+    font-size: 0.68rem;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: var(--accent-gold);
+    margin-bottom: 8px;
+}
+.si-category-eyebrow::before {
+    content: '';
+    display: block;
+    width: 24px;
+    height: 2px;
+    background: var(--accent-gold);
+}
+
+.si-category-section h2 {
+    font-family: 'Oswald', sans-serif;
+    font-size: clamp(1.5rem, 2.8vw, 2rem);
+    text-transform: uppercase;
+    color: #fff;
+    letter-spacing: 0.02em;
+    margin-bottom: 0.6rem;
+}
+
+.si-category-desc {
+    font-family: 'Roboto', sans-serif;
+    font-size: 0.93rem;
+    color: rgba(255,255,255,0.42);
+    line-height: 1.7;
+    max-width: 680px;
+    margin-bottom: 2.4rem;
+}
+
+/* SERVICE LIST WITHIN CATEGORY */
+.si-service-list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2px;
+}
+
+.si-service-item {
+    background: rgba(255,255,255,0.03);
+    padding: 18px 22px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-family: 'Roboto', sans-serif;
+    font-size: 0.88rem;
+    color: rgba(255,255,255,0.55);
+    border-left: 2px solid transparent;
+    transition: background 0.2s, border-color 0.2s, color 0.2s;
+}
+
+.si-service-item.linked {
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.si-service-item.linked:hover {
+    background: rgba(232,166,53,0.07);
+    border-left-color: var(--accent-gold);
+    color: #fff;
+}
+
+.si-service-item.linked:hover .si-service-item__arrow {
+    color: var(--accent-gold);
+    opacity: 1;
+}
+
+.si-service-item__name {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.si-service-item__name i {
+    color: var(--accent-gold);
+    font-size: 0.75rem;
+    opacity: 0.6;
+    flex-shrink: 0;
+}
+
+.si-service-item.linked .si-service-item__name i {
+    opacity: 1;
+}
+
+.si-service-item__arrow {
+    font-size: 0.65rem;
+    color: rgba(255,255,255,0.2);
+    opacity: 0;
+    transition: opacity 0.2s, color 0.2s;
+    flex-shrink: 0;
+}
+
+.si-service-item.linked .si-service-item__arrow {
+    opacity: 0.4;
+}
+
+/* AREAS SECTION */
+.si-areas {
+    background: #23262d;
+    padding: 72px 0 88px;
+    border-top: 1px solid rgba(255,255,255,0.05);
+}
+.si-areas__inner {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 40px;
+}
 .si-section-eyebrow {
     display: inline-flex;
     align-items: center;
@@ -187,7 +287,6 @@ description: Full-service auto repair in Eustis, FL. Oil changes, brakes, transm
     color: var(--accent-gold);
     margin-bottom: 8px;
 }
-
 .si-section-eyebrow::before {
     content: '';
     display: block;
@@ -195,7 +294,6 @@ description: Full-service auto repair in Eustis, FL. Oil changes, brakes, transm
     height: 2px;
     background: var(--accent-gold);
 }
-
 .si-section-heading {
     font-family: 'Oswald', sans-serif;
     font-size: clamp(1.6rem, 3vw, 2.2rem);
@@ -204,111 +302,11 @@ description: Full-service auto repair in Eustis, FL. Oil changes, brakes, transm
     margin-bottom: 2.5rem;
     letter-spacing: 0.01em;
 }
-
-.si-services-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 2px;
-}
-
-.si-card {
-    background: #23262d;
-    padding: 28px 28px 32px;
-    text-decoration: none;
-    display: flex;
-    flex-direction: column;
-    border-top: 3px solid transparent;
-    transition: background 0.2s, border-color 0.2s;
-}
-
-.si-card:hover {
-    background: #272b35;
-    border-top-color: var(--accent-gold);
-}
-
-.si-card__icon {
-    width: 46px;
-    height: 46px;
-    background: rgba(232,166,53,0.08);
-    border: 1px solid rgba(232,166,53,0.2);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-bottom: 16px;
-    border-radius: 2px;
-    flex-shrink: 0;
-    transition: background 0.2s, border-color 0.2s;
-}
-
-.si-card:hover .si-card__icon {
-    background: rgba(232,166,53,0.15);
-    border-color: var(--accent-gold);
-}
-
-.si-card__icon i {
-    font-size: 1.1rem;
-    color: var(--accent-gold);
-}
-
-.si-card__title {
-    font-family: 'Oswald', sans-serif;
-    font-size: 1.05rem;
-    text-transform: uppercase;
-    letter-spacing: 0.04em;
-    color: #fff;
-    margin-bottom: 10px;
-    line-height: 1.2;
-    transition: color 0.2s;
-}
-
-.si-card:hover .si-card__title { color: var(--accent-gold); }
-
-.si-card__desc {
-    font-family: 'Roboto', sans-serif;
-    font-size: 0.86rem;
-    color: rgba(255,255,255,0.4);
-    line-height: 1.65;
-    flex: 1;
-    margin-bottom: 16px;
-}
-
-.si-card__link {
-    display: inline-flex;
-    align-items: center;
-    gap: 6px;
-    font-family: 'Oswald', sans-serif;
-    font-size: 0.72rem;
-    letter-spacing: 0.12em;
-    text-transform: uppercase;
-    color: rgba(255,255,255,0.25);
-    transition: color 0.2s;
-    margin-top: auto;
-}
-
-.si-card:hover .si-card__link { color: var(--accent-gold); }
-
-.si-card__link i { font-size: 0.6rem; }
-
-/* AREAS SECTION */
-.si-areas {
-    background: #23262d;
-    padding: 72px 0 88px;
-    border-top: 1px solid rgba(255,255,255,0.05);
-}
-
-.si-areas__inner {
-    max-width: 1280px;
-    margin: 0 auto;
-    padding: 0 40px;
-}
-
 .si-areas-grid {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 2px;
-    margin-top: 2rem;
 }
-
 .si-area-card {
     background: #1a1c21;
     padding: 24px 22px 28px;
@@ -319,19 +317,11 @@ description: Full-service auto repair in Eustis, FL. Oil changes, brakes, transm
     border-top: 2px solid transparent;
     transition: background 0.2s, border-color 0.2s;
 }
-
 .si-area-card:hover {
     background: #1e2128;
     border-top-color: var(--accent-gold);
 }
-
-.si-area-card__icon {
-    color: var(--accent-gold);
-    font-size: 0.9rem;
-    opacity: 0.6;
-    margin-bottom: 4px;
-}
-
+.si-area-card__icon { color: var(--accent-gold); font-size: 0.9rem; opacity: 0.6; margin-bottom: 4px; }
 .si-area-card__city {
     font-family: 'Oswald', sans-serif;
     font-size: 1.1rem;
@@ -341,23 +331,9 @@ description: Full-service auto repair in Eustis, FL. Oil changes, brakes, transm
     line-height: 1.1;
     transition: color 0.2s;
 }
-
 .si-area-card:hover .si-area-card__city { color: var(--accent-gold); }
-
-.si-area-card__badge {
-    font-family: 'Roboto', sans-serif;
-    font-size: 0.72rem;
-    color: var(--accent-gold);
-    opacity: 0.7;
-}
-
-.si-area-card__dist {
-    font-family: 'Roboto', sans-serif;
-    font-size: 0.78rem;
-    color: rgba(255,255,255,0.28);
-    margin-top: 2px;
-}
-
+.si-area-card__badge { font-family: 'Roboto', sans-serif; font-size: 0.72rem; color: var(--accent-gold); opacity: 0.7; }
+.si-area-card__dist { font-family: 'Roboto', sans-serif; font-size: 0.78rem; color: rgba(255,255,255,0.28); margin-top: 2px; }
 .si-area-card__arrow {
     font-family: 'Oswald', sans-serif;
     font-size: 0.68rem;
@@ -370,7 +346,6 @@ description: Full-service auto repair in Eustis, FL. Oil changes, brakes, transm
     margin-top: 10px;
     transition: color 0.2s;
 }
-
 .si-area-card:hover .si-area-card__arrow { color: var(--accent-gold); }
 
 /* CTA BAND */
@@ -379,7 +354,6 @@ description: Full-service auto repair in Eustis, FL. Oil changes, brakes, transm
     padding: 56px 0;
     text-align: center;
 }
-
 .si-cta h2 {
     font-family: 'Oswald', sans-serif;
     font-size: clamp(1.6rem, 3vw, 2.2rem);
@@ -387,14 +361,12 @@ description: Full-service auto repair in Eustis, FL. Oil changes, brakes, transm
     color: #23262d;
     margin-bottom: 0.5rem;
 }
-
 .si-cta p {
     font-family: 'Roboto', sans-serif;
     font-size: 0.95rem;
     color: rgba(35,38,45,0.7);
     margin-bottom: 1.5rem;
 }
-
 .si-cta__phone {
     display: block;
     font-family: 'Oswald', sans-serif;
@@ -404,7 +376,6 @@ description: Full-service auto repair in Eustis, FL. Oil changes, brakes, transm
     text-decoration: none;
     margin-bottom: 1.2rem;
 }
-
 .si-btn-dark {
     display: inline-flex;
     align-items: center;
@@ -421,25 +392,22 @@ description: Full-service auto repair in Eustis, FL. Oil changes, brakes, transm
     border-radius: 2px;
     transition: background 0.2s;
 }
-
 .si-btn-dark:hover { background: #1a1c21; }
 
 /* RESPONSIVE */
 @media (max-width: 1024px) {
-    .si-services-grid { grid-template-columns: repeat(2, 1fr); }
+    .si-service-list { grid-template-columns: repeat(2, 1fr); }
     .si-areas-grid { grid-template-columns: repeat(2, 1fr); }
 }
-
 @media (max-width: 640px) {
     .si-hero { border-left: none; }
     .si-hero__inner,
-    .si-grid-section__inner,
+    .si-category-section__inner,
     .si-areas__inner { padding: 0 24px; }
     .si-trust__inner { padding: 0 24px; gap: 20px; }
-    .si-services-grid { grid-template-columns: 1fr; }
+    .si-service-list { grid-template-columns: 1fr; }
     .si-areas-grid { grid-template-columns: repeat(2, 1fr); }
 }
-
 @media (max-width: 400px) {
     .si-areas-grid { grid-template-columns: 1fr; }
 }
@@ -469,99 +437,341 @@ description: Full-service auto repair in Eustis, FL. Oil changes, brakes, transm
     </div>
 </div>
 
-<!-- SERVICES GRID -->
-<section class="si-grid-section">
-    <div class="si-grid-section__inner">
+<!-- ============================================================ -->
+<!-- AUTO REPAIR SHOP — PRIMARY CATEGORY -->
+<!-- ============================================================ -->
+<section class="si-category-section">
+    <div class="si-category-section__inner">
+        <div class="si-category-eyebrow">Auto Repair Shop</div>
+        <h2>General Auto Repair &amp; Maintenance</h2>
+        <p class="si-category-desc">AJ Automotive Services is a full-service auto repair shop in Eustis, FL. We handle everything from routine maintenance to complex diagnostics and repairs on all makes and models.</p>
 
-        <div class="si-section-eyebrow">What We Do</div>
-        <h2 class="si-section-heading">All Services</h2>
-
-        <div class="si-services-grid">
-
-            <a href="/services/oil-change" class="si-card">
-                <div class="si-card__icon"><i class="fa-solid fa-oil-can"></i></div>
-                <div class="si-card__title">Oil Change</div>
-                <p class="si-card__desc">Conventional and synthetic oil changes with filter replacement and a multi-point inspection on every visit.</p>
-                <span class="si-card__link">Learn More <i class="fa-solid fa-arrow-right"></i></span>
+        <div class="si-service-list">
+            <a href="/services/ac-installation-repair" class="si-service-item linked">
+                <span class="si-service-item__name"><i class="fa-solid fa-chevron-right"></i> A/C Installation &amp; Repair</span>
+                <i class="fa-solid fa-arrow-right si-service-item__arrow"></i>
             </a>
-
-            <a href="/services/auto-brake-repair" class="si-card">
-                <div class="si-card__icon"><i class="fa-solid fa-circle-stop"></i></div>
-                <div class="si-card__title">Brake Repair</div>
-                <p class="si-card__desc">Brake pads, rotors, calipers, brake lines, and complete brake system inspection and repair.</p>
-                <span class="si-card__link">Learn More <i class="fa-solid fa-arrow-right"></i></span>
+            <a href="/services/ac-installation-repair" class="si-service-item linked">
+                <span class="si-service-item__name"><i class="fa-solid fa-chevron-right"></i> Auto A/C Recharge</span>
+                <i class="fa-solid fa-arrow-right si-service-item__arrow"></i>
             </a>
-
-            <a href="/services/transmission" class="si-card">
-                <div class="si-card__icon"><i class="fa-solid fa-gears"></i></div>
-                <div class="si-card__title">Transmission</div>
-                <p class="si-card__desc">Transmission diagnostics, fluid service, repair, and replacement for automatic and manual transmissions.</p>
-                <span class="si-card__link">Learn More <i class="fa-solid fa-arrow-right"></i></span>
+            <a href="/services/ac-installation-repair" class="si-service-item linked">
+                <span class="si-service-item__name"><i class="fa-solid fa-chevron-right"></i> Auto A/C Replacement</span>
+                <i class="fa-solid fa-arrow-right si-service-item__arrow"></i>
             </a>
-
-            <a href="/services/ac-installation-repair" class="si-card">
-                <div class="si-card__icon"><i class="fa-solid fa-snowflake"></i></div>
-                <div class="si-card__title">A/C Repair</div>
-                <p class="si-card__desc">A/C diagnostics, refrigerant recharge, compressor replacement, and full system repair — critical in Florida heat.</p>
-                <span class="si-card__link">Learn More <i class="fa-solid fa-arrow-right"></i></span>
+            <a href="/services/battery" class="si-service-item linked">
+                <span class="si-service-item__name"><i class="fa-solid fa-chevron-right"></i> Auto Battery Maintenance</span>
+                <i class="fa-solid fa-arrow-right si-service-item__arrow"></i>
             </a>
-
-            <a href="/services/auto-engine-diagnostics" class="si-card">
-                <div class="si-card__icon"><i class="fa-solid fa-magnifying-glass-chart"></i></div>
-                <div class="si-card__title">Engine Diagnostics</div>
-                <p class="si-card__desc">Check engine light diagnosis, tune-ups, and complete engine repair using professional diagnostic equipment.</p>
-                <span class="si-card__link">Learn More <i class="fa-solid fa-arrow-right"></i></span>
+            <a href="/services/battery" class="si-service-item linked">
+                <span class="si-service-item__name"><i class="fa-solid fa-chevron-right"></i> Auto Battery Replacement</span>
+                <i class="fa-solid fa-arrow-right si-service-item__arrow"></i>
             </a>
-
-            <a href="/services/electrical" class="si-card">
-                <div class="si-card__icon"><i class="fa-solid fa-bolt"></i></div>
-                <div class="si-card__title">Electrical</div>
-                <p class="si-card__desc">Battery, alternator, starter, wiring, fuses, and vehicle computer diagnostics and repair.</p>
-                <span class="si-card__link">Learn More <i class="fa-solid fa-arrow-right"></i></span>
+            <a href="/services/auto-brake-repair" class="si-service-item linked">
+                <span class="si-service-item__name"><i class="fa-solid fa-chevron-right"></i> Auto Brake Repair</span>
+                <i class="fa-solid fa-arrow-right si-service-item__arrow"></i>
             </a>
-
-            <a href="/services/steering-suspension-repair" class="si-card">
-                <div class="si-card__icon"><i class="fa-solid fa-car-side"></i></div>
-                <div class="si-card__title">Steering &amp; Suspension</div>
-                <p class="si-card__desc">Shocks, struts, tie rods, control arms, alignment, and complete suspension system repair.</p>
-                <span class="si-card__link">Learn More <i class="fa-solid fa-arrow-right"></i></span>
+            <a href="/services/auto-brake-repair" class="si-service-item linked">
+                <span class="si-service-item__name"><i class="fa-solid fa-chevron-right"></i> Auto Brake Replacement</span>
+                <i class="fa-solid fa-arrow-right si-service-item__arrow"></i>
             </a>
-
-            <a href="/services/battery" class="si-card">
-                <div class="si-card__icon"><i class="fa-solid fa-car-battery"></i></div>
-                <div class="si-card__title">Battery Service</div>
-                <p class="si-card__desc">Battery testing, charging system inspection, battery replacement, and terminal cleaning.</p>
-                <span class="si-card__link">Learn More <i class="fa-solid fa-arrow-right"></i></span>
+            <a href="/services/auto-emissions-testing" class="si-service-item linked">
+                <span class="si-service-item__name"><i class="fa-solid fa-chevron-right"></i> Auto Emissions Testing</span>
+                <i class="fa-solid fa-arrow-right si-service-item__arrow"></i>
             </a>
-
-            <a href="/services/exhaust" class="si-card">
-                <div class="si-card__icon"><i class="fa-solid fa-wind"></i></div>
-                <div class="si-card__title">Exhaust</div>
-                <p class="si-card__desc">Muffler repair, catalytic converter service, exhaust pipe replacement, and exhaust leak diagnosis.</p>
-                <span class="si-card__link">Learn More <i class="fa-solid fa-arrow-right"></i></span>
+            <a href="/services/auto-engine-diagnostics" class="si-service-item linked">
+                <span class="si-service-item__name"><i class="fa-solid fa-chevron-right"></i> Auto Engine Diagnostic</span>
+                <i class="fa-solid fa-arrow-right si-service-item__arrow"></i>
             </a>
-
-            <a href="/services/vehicle-safety-inspection" class="si-card">
-                <div class="si-card__icon"><i class="fa-solid fa-shield-halved"></i></div>
-                <div class="si-card__title">Safety Inspection</div>
-                <p class="si-card__desc">Comprehensive vehicle safety inspection covering brakes, lights, tires, steering, and all critical systems.</p>
-                <span class="si-card__link">Learn More <i class="fa-solid fa-arrow-right"></i></span>
+            <span class="si-service-item">
+                <span class="si-service-item__name"><i class="fa-solid fa-chevron-right"></i> Auto Engine Tuning</span>
+            </span>
+            <a href="/services/exhaust" class="si-service-item linked">
+                <span class="si-service-item__name"><i class="fa-solid fa-chevron-right"></i> Auto Exhaust System Repair</span>
+                <i class="fa-solid fa-arrow-right si-service-item__arrow"></i>
             </a>
-
-            <a href="/services/auto-emissions-testing" class="si-card">
-                <div class="si-card__icon"><i class="fa-solid fa-leaf"></i></div>
-                <div class="si-card__title">Emissions Testing</div>
-                <p class="si-card__desc">Florida emissions testing and diagnostics to help your vehicle pass inspection and stay road legal.</p>
-                <span class="si-card__link">Learn More <i class="fa-solid fa-arrow-right"></i></span>
+            <a href="/services/exhaust" class="si-service-item linked">
+                <span class="si-service-item__name"><i class="fa-solid fa-chevron-right"></i> Auto Exhaust System Replacement</span>
+                <i class="fa-solid fa-arrow-right si-service-item__arrow"></i>
             </a>
-
-            <a href="/services/tire-rotations" class="si-card">
-                <div class="si-card__icon"><i class="fa-solid fa-tire"></i></div>
-                <div class="si-card__title">Tire Rotation</div>
-                <p class="si-card__desc">Regular tire rotations to extend tire life, improve fuel economy, and ensure even tread wear.</p>
-                <span class="si-card__link">Learn More <i class="fa-solid fa-arrow-right"></i></span>
+            <a href="/services/oil-change" class="si-service-item linked">
+                <span class="si-service-item__name"><i class="fa-solid fa-chevron-right"></i> Auto Maintenance</span>
+                <i class="fa-solid fa-arrow-right si-service-item__arrow"></i>
             </a>
+            <a href="/services/electrical" class="si-service-item linked">
+                <span class="si-service-item__name"><i class="fa-solid fa-chevron-right"></i> Auto Power Window Repair</span>
+                <i class="fa-solid fa-arrow-right si-service-item__arrow"></i>
+            </a>
+            <span class="si-service-item">
+                <span class="si-service-item__name"><i class="fa-solid fa-chevron-right"></i> Auto Water Leak Repair</span>
+            </span>
+            <span class="si-service-item">
+                <span class="si-service-item__name"><i class="fa-solid fa-chevron-right"></i> Auto Detailing</span>
+            </span>
+            <span class="si-service-item">
+                <span class="si-service-item__name"><i class="fa-solid fa-chevron-right"></i> Carburetor Cleaning</span>
+            </span>
+            <a href="/services/electrical" class="si-service-item linked">
+                <span class="si-service-item__name"><i class="fa-solid fa-chevron-right"></i> Electrical Repair</span>
+                <i class="fa-solid fa-arrow-right si-service-item__arrow"></i>
+            </a>
+            <span class="si-service-item">
+                <span class="si-service-item__name"><i class="fa-solid fa-chevron-right"></i> Engine Repair</span>
+            </span>
+            <a href="/services/exhaust" class="si-service-item linked">
+                <span class="si-service-item__name"><i class="fa-solid fa-chevron-right"></i> Exhaust</span>
+                <i class="fa-solid fa-arrow-right si-service-item__arrow"></i>
+            </a>
+            <a href="/services/oil-change" class="si-service-item linked">
+                <span class="si-service-item__name"><i class="fa-solid fa-chevron-right"></i> General Repairs &amp; Maintenance</span>
+                <i class="fa-solid fa-arrow-right si-service-item__arrow"></i>
+            </a>
+            <a href="/services/tire-rotations" class="si-service-item linked">
+                <span class="si-service-item__name"><i class="fa-solid fa-chevron-right"></i> Tire Rotations</span>
+                <i class="fa-solid fa-arrow-right si-service-item__arrow"></i>
+            </a>
+            <a href="/services/transmission" class="si-service-item linked">
+                <span class="si-service-item__name"><i class="fa-solid fa-chevron-right"></i> Transmission Repair</span>
+                <i class="fa-solid fa-arrow-right si-service-item__arrow"></i>
+            </a>
+            <a href="/services/transmission" class="si-service-item linked">
+                <span class="si-service-item__name"><i class="fa-solid fa-chevron-right"></i> Transmission Replacement</span>
+                <i class="fa-solid fa-arrow-right si-service-item__arrow"></i>
+            </a>
+            <a href="/services/vehicle-safety-inspection" class="si-service-item linked">
+                <span class="si-service-item__name"><i class="fa-solid fa-chevron-right"></i> Vehicle Inspection</span>
+                <i class="fa-solid fa-arrow-right si-service-item__arrow"></i>
+            </a>
+            <a href="/services/vehicle-safety-inspection" class="si-service-item linked">
+                <span class="si-service-item__name"><i class="fa-solid fa-chevron-right"></i> Vehicle Safety Inspection</span>
+                <i class="fa-solid fa-arrow-right si-service-item__arrow"></i>
+            </a>
+            <span class="si-service-item">
+                <span class="si-service-item__name"><i class="fa-solid fa-chevron-right"></i> Wiper Blade Installation</span>
+            </span>
+            <a href="/services/ac-installation-repair" class="si-service-item linked">
+                <span class="si-service-item__name"><i class="fa-solid fa-chevron-right"></i> Air Conditioning</span>
+                <i class="fa-solid fa-arrow-right si-service-item__arrow"></i>
+            </a>
+            <span class="si-service-item">
+                <span class="si-service-item__name"><i class="fa-solid fa-chevron-right"></i> Air &amp; Cabin Filter Replacement</span>
+            </span>
+            <a href="/services/auto-brake-repair" class="si-service-item linked">
+                <span class="si-service-item__name"><i class="fa-solid fa-chevron-right"></i> Brakes</span>
+                <i class="fa-solid fa-arrow-right si-service-item__arrow"></i>
+            </a>
+            <a href="/services/battery" class="si-service-item linked">
+                <span class="si-service-item__name"><i class="fa-solid fa-chevron-right"></i> Battery</span>
+                <i class="fa-solid fa-arrow-right si-service-item__arrow"></i>
+            </a>
+            <a href="/services/electrical" class="si-service-item linked">
+                <span class="si-service-item__name"><i class="fa-solid fa-chevron-right"></i> Electrical</span>
+                <i class="fa-solid fa-arrow-right si-service-item__arrow"></i>
+            </a>
+            <a href="/services/steering-suspension-repair" class="si-service-item linked">
+                <span class="si-service-item__name"><i class="fa-solid fa-chevron-right"></i> Steering &amp; Suspension Repair</span>
+                <i class="fa-solid fa-arrow-right si-service-item__arrow"></i>
+            </a>
+            <a href="/services/transmission" class="si-service-item linked">
+                <span class="si-service-item__name"><i class="fa-solid fa-chevron-right"></i> Transmission</span>
+                <i class="fa-solid fa-arrow-right si-service-item__arrow"></i>
+            </a>
+        </div>
+    </div>
+</section>
 
+<!-- ============================================================ -->
+<!-- MECHANIC — ADDITIONAL CATEGORY -->
+<!-- ============================================================ -->
+<section class="si-category-section">
+    <div class="si-category-section__inner">
+        <div class="si-category-eyebrow">Mechanic</div>
+        <h2>Mechanic Services</h2>
+        <p class="si-category-desc">Our certified mechanics work on all makes and models — domestic and import. Whether it's a routine tune-up or a complex repair, we diagnose it correctly and fix it right the first time.</p>
+
+        <div class="si-service-list">
+            <span class="si-service-item">
+                <span class="si-service-item__name"><i class="fa-solid fa-chevron-right"></i> Air &amp; Cabin Filter Replacement</span>
+            </span>
+            <a href="/services/ac-installation-repair" class="si-service-item linked">
+                <span class="si-service-item__name"><i class="fa-solid fa-chevron-right"></i> Air Conditioning</span>
+                <i class="fa-solid fa-arrow-right si-service-item__arrow"></i>
+            </a>
+            <a href="/services/auto-engine-diagnostics" class="si-service-item linked">
+                <span class="si-service-item__name"><i class="fa-solid fa-chevron-right"></i> Auto Engine Diagnostic</span>
+                <i class="fa-solid fa-arrow-right si-service-item__arrow"></i>
+            </a>
+            <a href="/services/battery" class="si-service-item linked">
+                <span class="si-service-item__name"><i class="fa-solid fa-chevron-right"></i> Battery</span>
+                <i class="fa-solid fa-arrow-right si-service-item__arrow"></i>
+            </a>
+            <a href="/services/auto-brake-repair" class="si-service-item linked">
+                <span class="si-service-item__name"><i class="fa-solid fa-chevron-right"></i> Brakes</span>
+                <i class="fa-solid fa-arrow-right si-service-item__arrow"></i>
+            </a>
+            <a href="/services/electrical" class="si-service-item linked">
+                <span class="si-service-item__name"><i class="fa-solid fa-chevron-right"></i> Electrical</span>
+                <i class="fa-solid fa-arrow-right si-service-item__arrow"></i>
+            </a>
+            <a href="/services/exhaust" class="si-service-item linked">
+                <span class="si-service-item__name"><i class="fa-solid fa-chevron-right"></i> Exhaust</span>
+                <i class="fa-solid fa-arrow-right si-service-item__arrow"></i>
+            </a>
+            <a href="/services/steering-suspension-repair" class="si-service-item linked">
+                <span class="si-service-item__name"><i class="fa-solid fa-chevron-right"></i> Steering &amp; Suspension Repair</span>
+                <i class="fa-solid fa-arrow-right si-service-item__arrow"></i>
+            </a>
+            <a href="/services/transmission" class="si-service-item linked">
+                <span class="si-service-item__name"><i class="fa-solid fa-chevron-right"></i> Transmission</span>
+                <i class="fa-solid fa-arrow-right si-service-item__arrow"></i>
+            </a>
+        </div>
+    </div>
+</section>
+
+<!-- ============================================================ -->
+<!-- BRAKE SHOP — ADDITIONAL CATEGORY -->
+<!-- ============================================================ -->
+<section class="si-category-section">
+    <div class="si-category-section__inner">
+        <div class="si-category-eyebrow">Brake Shop</div>
+        <h2>Brake Repair &amp; Related Services</h2>
+        <p class="si-category-desc">From brake pads and rotors to full system overhauls, we keep your vehicle stopping safely. We also handle the surrounding systems — suspension, tires, and diagnostics — as part of a complete brake service visit.</p>
+
+        <div class="si-service-list">
+            <span class="si-service-item">
+                <span class="si-service-item__name"><i class="fa-solid fa-chevron-right"></i> Air &amp; Cabin Filter Replacement</span>
+            </span>
+            <a href="/services/ac-installation-repair" class="si-service-item linked">
+                <span class="si-service-item__name"><i class="fa-solid fa-chevron-right"></i> Air Conditioning</span>
+                <i class="fa-solid fa-arrow-right si-service-item__arrow"></i>
+            </a>
+            <a href="/services/auto-engine-diagnostics" class="si-service-item linked">
+                <span class="si-service-item__name"><i class="fa-solid fa-chevron-right"></i> Auto Engine Diagnostic</span>
+                <i class="fa-solid fa-arrow-right si-service-item__arrow"></i>
+            </a>
+            <a href="/services/battery" class="si-service-item linked">
+                <span class="si-service-item__name"><i class="fa-solid fa-chevron-right"></i> Battery</span>
+                <i class="fa-solid fa-arrow-right si-service-item__arrow"></i>
+            </a>
+            <a href="/services/auto-brake-repair" class="si-service-item linked">
+                <span class="si-service-item__name"><i class="fa-solid fa-chevron-right"></i> Brakes</span>
+                <i class="fa-solid fa-arrow-right si-service-item__arrow"></i>
+            </a>
+            <a href="/services/electrical" class="si-service-item linked">
+                <span class="si-service-item__name"><i class="fa-solid fa-chevron-right"></i> Electrical</span>
+                <i class="fa-solid fa-arrow-right si-service-item__arrow"></i>
+            </a>
+            <a href="/services/exhaust" class="si-service-item linked">
+                <span class="si-service-item__name"><i class="fa-solid fa-chevron-right"></i> Exhaust</span>
+                <i class="fa-solid fa-arrow-right si-service-item__arrow"></i>
+            </a>
+            <a href="/services/steering-suspension-repair" class="si-service-item linked">
+                <span class="si-service-item__name"><i class="fa-solid fa-chevron-right"></i> Steering &amp; Suspension Repair</span>
+                <i class="fa-solid fa-arrow-right si-service-item__arrow"></i>
+            </a>
+            <a href="/services/transmission" class="si-service-item linked">
+                <span class="si-service-item__name"><i class="fa-solid fa-chevron-right"></i> Transmission</span>
+                <i class="fa-solid fa-arrow-right si-service-item__arrow"></i>
+            </a>
+        </div>
+    </div>
+</section>
+
+<!-- ============================================================ -->
+<!-- TRANSMISSION SHOP — ADDITIONAL CATEGORY -->
+<!-- ============================================================ -->
+<section class="si-category-section">
+    <div class="si-category-section__inner">
+        <div class="si-category-eyebrow">Transmission Shop</div>
+        <h2>Transmission Repair &amp; Related Services</h2>
+        <p class="si-category-desc">Transmission problems don't stay small for long. We diagnose transmission issues accurately, give you an honest repair estimate, and handle everything from fluid service to full rebuilds.</p>
+
+        <div class="si-service-list">
+            <span class="si-service-item">
+                <span class="si-service-item__name"><i class="fa-solid fa-chevron-right"></i> Air &amp; Cabin Filter Replacement</span>
+            </span>
+            <a href="/services/ac-installation-repair" class="si-service-item linked">
+                <span class="si-service-item__name"><i class="fa-solid fa-chevron-right"></i> Air Conditioning</span>
+                <i class="fa-solid fa-arrow-right si-service-item__arrow"></i>
+            </a>
+            <a href="/services/auto-engine-diagnostics" class="si-service-item linked">
+                <span class="si-service-item__name"><i class="fa-solid fa-chevron-right"></i> Auto Engine Diagnostic</span>
+                <i class="fa-solid fa-arrow-right si-service-item__arrow"></i>
+            </a>
+            <a href="/services/battery" class="si-service-item linked">
+                <span class="si-service-item__name"><i class="fa-solid fa-chevron-right"></i> Battery</span>
+                <i class="fa-solid fa-arrow-right si-service-item__arrow"></i>
+            </a>
+            <a href="/services/auto-brake-repair" class="si-service-item linked">
+                <span class="si-service-item__name"><i class="fa-solid fa-chevron-right"></i> Brakes</span>
+                <i class="fa-solid fa-arrow-right si-service-item__arrow"></i>
+            </a>
+            <a href="/services/electrical" class="si-service-item linked">
+                <span class="si-service-item__name"><i class="fa-solid fa-chevron-right"></i> Electrical</span>
+                <i class="fa-solid fa-arrow-right si-service-item__arrow"></i>
+            </a>
+            <a href="/services/exhaust" class="si-service-item linked">
+                <span class="si-service-item__name"><i class="fa-solid fa-chevron-right"></i> Exhaust</span>
+                <i class="fa-solid fa-arrow-right si-service-item__arrow"></i>
+            </a>
+            <a href="/services/steering-suspension-repair" class="si-service-item linked">
+                <span class="si-service-item__name"><i class="fa-solid fa-chevron-right"></i> Steering &amp; Suspension Repair</span>
+                <i class="fa-solid fa-arrow-right si-service-item__arrow"></i>
+            </a>
+            <a href="/services/transmission" class="si-service-item linked">
+                <span class="si-service-item__name"><i class="fa-solid fa-chevron-right"></i> Transmission</span>
+                <i class="fa-solid fa-arrow-right si-service-item__arrow"></i>
+            </a>
+        </div>
+    </div>
+</section>
+
+<!-- ============================================================ -->
+<!-- OIL CHANGE SERVICE — ADDITIONAL CATEGORY -->
+<!-- ============================================================ -->
+<section class="si-category-section">
+    <div class="si-category-section__inner">
+        <div class="si-category-eyebrow">Oil Change Service</div>
+        <h2>Oil Change &amp; Related Services</h2>
+        <p class="si-category-desc">Conventional, synthetic, synthetic blend, and high-mileage oil changes for all makes and models. Every oil change includes a multi-point inspection — we don't just swap the oil and send you on your way.</p>
+
+        <div class="si-service-list">
+            <span class="si-service-item">
+                <span class="si-service-item__name"><i class="fa-solid fa-chevron-right"></i> Air &amp; Cabin Filter Replacement</span>
+            </span>
+            <a href="/services/ac-installation-repair" class="si-service-item linked">
+                <span class="si-service-item__name"><i class="fa-solid fa-chevron-right"></i> Air Conditioning</span>
+                <i class="fa-solid fa-arrow-right si-service-item__arrow"></i>
+            </a>
+            <a href="/services/auto-engine-diagnostics" class="si-service-item linked">
+                <span class="si-service-item__name"><i class="fa-solid fa-chevron-right"></i> Auto Engine Diagnostic</span>
+                <i class="fa-solid fa-arrow-right si-service-item__arrow"></i>
+            </a>
+            <a href="/services/battery" class="si-service-item linked">
+                <span class="si-service-item__name"><i class="fa-solid fa-chevron-right"></i> Battery</span>
+                <i class="fa-solid fa-arrow-right si-service-item__arrow"></i>
+            </a>
+            <a href="/services/auto-brake-repair" class="si-service-item linked">
+                <span class="si-service-item__name"><i class="fa-solid fa-chevron-right"></i> Brakes</span>
+                <i class="fa-solid fa-arrow-right si-service-item__arrow"></i>
+            </a>
+            <a href="/services/electrical" class="si-service-item linked">
+                <span class="si-service-item__name"><i class="fa-solid fa-chevron-right"></i> Electrical</span>
+                <i class="fa-solid fa-arrow-right si-service-item__arrow"></i>
+            </a>
+            <a href="/services/exhaust" class="si-service-item linked">
+                <span class="si-service-item__name"><i class="fa-solid fa-chevron-right"></i> Exhaust</span>
+                <i class="fa-solid fa-arrow-right si-service-item__arrow"></i>
+            </a>
+            <a href="/services/steering-suspension-repair" class="si-service-item linked">
+                <span class="si-service-item__name"><i class="fa-solid fa-chevron-right"></i> Steering &amp; Suspension Repair</span>
+                <i class="fa-solid fa-arrow-right si-service-item__arrow"></i>
+            </a>
+            <a href="/services/transmission" class="si-service-item linked">
+                <span class="si-service-item__name"><i class="fa-solid fa-chevron-right"></i> Transmission</span>
+                <i class="fa-solid fa-arrow-right si-service-item__arrow"></i>
+            </a>
         </div>
     </div>
 </section>
@@ -569,71 +779,61 @@ description: Full-service auto repair in Eustis, FL. Oil changes, brakes, transm
 <!-- SERVICE AREAS -->
 <section class="si-areas">
     <div class="si-areas__inner">
-
         <div class="si-section-eyebrow">Where We Serve</div>
         <h2 class="si-section-heading">Service Areas</h2>
-
         <div class="si-areas-grid">
-
             <a href="/service-areas/eustis-fl" class="si-area-card">
                 <div class="si-area-card__icon"><i class="fa-solid fa-map-pin"></i></div>
                 <div class="si-area-card__city">Eustis</div>
                 <div class="si-area-card__badge">Our Shop Location</div>
                 <div class="si-area-card__arrow">View Page <i class="fa-solid fa-arrow-right" style="font-size:0.6rem;"></i></div>
             </a>
-
             <a href="/service-areas/mount-dora-fl" class="si-area-card">
                 <div class="si-area-card__icon"><i class="fa-solid fa-location-dot"></i></div>
                 <div class="si-area-card__city">Mount Dora</div>
                 <div class="si-area-card__dist">~5 miles away</div>
                 <div class="si-area-card__arrow">View Page <i class="fa-solid fa-arrow-right" style="font-size:0.6rem;"></i></div>
             </a>
-
             <a href="/service-areas/tavares-fl" class="si-area-card">
                 <div class="si-area-card__icon"><i class="fa-solid fa-location-dot"></i></div>
                 <div class="si-area-card__city">Tavares</div>
                 <div class="si-area-card__dist">~6 miles away</div>
                 <div class="si-area-card__arrow">View Page <i class="fa-solid fa-arrow-right" style="font-size:0.6rem;"></i></div>
             </a>
-
-            <a href="/service-areas/umatilla-fl" class="si-area-card">
-                <div class="si-area-card__icon"><i class="fa-solid fa-location-dot"></i></div>
-                <div class="si-area-card__city">Umatilla</div>
-                <div class="si-area-card__dist">~10 miles away</div>
-                <div class="si-area-card__arrow">View Page <i class="fa-solid fa-arrow-right" style="font-size:0.6rem;"></i></div>
-            </a>
-
             <a href="/service-areas/leesburg-fl" class="si-area-card">
                 <div class="si-area-card__icon"><i class="fa-solid fa-location-dot"></i></div>
                 <div class="si-area-card__city">Leesburg</div>
                 <div class="si-area-card__dist">~12 miles away</div>
                 <div class="si-area-card__arrow">View Page <i class="fa-solid fa-arrow-right" style="font-size:0.6rem;"></i></div>
             </a>
-
             <a href="/service-areas/fruitland-park-fl" class="si-area-card">
                 <div class="si-area-card__icon"><i class="fa-solid fa-location-dot"></i></div>
                 <div class="si-area-card__city">Fruitland Park</div>
+                <div class="si-area-card__dist">~10 miles away</div>
+                <div class="si-area-card__arrow">View Page <i class="fa-solid fa-arrow-right" style="font-size:0.6rem;"></i></div>
+            </a>
+            <a href="/service-areas/umatilla-fl" class="si-area-card">
+                <div class="si-area-card__icon"><i class="fa-solid fa-location-dot"></i></div>
+                <div class="si-area-card__city">Umatilla</div>
                 <div class="si-area-card__dist">~13 miles away</div>
                 <div class="si-area-card__arrow">View Page <i class="fa-solid fa-arrow-right" style="font-size:0.6rem;"></i></div>
             </a>
-
             <a href="/service-areas/lady-lake-fl" class="si-area-card">
                 <div class="si-area-card__icon"><i class="fa-solid fa-location-dot"></i></div>
                 <div class="si-area-card__city">Lady Lake</div>
-                <div class="si-area-card__dist">~16 miles away</div>
+                <div class="si-area-card__dist">~14 miles away</div>
                 <div class="si-area-card__arrow">View Page <i class="fa-solid fa-arrow-right" style="font-size:0.6rem;"></i></div>
             </a>
-
         </div>
     </div>
 </section>
 
 <!-- CTA -->
 <section class="si-cta">
-    <div class="container">
-        <h2>Ready to Schedule?</h2>
-        <p>Most appointments available same week. Walk-ins welcome during business hours.</p>
+    <div>
+        <h2>Ready to Bring Your Vehicle In?</h2>
+        <p>Call us or schedule online. Most appointments available same week.</p>
         <a href="tel:+13523088142" class="si-cta__phone">(352) 308-8142</a>
-        <a href="/contact" class="si-btn-dark"><i class="fa-solid fa-calendar-check"></i> Schedule Online</a>
+        <a href="/contact" class="si-btn-dark"><i class="fa-solid fa-calendar-check"></i> Schedule Service</a>
     </div>
 </section>
