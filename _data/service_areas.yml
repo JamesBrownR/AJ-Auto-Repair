@@ -414,7 +414,96 @@
           answer: Most rotations are completed in 30 to 45 minutes at our Eustis shop.
         - question: Do tire rotations really make a difference?
           answer: Significantly. Front tires on a front-wheel drive vehicle wear two to three times faster than rears without rotation. Regular rotations keep all four tires wearing evenly so you replace a full set at maximum mileage rather than two tires prematurely.
+    
+    - slug: air-cabin-filter-replacement
+      service_name: Air and Cabin Filter Replacement
+      description: "Air filter and cabin air filter replacement in Eustis, FL. Engine air filters and cabin filters for all makes and models at AJ Automotive Services. Call (352) 308-8142."
+      hero_tagline: "Engine air filters and cabin air filters for all makes and models. Right here in Eustis on Kurt St."
+      intro_heading: "Air and Cabin Filter Replacement in Eustis, FL"
+      intro_content: "<p>AJ Automotive Services is located at 1534 Kurt St in Eustis and replaces engine air filters and cabin air filters on all makes and models. Both services are quick, but the difference between a clean filter and a clogged one is real performance, fuel economy, and air quality inside your vehicle.</p><p>Eustis vehicles deal with heavy pollen from the surrounding lakes and wooded areas, plus the dust that comes with Central Florida's dry season. Engine air filters here often need attention before the manufacturer's general mileage interval, especially for vehicles parked outside or driven on unpaved roads around Lake County.</p><p>The cabin air filter affects the air you breathe inside the vehicle. In Florida's humidity, a long-overdue cabin filter can grow mold and produce a musty smell from the vents. We check both filters at every service visit and tell you honestly where yours stand.</p>"
+      included_heading: "What We Do"
+      included_items:
+        - name: Engine Air Filter Replacement
+          description: Correct filter for your make, model, and engine. Restores proper airflow and engine protection.
+        - name: Cabin Air Filter Replacement
+          description: Replaces the filter cleaning air entering your cabin through the HVAC system. Improves airflow and removes allergens and odors.
+        - name: Filter Condition Inspection
+          description: We inspect both filters and show you what we find. We do not replace filters that do not need it.
+        - name: Filter Interval Recommendation
+          description: Realistic guidance on when each filter should be checked again based on your driving conditions.
+      faqs:
+        - question: How often do air filters need replacement in Eustis?
+          answer: Engine air filters typically every 15,000 to 30,000 miles, but Eustis vehicles driven during heavy pollen season or on unpaved roads often need them sooner. Cabin filters every 15,000 to 25,000 miles. We check both at every service and tell you where yours stand.
+        - question: Why does my A/C smell musty in Eustis?
+          answer: A dirty cabin air filter combined with Florida humidity is the most common cause. Mold grows quickly in a clogged, damp filter. Replacing it and running fresh air mode for a few minutes usually clears it.
+        - question: How long does filter replacement take?
+          answer: Both filters combined typically take 20 to 30 minutes at our Eustis shop.
+        - question: Do you carry filters for all vehicles?
+          answer: We carry or source the correct filters for all makes and models. Call ahead if you want to confirm availability for your specific vehicle.
 
+    - slug: engine-repair
+      service_name: Engine Repair
+      description: "Engine repair and diagnostics in Eustis, FL. From minor repairs to major engine work on all makes and models at AJ Automotive Services. Call (352) 308-8142."
+      hero_tagline: "Engine diagnostics and repair for all makes and models. Right here in Eustis on Kurt St."
+      intro_heading: "Engine Repair in Eustis, FL"
+      intro_content: "<p>AJ Automotive Services is located at 1534 Kurt St in Eustis and performs engine diagnostics and repair on all makes and models, foreign and domestic. Engine problems range from a faulty sensor to a failing head gasket to internal wear. We diagnose accurately before recommending any repair so you know exactly what you are dealing with.</p><p>Central Florida heat is hard on engines. Oil breaks down faster, cooling systems work harder, and rubber components in the engine bay age more quickly than in cooler climates. We see a consistent pattern of heat-related engine problems on Eustis vehicles, particularly overheating issues, oil leaks from hardened gaskets and seals, and cooling system failures that were ignored until they caused secondary damage.</p><p>We give you a straight assessment of what the repair involves, what it will cost, and whether it makes sense for your vehicle before any work begins.</p>"
+      included_heading: "Engine Services We Perform"
+      included_items:
+        - name: Engine Diagnostics
+          description: OBD-II scanning and hands-on testing to find the actual cause of the problem.
+        - name: Head Gasket Repair
+          description: Diagnosis and repair of head gasket failures including cylinder head resurfacing when needed.
+        - name: Timing Belt and Chain Service
+          description: Replacement of timing components with tensioners, pulleys, and water pump inspected at the same time.
+        - name: Oil Leak Repair
+          description: Valve cover gaskets, rear main seals, oil pan gaskets, and other leak sources diagnosed and repaired.
+        - name: Cooling System Repair
+          description: Thermostat, water pump, radiator, and coolant service to prevent overheating damage.
+        - name: Engine Mount Replacement
+          description: Worn mount diagnosis and replacement to eliminate vibration and protect surrounding components.
+        - name: Internal Engine Repair
+          description: Compression testing, piston rings, valve train, and bearing work for engines with internal wear.
+        - name: Engine Replacement
+          description: Full engine swap with remanufactured, rebuilt, or used engine options discussed honestly.
+      faqs:
+        - question: How does Eustis heat affect engines?
+          answer: Florida heat accelerates oil breakdown, hardens rubber seals and gaskets, and forces cooling systems to work at their limits. We see more heat-related engine problems in Central Florida than shops in cooler climates. Staying on oil change intervals and addressing cooling system maintenance on schedule prevents most of it.
+        - question: My check engine light is on. How serious is it?
+          answer: It depends on what triggered it. Some faults are minor, others need prompt attention, and a flashing check engine light means an active misfire that should not be driven on. We scan and diagnose to tell you exactly what you are dealing with.
+        - question: How long does engine repair take?
+          answer: Depends on the repair. A thermostat is same day. A head gasket is typically two to three days. An engine replacement is three to five days depending on parts availability.
+        - question: Do you work on all makes and models?
+          answer: Yes. Foreign and domestic including Honda, Toyota, Ford, Chevrolet, Dodge, Nissan, Jeep, GMC, Kia, Hyundai, Subaru, BMW, Mercedes-Benz, and more.
+
+    - slug: auto-water-leak-repair
+      service_name: Auto Water Leak Repair
+      description: "Auto water leak diagnosis and repair in Eustis, FL. Wet carpets, water intrusion, and leak sources found and fixed on all makes and models at AJ Automotive Services. Call (352) 308-8142."
+      hero_tagline: "Water leak diagnosis and repair for all makes and models. Right here in Eustis on Kurt St."
+      intro_heading: "Auto Water Leak Repair in Eustis, FL"
+      intro_content: "<p>AJ Automotive Services is located at 1534 Kurt St in Eustis and diagnoses and repairs vehicle water leaks on all makes and models. Water intrusion is a more serious problem in Florida than in drier climates. The combination of heavy rainfall, high humidity, and intense heat means a slow leak that might stay dormant elsewhere will produce mold and corrosion quickly in Eustis conditions.</p><p>We see water leaks regularly on Eustis vehicles, particularly from deteriorated door and window seals that have been baked by the sun, clogged sunroof drains packed with debris from surrounding trees, and HVAC drain lines that back up during the rainy season. The source is often not where the water appears, which is why systematic diagnosis is the only reliable way to find it.</p><p>We locate the entry point, tell you what the repair involves and what it will cost, and fix it correctly before the secondary damage gets expensive.</p>"
+      included_heading: "Water Leak Services We Perform"
+      included_items:
+        - name: Water Leak Diagnosis
+          description: Systematic inspection to find the actual entry point before any repair is recommended.
+        - name: Door and Window Seal Replacement
+          description: Weatherstripping and rubber seals degraded by Florida sun and heat replaced to restore a watertight barrier.
+        - name: Windshield and Rear Glass Seal Repair
+          description: Failed seals around glass resealed or replaced to stop water running into the headliner and carpet.
+        - name: Sunroof Drain Cleaning and Repair
+          description: Clogged sunroof drain tubes cleared and inspected for cracks or disconnections.
+        - name: HVAC Drain Line Service
+          description: Evaporator drain cleared to stop condensation from backing up onto the passenger floor.
+        - name: Firewall and Body Grommet Repair
+          description: Deteriorated grommets at wiring and cable pass-throughs replaced to seal the cabin.
+      faqs:
+        - question: Why are water leaks more common in Eustis than in other parts of the country?
+          answer: Florida's UV intensity degrades rubber seals and weatherstripping faster than in cooler or less sunny climates. The heavy summer rainfall gives those degraded seals more opportunities to fail. And the heat and humidity mean any water that gets in creates mold within days rather than weeks.
+        - question: Water is on my passenger floor but it has not rained. What is it?
+          answer: Most likely a clogged HVAC evaporator drain. The A/C system removes moisture from the air and that condensation has to drain somewhere. When the drain line clogs, water backs up into the cabin. It is a common Florida problem during heavy A/C use season.
+        - question: How do you find where the leak is coming from?
+          answer: We do a systematic water test starting at the most likely entry points and trace the path from where the water appears back to where it enters. The visible wet spot is usually not the entry point.
+        - question: How long does water leak repair take?
+          answer: Diagnosis is one to two hours. Repair time depends on what we find. A clogged drain line is quick. A windshield reseal or full weatherstripping replacement takes longer. We give you a specific estimate once the source is identified.
 
 - city: Mount Dora
   city_slug: mount-dora-fl
@@ -829,6 +918,93 @@
         - question: How far is the drive from Mount Dora?
           answer: About 10 minutes on US-441. We are at 1534 Kurt St in Eustis.
 
+    - slug: air-cabin-filter-replacement
+      service_name: Air and Cabin Filter Replacement
+      description: "Air filter and cabin air filter replacement for Mount Dora, FL drivers. All makes and models at AJ Automotive Services in Eustis. Call (352) 308-8142."
+      hero_tagline: "Engine air filters and cabin air filters for Mount Dora drivers. About 5 miles from Mount Dora in Eustis."
+      intro_heading: "Air and Cabin Filter Replacement Near Mount Dora, FL"
+      intro_content: "<p>AJ Automotive Services in Eustis replaces engine air filters and cabin air filters for Mount Dora drivers just about 5 miles away at 1534 Kurt St. We work on all makes and models and use the correct filter for your specific vehicle every time.</p><p>Mount Dora vehicles contend with pollen from the surrounding oak canopy and the wooded residential streets that characterize the area. Lake Dora and the nearby waterways also keep humidity elevated, which accelerates how quickly cabin filters become saturated and develop odors. We see a lot of overdue cabin filters on Mount Dora vehicles, particularly during oak pollen season.</p><p>We check both filters whenever we have your vehicle in and give you a straight answer on whether replacement is needed.</p>"
+      included_heading: "What We Do"
+      included_items:
+        - name: Engine Air Filter Replacement
+          description: Correct filter for your make, model, and engine. Restores proper airflow and engine protection.
+        - name: Cabin Air Filter Replacement
+          description: Replaces the filter cleaning air entering your cabin. Improves airflow and removes allergens and odors.
+        - name: Filter Condition Inspection
+          description: We inspect and show you what we find before recommending replacement.
+        - name: Filter Interval Recommendation
+          description: Guidance on when to check again based on your driving conditions around Mount Dora.
+      faqs:
+        - question: Does Mount Dora's oak pollen affect cabin air filters?
+          answer: Yes. Heavy pollen seasons saturate cabin filters faster than in areas with less tree cover. If your vents smell musty or airflow seems low during or after pollen season, the cabin filter is usually the first thing to check.
+        - question: How often should I replace my engine air filter?
+          answer: Every 15,000 to 30,000 miles, though vehicles in high-pollen or dusty environments often need them sooner. We check it at every service.
+        - question: How long does the drive from Mount Dora take?
+          answer: About 10 minutes on US-441 south. We are at 1534 Kurt St in Eustis.
+        - question: How long does filter replacement take?
+          answer: Both filters together typically 20 to 30 minutes.
+ 
+    - slug: engine-repair
+      service_name: Engine Repair
+      description: "Engine repair for Mount Dora, FL drivers. Diagnostics and engine repair on all makes and models at AJ Automotive Services in Eustis. Call (352) 308-8142."
+      hero_tagline: "Engine diagnostics and repair for Mount Dora drivers. About 5 miles from Mount Dora in Eustis."
+      intro_heading: "Engine Repair Near Mount Dora, FL"
+      intro_content: "<p>AJ Automotive Services in Eustis performs engine repair for Mount Dora drivers just about 5 miles away at 1534 Kurt St. We diagnose and repair engines on all makes and models, foreign and domestic.</p><p>Mount Dora vehicles deal with the same Central Florida heat that shortens the life of engine gaskets, seals, and cooling system components. The wooded character of the town also means engines accumulate debris around intake areas and cooling fins more than in more open environments. We see a regular pattern of cooling system failures and oil leaks on vehicles from the Mount Dora area that were caught late.</p><p>We start every engine repair job with an accurate diagnosis and give you a clear estimate before any work begins. If a repair is not worth it for the value of your vehicle, we tell you that too.</p>"
+      included_heading: "Engine Services We Perform"
+      included_items:
+        - name: Engine Diagnostics
+          description: OBD-II scanning and hands-on testing to identify the root cause before recommending a repair.
+        - name: Head Gasket Repair
+          description: Repair of head gasket failures with cylinder head inspection and resurfacing as needed.
+        - name: Timing Belt and Chain Service
+          description: Timing component replacement with full inspection of related components.
+        - name: Oil Leak Repair
+          description: Common leak points diagnosed and repaired correctly.
+        - name: Cooling System Repair
+          description: Thermostat, water pump, radiator, and coolant service to keep the engine at the correct temperature.
+        - name: Internal Engine Repair
+          description: Compression, rings, valve train, and bearing work on engines with internal wear.
+        - name: Engine Replacement
+          description: Full swap with honest guidance on remanufactured, rebuilt, or used options.
+      faqs:
+        - question: Is it worth repairing an engine on a high-mileage Mount Dora vehicle?
+          answer: It depends on the cost of the repair relative to the vehicle's value and the condition of the rest of the car. We give you that information straight so you can make an informed decision.
+        - question: My car overheated once. Is there engine damage?
+          answer: Possibly. A single overheating event can warp a cylinder head or blow a head gasket without any immediate obvious symptoms. We inspect and test to find out what actually happened before recommending any repair.
+        - question: How far is AJ Automotive from Mount Dora?
+          answer: About 10 minutes on US-441 south. We are at 1534 Kurt St in Eustis.
+        - question: Do you work on all makes and models?
+          answer: Yes. Foreign and domestic vehicles including Honda, Toyota, Ford, Chevrolet, Dodge, Nissan, Jeep, GMC, Kia, Hyundai, Subaru, BMW, and more.
+ 
+    - slug: auto-water-leak-repair
+      service_name: Auto Water Leak Repair
+      description: "Auto water leak repair for Mount Dora, FL drivers. Wet carpets and water intrusion diagnosed and fixed at AJ Automotive Services in Eustis. Call (352) 308-8142."
+      hero_tagline: "Water leak diagnosis and repair for Mount Dora drivers. About 5 miles from Mount Dora in Eustis."
+      intro_heading: "Auto Water Leak Repair Near Mount Dora, FL"
+      intro_content: "<p>AJ Automotive Services in Eustis diagnoses and repairs vehicle water leaks for Mount Dora drivers just about 5 miles away at 1534 Kurt St. All makes and models, systematic diagnosis before any repair recommendation.</p><p>Mount Dora vehicles deal with a specific water leak risk from the heavy tree canopy that characterizes the town. Oak debris, Spanish moss, and leaf matter accumulate in sunroof trays and drain passages faster than in more open environments. Clogged sunroof drains are one of the most common water leak causes we see on Mount Dora vehicles, particularly on cars that are parked under trees regularly. The debris blocks the drain tubes and water overflows into the headliner and down into the cabin.</p><p>We find the source and fix it before the water causes mold or electrical damage.</p>"
+      included_heading: "Water Leak Services We Perform"
+      included_items:
+        - name: Water Leak Diagnosis
+          description: Systematic inspection to locate the actual entry point before any repair.
+        - name: Sunroof Drain Cleaning and Repair
+          description: Clogged drains cleared and tubes inspected for cracks or disconnections from debris accumulation.
+        - name: Door and Window Seal Replacement
+          description: Degraded weatherstripping and rubber seals replaced to restore a watertight barrier.
+        - name: Windshield and Rear Glass Seal Repair
+          description: Failed glass seals resealed or replaced to stop water intrusion into headliner and carpet.
+        - name: HVAC Drain Line Service
+          description: Evaporator drain cleared to stop condensation from entering the cabin floor.
+        - name: Firewall and Body Grommet Repair
+          description: Deteriorated grommets at wiring pass-throughs replaced.
+      faqs:
+        - question: Why do so many Mount Dora vehicles have sunroof leaks?
+          answer: The oak canopy and Spanish moss in Mount Dora deposit debris into sunroof trays faster than in more open areas. That debris packs into the drain tubes and blocks them. Water that cannot drain out the tubes overflows into the headliner instead.
+        - question: How do I know if it is the sunroof drain or the seal?
+          answer: We test both during diagnosis. A clogged drain tube typically causes water to appear at the headliner or pillar area near the sunroof. A failed seal usually lets water in around the edges of the glass. Both are repairable and we identify which one it is before recommending anything.
+        - question: How far is AJ Automotive from Mount Dora?
+          answer: About 10 minutes on US-441 south. We are at 1534 Kurt St in Eustis.
+        - question: How long does the repair take?
+          answer: Diagnosis is one to two hours. Drain clearing is quick. More involved repairs like seal replacement take longer and we give you a specific estimate once the source is confirmed.
 
 - city: Tavares
   city_slug: tavares-fl
@@ -1243,6 +1419,93 @@
         - question: How far is the drive from Tavares?
           answer: About 10 to 12 minutes on US-441. We are at 1534 Kurt St in Eustis.
 
+    - slug: air-cabin-filter-replacement
+      service_name: Air and Cabin Filter Replacement
+      description: "Air filter and cabin air filter replacement for Mount Dora, FL drivers. All makes and models at AJ Automotive Services in Eustis. Call (352) 308-8142."
+      hero_tagline: "Engine air filters and cabin air filters for Mount Dora drivers. About 5 miles from Mount Dora in Eustis."
+      intro_heading: "Air and Cabin Filter Replacement Near Mount Dora, FL"
+      intro_content: "<p>AJ Automotive Services in Eustis replaces engine air filters and cabin air filters for Mount Dora drivers just about 5 miles away at 1534 Kurt St. We work on all makes and models and use the correct filter for your specific vehicle every time.</p><p>Mount Dora vehicles contend with pollen from the surrounding oak canopy and the wooded residential streets that characterize the area. Lake Dora and the nearby waterways also keep humidity elevated, which accelerates how quickly cabin filters become saturated and develop odors. We see a lot of overdue cabin filters on Mount Dora vehicles, particularly during oak pollen season.</p><p>We check both filters whenever we have your vehicle in and give you a straight answer on whether replacement is needed.</p>"
+      included_heading: "What We Do"
+      included_items:
+        - name: Engine Air Filter Replacement
+          description: Correct filter for your make, model, and engine. Restores proper airflow and engine protection.
+        - name: Cabin Air Filter Replacement
+          description: Replaces the filter cleaning air entering your cabin. Improves airflow and removes allergens and odors.
+        - name: Filter Condition Inspection
+          description: We inspect and show you what we find before recommending replacement.
+        - name: Filter Interval Recommendation
+          description: Guidance on when to check again based on your driving conditions around Mount Dora.
+      faqs:
+        - question: Does Mount Dora's oak pollen affect cabin air filters?
+          answer: Yes. Heavy pollen seasons saturate cabin filters faster than in areas with less tree cover. If your vents smell musty or airflow seems low during or after pollen season, the cabin filter is usually the first thing to check.
+        - question: How often should I replace my engine air filter?
+          answer: Every 15,000 to 30,000 miles, though vehicles in high-pollen or dusty environments often need them sooner. We check it at every service.
+        - question: How long does the drive from Mount Dora take?
+          answer: About 10 minutes on US-441 south. We are at 1534 Kurt St in Eustis.
+        - question: How long does filter replacement take?
+          answer: Both filters together typically 20 to 30 minutes.
+
+    - slug: engine-repair
+      service_name: Engine Repair
+      description: "Engine repair for Mount Dora, FL drivers. Diagnostics and engine repair on all makes and models at AJ Automotive Services in Eustis. Call (352) 308-8142."
+      hero_tagline: "Engine diagnostics and repair for Mount Dora drivers. About 5 miles from Mount Dora in Eustis."
+      intro_heading: "Engine Repair Near Mount Dora, FL"
+      intro_content: "<p>AJ Automotive Services in Eustis performs engine repair for Mount Dora drivers just about 5 miles away at 1534 Kurt St. We diagnose and repair engines on all makes and models, foreign and domestic.</p><p>Mount Dora vehicles deal with the same Central Florida heat that shortens the life of engine gaskets, seals, and cooling system components. The wooded character of the town also means engines accumulate debris around intake areas and cooling fins more than in more open environments. We see a regular pattern of cooling system failures and oil leaks on vehicles from the Mount Dora area that were caught late.</p><p>We start every engine repair job with an accurate diagnosis and give you a clear estimate before any work begins. If a repair is not worth it for the value of your vehicle, we tell you that too.</p>"
+      included_heading: "Engine Services We Perform"
+      included_items:
+        - name: Engine Diagnostics
+          description: OBD-II scanning and hands-on testing to identify the root cause before recommending a repair.
+        - name: Head Gasket Repair
+          description: Repair of head gasket failures with cylinder head inspection and resurfacing as needed.
+        - name: Timing Belt and Chain Service
+          description: Timing component replacement with full inspection of related components.
+        - name: Oil Leak Repair
+          description: Common leak points diagnosed and repaired correctly.
+        - name: Cooling System Repair
+          description: Thermostat, water pump, radiator, and coolant service to keep the engine at the correct temperature.
+        - name: Internal Engine Repair
+          description: Compression, rings, valve train, and bearing work on engines with internal wear.
+        - name: Engine Replacement
+          description: Full swap with honest guidance on remanufactured, rebuilt, or used options.
+      faqs:
+        - question: Is it worth repairing an engine on a high-mileage Mount Dora vehicle?
+          answer: It depends on the cost of the repair relative to the vehicle's value and the condition of the rest of the car. We give you that information straight so you can make an informed decision.
+        - question: My car overheated once. Is there engine damage?
+          answer: Possibly. A single overheating event can warp a cylinder head or blow a head gasket without any immediate obvious symptoms. We inspect and test to find out what actually happened before recommending any repair.
+        - question: How far is AJ Automotive from Mount Dora?
+          answer: About 10 minutes on US-441 south. We are at 1534 Kurt St in Eustis.
+        - question: Do you work on all makes and models?
+          answer: Yes. Foreign and domestic vehicles including Honda, Toyota, Ford, Chevrolet, Dodge, Nissan, Jeep, GMC, Kia, Hyundai, Subaru, BMW, and more.
+
+    - slug: auto-water-leak-repair
+      service_name: Auto Water Leak Repair
+      description: "Auto water leak repair for Mount Dora, FL drivers. Wet carpets and water intrusion diagnosed and fixed at AJ Automotive Services in Eustis. Call (352) 308-8142."
+      hero_tagline: "Water leak diagnosis and repair for Mount Dora drivers. About 5 miles from Mount Dora in Eustis."
+      intro_heading: "Auto Water Leak Repair Near Mount Dora, FL"
+      intro_content: "<p>AJ Automotive Services in Eustis diagnoses and repairs vehicle water leaks for Mount Dora drivers just about 5 miles away at 1534 Kurt St. All makes and models, systematic diagnosis before any repair recommendation.</p><p>Mount Dora vehicles deal with a specific water leak risk from the heavy tree canopy that characterizes the town. Oak debris, Spanish moss, and leaf matter accumulate in sunroof trays and drain passages faster than in more open environments. Clogged sunroof drains are one of the most common water leak causes we see on Mount Dora vehicles, particularly on cars that are parked under trees regularly. The debris blocks the drain tubes and water overflows into the headliner and down into the cabin.</p><p>We find the source and fix it before the water causes mold or electrical damage.</p>"
+      included_heading: "Water Leak Services We Perform"
+      included_items:
+        - name: Water Leak Diagnosis
+          description: Systematic inspection to locate the actual entry point before any repair.
+        - name: Sunroof Drain Cleaning and Repair
+          description: Clogged drains cleared and tubes inspected for cracks or disconnections from debris accumulation.
+        - name: Door and Window Seal Replacement
+          description: Degraded weatherstripping and rubber seals replaced to restore a watertight barrier.
+        - name: Windshield and Rear Glass Seal Repair
+          description: Failed glass seals resealed or replaced to stop water intrusion into headliner and carpet.
+        - name: HVAC Drain Line Service
+          description: Evaporator drain cleared to stop condensation from entering the cabin floor.
+        - name: Firewall and Body Grommet Repair
+          description: Deteriorated grommets at wiring pass-throughs replaced.
+      faqs:
+        - question: Why do so many Mount Dora vehicles have sunroof leaks?
+          answer: The oak canopy and Spanish moss in Mount Dora deposit debris into sunroof trays faster than in more open areas. That debris packs into the drain tubes and blocks them. Water that cannot drain out the tubes overflows into the headliner instead.
+        - question: How do I know if it is the sunroof drain or the seal?
+          answer: We test both during diagnosis. A clogged drain tube typically causes water to appear at the headliner or pillar area near the sunroof. A failed seal usually lets water in around the edges of the glass. Both are repairable and we identify which one it is before recommending anything.
+        - question: How far is AJ Automotive from Mount Dora?
+          answer: About 10 minutes on US-441 south. We are at 1534 Kurt St in Eustis.
+        - question: How long does the repair take?
+          answer: Diagnosis is one to two hours. Drain clearing is quick. More involved repairs like seal replacement take longer and we give you a specific estimate once the source is confirmed.
 
 - city: Leesburg
   city_slug: leesburg-fl
@@ -1657,6 +1920,94 @@
         - question: How far is the drive from Leesburg?
           answer: About 15 minutes on US-441. We are at 1534 Kurt St in Eustis.
 
+    - slug: air-cabin-filter-replacement
+      service_name: Air and Cabin Filter Replacement
+      description: "Air filter and cabin air filter replacement for Leesburg, FL drivers. All makes and models at AJ Automotive Services in Eustis. Call (352) 308-8142."
+      hero_tagline: "Engine air filters and cabin air filters for Leesburg drivers. About 12 miles from Leesburg in Eustis."
+      intro_heading: "Air and Cabin Filter Replacement Near Leesburg, FL"
+      intro_content: "<p>AJ Automotive Services in Eustis replaces engine air filters and cabin air filters for Leesburg drivers about 12 miles away at 1534 Kurt St. We work on all makes and models and use the correct filter for every vehicle.</p><p>Leesburg vehicles spend a lot of time on US-27 and US-441, both of which carry significant truck traffic that stirs up road dust and debris. This puts a heavier load on engine air filters than pure highway or residential driving. Leesburg is also surrounded by Lake Harris and Lake Griffin, keeping humidity high and accelerating the rate at which cabin filters become saturated.</p><p>Many Leesburg drivers we see have overdue cabin filters producing musty smells they have been living with for months. It is an easy fix. We check both filters at every service and tell you where yours stand.</p>"
+      included_heading: "What We Do"
+      included_items:
+        - name: Engine Air Filter Replacement
+          description: Correct filter for your make, model, and engine. Restores proper airflow and protects the engine from road debris.
+        - name: Cabin Air Filter Replacement
+          description: Replaces the filter cleaning cabin air. Restores airflow through the HVAC system and eliminates odors.
+        - name: Filter Condition Inspection
+          description: We inspect both and show you the condition before recommending anything.
+        - name: Filter Interval Recommendation
+          description: Guidance on when to check again based on Leesburg driving patterns.
+      faqs:
+        - question: Does highway driving on US-27 affect engine air filters?
+          answer: Yes. Truck traffic on US-27 generates road dust and debris that loads engine air filters faster than cleaner roads. Vehicles regularly driven on that corridor often benefit from more frequent filter checks.
+        - question: How often should Leesburg drivers replace cabin filters?
+          answer: Every 15,000 to 25,000 miles, though the humidity from Lake Harris and Lake Griffin can shorten that interval. If you notice reduced vent airflow or a musty smell, check it regardless of mileage.
+        - question: How far is AJ Automotive from Leesburg?
+          answer: About 15 minutes on US-441 heading north. We are at 1534 Kurt St in Eustis.
+        - question: How long does filter replacement take?
+          answer: Both filters combined typically 20 to 30 minutes.
+ 
+    - slug: engine-repair
+      service_name: Engine Repair
+      description: "Engine repair for Leesburg, FL drivers. Diagnostics and engine repair on all makes and models at AJ Automotive Services in Eustis. Call (352) 308-8142."
+      hero_tagline: "Engine diagnostics and repair for Leesburg drivers. About 12 miles from Leesburg in Eustis."
+      intro_heading: "Engine Repair Near Leesburg, FL"
+      intro_content: "<p>AJ Automotive Services in Eustis performs engine repair for Leesburg drivers about 12 miles away at 1534 Kurt St. All makes and models, accurate diagnosis before any recommendation.</p><p>Leesburg vehicles put significant miles on US-27 and US-441, both of which involve consistent highway speeds that put steady thermal load on engines. We see a regular pattern of cooling system wear on higher-mileage Leesburg vehicles that have been driven hard on those corridors, along with the gasket and seal failures common to all vehicles operating in Central Florida heat. Catching these issues before they cause secondary engine damage is almost always the less expensive outcome.</p><p>We give you a straight assessment of what is wrong, what the repair will cost, and whether it makes sense before we start.</p>"
+      included_heading: "Engine Services We Perform"
+      included_items:
+        - name: Engine Diagnostics
+          description: Root cause diagnosis before any repair recommendation.
+        - name: Head Gasket Repair
+          description: Failure diagnosis and repair with cylinder head inspection.
+        - name: Timing Belt and Chain Service
+          description: Timing component replacement with full related inspection.
+        - name: Oil Leak Repair
+          description: All common leak sources found and repaired correctly.
+        - name: Cooling System Repair
+          description: Thermostat, water pump, radiator, and coolant service.
+        - name: Internal Engine Repair
+          description: Compression, rings, valve train, and bearing work.
+        - name: Engine Replacement
+          description: Full swap with honest guidance on replacement options.
+      faqs:
+        - question: Does highway driving on US-27 cause engine wear?
+          answer: Sustained highway driving at consistent speeds is actually less demanding on engines than stop-and-go driving. The concern with high-mileage highway vehicles is that cooling systems and timing components wear gradually and fail without warning if they are not inspected on schedule.
+        - question: Is engine repair worth it on an older Leesburg vehicle?
+          answer: We evaluate the repair cost against the vehicle's condition and value and give you that information straight. Some older vehicles are worth repairing, some are not. We have seen both.
+        - question: How far is the drive from Leesburg?
+          answer: About 15 minutes on US-441 heading north. We are at 1534 Kurt St in Eustis.
+        - question: Do you work on all makes and models?
+          answer: Yes. Foreign and domestic vehicles of all types.
+ 
+    - slug: auto-water-leak-repair
+      service_name: Auto Water Leak Repair
+      description: "Auto water leak repair for Leesburg, FL drivers. Wet carpets and water intrusion diagnosed and fixed at AJ Automotive Services in Eustis. Call (352) 308-8142."
+      hero_tagline: "Water leak diagnosis and repair for Leesburg drivers. About 12 miles from Leesburg in Eustis."
+      intro_heading: "Auto Water Leak Repair Near Leesburg, FL"
+      intro_content: "<p>AJ Automotive Services in Eustis diagnoses and repairs vehicle water leaks for Leesburg drivers about 12 miles away at 1534 Kurt St. All makes and models, systematic diagnosis to find the actual source.</p><p>Leesburg sits between Lake Harris and Lake Griffin and the humidity from both lakes is a constant factor for vehicles stored and driven in the area. That humidity is hard on the rubber seals and weatherstripping that keep water out of a vehicle, and it ensures that any water that does enter creates mold and corrosion problems faster than in drier climates. Leesburg also gets the same heavy summer rainfall that affects all of Central Florida, which tests seals and drains regularly during rainy season.</p><p>We find the entry point, tell you exactly what needs to be done, and fix it before the interior damage gets worse.</p>"
+      included_heading: "Water Leak Services We Perform"
+      included_items:
+        - name: Water Leak Diagnosis
+          description: Systematic inspection to locate the actual entry point before any repair.
+        - name: Door and Window Seal Replacement
+          description: Lake-humidity-degraded seals and weatherstripping replaced.
+        - name: Windshield and Rear Glass Seal Repair
+          description: Failed glass seals resealed or replaced.
+        - name: Sunroof Drain Cleaning and Repair
+          description: Clogged drains cleared and tubes inspected.
+        - name: HVAC Drain Line Service
+          description: Evaporator drain cleared to stop floor water intrusion.
+        - name: Firewall and Body Grommet Repair
+          description: Deteriorated grommets at cabin entry points replaced.
+      faqs:
+        - question: Why does Leesburg's location make water leaks a bigger concern?
+          answer: Being surrounded by Lake Harris and Lake Griffin keeps humidity elevated compared to inland areas. That persistent moisture accelerates rubber seal degradation and means any water intrusion produces mold faster than it would in a drier environment.
+        - question: My carpet is wet but it only happens sometimes. Why?
+          answer: Intermittent leaks are common with partially clogged drains or seals that fail under heavy rain but hold in lighter conditions. We test under controlled water flow to replicate the leak and find the source regardless of whether it is happening constantly.
+        - question: How far is AJ Automotive from Leesburg?
+          answer: About 15 minutes on US-441 heading north. We are at 1534 Kurt St in Eustis.
+        - question: How long does repair take?
+          answer: Diagnosis one to two hours. Specific repair time estimated once the source is confirmed.
+    
 
 - city: Lady Lake
   city_slug: lady-lake-fl
@@ -2071,7 +2422,94 @@
         - question: How far is the drive from Lady Lake?
           answer: About 20 to 25 minutes north on US-27 or US-441.
 
-
+    - slug: air-cabin-filter-replacement
+      service_name: Air and Cabin Filter Replacement
+      description: "Air filter and cabin air filter replacement for Lady Lake, FL drivers. All makes and models at AJ Automotive Services in Eustis. Call (352) 308-8142."
+      hero_tagline: "Engine air filters and cabin air filters for Lady Lake drivers. About 16 miles from Lady Lake in Eustis."
+      intro_heading: "Air and Cabin Filter Replacement Near Lady Lake, FL"
+      intro_content: "<p>AJ Automotive Services in Eustis replaces engine air filters and cabin air filters for Lady Lake drivers about 16 miles away at 1534 Kurt St. All makes and models, correct filter every time.</p><p>Lady Lake is home to a large retired population, and many vehicles in the area are driven fewer miles per year than average. Low mileage does not mean filters last indefinitely. Cabin air filters degrade from humidity and age regardless of mileage, and engine air filters accumulate pollen and debris from sitting outside in Florida's environment even when the vehicle is not being driven heavily. We recommend checking both filters at least annually regardless of mileage for Lady Lake vehicles.</p><p>We check both at every service visit and tell you honestly what we find. If they do not need replacement, we tell you that too.</p>"
+      included_heading: "What We Do"
+      included_items:
+        - name: Engine Air Filter Replacement
+          description: Correct filter for your make, model, and engine. Restores proper airflow and engine protection.
+        - name: Cabin Air Filter Replacement
+          description: Replaces the filter cleaning cabin air. Improves airflow and removes allergens and odors.
+        - name: Filter Condition Inspection
+          description: We inspect and report honestly on what we find before recommending replacement.
+        - name: Filter Interval Recommendation
+          description: Guidance for low-mileage Lady Lake drivers on when to check again.
+      faqs:
+        - question: Do low-mileage vehicles still need filter replacements?
+          answer: Yes. Cabin air filters degrade from humidity and age whether you drive the vehicle or not. Engine air filters accumulate pollen and debris from being parked outside. Annual inspection is the right call for low-mileage vehicles, especially in Florida's environment.
+        - question: How often should I replace filters if I drive under 8,000 miles per year?
+          answer: Check them annually regardless of mileage. Condition varies based on how much time they have spent in humid, pollen-heavy air rather than mileage alone.
+        - question: How far is the drive from Lady Lake?
+          answer: About 20 to 25 minutes north on US-27 or US-441. We are at 1534 Kurt St in Eustis.
+        - question: How long does filter replacement take?
+          answer: Both filters combined typically 20 to 30 minutes.
+ 
+    - slug: engine-repair
+      service_name: Engine Repair
+      description: "Engine repair for Lady Lake, FL drivers. Diagnostics and engine repair on all makes and models at AJ Automotive Services in Eustis. Call (352) 308-8142."
+      hero_tagline: "Engine diagnostics and repair for Lady Lake drivers. About 16 miles from Lady Lake in Eustis."
+      intro_heading: "Engine Repair Near Lady Lake, FL"
+      intro_content: "<p>AJ Automotive Services in Eustis performs engine repair for Lady Lake drivers about 16 miles away at 1534 Kurt St. All makes and models, honest diagnosis, clear estimates before work begins.</p><p>Lady Lake has a large retired population with many vehicles that are driven fewer miles per year but have significant age. Low annual mileage does not protect engines from age-related failures. Timing belts fail by age as much as by mileage. Coolant degrades over time regardless of how few miles are driven. Gaskets and seals harden and crack in Florida heat on vehicles that are rarely driven as much as on those driven daily. We see age-related engine failures on Lady Lake vehicles regularly, particularly on vehicles whose owners assumed low mileage meant no maintenance was needed.</p><p>We diagnose accurately and tell you exactly what your engine needs before any work starts.</p>"
+      included_heading: "Engine Services We Perform"
+      included_items:
+        - name: Engine Diagnostics
+          description: Accurate root cause diagnosis before any repair recommendation.
+        - name: Head Gasket Repair
+          description: Failure diagnosis and repair including cylinder head inspection.
+        - name: Timing Belt and Chain Service
+          description: Age and mileage based replacement with full related component inspection.
+        - name: Oil Leak Repair
+          description: Age-hardened gaskets and seals diagnosed and replaced.
+        - name: Cooling System Repair
+          description: Coolant flush, thermostat, water pump, and radiator service.
+        - name: Internal Engine Repair
+          description: Compression, rings, valve train, and bearing work.
+        - name: Engine Replacement
+          description: Full swap with honest guidance on replacement options.
+      faqs:
+        - question: Do low-mileage vehicles still need engine maintenance?
+          answer: Yes. Timing belts have age intervals as well as mileage intervals. Coolant breaks down over time. Gaskets and seals harden from heat cycles regardless of mileage. A vehicle driven 5,000 miles per year for 10 years still has 10 years of age-related wear.
+        - question: My older vehicle runs fine. Do I still need to check the timing belt?
+          answer: Yes, especially if you do not know when it was last replaced. A timing belt that fails on an interference engine causes severe internal engine damage. The replacement cost is much lower than the repair cost after a failure.
+        - question: How far is the drive from Lady Lake?
+          answer: About 20 to 25 minutes north on US-27 or US-441. We are at 1534 Kurt St in Eustis.
+        - question: Do you work on all vehicles?
+          answer: Yes. All makes and models, foreign and domestic.
+ 
+    - slug: auto-water-leak-repair
+      service_name: Auto Water Leak Repair
+      description: "Auto water leak repair for Lady Lake, FL drivers. Wet carpets and water intrusion diagnosed and fixed at AJ Automotive Services in Eustis. Call (352) 308-8142."
+      hero_tagline: "Water leak diagnosis and repair for Lady Lake drivers. About 16 miles from Lady Lake in Eustis."
+      intro_heading: "Auto Water Leak Repair Near Lady Lake, FL"
+      intro_content: "<p>AJ Automotive Services in Eustis diagnoses and repairs vehicle water leaks for Lady Lake drivers about 16 miles away at 1534 Kurt St. All makes and models, accurate diagnosis before any repair recommendation.</p><p>Lady Lake has a large retired population with many vehicles that are older and have accumulated years of Florida UV and humidity exposure. Seals and weatherstripping on older vehicles in this environment are often overdue. We see water leaks on Lady Lake vehicles regularly from seals that have hardened and cracked after years in the sun, particularly around windshields and doors on vehicles that have never had seal service. Low annual mileage does not slow that degradation process.</p><p>We find the source, give you a clear estimate, and fix it before water damage compounds.</p>"
+      included_heading: "Water Leak Services We Perform"
+      included_items:
+        - name: Water Leak Diagnosis
+          description: Systematic inspection to find the actual entry point on older and newer vehicles alike.
+        - name: Door and Window Seal Replacement
+          description: Age and UV-hardened seals and weatherstripping replaced.
+        - name: Windshield and Rear Glass Seal Repair
+          description: Failed glass seals on older vehicles resealed or replaced.
+        - name: Sunroof Drain Cleaning and Repair
+          description: Clogged drains cleared and tubes inspected.
+        - name: HVAC Drain Line Service
+          description: Evaporator drain cleared to stop floor water intrusion.
+        - name: Firewall and Body Grommet Repair
+          description: Aged and cracked grommets at cabin entry points replaced.
+      faqs:
+        - question: Do older vehicles have more water leak problems?
+          answer: Yes, particularly in Florida. Rubber seals and weatherstripping harden, crack, and shrink over years of UV and heat exposure. Vehicles in Lady Lake that have spent a decade or more in the Florida sun often have seals that are well past their effective life even if the mileage is low.
+        - question: Can a water leak cause electrical problems on an older vehicle?
+          answer: Yes. Water and corroded electrical connectors are a common combination on older Florida vehicles. Repeated moisture exposure corrodes connectors and causes intermittent faults that can be difficult to trace. Fixing the water source is the first step.
+        - question: How far is AJ Automotive from Lady Lake?
+          answer: About 20 to 25 minutes north on US-27 or US-441. We are at 1534 Kurt St in Eustis.
+        - question: How long does repair take?
+          answer: Diagnosis one to two hours. Repair time depends on what we find and we give a specific estimate once the source is confirmed.
+          
 - city: Fruitland Park
   city_slug: fruitland-park-fl
   distance: about 13 miles
@@ -2485,6 +2923,93 @@
         - question: How far is the drive from Fruitland Park?
           answer: About 15 to 20 minutes on US-27 heading north.
 
+    - slug: air-cabin-filter-replacement
+      service_name: Air and Cabin Filter Replacement
+      description: "Air filter and cabin air filter replacement for Fruitland Park, FL drivers. All makes and models at AJ Automotive Services in Eustis. Call (352) 308-8142."
+      hero_tagline: "Engine air filters and cabin air filters for Fruitland Park drivers. About 13 miles from Fruitland Park in Eustis."
+      intro_heading: "Air and Cabin Filter Replacement Near Fruitland Park, FL"
+      intro_content: "<p>AJ Automotive Services in Eustis replaces engine air filters and cabin air filters for Fruitland Park drivers about 13 miles away at 1534 Kurt St. We work on all makes and models and use the correct filter specification for every vehicle.</p><p>Fruitland Park sits between Lake Griffin and Lake Harris, and the humidity from those lakes is consistently high. That humidity saturates cabin air filters and creates conditions for mold growth that produces the musty vent smell many Florida drivers consider normal. It is not normal. A fresh cabin filter clears it.</p><p>Engine air filters in Fruitland Park vehicles also face the pollen load common to all of Central Florida, plus road debris from the US-27 corridor. We check both filters at every service and give you a straight assessment of where yours stand.</p>"
+      included_heading: "What We Do"
+      included_items:
+        - name: Engine Air Filter Replacement
+          description: Correct filter for your make, model, and engine. Restores proper airflow and engine protection.
+        - name: Cabin Air Filter Replacement
+          description: Replaces the filter cleaning cabin air. Restores HVAC airflow and eliminates mold-related odors.
+        - name: Filter Condition Inspection
+          description: We inspect both and show you what we find before recommending anything.
+        - name: Filter Interval Recommendation
+          description: Guidance on when to check again based on Fruitland Park conditions.
+      faqs:
+        - question: Why does my car smell musty near Fruitland Park?
+          answer: The humidity from Lake Griffin and Lake Harris makes Fruitland Park one of the more challenging environments for cabin air filters. A saturated filter grows mold quickly. Replacing it is a straightforward fix.
+        - question: How often should filters be replaced in high-humidity areas?
+          answer: Cabin filters every 15,000 miles or annually, whichever comes first, in high-humidity areas like Fruitland Park. Engine air filters every 15,000 to 25,000 miles depending on road conditions.
+        - question: How far is the drive from Fruitland Park?
+          answer: About 15 to 20 minutes on US-27 heading north. We are at 1534 Kurt St in Eustis.
+        - question: How long does it take?
+          answer: Both filters combined typically 20 to 30 minutes.
+ 
+    - slug: engine-repair
+      service_name: Engine Repair
+      description: "Engine repair for Fruitland Park, FL drivers. Diagnostics and engine repair on all makes and models at AJ Automotive Services in Eustis. Call (352) 308-8142."
+      hero_tagline: "Engine diagnostics and repair for Fruitland Park drivers. About 13 miles from Fruitland Park in Eustis."
+      intro_heading: "Engine Repair Near Fruitland Park, FL"
+      intro_content: "<p>AJ Automotive Services in Eustis performs engine repair for Fruitland Park drivers about 13 miles away at 1534 Kurt St. We work on all makes and models and diagnose accurately before recommending any repair.</p><p>Fruitland Park sits between Lake Griffin and Lake Harris, and the persistent humidity from those bodies of water affects engine health in specific ways. Vehicles that sit for extended periods in high-humidity environments accumulate moisture in the crankcase, which dilutes oil and accelerates internal corrosion. We also see the standard Central Florida pattern of heat-related gasket and seal failures and cooling system wear that catches up with vehicles whose maintenance has been stretched.</p><p>We explain what we find and what it will cost before any work begins. If the repair is not the right call for your vehicle, we tell you that too.</p>"
+      included_heading: "Engine Services We Perform"
+      included_items:
+        - name: Engine Diagnostics
+          description: Root cause diagnosis before any repair recommendation.
+        - name: Head Gasket Repair
+          description: Failure diagnosis and repair with cylinder head inspection.
+        - name: Timing Belt and Chain Service
+          description: Timing component replacement with full related inspection.
+        - name: Oil Leak Repair
+          description: All common engine leak sources diagnosed and repaired.
+        - name: Cooling System Repair
+          description: Full cooling system service to prevent overheating damage.
+        - name: Internal Engine Repair
+          description: Compression, rings, valve train, and bearing work.
+        - name: Engine Replacement
+          description: Full swap with honest guidance on replacement options.
+      faqs:
+        - question: Does the humidity near Lake Griffin affect engines?
+          answer: Vehicles that sit in high-humidity environments accumulate moisture in the crankcase between drives. Over time this contributes to bearing wear and internal corrosion. Regular oil changes at proper intervals flush that contamination out before it causes damage.
+        - question: What are signs my engine needs attention?
+          answer: Check engine light, overheating, oil consumption, blue or white exhaust smoke, knocking sounds, rough idle, and power loss are the most common. Any of those warrant a diagnosis.
+        - question: How far is the drive from Fruitland Park?
+          answer: About 15 to 20 minutes on US-27 heading north. We are at 1534 Kurt St in Eustis.
+        - question: Do you work on all makes and models?
+          answer: Yes. Foreign and domestic vehicles of all types.
+ 
+    - slug: auto-water-leak-repair
+      service_name: Auto Water Leak Repair
+      description: "Auto water leak repair for Fruitland Park, FL drivers. Wet carpets and water intrusion diagnosed and fixed at AJ Automotive Services in Eustis. Call (352) 308-8142."
+      hero_tagline: "Water leak diagnosis and repair for Fruitland Park drivers. About 13 miles from Fruitland Park in Eustis."
+      intro_heading: "Auto Water Leak Repair Near Fruitland Park, FL"
+      intro_content: "<p>AJ Automotive Services in Eustis diagnoses and repairs vehicle water leaks for Fruitland Park drivers about 13 miles away at 1534 Kurt St. All makes and models, systematic diagnosis to locate the actual source.</p><p>Fruitland Park sits between Lake Griffin and Lake Harris, and that environment is among the more challenging in Lake County for vehicle seals and weatherstripping. The humidity is persistent, rainfall during summer is heavy, and vehicles stored outside in this corridor deal with moisture from multiple directions. We see water leak cases from Fruitland Park regularly, often involving door seals and window seals that have degraded from the combination of UV exposure and constant high humidity.</p><p>We trace the leak to its source and repair it before mold and corrosion add to the cost.</p>"
+      included_heading: "Water Leak Services We Perform"
+      included_items:
+        - name: Water Leak Diagnosis
+          description: Systematic inspection to find the actual entry point.
+        - name: Door and Window Seal Replacement
+          description: UV and humidity-degraded seals replaced to restore waterproofing.
+        - name: Windshield and Rear Glass Seal Repair
+          description: Failed glass seals resealed or replaced.
+        - name: Sunroof Drain Cleaning and Repair
+          description: Clogged drains cleared and tubes inspected.
+        - name: HVAC Drain Line Service
+          description: Evaporator drain cleared to stop condensation from pooling on the floor.
+        - name: Firewall and Body Grommet Repair
+          description: Deteriorated cabin entry grommets replaced.
+      faqs:
+        - question: Why is Fruitland Park a tough environment for vehicle seals?
+          answer: Being between two large lakes keeps humidity unusually high even by Central Florida standards. That constant moisture combined with Florida UV exposure degrades rubber seals faster than in more inland locations. We see more seal-related water leaks per vehicle age in lakeside communities than elsewhere in Lake County.
+        - question: What happens if I ignore a slow water leak?
+          answer: Mold in the carpet and padding, rust in the floor pan, and corrosion in electrical connectors beneath the carpet. All three are more expensive to address than the original leak repair. In Florida's heat and humidity the timeline from wet carpet to mold problem is days, not weeks.
+        - question: How far is the drive from Fruitland Park?
+          answer: About 15 to 20 minutes on US-27 heading north. We are at 1534 Kurt St in Eustis.
+        - question: How long does repair take?
+          answer: Diagnosis one to two hours. Specific repair estimate provided once the source is identified.
 
 - city: Umatilla
   city_slug: umatilla-fl
@@ -2902,3 +3427,91 @@
           answer: Most rotations are completed in 30 to 45 minutes.
         - question: How far is the drive from Umatilla?
           answer: About 15 minutes south on SR-19. We are at 1534 Kurt St in Eustis.
+
+    - slug: air-cabin-filter-replacement
+      service_name: Air and Cabin Filter Replacement
+      description: "Air filter and cabin air filter replacement for Umatilla, FL drivers. All makes and models at AJ Automotive Services in Eustis. Call (352) 308-8142."
+      hero_tagline: "Engine air filters and cabin air filters for Umatilla drivers. About 10 miles from Umatilla in Eustis."
+      intro_heading: "Air and Cabin Filter Replacement Near Umatilla, FL"
+      intro_content: "<p>AJ Automotive Services in Eustis replaces engine air filters and cabin air filters for Umatilla drivers about 10 miles away at 1534 Kurt St. We work on all makes and models and use the correct filter for every vehicle.</p><p>Umatilla vehicles face one of the harder filter environments in Lake County. The rural character of the area means many vehicles regularly travel unpaved or poorly maintained roads, which loads engine air filters with dust and debris far faster than vehicles driven only on paved roads. A vehicle driven on unpaved Umatilla roads may need its engine air filter well before the standard mileage interval.</p><p>Cabin filters deal with the pollen and humidity common to all of Central Florida. We check both at every service visit and give you an honest read on what we find.</p>"
+      included_heading: "What We Do"
+      included_items:
+        - name: Engine Air Filter Replacement
+          description: Correct filter for your make, model, and engine. Especially important for Umatilla vehicles on unpaved roads.
+        - name: Cabin Air Filter Replacement
+          description: Replaces the filter cleaning cabin air. Restores airflow and removes pollen, dust, and odors.
+        - name: Filter Condition Inspection
+          description: We inspect both and show you what we find before recommending replacement.
+        - name: Filter Interval Recommendation
+          description: Realistic guidance for Umatilla driving conditions, including unpaved road use.
+      faqs:
+        - question: Do unpaved Umatilla roads really affect engine air filters that much?
+          answer: Yes, significantly. Gravel and dirt roads kick up a volume of dust and debris that paved roads do not. Vehicles regularly driven on unpaved roads can clog an engine air filter in half the normal mileage interval. We check it at every service.
+        - question: How often should cabin filters be replaced in Umatilla?
+          answer: Every 15,000 to 25,000 miles, or annually. The pollen from the surrounding rural landscape and the general Central Florida humidity both affect how quickly cabin filters degrade.
+        - question: How far is AJ Automotive from Umatilla?
+          answer: About 15 minutes south on SR-19. We are at 1534 Kurt St in Eustis.
+        - question: How long does filter replacement take?
+          answer: Both filters combined typically 20 to 30 minutes.
+ 
+    - slug: engine-repair
+      service_name: Engine Repair
+      description: "Engine repair for Umatilla, FL drivers. Diagnostics and engine repair on all makes and models at AJ Automotive Services in Eustis. Call (352) 308-8142."
+      hero_tagline: "Engine diagnostics and repair for Umatilla drivers. About 10 miles from Umatilla in Eustis."
+      intro_heading: "Engine Repair Near Umatilla, FL"
+      intro_content: "<p>AJ Automotive Services in Eustis performs engine repair for Umatilla drivers about 10 miles away at 1534 Kurt St. All makes and models, accurate diagnosis, honest estimates.</p><p>Umatilla vehicles face a combination of engine wear factors that we see consistently. The rural character of the area means many vehicles regularly travel unpaved or poorly maintained roads, which subjects engines to more vibration and debris ingestion than purely paved driving. Engine air filters clog faster, which can starve engines of airflow if not caught in time. The elevated terrain and surrounding lakes also create humidity variations that affect how engines breathe and how oil behaves between changes.</p><p>We diagnose the actual problem before recommending any repair and give you a clear picture of what the work involves and what it will cost.</p>"
+      included_heading: "Engine Services We Perform"
+      included_items:
+        - name: Engine Diagnostics
+          description: Accurate diagnosis before any repair recommendation.
+        - name: Head Gasket Repair
+          description: Failure diagnosis and repair with cylinder head inspection.
+        - name: Timing Belt and Chain Service
+          description: Timing component replacement with full related inspection.
+        - name: Oil Leak Repair
+          description: All common leak sources found and repaired.
+        - name: Cooling System Repair
+          description: Full cooling system service to prevent overheating.
+        - name: Internal Engine Repair
+          description: Compression, rings, valve train, and bearing work.
+        - name: Engine Replacement
+          description: Full swap with honest guidance on replacement options.
+      faqs:
+        - question: Do unpaved Umatilla roads cause engine problems?
+          answer: Indirectly, yes. Unpaved roads clog engine air filters faster, and a severely restricted filter starves the engine of airflow which affects fuel mixture and performance. The vibration from rough road surfaces can also accelerate wear on engine mounts. We check both at every service.
+        - question: How do I know if my engine needs major work versus a minor repair?
+          answer: You often cannot tell from symptoms alone. A compression test, leak-down test, and diagnostic scan together give us the information needed to know what is actually happening internally. We run those tests and give you a clear picture before recommending anything.
+        - question: How far is AJ Automotive from Umatilla?
+          answer: About 15 minutes south on SR-19. We are at 1534 Kurt St in Eustis.
+        - question: Do you work on all makes and models?
+          answer: Yes. Foreign and domestic vehicles of all types.
+ 
+    - slug: auto-water-leak-repair
+      service_name: Auto Water Leak Repair
+      description: "Auto water leak repair for Umatilla, FL drivers. Wet carpets and water intrusion diagnosed and fixed at AJ Automotive Services in Eustis. Call (352) 308-8142."
+      hero_tagline: "Water leak diagnosis and repair for Umatilla drivers. About 10 miles from Umatilla in Eustis."
+      intro_heading: "Auto Water Leak Repair Near Umatilla, FL"
+      intro_content: "<p>AJ Automotive Services in Eustis diagnoses and repairs vehicle water leaks for Umatilla drivers about 10 miles away at 1534 Kurt St. All makes and models, accurate diagnosis before any repair is recommended.</p><p>Umatilla vehicles face water intrusion risks from a couple of directions. The rural roads around town mean vehicles encounter more debris that can damage underbody seals and grommets, and the vibration from rough road surfaces accelerates weatherstripping wear over time. Umatilla also sits near several lakes and the surrounding wetlands keep humidity elevated, which means any water that enters a vehicle creates mold and corrosion conditions quickly.</p><p>We find where the water is getting in, tell you exactly what it will take to fix it, and get it done before the damage compounds.</p>"
+      included_heading: "Water Leak Services We Perform"
+      included_items:
+        - name: Water Leak Diagnosis
+          description: Systematic inspection to locate the actual entry point on all vehicle types.
+        - name: Door and Window Seal Replacement
+          description: Vibration and UV-degraded seals and weatherstripping replaced.
+        - name: Windshield and Rear Glass Seal Repair
+          description: Failed glass seals resealed or replaced.
+        - name: Sunroof Drain Cleaning and Repair
+          description: Clogged drains cleared and tubes inspected for road-vibration damage.
+        - name: HVAC Drain Line Service
+          description: Evaporator drain cleared to stop condensation from pooling in the cabin.
+        - name: Firewall and Body Grommet Repair
+          description: Underbody grommets damaged by road debris or vibration replaced.
+      faqs:
+        - question: Can rough roads cause water leaks?
+          answer: Yes, indirectly. Vibration from rough road surfaces accelerates weatherstripping wear and can knock drain tube connections loose over time. Underbody grommets can also be damaged by debris kicked up on unpaved roads. We check these as part of any water leak diagnosis on Umatilla vehicles.
+        - question: I smell mold but I cannot find any standing water. What should I do?
+          answer: Mold smell without obvious standing water usually means the water source dried up but left moisture in the padding beneath the carpet. The padding holds moisture long after the surface feels dry. We locate the entry point to prevent it from recurring and advise on drying out the interior.
+        - question: How far is AJ Automotive from Umatilla?
+          answer: About 15 minutes south on SR-19. We are at 1534 Kurt St in Eustis.
+        - question: How long does repair take?
+          answer: Diagnosis one to two hours. Repair time depends on the source and we provide a specific estimate once it is identified.
