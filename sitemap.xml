@@ -6,6 +6,7 @@ layout: null
 
   <!-- CORE -->
   <url><loc>{{ site.url }}/</loc></url>
+  <url><loc>{{ site.url }}/about/</loc></url>
   <url><loc>{{ site.url }}/contact/</loc></url>
   <url><loc>{{ site.url }}/gallery/</loc></url>
   <url><loc>{{ site.url }}/reviews/</loc></url>
