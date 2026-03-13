@@ -1,0 +1,430 @@
+---
+layout: default
+title: About AJ Automotive Services | Eustis, FL
+description: AJ Automotive Services is a locally owned auto repair shop in Eustis, FL. Andrew and Jeremy work on all makes and models with honest estimates and quality work. Call (352) 308-8142.
+---
+
+<style>
+/* HERO */
+.about-hero {
+    background:
+        linear-gradient(rgba(0,0,0,0.70), rgba(0,0,0,0.70)),
+        url('/Pics/AJ31.webp') center / cover no-repeat;
+    padding: 90px 0 72px;
+    padding-top: calc(68px + 56px);
+    text-align: center;
+    border-bottom: 3px solid var(--accent-gold);
+}
+
+.about-hero .breadcrumb {
+    font-family: 'Roboto', sans-serif;
+    font-size: 0.8rem;
+    color: rgba(255,255,255,0.32);
+    margin-bottom: 1.2rem;
+}
+
+.about-hero .breadcrumb a {
+    color: rgba(255,255,255,0.32);
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+.about-hero .breadcrumb a:hover { color: var(--accent-gold); }
+
+.about-hero h1 {
+    font-family: 'Oswald', sans-serif;
+    font-size: clamp(2rem, 5vw, 3.2rem);
+    text-transform: uppercase;
+    color: #fff;
+    margin-bottom: 0.8rem;
+    line-height: 1.08;
+}
+
+.about-hero h1 span { color: var(--accent-gold); }
+
+.about-hero p {
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.05rem;
+    color: rgba(255,255,255,0.48);
+    max-width: 560px;
+    margin: 0 auto;
+    font-weight: 300;
+    line-height: 1.65;
+}
+
+/* SECTIONS */
+.about-section {
+    padding: 70px 0;
+    background: var(--primary-dark, #1a1c21);
+}
+
+.about-section.alt {
+    background: var(--primary-light, #23262d);
+}
+
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 32px;
+}
+
+/* STORY SPLIT */
+.about-split {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: center;
+}
+
+.about-split.reverse {
+    direction: rtl;
+}
+
+.about-split.reverse > * {
+    direction: ltr;
+}
+
+.about-split__img {
+    width: 100%;
+    aspect-ratio: 4/3;
+    object-fit: cover;
+    border: 1px solid rgba(255,255,255,0.07);
+    display: block;
+}
+
+.about-split__img.portrait {
+    aspect-ratio: 3/4;
+    max-width: 380px;
+    margin: 0 auto;
+}
+
+.about-eyebrow {
+    font-family: 'Oswald', sans-serif;
+    font-size: 0.72rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--accent-gold, #e8a635);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 1rem;
+}
+
+.about-eyebrow::before {
+    content: '';
+    display: block;
+    width: 24px;
+    height: 2px;
+    background: var(--accent-gold, #e8a635);
+}
+
+.about-split__body h2 {
+    font-family: 'Oswald', sans-serif;
+    font-size: clamp(1.6rem, 3vw, 2.2rem);
+    text-transform: uppercase;
+    color: #fff;
+    line-height: 1.1;
+    margin-bottom: 1.2rem;
+}
+
+.about-split__body p {
+    font-family: 'Roboto', sans-serif;
+    font-size: 0.95rem;
+    color: rgba(255,255,255,0.55);
+    line-height: 1.8;
+    margin-bottom: 1rem;
+}
+
+.about-split__body p:last-child { margin-bottom: 0; }
+
+/* SHOP PHOTO SECTION */
+.shop-photo-wrap {
+    position: relative;
+}
+
+.shop-photo-wrap img {
+    width: 100%;
+    display: block;
+    border: 1px solid rgba(255,255,255,0.07);
+}
+
+.shop-photo-caption {
+    font-family: 'Roboto', sans-serif;
+    font-size: 0.8rem;
+    color: rgba(255,255,255,0.28);
+    margin-top: 10px;
+    text-align: center;
+}
+
+/* VALUES GRID */
+.values-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+    gap: 2px;
+    margin-top: 2.5rem;
+}
+
+.value-card {
+    background: var(--primary-dark, #1a1c21);
+    padding: 28px 24px;
+    border-top: 3px solid var(--accent-gold, #e8a635);
+}
+
+.about-section.alt .value-card {
+    background: var(--primary-light, #23262d);
+}
+
+.value-card i {
+    font-size: 1.3rem;
+    color: var(--accent-gold, #e8a635);
+    margin-bottom: 14px;
+    display: block;
+}
+
+.value-card h3 {
+    font-family: 'Oswald', sans-serif;
+    font-size: 1rem;
+    text-transform: uppercase;
+    color: #fff;
+    margin-bottom: 8px;
+    letter-spacing: 0.04em;
+}
+
+.value-card p {
+    font-family: 'Roboto', sans-serif;
+    font-size: 0.88rem;
+    color: rgba(255,255,255,0.45);
+    line-height: 1.65;
+    margin: 0;
+}
+
+/* SECTION TITLE */
+.section-title-about {
+    font-family: 'Oswald', sans-serif;
+    font-size: clamp(1.5rem, 3vw, 2rem);
+    text-transform: uppercase;
+    color: #fff;
+    margin-bottom: 0.5rem;
+}
+
+.section-title-about::after {
+    content: '';
+    display: block;
+    width: 40px;
+    height: 3px;
+    background: var(--accent-gold, #e8a635);
+    margin-top: 10px;
+}
+
+/* REVIEW PULL QUOTE */
+.about-review {
+    background: var(--primary-light, #23262d);
+    border-left: 4px solid var(--accent-gold, #e8a635);
+    padding: 24px 28px;
+    margin-top: 2rem;
+}
+
+.about-review p {
+    font-family: 'Roboto', sans-serif;
+    font-size: 0.95rem;
+    color: rgba(255,255,255,0.6);
+    line-height: 1.75;
+    margin: 0 0 10px;
+    font-style: italic;
+}
+
+.about-review span {
+    font-family: 'Oswald', sans-serif;
+    font-size: 0.78rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--accent-gold, #e8a635);
+}
+
+/* CTA BAND */
+.about-cta {
+    background: var(--primary-light, #23262d);
+    border-top: 3px solid var(--accent-gold, #e8a635);
+    padding: 64px 0;
+    text-align: center;
+}
+
+.about-cta h2 {
+    font-family: 'Oswald', sans-serif;
+    font-size: clamp(1.6rem, 3vw, 2.2rem);
+    text-transform: uppercase;
+    color: #fff;
+    margin-bottom: 0.6rem;
+}
+
+.about-cta p {
+    font-family: 'Roboto', sans-serif;
+    font-size: 0.95rem;
+    color: rgba(255,255,255,0.45);
+    margin-bottom: 1.8rem;
+}
+
+.about-cta-row {
+    display: flex;
+    gap: 12px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+    background: var(--accent-gold, #e8a635);
+    color: var(--primary-dark, #1a1c21);
+    padding: 12px 26px;
+    font-family: 'Oswald', sans-serif;
+    font-size: 0.85rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    border-radius: 2px;
+    text-decoration: none;
+    transition: background 0.2s;
+}
+
+.btn:hover { background: #f5b942; }
+
+.btn-ghost {
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+    background: transparent;
+    color: rgba(255,255,255,0.65);
+    padding: 12px 26px;
+    font-family: 'Oswald', sans-serif;
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    border: 1px solid rgba(255,255,255,0.22);
+    border-radius: 2px;
+    text-decoration: none;
+    transition: border-color 0.2s, color 0.2s;
+}
+
+.btn-ghost:hover {
+    color: #fff;
+    border-color: rgba(255,255,255,0.5);
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+    .about-split {
+        grid-template-columns: 1fr;
+        gap: 32px;
+    }
+
+    .about-split.reverse {
+        direction: ltr;
+    }
+
+    .about-split__img.portrait {
+        max-width: 260px;
+    }
+}
+</style>
+
+<!-- HERO -->
+<section class="about-hero">
+    <div class="container">
+        <div class="breadcrumb">
+            <a href="/">Home</a> &rsaquo; About
+        </div>
+        <h1>About <span>AJ Automotive</span></h1>
+        <p>Locally owned and operated in Eustis, FL. Honest work, fair prices, and repairs done right the first time.</p>
+    </div>
+</section>
+
+<!-- STORY -->
+<section class="about-section">
+    <div class="container">
+        <div class="about-split">
+            <div class="shop-photo-wrap">
+                <img src="/Pics/AJ31.webp" alt="AJ Automotive Services shop in Eustis, FL">
+                <p class="shop-photo-caption">1534 Kurt St, Eustis, FL 32726</p>
+            </div>
+            <div class="about-split__body">
+                <div class="about-eyebrow">Our Shop</div>
+                <h2>A Shop That Works for You</h2>
+                <p>AJ Automotive Services is a full-service auto repair shop located at 1534 Kurt St in Eustis, Florida. We work on all makes and models, foreign and domestic, covering everything from routine oil changes and brake service to transmission repair, electrical diagnostics, engine work, and custom builds.</p>
+                <p>We built this shop on a straightforward principle: diagnose the vehicle first, give you a clear estimate, and let you decide before any work starts. No repairs you did not approve, no parts swapped by guesswork, no inflated bills at pickup. That is how we operate every day, for every customer.</p>
+                <p>We serve Eustis and all of Lake County including Mount Dora, Tavares, Leesburg, Fruitland Park, Umatilla, and Lady Lake. Open Monday through Saturday, 8 AM to 6 PM.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ANDREW -->
+<section class="about-section alt">
+    <div class="container">
+        <div class="about-split reverse">
+            <div class="about-split__body">
+                <div class="about-eyebrow">The Owners</div>
+                <h2>Andrew &amp; Jeremy</h2>
+                <p>AJ Automotive is owned and operated by Andrew and Jeremy, who work in the shop directly. When you bring your vehicle in, the people diagnosing it and making recommendations are the same people with their names on the door.</p>
+                <p>Both have hands-on experience across a wide range of makes and models including domestic trucks, Japanese imports, European vehicles, classics, motorcycles, ATVs, and marine engines. That range matters because it means we can handle what most shops turn away.</p>
+                <p>The shop stays small by design. Every vehicle gets the owners' attention, not whoever happens to be available. That is not something a larger operation can offer.</p>
+                <div class="about-review">
+                    <p>"Jeremy and Andrew always do an amazing job on my car. Very professional."</p>
+                    <span>Roberto Solo100, Google Review</span>
+                </div>
+            </div>
+            <!-- Replace /Pics/Andrew.webp with the actual path to Andrew's photo -->
+            <div style="display:flex;align-items:center;justify-content:center;">
+                <img src="/Pics/Andrew.webp" alt="Andrew, co-owner of AJ Automotive Services" class="about-split__img portrait">
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- VALUES -->
+<section class="about-section">
+    <div class="container">
+        <div class="about-eyebrow">How We Work</div>
+        <h2 class="section-title-about">What You Can Expect</h2>
+        <div class="values-grid">
+            <div class="value-card">
+                <i class="fa-solid fa-clipboard-check"></i>
+                <h3>Upfront Estimates</h3>
+                <p>You get a clear price before we start. No surprise charges at pickup and no work done without your approval.</p>
+            </div>
+            <div class="value-card">
+                <i class="fa-solid fa-comments"></i>
+                <h3>Clear Communication</h3>
+                <p>We explain what we found, what it means, and what can wait versus what needs attention now. No jargon.</p>
+            </div>
+            <div class="value-card">
+                <i class="fa-solid fa-screwdriver-wrench"></i>
+                <h3>All Makes and Models</h3>
+                <p>Foreign, domestic, cars, trucks, SUVs, motorcycles, ATVs, and small engines. One shop for everything.</p>
+            </div>
+            <div class="value-card">
+                <i class="fa-solid fa-map-pin"></i>
+                <h3>Locally Owned</h3>
+                <p>Andrew and Jeremy run the shop and work on vehicles themselves. Your car gets the owners' attention every time.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- SHOP PHOTO FULL WIDTH -->
+<section class="about-section alt" style="padding: 0;">
+    <img src="/Pics/AJ6.webp" alt="Inside AJ Automotive Services shop in Eustis FL" style="width:100%;max-height:420px;object-fit:cover;display:block;filter:brightness(0.75);">
+</section>
+
+<!-- CTA -->
+<section class="about-cta">
+    <div class="container">
+        <h2>Come See Us in Eustis</h2>
+        <p>1534 Kurt St, Eustis, FL 32726 &nbsp;&middot;&nbsp; Mon &ndash; Sat 8 AM to 6 PM &nbsp;&middot;&nbsp; Walk-ins welcome</p>
+        <div class="about-cta-row">
+            <a href="tel:+13523088142" class="btn"><i class="fa-solid fa-phone"></i> (352) 308-8142</a>
+            <a href="/contact" class="btn-ghost"><i class="fa-solid fa-calendar-check"></i> Schedule Online</a>
+        </div>
+    </div>
+</section>
