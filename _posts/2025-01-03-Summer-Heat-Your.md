@@ -3,7 +3,7 @@ layout: blog
 title: "Car A/C Repair Florida: Summer Heat Maintenance Guide | AJ Auto Repair"
 description: "Expert car A/C repair in Eustis, FL. Learn warning signs, maintenance tips, and how to prevent expensive A/C system failures in Florida's extreme heat."
 category: A/C Repair
-date: January 3, 202
+date: January 3, 2025
 read_time: 6 min read
 image: "Pics/AJ1.webp"
 ---
