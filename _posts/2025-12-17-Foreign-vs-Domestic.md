@@ -3,7 +3,7 @@ layout: blog
 title: "Foreign vs Domestic Car Repair: Complete Guide | Eustis Auto Repair"
 description: "Expert auto repair for foreign and domestic vehicles in Eustis, FL. Learn maintenance differences between Japanese, European, and American cars."
 category: Industry Insights
-date: December 8, 2024
+date: December 17, 2025
 read_time: 8 min read
 image: "Pics/AJ3.webp"
 ---
