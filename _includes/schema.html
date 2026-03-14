@@ -36,7 +36,7 @@
   "aggregateRating": {
     "@type": "AggregateRating",
     "ratingValue": "5",
-    "reviewCount": "12",
+    "reviewCount": "{{ site.data.reviews | size }}",
     "bestRating": "5"
   },
   "paymentAccepted": "Cash, Credit Card, Debit Card",
@@ -443,6 +443,53 @@
 
 {% endif %}
 
+{% if page.layout == "services" %}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "name": "{{ page.title }}",
+  "description": "{{ page.description }}",
+  "serviceType": "{{ page.h1 | strip_html }}",
+  "url": "https://ajautoandrepair.com{{ page.url }}",
+  "provider": {
+    "@type": "AutoRepair",
+    "name": "AJ Automotive Services",
+    "url": "https://ajautoandrepair.com/",
+    "telephone": "+13523088142",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "1534 Kurt St",
+      "addressLocality": "Eustis",
+      "addressRegion": "FL",
+      "postalCode": "32726",
+      "addressCountry": "US"
+    }
+  },
+  "areaServed": [
+    { "@type": "City", "name": "Eustis" },
+    { "@type": "City", "name": "Mount Dora" },
+    { "@type": "City", "name": "Tavares" },
+    { "@type": "City", "name": "Leesburg" },
+    { "@type": "City", "name": "Fruitland Park" },
+    { "@type": "City", "name": "Umatilla" },
+    { "@type": "City", "name": "Lady Lake" }
+  ]
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Home",     "item": "https://ajautoandrepair.com/" },
+    { "@type": "ListItem", "position": 2, "name": "Services", "item": "https://ajautoandrepair.com/services" },
+    { "@type": "ListItem", "position": 3, "name": "{{ page.title }}", "item": "https://ajautoandrepair.com{{ page.url }}" }
+  ]
+}
+</script>
+{% endif %}
 <!-- =============================================
      BLOG INDEX
      ============================================= -->
