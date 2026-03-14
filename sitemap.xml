@@ -26,6 +26,9 @@ layout: null
   <url><loc>{{ site.url }}/services/vehicle-safety-inspection/</loc></url>
   <url><loc>{{ site.url }}/services/auto-emissions-testing/</loc></url>
   <url><loc>{{ site.url }}/services/tire-rotations/</loc></url>
+  <url><loc>{{ site.url }}/services/air-cabin-filter-replacement/</loc></url>
+  <url><loc>{{ site.url }}/services/engine-repair/</loc></url>
+  <url><loc>{{ site.url }}/services/auto-water-leak-repair/</loc></url>
 
   <!-- SERVICE AREAS -->
   <url><loc>{{ site.url }}/service-areas/</loc></url>
@@ -39,7 +42,7 @@ layout: null
 
   <!-- SERVICE + AREA COMBO PAGES -->
   {% assign city_slugs = "eustis-fl,mount-dora-fl,tavares-fl,leesburg-fl,fruitland-park-fl,umatilla-fl,lady-lake-fl" | split: "," %}
-  {% assign service_slugs = "oil-change,auto-brake-repair,transmission,ac-installation-repair,auto-engine-diagnostics,electrical,steering-suspension-repair,battery,exhaust,vehicle-safety-inspection,auto-emissions-testing,tire-rotations" | split: "," %}
+  {% assign service_slugs = "oil-change,auto-brake-repair,transmission,ac-installation-repair,auto-engine-diagnostics,electrical,steering-suspension-repair,battery,exhaust,vehicle-safety-inspection,auto-emissions-testing,tire-rotations,air-cabin-filter-replacement,engine-repair,auto-water-leak-repair" | split: "," %}
   {% for city in city_slugs %}{% for service in service_slugs %}
   <url><loc>{{ site.url }}/service-areas/{{ city }}/{{ service }}/</loc></url>
   {% endfor %}{% endfor %}
