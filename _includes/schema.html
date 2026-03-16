@@ -161,6 +161,90 @@
 {% endif %}
 
 <!-- =============================================
+     ABOUT PAGE
+     ============================================= -->
+{% if page.url contains '/about' %}
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "AboutPage",
+  "name": "About AJ Automotive Services",
+  "description": "AJ Automotive Services is a locally owned auto repair shop in Eustis, FL. Andrew and Jeremy work on all makes and models with honest estimates and quality work.",
+  "url": "https://ajautoandrepair.com/about",
+  "breadcrumb": {
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://ajautoandrepair.com/" },
+      { "@type": "ListItem", "position": 2, "name": "About", "item": "https://ajautoandrepair.com/about" }
+    ]
+  },
+  "mainEntity": {
+    "@type": "AutoRepair",
+    "name": "AJ Automotive Services",
+    "foundingDate": "2025",
+    "url": "https://ajautoandrepair.com/",
+    "telephone": "+13523088142",
+    "image": "https://ajautoandrepair.com/Pics/AJ31.webp",
+    "logo": "https://ajautoandrepair.com/Logo.png",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "1534 Kurt St",
+      "addressLocality": "Eustis",
+      "addressRegion": "FL",
+      "postalCode": "32726",
+      "addressCountry": "US"
+    },
+    "employee": [
+      {
+        "@type": "Person",
+        "name": "Andrew",
+        "jobTitle": "Owner and Mechanic",
+        "worksFor": {
+          "@type": "AutoRepair",
+          "name": "AJ Automotive Services"
+        }
+      },
+      {
+        "@type": "Person",
+        "name": "Jeremy",
+        "jobTitle": "Owner and Mechanic",
+        "worksFor": {
+          "@type": "AutoRepair",
+          "name": "AJ Automotive Services"
+        }
+      }
+    ],
+    "knowsAbout": [
+      "Auto Repair",
+      "Brake Repair",
+      "Oil Change",
+      "Transmission Service",
+      "Engine Diagnostics",
+      "Electrical Repair",
+      "Exhaust Repair",
+      "Tire Rotation",
+      "Vehicle Safety Inspection",
+      "Air and Cabin Filter Replacement",
+      "Engine Repair",
+      "Auto Water Leak Repair"
+    ],
+    "areaServed": [
+      { "@type": "City", "name": "Eustis" },
+      { "@type": "City", "name": "Mount Dora" },
+      { "@type": "City", "name": "Tavares" },
+      { "@type": "City", "name": "Leesburg" },
+      { "@type": "City", "name": "Fruitland Park" },
+      { "@type": "City", "name": "Umatilla" },
+      { "@type": "City", "name": "Lady Lake" }
+    ]
+  }
+}
+</script>
+
+{% endif %}
+
+<!-- =============================================
      SERVICE PAGES  (layout: services)
      ============================================= -->
 {% if page.layout == "services" %}
@@ -356,10 +440,39 @@
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "BreadcrumbList",
+  "@type": "ItemList",
+  "name": "Customer Reviews — AJ Automotive Services",
   "itemListElement": [
-    { "@type": "ListItem", "position": 1, "name": "Home",    "item": "https://ajautoandrepair.com/" },
-    { "@type": "ListItem", "position": 2, "name": "Reviews", "item": "https://ajautoandrepair.com/reviews" }
+    {% for review in site.data.reviews %}
+    {
+      "@type": "ListItem",
+      "position": {{ forloop.index }},
+      "item": {
+        "@type": "Review",
+        "reviewRating": {
+          "@type": "Rating",
+          "ratingValue": "{{ review.stars }}",
+          "bestRating": "5"
+        },
+        "author": {
+          "@type": "Person",
+          "name": "{{ review.name | escape }}"
+        },
+        "reviewBody": "{{ review.text | escape }}",
+        "itemReviewed": {
+          "@type": "AutoRepair",
+          "name": "AJ Automotive Services",
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "1534 Kurt St",
+            "addressLocality": "Eustis",
+            "addressRegion": "FL",
+            "postalCode": "32726"
+          }
+        }
+      }
+    }{% unless forloop.last %},{% endunless %}
+    {% endfor %}
   ]
 }
 </script>
@@ -443,53 +556,7 @@
 
 {% endif %}
 
-{% if page.layout == "services" %}
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "Service",
-  "name": "{{ page.title }}",
-  "description": "{{ page.description }}",
-  "serviceType": "{{ page.h1 | strip_html }}",
-  "url": "https://ajautoandrepair.com{{ page.url }}",
-  "provider": {
-    "@type": "AutoRepair",
-    "name": "AJ Automotive Services",
-    "url": "https://ajautoandrepair.com/",
-    "telephone": "+13523088142",
-    "address": {
-      "@type": "PostalAddress",
-      "streetAddress": "1534 Kurt St",
-      "addressLocality": "Eustis",
-      "addressRegion": "FL",
-      "postalCode": "32726",
-      "addressCountry": "US"
-    }
-  },
-  "areaServed": [
-    { "@type": "City", "name": "Eustis" },
-    { "@type": "City", "name": "Mount Dora" },
-    { "@type": "City", "name": "Tavares" },
-    { "@type": "City", "name": "Leesburg" },
-    { "@type": "City", "name": "Fruitland Park" },
-    { "@type": "City", "name": "Umatilla" },
-    { "@type": "City", "name": "Lady Lake" }
-  ]
-}
-</script>
 
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "BreadcrumbList",
-  "itemListElement": [
-    { "@type": "ListItem", "position": 1, "name": "Home",     "item": "https://ajautoandrepair.com/" },
-    { "@type": "ListItem", "position": 2, "name": "Services", "item": "https://ajautoandrepair.com/services" },
-    { "@type": "ListItem", "position": 3, "name": "{{ page.title }}", "item": "https://ajautoandrepair.com{{ page.url }}" }
-  ]
-}
-</script>
-{% endif %}
 <!-- =============================================
      BLOG INDEX
      ============================================= -->
