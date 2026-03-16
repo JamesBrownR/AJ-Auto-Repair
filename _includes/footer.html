@@ -6,7 +6,30 @@
     background: #111315;
     border-top: 3px solid var(--accent-gold, #e8a635);
 }
-   
+   .footer-social {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 16px;
+}
+
+.footer-social a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 34px;
+    height: 34px;
+    border: 1px solid rgba(255,255,255,0.12);
+    color: rgba(255,255,255,0.4);
+    font-size: 0.85rem;
+    text-decoration: none;
+    transition: border-color 0.2s, color 0.2s;
+}
+
+.footer-social a:hover {
+    border-color: var(--accent-gold, #e8a635);
+    color: var(--accent-gold, #e8a635);
+}
 
 /* TOP: MAIN FOOTER BODY */
 .footer-body {
@@ -295,6 +318,11 @@ a.footer-contact-row:hover {
                 <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
                 <span>5.0 &middot; Google Reviews</span>
             </div>
+           <div class="footer-social">
+    <a href="https://www.facebook.com/profile.php?id=61584168264505" target="_blank" rel="noopener" aria-label="AJ Automotive on Facebook">
+        <i class="fa-brands fa-facebook-f"></i>
+    </a>
+</div>
         </div>
 
         <!-- SERVICES -->
