@@ -3,7 +3,7 @@ layout: blog
 title: "Auto Repair in Eustis, FL: What to Know Before You Pick a Shop"
 description: "A local's guide to finding honest auto repair in Eustis, FL. What to look for, what to avoid, and why the shop you choose matters more than you think."
 category: Auto Repair
-date: 2025-03-16
+date: 2025-12-17
 read_time: 5 min read
 image: "Pics/AJ3.webp"
 ---
