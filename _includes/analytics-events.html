@@ -1,0 +1,173 @@
+<script>
+(function () {
+  // ─── Safety check ────────────────────────────────────────────────────────────
+  if (typeof gtag !== 'function') return;
+
+  // ─── Helper ──────────────────────────────────────────────────────────────────
+  function send(eventName, params) {
+    gtag('event', eventName, params);
+  }
+
+  // ═══════════════════════════════════════════════════════════════════════════════
+  // 1. PHONE NUMBER CLICKS
+  // Fires whenever any tel: link is clicked anywhere on the page
+  // ═══════════════════════════════════════════════════════════════════════════════
+  document.addEventListener('click', function (e) {
+    var el = e.target.closest('a[href^="tel:"]');
+    if (!el) return;
+    send('phone_click', {
+      event_category: 'Contact',
+      event_label: el.href.replace('tel:', ''),
+      page_location: window.location.href
+    });
+  });
+
+  // ═══════════════════════════════════════════════════════════════════════════════
+  // 2. CONTACT FORM SUBMISSIONS
+  // Works with Formspree (both homepage form and /contact page form)
+  // ═══════════════════════════════════════════════════════════════════════════════
+  document.querySelectorAll('form[action*="formspree"]').forEach(function (form) {
+    form.addEventListener('submit', function () {
+      send('form_submit', {
+        event_category: 'Contact',
+        event_label: 'Contact Form',
+        page_location: window.location.href
+      });
+    });
+  });
+
+  // ═══════════════════════════════════════════════════════════════════════════════
+  // 3. "SCHEDULE SERVICE" BUTTON CLICKS
+  // Matches any link whose visible text or href contains schedule/contact patterns
+  // ═══════════════════════════════════════════════════════════════════════════════
+  document.addEventListener('click', function (e) {
+    var el = e.target.closest('a');
+    if (!el) return;
+    var href = (el.getAttribute('href') || '').toLowerCase();
+    var text = (el.textContent || '').trim().toLowerCase();
+    if (
+      href === '/contact' ||
+      href === '/contact/' ||
+      text.indexOf('schedule') !== -1 ||
+      text.indexOf('book') !== -1
+    ) {
+      // Don't double-fire for nav items — only fire for CTA buttons
+      var isNavLink = el.closest('.nav-links, .nav-drawer, footer');
+      if (!isNavLink) {
+        send('schedule_click', {
+          event_category: 'CTA',
+          event_label: el.textContent.trim(),
+          page_location: window.location.href
+        });
+      }
+    }
+  });
+
+  // ═══════════════════════════════════════════════════════════════════════════════
+  // 4. GOOGLE MAPS / DIRECTIONS CLICKS
+  // ═══════════════════════════════════════════════════════════════════════════════
+  document.addEventListener('click', function (e) {
+    var el = e.target.closest('a[href*="maps.google"], a[href*="google.com/maps"]');
+    if (!el) return;
+    send('directions_click', {
+      event_category: 'Contact',
+      event_label: 'Google Maps',
+      page_location: window.location.href
+    });
+  });
+
+  // ═══════════════════════════════════════════════════════════════════════════════
+  // 5. BLOG POST SCROLL DEPTH  (25 / 50 / 75 / 100 %)
+  // Only fires on blog post pages (layout: blog)
+  // ═══════════════════════════════════════════════════════════════════════════════
+  var article = document.querySelector('.blog-article');
+  if (article) {
+    var milestones = [25, 50, 75, 100];
+    var fired = {};
+
+    function getScrollPct() {
+      var scrollTop  = window.scrollY || document.documentElement.scrollTop;
+      var docHeight  = document.documentElement.scrollHeight - window.innerHeight;
+      return docHeight > 0 ? Math.round((scrollTop / docHeight) * 100) : 0;
+    }
+
+    window.addEventListener('scroll', function () {
+      var pct = getScrollPct();
+      milestones.forEach(function (m) {
+        if (!fired[m] && pct >= m) {
+          fired[m] = true;
+          send('scroll_depth', {
+            event_category: 'Blog Engagement',
+            event_label: document.title,
+            value: m,
+            page_location: window.location.href
+          });
+        }
+      });
+    }, { passive: true });
+  }
+
+  // ═══════════════════════════════════════════════════════════════════════════════
+  // 6. GALLERY VIEWS — lightbox open
+  // ═══════════════════════════════════════════════════════════════════════════════
+  var galleryGrid = document.querySelector('.gallery-full-grid, #homepageGallery');
+  if (galleryGrid) {
+    galleryGrid.addEventListener('click', function (e) {
+      var item = e.target.closest('.gallery-full-item, .hp-gallery__item');
+      if (!item) return;
+      var img = item.querySelector('img');
+      send('gallery_image_view', {
+        event_category: 'Gallery',
+        event_label: img ? (img.alt || img.src.split('/').pop()) : 'image',
+        page_location: window.location.href
+      });
+    });
+
+    // Also fire once for gallery section becoming visible
+    var gallerySeen = false;
+    var galleryObs = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        if (entry.isIntersecting && !gallerySeen) {
+          gallerySeen = true;
+          send('gallery_section_view', {
+            event_category: 'Gallery',
+            event_label: window.location.pathname,
+            page_location: window.location.href
+          });
+        }
+      });
+    }, { threshold: 0.2 });
+    galleryObs.observe(galleryGrid);
+  }
+
+  // ═══════════════════════════════════════════════════════════════════════════════
+  // 7. SERVICE PAGE VISITS
+  // Fires once when a /services/* page loads
+  // ═══════════════════════════════════════════════════════════════════════════════
+  var path = window.location.pathname;
+  if (/^\/services\/[^/]+/.test(path)) {
+    var serviceName = path.replace(/^\/services\//, '').replace(/\/$/, '').replace(/-/g, ' ');
+    send('service_page_view', {
+      event_category: 'Service Pages',
+      event_label: serviceName,
+      page_location: window.location.href
+    });
+  }
+
+  // ═══════════════════════════════════════════════════════════════════════════════
+  // 8. SERVICE AREA PAGE VISITS
+  // Fires once when a /service-areas/* page loads
+  // ═══════════════════════════════════════════════════════════════════════════════
+  if (/^\/service-areas\//.test(path)) {
+    var parts    = path.replace(/^\/service-areas\//, '').replace(/\/$/, '').split('/');
+    var city     = parts[0] ? parts[0].replace(/-fl$/, '').replace(/-/g, ' ') : '';
+    var service  = parts[1] ? parts[1].replace(/-/g, ' ') : '';
+    send('service_area_page_view', {
+      event_category: 'Service Area Pages',
+      event_label: service ? city + ' — ' + service : city,
+      page_location: window.location.href
+    });
+  }
+
+})();
+</script>
