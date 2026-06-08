@@ -1,99 +1,133 @@
-- name: Chandler Smithie
+- name: Michael Garcia
   stars: 5
   text: >
-    Been going to AJ Auto Repair for a long time now and I honestly would not trust my vehicles with anyone else.
-    Every repair has been done right the first time, pricing is fair, and they are always upfront about what actually
-    needs to be fixed. No upselling or surprises. It is hard to find a shop this reliable anymore.
+    Great price. Very good shop. I brought my car in and they started working on it right away.
+    Fast service, fair pricing, and a great experience overall.
 
-- name: Ana Gelmi
+- name: Carrisa Cusmano
   stars: 5
   text: >
-    We started going last year and absolutely highly recommend them. They tell us what is going on, how to fix it,
-    and the price is very fair. Attention is great and customer service is awesome.
+    The prices are really good and everyone there is super nice. I'd definitely recommend getting
+    your car fixed here. Friendly staff, fair pricing, and excellent service.
 
-- name: J Cusmano
+- name: Joshua Wilkinson
   stars: 5
   text: >
-    Great price, awesome shop. Very knowledgeable and straightforward. Great communication and lets you know every
-    step of the way what is being done with your vehicle.
+    AJ Automotive exceeded my expectations. Being open on Saturday already set them apart, but their
+    honest, straightforward, and professional approach really stood out. They quickly diagnosed my
+    truck, offered the best pricing I found, and delivered exactly what they promised. My truck runs
+    smooth and feels like new again. Highly recommend them for trustworthy and reliable auto repair.
 
-- name: Savannah Day
+- name: Mary Bufis
   stars: 5
   text: >
-    I went to AJ Automotive to get a sensor fixed and for them to check my brakes. They were honest and helpful
-    by only recommending what actually needed to be done.
-
-- name: Andrew Dubitsky
-  stars: 5
-  text: >
-    I received exceptional quality of service and professional care. Very pleased with the work done on my vehicle.
-
-- name: Alex Collazo
-  stars: 5
-  text: >
-    Very clean shop, looks great, and great customer service.
-
-- name: Roberto Solo100
-  stars: 5
-  text: >
-    I got a 2008 C300 and Jeremy and Andrew always do an amazing job on my car. Very professional.
-
-- name: Ayden Peluso
-  stars: 5
-  text: >
-    Great customer service and very informative. Great price.
-
-- name: Kaleb Williams
-  stars: 5
-  text: >
-    Very friendly, fast, and knowledgeable service. Reasonable prices.
-
-- name: All Stars Mobile Detailing
-  stars: 5
-  text: >
-    These guys know what they are doing. Had work done on my Charger and truck. Flawless. Excellent job, good prices.
-    Jeremy and Andrew are good mechanics. I highly recommend this shop.
-
-- name: Anjay Smith
-  stars: 5
-  text: >
-    I got referred to AJ Auto Repair and they did a great job at an affordable price range. The bumper of my car
-    was fixed to where it actually stays put and they did it in a great time frame. I would 100% recommend this company.
-
-- name: Dawn Sinka
-  stars: 5
-  text: >
-    Visited Andrew and Jeremy to inquire about some issues with my vintage Chevy truck. They gave me a reasonable
-    quote for repairs, returned the truck when promised, and the truck hasn't run this well for years. They are
-    friendly and professional. Already recommended them to my friends.
-
-- name: Billy Limbaugh
-  stars: 5
-  text: > 
-    Amazing work, and fair price. Thanks again
-    
-- name: David Spencer
-  stars: 5
-  text: >
-    Great customer service and knowledgeable in their field. Reasonable rates.
-
-- name: Ron Kendrick
-  stars: 5
-  text: >
-    I allowed them to work on the 1965 Mustang. 😎. Great job, quick in n out at a good price. 🇱🇷
-
-- name: Chris Miles
-  stars: 5
-  text: >
-    Jeremy and Andrew at AJ Automotive Services did an amazing job. I had my engine rebuilt and after getting quotes
-    from a few other shops, their price was by far the best I could find. Not only was it affordable, but the quality
-    of work was top-notch. The car runs better than ever and everything was done professionally and on time. You can
-    tell they actually care about their work and don't try to overcharge like a lot of other places. Highly recommend
-    them if you're looking for honest pricing and solid work. I'll definitely be coming back 👍
+    What an awesome mechanic. Jeremy was more than fair with his pricing, prompt, and attentive while
+    fixing my vehicle. My car now purrs like a kitten and I know I can trust his work. Honest,
+    talented, and reliable service.
 
 - name: Tara Kephart
   stars: 5
   text: >
-    Called Jeremy about my heater not working so he came to my job and took my car to his shop to change the
-    thermostat while I was working. He had my car back before I got off work. Gave me an amazing price and
-    excellent service.
+    Called Jeremy about my heater not working and he came to my job, took my car to the shop, and
+    replaced the thermostat while I was working. He had my car back before my shift ended. Amazing
+    price and excellent service.
+
+- name: Chris Miles
+  stars: 5
+  text: >
+    Jeremy and Andrew did an amazing job rebuilding my engine. After getting several quotes, their
+    price was by far the best. The quality of work was top-notch, everything was completed on time,
+    and the car runs better than ever. Honest pricing and solid workmanship.
+
+- name: Ron Kendrick
+  stars: 5
+  text: >
+    Trusted them with my 1965 Mustang and they did a great job. Quick service, fair pricing, and a
+    smooth experience from start to finish.
+
+- name: David Spencer
+  stars: 5
+  text: >
+    Great customer service and knowledgeable technicians. Reasonable rates, honest communication,
+    and quality work.
+
+- name: Billy Limbaugh
+  stars: 5
+  text: >
+    Amazing work and a fair price. Great experience and quality service.
+
+- name: Dawn Sinka
+  stars: 5
+  text: >
+    I brought my vintage Chevy truck to Andrew and Jeremy. They provided a reasonable quote,
+    completed the repairs on time, and now the truck runs better than it has in years. Friendly,
+    professional, and highly recommended.
+
+- name: Ana Gelmi
+  stars: 5
+  text: >
+    We started going last year and absolutely highly recommend them. They tell us what is going on,
+    how to fix it, and the price is very fair. Attention is great and customer service is awesome.
+
+- name: J Cusmano
+  stars: 5
+  text: >
+    Great price, awesome shop. Very knowledgeable and straightforward. Great communication and lets
+    you know every step of the way what is being done with your vehicle.
+
+- name: Savannah Day
+  stars: 5
+  text: >
+    I went to AJ Automotive for a sensor issue and a brake inspection. They were honest and only
+    repaired what actually needed attention. The team was helpful, kind, and did an amazing job.
+    They even gave me a teacher discount. Highly recommend them.
+
+- name: Andrew Dubitsky
+  stars: 5
+  text: >
+    I received exceptional quality service and professional care. The team was knowledgeable,
+    efficient, and easy to work with throughout the process.
+
+- name: Alex Collazo
+  stars: 5
+  text: >
+    Very clean shop, great customer service, and a professional atmosphere. Excellent experience.
+
+- name: Roberto Solo100
+  stars: 5
+  text: >
+    Jeremy and Andrew always do an amazing job on my 2008 C300. They are professional, reliable,
+    and consistently provide quality service at a fair price.
+
+- name: Ayden Peluso
+  stars: 5
+  text: >
+    Great customer service and very informative. The team takes the time to explain everything and
+    makes sure you understand what is going on with your vehicle.
+
+- name: Kaleb Williams
+  stars: 5
+  text: >
+    Very friendly, fast, and knowledgeable service. Fair pricing, quality work, and a great overall
+    experience every time.
+
+- name: All Stars Mobile Detailing
+  stars: 5
+  text: >
+    These guys know what they are doing. They worked on both my Charger and my truck and the results
+    were flawless. Excellent work, good prices, and knowledgeable mechanics. Highly recommend them.
+
+- name: Chandler Smithie
+  stars: 5
+  text: >
+    Been going to AJ Auto Repair for a long time now and I honestly would not trust my vehicles with
+    anyone else. Every repair has been done right the first time, pricing is fair, and they are
+    always upfront about what actually needs to be fixed. No upselling or surprises. It is hard to
+    find a shop this reliable anymore.
+
+- name: Anjay Smith
+  stars: 5
+  text: >
+    I was referred to AJ Auto Repair and they did a great job at an affordable price. They fixed my
+    bumper properly, completed the work quickly, and provided excellent service. I would absolutely
+    recommend getting a quote from them if you need vehicle repairs.
